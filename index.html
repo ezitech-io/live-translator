@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Translator — Real-Time Translation for Meetings & Videos</title>
+  <meta name="description" content="Free browser extension for real-time translation in Google Meet, Zoom, Teams & YouTube. 60+ languages, 100% private, runs locally." />
+  <link rel="icon" type="image/png" sizes="128x128" href="./icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-128x128.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            base: {
+              900: '#06080F',
+              800: '#0B0F1A',
+              700: '#111827',
+              600: '#1E293B',
+            },
+            accent: {
+              blue: '#3B82F6',
+              cyan: '#06B6D4',
+              emerald: '#10B981',
+              violet: '#8B5CF6',
+            },
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 2s infinite',
+            'float-slow': 'float 8s ease-in-out 1s infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'slide-up': 'slideUp 0.6s ease-out forwards',
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4' },
+              '50%': { opacity: '0.8' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #06080F;
+      color: #F8FAFC;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6, #06B6D4, #10B981);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(59,130,246,0.3), rgba(6,182,212,0.3));
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: xor;
+      -webkit-mask-composite: xor;
+      pointer-events: none;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(59,130,246,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 60px rgba(59,130,246,0.06);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .nav-blur {
+      background: rgba(6,8,15,0.7);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .faq-answer.open { max-height: 300px; }
+
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+    .platform-icon {
+      transition: all 0.3s ease;
+    }
+    .platform-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 40px rgba(59,130,246,0.15);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #3B82F6, #2563EB);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #06B6D4, #3B82F6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59,130,246,0.3); }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(59,130,246,0.2), rgba(6,182,212,0.2), transparent);
+    }
+
+    @keyframes orbit {
+      0% { transform: rotate(0deg) translateX(140px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(140px) rotate(-360deg); }
+    }
+
+    .mesh-gradient {
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(6,182,212,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(139,92,246,0.05) 0%, transparent 50%);
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50 border-b border-white/5" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-4">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-xl overflow-hidden ring-white/10 shadow-lg shadow-black/30">
+            <img src="./icons/icon-128x128.png" alt="Live Translator icon" class="w-full h-full object-cover" />
+          </div>
+          <span class="font-display font-bold text-lg tracking-tight">Live Translator</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Features</a>
+          <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Platforms</a>
+          <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">How It Works</a>
+          <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Install Guide</a>
+          <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">FAQ</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#install" class="btn-primary relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white">
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+              Install Free
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="md:hidden p-2 text-slate-400 hover:text-white transition-colors" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" id="menu-open-icon" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div class="md:hidden hidden pb-6 border-t border-white/5" id="mobile-menu">
+        <div class="flex flex-col gap-4 pt-4">
+          <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+          <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Platforms</a>
+          <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
+          <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Install Guide</a>
+          <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
+          <a href="#install" class="btn-primary relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white mt-2">
+            <span class="relative z-10">Install Free</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden mesh-gradient">
+    <!-- Background glows -->
+    <div class="hero-glow bg-accent-blue top-20 -left-40"></div>
+    <div class="hero-glow bg-accent-cyan top-40 right-[-10%]"></div>
+    <div class="hero-glow bg-accent-violet bottom-0 left-1/3"></div>
+
+    <!-- Subtle grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <!-- Left: Copy -->
+        <div class="max-w-xl">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-white/10 mb-8 animate-fade-in">
+            <span class="w-2 h-2 rounded-full bg-accent-emerald animate-pulse"></span>
+            <span class="font-body text-xs font-medium text-slate-300 tracking-wide">Free & Private Browser Extension</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight mb-6 animate-slide-up">
+            Break Language<br />
+            Barriers <span class="gradient-text">in Real&nbsp;Time</span>
+          </h1>
+
+          <p class="font-body text-lg text-slate-400 leading-relaxed mb-10 max-w-lg" style="animation: slideUp 0.6s ease-out 0.2s forwards; opacity: 0;">
+            Translate live conversations in Google Meet, Zoom, Teams, and YouTube videos. 
+            60+ languages, zero setup, runs entirely on your browser — your data never leaves your device.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4" style="animation: slideUp 0.6s ease-out 0.4s forwards; opacity: 0;">
+            <a href="https://drive.google.com/drive/folders/1-W1Tzq9lM0HIgt5LnGBC3wqIchBWJkuG?usp=drive_link" target="_blank" rel="noopener" class="btn-primary relative inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
+              <span class="relative z-10 flex items-center gap-2.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 3.953A7.48 7.48 0 0112 4.5c1.77 0 3.397.617 4.682 1.645l3.953-3.953C18.435 1.083 15.382 0 12 0zm0 24c3.79 0 7.169-1.757 9.368-4.501l-3.953-3.953A7.48 7.48 0 0112 19.5a7.48 7.48 0 01-5.415-3.954l-3.953 3.953C5.565 22.243 8.618 24 12 24zM1.757 7.632A11.946 11.946 0 000 12c0 1.58.307 3.09.864 4.472l4.812-2.779A7.444 7.444 0 014.5 12c0-.592.069-1.169.198-1.723L1.757 7.632zm20.486 0l-2.941 2.645c.129.554.198 1.131.198 1.723s-.069 1.169-.198 1.723l2.941 2.645A11.946 11.946 0 0024 12c0-1.58-.307-3.09-.864-4.472z"/></svg>
+                Add to Chrome — It's Free
+              </span>
+            </a>
+            <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:bg-white/5">
+              See How It Works
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </a>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex items-center gap-6 mt-10" style="animation: fadeIn 0.8s ease-out 0.6s forwards; opacity: 0;">
+            <div class="flex items-center gap-2 text-slate-500">
+              <svg class="w-4 h-4 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <span class="font-body text-xs">100% Private</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-500">
+              <svg class="w-4 h-4 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              <span class="font-body text-xs">Zero Latency</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-500">
+              <svg class="w-4 h-4 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <span class="font-body text-xs">60+ Languages</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Hero Visual -->
+        <div class="relative hidden lg:flex items-center justify-center" style="animation: fadeIn 1s ease-out 0.3s forwards; opacity: 0;">
+          <!-- Central meeting mockup -->
+          <div class="relative w-full max-w-md">
+            <!-- Meeting window -->
+            <div class="glass rounded-3xl p-6 border border-white/10 shadow-2xl shadow-black/50">
+              <!-- Window header -->
+              <div class="flex items-center gap-2 mb-5">
+                <div class="w-3 h-3 rounded-full bg-red-500/70"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/70"></div>
+                <span class="ml-3 font-body text-xs text-slate-500">Google Meet — Team Standup</span>
+              </div>
+              
+              <!-- Meeting grid -->
+              <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-base-700 to-base-800 flex items-center justify-center border border-white/5">
+                  <div class="w-10 h-10 rounded-full bg-accent-blue/20 flex items-center justify-center">
+                    <span class="font-display font-bold text-sm text-accent-blue">TK</span>
+                  </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-base-700 to-base-800 flex items-center justify-center border border-white/5">
+                  <div class="w-10 h-10 rounded-full bg-accent-violet/20 flex items-center justify-center">
+                    <span class="font-display font-bold text-sm text-accent-violet">MN</span>
+                  </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-base-700 to-base-800 flex items-center justify-center border border-white/5">
+                  <div class="w-10 h-10 rounded-full bg-accent-emerald/20 flex items-center justify-center">
+                    <span class="font-display font-bold text-sm text-accent-emerald">YS</span>
+                  </div>
+                </div>
+                <div class="aspect-video rounded-xl bg-gradient-to-br from-base-700 to-base-800 flex items-center justify-center border border-white/5">
+                  <div class="w-10 h-10 rounded-full bg-accent-cyan/20 flex items-center justify-center">
+                    <span class="font-display font-bold text-sm text-accent-cyan">LW</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Translation overlay -->
+              <div class="space-y-2.5">
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-accent-blue/5 border border-accent-blue/10">
+                  <div class="w-6 h-6 rounded-full bg-accent-blue/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="font-display font-bold text-[10px] text-accent-blue">TK</span>
+                  </div>
+                  <div>
+                    <p class="font-body text-xs text-slate-500 leading-relaxed">皆さん、今日のアジェンダを確認しましょう</p>
+                    <p class="font-body text-sm text-white leading-relaxed mt-1">Let's review today's agenda, everyone</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-accent-emerald/5 border border-accent-emerald/10">
+                  <div class="w-6 h-6 rounded-full bg-accent-emerald/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span class="font-display font-bold text-[10px] text-accent-emerald">YS</span>
+                  </div>
+                  <div>
+                    <p class="font-body text-xs text-slate-500 leading-relaxed">네, 준비됐습니다. 시작하죠</p>
+                    <p class="font-body text-sm text-white leading-relaxed mt-1">Yes, I'm ready. Let's get started</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating language badges -->
+            <div class="absolute -top-4 -right-4 animate-float">
+              <div class="px-3 py-1.5 rounded-full glass border border-white/10 shadow-lg">
+                <span class="font-display text-xs font-semibold text-accent-cyan">English</span>
+              </div>
+            </div>
+            <div class="absolute top-16 -left-8 animate-float-delayed">
+              <div class="px-3 py-1.5 rounded-full glass border border-white/10 shadow-lg">
+                <span class="font-display text-xs font-semibold text-accent-blue">日本語</span>
+              </div>
+            </div>
+            <div class="absolute bottom-24 -right-6 animate-float-slow">
+              <div class="px-3 py-1.5 rounded-full glass border border-white/10 shadow-lg">
+                <span class="font-display text-xs font-semibold text-accent-emerald">한국어</span>
+              </div>
+            </div>
+            <div class="absolute -bottom-2 left-4 animate-float">
+              <div class="px-3 py-1.5 rounded-full glass border border-white/10 shadow-lg">
+                <span class="font-display text-xs font-semibold text-accent-violet">Español</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="relative py-8 border-y border-white/5 bg-base-800/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div class="text-center reveal">
+          <div class="font-display font-extrabold text-3xl gradient-text mb-1">60+</div>
+          <div class="font-body text-sm text-slate-500">Languages Supported</div>
+        </div>
+        <div class="text-center reveal">
+          <div class="font-display font-extrabold text-3xl gradient-text mb-1">4</div>
+          <div class="font-body text-sm text-slate-500">Platforms Integrated</div>
+        </div>
+        <div class="text-center reveal">
+          <div class="font-display font-extrabold text-3xl gradient-text mb-1">100%</div>
+          <div class="font-body text-sm text-slate-500">Private & Local</div>
+        </div>
+        <div class="text-center reveal">
+          <div class="font-display font-extrabold text-3xl gradient-text mb-1">$0</div>
+          <div class="font-body text-sm text-slate-500">Extension Cost</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features" class="relative py-24 lg:py-32 mesh-gradient">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Section header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-blue tracking-wider uppercase">Features</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Everything You Need to <span class="gradient-text">Communicate&nbsp;Globally</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          Powerful real-time translation that works where you already meet, learn, and collaborate.
+        </p>
+      </div>
+
+      <!-- Feature cards grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature 1: Real-Time -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Real-Time Translation</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            See translations appear instantly as people speak during your meetings. No delay, no interruptions — just seamless multilingual communication.
+          </p>
+        </div>
+
+        <!-- Feature 2: 60+ Languages -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-cyan/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">60+ Languages</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            From English and Spanish to Japanese and Arabic — support for over 60 languages and regional dialects covering most of the world's spoken languages.
+          </p>
+        </div>
+
+        <!-- Feature 3: Multi-Platform -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-emerald/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Multi-Platform Support</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Works seamlessly with Google Meet, Zoom, Microsoft Teams, and YouTube. One extension for all your video communication and learning needs.
+          </p>
+        </div>
+
+        <!-- Feature 4: Privacy -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-violet/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Privacy First</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Everything runs locally on your browser. No data leaves your device, no third-party servers involved. Your conversations stay completely private.
+          </p>
+        </div>
+
+        <!-- Feature 5: Download Transcripts -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Download Transcripts</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Save translated transcripts after your meetings end. Review, share, or archive your multilingual conversations for future reference.
+          </p>
+        </div>
+
+        <!-- Feature 6: BYO Key -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-cyan/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Bring Your Own Key</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Connect your Soniox API key and pay only for actual usage. No subscriptions, no hidden fees — complete control over your translation cost.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== PLATFORMS ===== -->
+  <section id="platforms" class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-emerald tracking-wider uppercase">Platforms</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Works Where <span class="gradient-text">You Already&nbsp;Are</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          Integrates directly into the platforms you use every day for meetings and learning.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Google Meet -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-green-500/10 to-blue-500/10 flex items-center justify-center border border-white/5">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+              <path d="M15.5 10.5V7.5C15.5 6.67 14.83 6 14 6H4C3.17 6 2.5 6.67 2.5 7.5V16.5C2.5 17.33 3.17 18 4 18H14C14.83 18 15.5 17.33 15.5 16.5V13.5L21.5 17V7L15.5 10.5Z" fill="#34A853" stroke="#34A853" stroke-width="0.5"/>
+              <path d="M14 6H4C3.17 6 2.5 6.67 2.5 7.5V12H15.5V7.5C15.5 6.67 14.83 6 14 6Z" fill="#4285F4"/>
+              <path d="M2.5 12V16.5C2.5 17.33 3.17 18 4 18H9V12H2.5Z" fill="#FBBC04"/>
+              <path d="M9 12V18H14C14.83 18 15.5 17.33 15.5 16.5V12H9Z" fill="#EA4335"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Google Meet</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Real-time captions and translation during your Google Meet calls</p>
+        </div>
+
+        <!-- Zoom -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 flex items-center justify-center border border-white/5">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="5" width="20" height="14" rx="3" fill="#2D8CFF"/>
+              <path d="M7 9.5V14.5C7 15.05 7.45 15.5 8 15.5H13C13.55 15.5 14 15.05 14 14.5V12.5L17 14.5V9.5L14 11.5V9.5C14 8.95 13.55 8.5 13 8.5H8C7.45 8.5 7 8.95 7 9.5Z" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Zoom</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate Zoom meetings in real-time without any disruption</p>
+        </div>
+
+        <!-- Teams -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 flex items-center justify-center border border-white/5">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" fill="#5059C9"/>
+              <circle cx="18" cy="7" r="2.5" fill="#7B83EB"/>
+              <path d="M20 11H16C15.45 11 15 11.45 15 12V17C15 17.55 15.45 18 16 18H20C20.55 18 21 17.55 21 17V12C21 11.45 20.55 11 20 11Z" fill="#7B83EB"/>
+              <circle cx="11" cy="7.5" r="3" fill="white"/>
+              <path d="M16 12H6C5.45 12 5 12.45 5 13V19C5 19.55 5.45 20 6 20H16C16.55 20 17 19.55 17 19V13C17 12.45 16.55 12 16 12Z" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Microsoft Teams</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Seamless translation for your Teams meetings and calls</p>
+        </div>
+
+        <!-- YouTube -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/10 flex items-center justify-center border border-white/5">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+              <path d="M21.58 7.19C21.35 6.33 20.67 5.65 19.81 5.42C18.27 5 12 5 12 5C12 5 5.73 5 4.19 5.42C3.33 5.65 2.65 6.33 2.42 7.19C2 8.73 2 12 2 12C2 12 2 15.27 2.42 16.81C2.65 17.67 3.33 18.35 4.19 18.58C5.73 19 12 19 12 19C12 19 18.27 19 19.81 18.58C20.67 18.35 21.35 17.67 21.58 16.81C22 15.27 22 12 22 12C22 12 22 8.73 21.58 7.19Z" fill="#FF0000"/>
+              <path d="M10 15.5L15.5 12L10 8.5V15.5Z" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">YouTube</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate video captions and learn from content in any language</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how-it-works" class="relative py-24 lg:py-32 mesh-gradient">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-cyan tracking-wider uppercase">How It Works</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Start Translating in <span class="gradient-text">Three&nbsp;Steps</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          No accounts, no configuration headaches. Get up and running in under a minute.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <!-- Step 1 -->
+        <div class="relative text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-blue to-accent-blue/50 flex items-center justify-center shadow-lg shadow-accent-blue/20">
+            <span class="font-display font-extrabold text-xl text-white">1</span>
+          </div>
+          <!-- Connector line (desktop) -->
+          <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent-blue/30 to-accent-cyan/30"></div>
+          <h3 class="font-display font-bold text-xl mb-3">Install the Extension</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
+            Download the ZIP package and install Live Translator on Chrome using the quick 3-step guide below.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-cyan to-accent-cyan/50 flex items-center justify-center shadow-lg shadow-accent-cyan/20">
+            <span class="font-display font-extrabold text-xl text-white">2</span>
+          </div>
+          <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent-cyan/30 to-accent-emerald/30"></div>
+          <h3 class="font-display font-bold text-xl mb-3">Add Your Soniox API Key</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
+            Enter your Soniox API key in extension settings. Your key stays on your device — we never see, collect, or store it.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent-emerald to-accent-emerald/50 flex items-center justify-center shadow-lg shadow-accent-emerald/20">
+            <span class="font-display font-extrabold text-xl text-white">3</span>
+          </div>
+          <h3 class="font-display font-bold text-xl mb-3">Start Translating</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
+            Open Google Meet, Teams, Zoom, or YouTube. A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== PRIVACY & SECURITY ===== -->
+  <section class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Visual -->
+        <div class="relative reveal">
+          <div class="glass rounded-3xl p-10 border border-white/10 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-accent-emerald/5 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10 space-y-6">
+              <!-- Shield icon -->
+              <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-accent-emerald/20 to-accent-emerald/5 flex items-center justify-center border border-accent-emerald/10">
+                <svg class="w-10 h-10 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+
+              <!-- Security checklist -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-accent-emerald/5 border border-accent-emerald/10">
+                  <div class="w-8 h-8 rounded-full bg-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <div>
+                    <div class="font-display font-semibold text-sm">Local Processing Only</div>
+                    <div class="font-body text-xs text-slate-500">All translation happens on your browser</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-accent-emerald/5 border border-accent-emerald/10">
+                  <div class="w-8 h-8 rounded-full bg-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <div>
+                    <div class="font-display font-semibold text-sm">No Third-Party Servers</div>
+                    <div class="font-body text-xs text-slate-500">Your data never leaves your device</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-accent-emerald/5 border border-accent-emerald/10">
+                  <div class="w-8 h-8 rounded-full bg-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <div>
+                    <div class="font-display font-semibold text-sm">No Account Required</div>
+                    <div class="font-body text-xs text-slate-500">Install and start using immediately</div>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-accent-emerald/5 border border-accent-emerald/10">
+                  <div class="w-8 h-8 rounded-full bg-accent-emerald/20 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-4 h-4 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  </div>
+                  <div>
+                    <div class="font-display font-semibold text-sm">Your Keys, Your Control</div>
+                    <div class="font-body text-xs text-slate-500">Manage your own API keys securely</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Copy -->
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 mb-6">
+            <span class="font-body text-xs font-semibold text-accent-emerald tracking-wider uppercase">Privacy & Security</span>
+          </div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-6">
+            Your Conversations<br /><span class="gradient-text">Stay Yours</span>
+          </h2>
+          <p class="font-body text-lg text-slate-400 leading-relaxed mb-6">
+            Unlike cloud-based translation services, Live Translator processes everything locally in your browser. No audio recordings, no conversation logs, no data collection — period.
+          </p>
+          <p class="font-body text-base text-slate-500 leading-relaxed mb-8">
+            You bring your own Soniox API key, stored only in your browser's local storage. We never see it, never route it through our servers, and never have access to your translation data. Billing is pay-as-you-go directly with Soniox based on your usage.
+          </p>
+          <div class="flex items-center gap-3 p-4 rounded-2xl glass border border-white/10">
+            <div class="w-10 h-10 rounded-xl bg-accent-emerald/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-display font-semibold text-sm">Open & Transparent</div>
+              <div class="font-body text-xs text-slate-500">The extension code is open for review — verify our privacy claims yourself.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="relative py-24 lg:py-32 mesh-gradient">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-blue tracking-wider uppercase">FAQ</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Frequently Asked <span class="gradient-text">Questions</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          Everything you need to know about Live Translator.
+        </p>
+      </div>
+
+      <div class="space-y-3" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">How does the real-time translation work?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                Live Translator captures audio from your meeting or video, sends it directly to Soniox for speech recognition and translation, then renders translated captions on your screen in real-time. The extension runs locally in your browser, and no conversation data is routed through third-party app servers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Is it really free? What are the costs?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                The extension is completely free to install and use. You only pay Soniox for the API usage you consume (pay-as-you-go). There is no monthly subscription from Live Translator, and you can control your usage directly from your Soniox account.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Do I need a Soniox API key to use it?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                Yes. Live Translator currently uses Soniox API for translation. After installing the extension, add your Soniox API key once in settings and you're ready to translate in meetings and videos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Can other meeting participants see my translations?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                No. Translations are displayed only on your screen as a local overlay. Other participants in the meeting cannot see your translations. The extension works silently in the background, visible only to you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Does it work with any browser?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                Currently, Live Translator is available as a Chrome extension and works on all Chromium-based browsers including Google Chrome, Microsoft Edge, Brave, and Arc. Support for Firefox is planned for a future release.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Can I download meeting transcripts?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                Yes! After your meeting ends, you can download the full translated transcript as a text file. This includes both the original speech and translations, timestamped for easy reference. Great for meeting notes and follow-ups.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item glass-card rounded-2xl overflow-hidden reveal">
+          <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+            <span class="font-display font-semibold text-base pr-4">Is my Soniox API key safe?</span>
+            <span class="faq-icon text-slate-500 flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" /></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <div class="px-6 pb-6 pt-0">
+              <p class="font-body text-sm text-slate-400 leading-relaxed">
+                Absolutely. Your Soniox API key is stored only in your browser's local storage and is never sent to our servers. The extension communicates directly between your browser and Soniox, so you keep full control of key usage and revocation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section id="install" class="relative py-24 lg:py-32 overflow-hidden">
+    <!-- Background effect -->
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-accent-blue/10 via-accent-cyan/10 to-accent-emerald/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10 reveal">
+      <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-6">
+        Ready to Break <span class="gradient-text">Language&nbsp;Barriers?</span>
+      </h2>
+      <p class="font-body text-lg text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
+        Download the ZIP package from Google Drive, drag it into Chrome Extensions, then start translating in minutes.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://drive.google.com/drive/folders/1-W1Tzq9lM0HIgt5LnGBC3wqIchBWJkuG?usp=drive_link" target="_blank" rel="noopener" class="btn-primary relative inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
+          <span class="relative z-10 flex items-center gap-2.5">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 3.953A7.48 7.48 0 0112 4.5c1.77 0 3.397.617 4.682 1.645l3.953-3.953C18.435 1.083 15.382 0 12 0zm0 24c3.79 0 7.169-1.757 9.368-4.501l-3.953-3.953A7.48 7.48 0 0112 19.5a7.48 7.48 0 01-5.415-3.954l-3.953 3.953C5.565 22.243 8.618 24 12 24zM1.757 7.632A11.946 11.946 0 000 12c0 1.58.307 3.09.864 4.472l4.812-2.779A7.444 7.444 0 014.5 12c0-.592.069-1.169.198-1.723L1.757 7.632zm20.486 0l-2.941 2.645c.129.554.198 1.131.198 1.723s-.069 1.169-.198 1.723l2.941 2.645A11.946 11.946 0 0024 12c0-1.58-.307-3.09-.864-4.472z"/></svg>
+            Add to Chrome — It's Free
+          </span>
+        </a>
+        <a href="#installation-guide" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:bg-white/5">
+          Step-by-Step Install Guide
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== INSTALLATION GUIDE ===== -->
+  <section id="installation-guide" class="relative py-24 lg:py-32 mesh-gradient">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-blue tracking-wider uppercase">Installation Guide</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Install from ZIP in <span class="gradient-text">3 Simple Steps</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          No technical skills needed. Follow these exact steps and you can install Live Translator successfully in just a few minutes.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-10 h-10 rounded-xl bg-accent-blue/10 text-accent-blue font-display font-bold text-lg flex items-center justify-center mb-4">1</div>
+          <h3 class="font-display font-bold text-lg mb-3">Download the ZIP File</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed mb-4">
+            Click the download button below and get the latest extension ZIP from Google Drive.
+          </p>
+          <a href="https://drive.google.com/drive/folders/1-W1Tzq9lM0HIgt5LnGBC3wqIchBWJkuG?usp=drive_link" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-accent-cyan hover:text-cyan-300 transition-colors">
+            Open download folder
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L6.75 17.25M8.25 6.75h9v9" /></svg>
+          </a>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-10 h-10 rounded-xl bg-accent-cyan/10 text-accent-cyan font-display font-bold text-lg flex items-center justify-center mb-4">2</div>
+          <h3 class="font-display font-bold text-lg mb-3">Open Extensions & Enable Developer Mode</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Open Chrome and go to <span class="text-slate-300">chrome://extensions</span>, then turn on <span class="text-slate-300">Developer mode</span>.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-10 h-10 rounded-xl bg-accent-emerald/10 text-accent-emerald font-display font-bold text-lg flex items-center justify-center mb-4">3</div>
+          <h3 class="font-display font-bold text-lg mb-3">Drag ZIP into Extensions Page</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Drag and drop the downloaded ZIP file into <span class="text-slate-300">chrome://extensions</span>. After install, pin Live Translator and add your Soniox API key.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-6 lg:p-7 border border-white/10 reveal">
+        <h3 class="font-display font-bold text-lg mb-3">If something does not work</h3>
+        <ul class="space-y-2 text-sm text-slate-400 font-body leading-relaxed">
+          <li>• If drag-and-drop does not work, unzip the package and install using <span class="text-slate-300">Load unpacked</span>.</li>
+          <li>• For <span class="text-slate-300">Load unpacked</span>, select the unzipped extension folder (not the ZIP file).</li>
+          <li>• If Chrome shows an error, remove the extension and install again.</li>
+          <li>• Keep Developer mode enabled while using this manually installed version.</li>
+          <li>• Verify your Soniox API key is valid and has enough usage quota.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="border-t border-white/5 py-16 bg-base-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="#" class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-xl overflow-hidden ring-1 ring-white/10">
+              <img src="./icons/icon-128x128.png" alt="Live Translator icon" class="w-full h-full object-cover" />
+            </div>
+            <span class="font-display font-bold text-lg">Live Translator</span>
+          </a>
+          <p class="font-body text-sm text-slate-500 leading-relaxed">
+            Break language barriers in real-time. Free, private, and open.
+          </p>
+        </div>
+
+        <!-- Product -->
+        <div>
+          <h4 class="font-display font-semibold text-sm mb-4">Product</h4>
+          <ul class="space-y-3">
+            <li><a href="#features" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#platforms" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Platforms</a></li>
+            <li><a href="#how-it-works" class="font-body text-sm text-slate-500 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#installation-guide" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Install Guide</a></li>
+            <li><a href="#faq" class="font-body text-sm text-slate-500 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="font-display font-semibold text-sm mb-4">Resources</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Documentation</a></li>
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Soniox Setup Guide</a></li>
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Changelog</a></li>
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h4 class="font-display font-semibold text-sm mb-4">Community</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Twitter / X</a></li>
+            <li><a href="#" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Contributing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="font-body text-xs text-slate-600">&copy; 2026 Live Translator. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="font-body text-xs text-slate-600 hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="font-body text-xs text-slate-600 hover:text-slate-400 transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // FAQ Accordion
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+        el.querySelector('.faq-answer').classList.remove('open');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        answer.classList.add('open');
+      }
+    }
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Navbar shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('shadow-lg', 'shadow-black/10');
+        navbar.style.borderColor = 'rgba(255,255,255,0.08)';
+      } else {
+        navbar.classList.remove('shadow-lg', 'shadow-black/10');
+        navbar.style.borderColor = 'rgba(255,255,255,0.05)';
+      }
+    });
+  </script>
+</body>
+</html>
