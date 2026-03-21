@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Live Translator Extension for Google Meet, Zoom, Teams & YouTube</title>
-  <meta name="description" content="Live Translator is a browser extension for real-time translation in Google Meet, Zoom, Microsoft Teams, and YouTube. 60+ languages, private local processing, Soniox API support." />
-  <meta name="keywords" content="live translator extension, real-time meeting translation, Google Meet translator extension, Zoom translator extension, Microsoft Teams translator, YouTube video translator, Soniox API translation, browser translation extension" />
+  <meta name="description" content="Live Translator is a browser extension for real-time translation in Google Meet, Zoom, Microsoft Teams, and YouTube. 60+ languages, optional narration (text-to-speech), private local processing, Soniox/OpenAI API support." />
+  <meta name="keywords" content="live translator extension, real-time meeting translation, Google Meet translator extension, Zoom translator extension, Microsoft Teams translator, YouTube video translator, Soniox API translation, OpenAI TTS, narration mode, browser translation extension" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="Live Translator" />
   <meta name="theme-color" content="#06080F" />
@@ -16,14 +16,14 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://translate.ezitech.io/" />
   <meta property="og:title" content="Live Translator Extension for Google Meet, Zoom, Teams & YouTube" />
-  <meta property="og:description" content="Translate meetings and videos in real time with 60+ languages. Private local extension with Soniox API support." />
+  <meta property="og:description" content="Translate meetings and videos in real time with 60+ languages, with optional narration mode. Private local extension with Soniox/OpenAI API support." />
   <meta property="og:image" content="https://translate.ezitech.io/icons/logo.png" />
   <meta property="og:image:alt" content="Live Translator logo" />
   <meta property="og:image:type" content="image/png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Live Translator Extension for Meetings & YouTube" />
-  <meta name="twitter:description" content="Real-time translation for Google Meet, Zoom, Teams, and YouTube. Private local processing with Soniox API." />
+  <meta name="twitter:description" content="Real-time translation for Google Meet, Zoom, Teams, and YouTube with optional narration mode. Private local processing with Soniox/OpenAI API." />
   <meta name="twitter:image" content="https://translate.ezitech.io/icons/logo.png" />
   <meta name="twitter:image:alt" content="Live Translator logo" />
 
@@ -53,7 +53,8 @@
         "Google Meet, Zoom, Teams, and YouTube support",
         "Private local processing on browser",
         "Download translated transcripts",
-        "Soniox API integration"
+        "Soniox API integration",
+        "Optional narration mode (text-to-speech)"
       ]
     }
   </script>
@@ -250,6 +251,7 @@
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Features</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Platforms</a>
           <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">How It Works</a>
+          <a href="#narration-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Narration Guide</a>
           <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Install Guide</a>
           <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">FAQ</a>
         </div>
@@ -278,6 +280,7 @@
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Features</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Platforms</a>
           <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
+          <a href="#narration-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Narration Guide</a>
           <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Install Guide</a>
           <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
           <a href="#install" class="btn-primary relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white mt-2">
@@ -556,6 +559,19 @@
             Connect your Soniox API key and pay only for actual usage. No subscriptions, no hidden fees — complete control over your translation cost.
           </p>
         </div>
+
+        <!-- Feature 7: Narration (TTS) -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-violet/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.286 8.464a5 5 0 010 7.072M7 9v6a1 1 0 001.447.894L12 14h2a1 1 0 001-1v-2a1 1 0 00-1-1h-2l-3.553-1.894A1 1 0 007 9z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Narration Mode (TTS)</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Listen to translated text in a natural voice while your meeting or video continues. Choose voice, speed, and volume to match your preference.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -671,9 +687,9 @@
             <span class="font-display font-extrabold text-xl text-white">2</span>
           </div>
           <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent-cyan/30 to-accent-emerald/30"></div>
-          <h3 class="font-display font-bold text-xl mb-3">Add Your Soniox API Key</h3>
+          <h3 class="font-display font-bold text-xl mb-3">Add Your API Key(s)</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-            Enter your Soniox API key in extension settings. Your key stays on your device — we never see, collect, or store it.
+            Add your Soniox API key to start translation. If you want Narration mode, add your OpenAI API key too.
           </p>
         </div>
 
@@ -687,6 +703,35 @@
             Open Google Meet, Teams, Zoom, or YouTube. A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===== NARRATION GUIDE ===== -->
+  <section id="narration-guide" class="relative py-24 lg:py-28">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-violet tracking-wider uppercase">Narration Guide</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-5">
+          How to Use <span class="gradient-text">Narration (TTS)</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          Turn translated captions into spoken audio in just a few clicks.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
+        <ol class="space-y-4 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
+          <li>Open Live Translator during a meeting or video and start translation.</li>
+          <li>Click the Narration button, then enter your OpenAI API key (required for TTS), get your API key <a href="https://platform.openai.com/account/api-keys" target="_blank"><b>HERE</b></a>.</li>
+          <li>Choose a voice and adjust speed/volume settings to your preference.</li>
+          <li>Use <strong>Test</strong> to preview the voice, then click <strong>Start</strong> to enable narration.</li>
+          <li>Optionally enable auto-sync speed to keep narration close to live translation when conversations are fast.</li>
+        </ol>
       </div>
     </div>
   </section>
@@ -1038,6 +1083,7 @@
             <li><a href="#features" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Features</a></li>
             <li><a href="#platforms" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Platforms</a></li>
             <li><a href="#how-it-works" class="font-body text-sm text-slate-500 hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#narration-guide" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Narration Guide</a></li>
             <li><a href="#installation-guide" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Install Guide</a></li>
             <li><a href="#faq" class="font-body text-sm text-slate-500 hover:text-white transition-colors">FAQ</a></li>
           </ul>
