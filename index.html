@@ -42,21 +42,40 @@
       "applicationCategory": "BrowserApplication",
       "description": "Live Translator is a browser extension that provides real-time translation for Google Meet, Zoom, Microsoft Teams, and YouTube with private local processing.",
       "operatingSystem": "Chrome, Edge, Brave, Arc",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro (Monthly)",
+          "price": "5.99",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro (Yearly)",
+          "price": "59",
+          "priceCurrency": "USD"
+        }
+      ],
       "featureList": [
         "Real-time translation for meetings and videos",
         "Two-way translation between my language and their language",
         "Interpreter mode to send translated speech into meeting chat",
+        "Narrate My Voice — speak into meetings in the other person's language",
+        "Narrate Their Voice — hear translations read aloud",
+        "SRT subtitle export for video editing workflows",
         "Support for 60+ languages",
         "Google Meet, Zoom, Teams, and YouTube support",
         "Private local processing on browser",
-        "Download translated transcripts",
+        "Download translated transcripts (TXT, JSON, SRT)",
+        "Inline AI Assistant with Explain and Generate Answer actions",
         "Soniox API integration",
-        "Optional narration mode (text-to-speech)"
+        "OpenAI Realtime API for speech-to-speech translation"
       ]
     }
   </script>
@@ -259,11 +278,11 @@
 
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center gap-8">
-          <a href="#new-v041" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">New in v0.4.1</a>
+          <a href="#new-v062" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">New in v0.6.2</a>
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Features</a>
+          <a href="#pricing" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Pricing</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Platforms</a>
           <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">How It Works</a>
-          <a href="#narration-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Narration Guide</a>
           <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Install Guide</a>
           <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">FAQ</a>
         </div>
@@ -289,11 +308,11 @@
       <!-- Mobile Nav -->
       <div class="md:hidden hidden pb-6 border-t border-white/5" id="mobile-menu">
         <div class="flex flex-col gap-4 pt-4">
-          <a href="#new-v041" class="font-body text-sm text-slate-400 hover:text-white transition-colors">New in v0.4.1</a>
+          <a href="#new-v062" class="font-body text-sm text-slate-400 hover:text-white transition-colors">New in v0.6.2</a>
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+          <a href="#pricing" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Pricing</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Platforms</a>
           <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
-          <a href="#narration-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Narration Guide</a>
           <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Install Guide</a>
           <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
           <a href="#install" class="btn-primary relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white mt-2">
@@ -454,49 +473,59 @@
   </section>
 
   <!-- ===== NEW RELEASE ===== -->
-  <section id="new-v041" class="relative py-16 lg:py-20 border-y border-white/5 bg-base-800/40">
+  <section id="new-v062" class="relative py-16 lg:py-20 border-y border-white/5 bg-base-800/40">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10 reveal">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 mb-5">
           <span class="font-body text-xs font-semibold text-accent-emerald tracking-wider uppercase">New Release</span>
         </div>
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
-          Introducing <span class="gradient-text">v0.4.1</span>
+          What's New in <span class="gradient-text">v0.6.2</span>
         </h2>
         <p class="font-body text-base sm:text-lg text-slate-400 leading-relaxed">
-          Two-way translation is now live. Speak in your language, translate into your client's language,
-          and push the message directly to meeting chat with Interpreter mode.
+          Speak your language and let the other person hear it in theirs — in real time.
+          Plus smarter narration, SRT subtitle export, and a polished new experience.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-5">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div class="glass-card rounded-2xl p-6 reveal">
-          <div class="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m10 0v12m0 0l-4-4m4 4l4-4M10 8h4m-4 8h4" /></svg>
+          <div class="w-11 h-11 rounded-xl bg-accent-violet/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" /></svg>
           </div>
-          <h3 class="font-display font-bold text-lg mb-2">Two-Way Language Pair</h3>
+          <h3 class="font-display font-bold text-lg mb-2">Narrate My Voice</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Configure <strong>My language</strong> and <strong>Their language</strong> directly in the translator header.
+            Your translated speech is spoken directly into the meeting. The other person hears you in their language — no chat reading needed.
           </p>
         </div>
 
         <div class="glass-card rounded-2xl p-6 reveal">
           <div class="w-11 h-11 rounded-xl bg-accent-emerald/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.5a6.5 6.5 0 100-13 6.5 6.5 0 000 13z" /><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12h9M12 7.5v9" /></svg>
+            <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" /></svg>
           </div>
-          <h3 class="font-display font-bold text-lg mb-2">Interpreter Mode</h3>
+          <h3 class="font-display font-bold text-lg mb-2">Smarter Narration</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            One tap to translate your speech into the other side's language during live conversations.
+            Narration now only reads translations from other participants — your own voice is automatically skipped. Echo-free audio guaranteed.
           </p>
         </div>
 
         <div class="glass-card rounded-2xl p-6 reveal">
           <div class="w-11 h-11 rounded-xl bg-accent-cyan/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h8m-8 4h5M7 20h10a2 2 0 002-2V8l-4-4H7a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            <svg class="w-5 h-5 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" /></svg>
           </div>
-          <h3 class="font-display font-bold text-lg mb-2">Send to Meeting Chat</h3>
+          <h3 class="font-display font-bold text-lg mb-2">SRT Subtitle Export</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Works with Google Meet chat injection so translated output can be posted in-thread.
+            Download transcripts as <strong>.srt</strong> subtitle files — original or translated — ready for video editors and media players.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 reveal">
+          <div class="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">Refined Controls</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Microphone defaults to off for safety. Narration uses cleaner Start/Stop buttons and toggle switches for a simpler workflow.
           </p>
         </div>
       </div>
@@ -512,7 +541,7 @@
           <div class="font-body text-sm text-slate-500">Languages Supported</div>
         </div>
         <div class="text-center reveal">
-          <div class="font-display font-extrabold text-3xl gradient-text mb-1">4</div>
+          <div class="font-display font-extrabold text-3xl gradient-text mb-1">10</div>
           <div class="font-body text-sm text-slate-500">Platforms Integrated</div>
         </div>
         <div class="text-center reveal">
@@ -542,7 +571,7 @@
           Powerful real-time translation that works where you already meet, learn, and collaborate.
         </p>
         <p class="font-body text-sm text-accent-cyan mt-3">
-          New in v0.4.1: Two-way translation + Interpreter mode for sending translated speech to meeting chat.
+          New in v0.6.2: Narrate your translated voice into meetings, smarter narration, SRT export, and refined controls.
         </p>
       </div>
 
@@ -607,9 +636,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
             </svg>
           </div>
-          <h3 class="font-display font-bold text-lg mb-3">Download Transcripts</h3>
+          <h3 class="font-display font-bold text-lg mb-3">Download Transcripts & SRT</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Save translated transcripts after your meetings end. Review, share, or archive your multilingual conversations for future reference.
+            Save transcripts as TXT, JSON, or SRT subtitle files. Choose original or translated text — perfect for meeting notes, video editing, or archiving.
           </p>
         </div>
 
@@ -635,7 +664,7 @@
           </div>
           <h3 class="font-display font-bold text-lg mb-3">Narration Mode (TTS)</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Listen to translated text in a natural voice while your meeting or video continues. Choose voice, speed, and volume to match your preference.
+            Listen to translated text in a natural voice while your meeting continues. "Narrate their voice" reads others' speech aloud; "Narrate my voice" speaks your words into the meeting in their language.
           </p>
         </div>
 
@@ -658,6 +687,187 @@
 
   <div class="section-divider"></div>
 
+  <!-- ===== PRICING ===== -->
+  <section id="pricing" class="relative py-24 lg:py-32">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/20 mb-6">
+          <span class="font-body text-xs font-semibold text-accent-violet tracking-wider uppercase">Pricing</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">
+          Simple, <span class="gradient-text">Transparent&nbsp;Pricing</span>
+        </h2>
+        <p class="font-body text-lg text-slate-400 leading-relaxed">
+          Start for free with full translation capabilities. Upgrade to Pro when you need advanced features.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Free Plan -->
+        <div class="glass-card rounded-3xl p-8 reveal relative">
+          <div class="mb-6">
+            <h3 class="font-display font-bold text-2xl mb-1">Free</h3>
+            <p class="font-body text-sm text-slate-500">Everything you need to get started</p>
+          </div>
+          <div class="flex items-baseline gap-1 mb-8">
+            <span class="font-display font-extrabold text-4xl">$0</span>
+            <span class="font-body text-sm text-slate-500">forever</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">Real-time translation (start, pause, resume, end)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">60+ languages supported</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">Google Meet, Zoom, Teams & YouTube</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">Download transcripts (TXT & JSON)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">BYO Soniox API key — pay only for usage</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">100% private & local processing</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span class="font-body text-sm text-slate-500">Narration, AI Assistant, and SRT export (Pro only)</span>
+            </li>
+          </ul>
+          <a href="#install" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-2xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:bg-white/5">
+            Get Started Free
+          </a>
+        </div>
+
+        <!-- Pro Monthly Plan -->
+        <div class="glass-card rounded-3xl p-8 reveal relative border-accent-blue/30" style="border-color: rgba(59,130,246,0.25); box-shadow: 0 0 60px rgba(59,130,246,0.06);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-blue text-white text-xs font-display font-semibold shadow-lg shadow-accent-blue/30">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
+              Most Popular
+            </div>
+          </div>
+          <div class="mb-6">
+            <h3 class="font-display font-bold text-2xl mb-1">Pro (Monthly)</h3>
+            <p class="font-body text-sm text-slate-500">Flexible monthly billing</p>
+          </div>
+          <div class="flex items-baseline gap-1 mb-2">
+            <span class="font-display font-extrabold text-4xl gradient-text">$5.99</span>
+            <span class="font-body text-sm text-slate-500">/ month</span>
+          </div>
+          <p class="font-body text-xs text-slate-600 mb-8">Cancel anytime.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">Everything in Free</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Narrate Their Voice — hear translations read aloud</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Narrate My Voice — speak into meetings in their language</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Two-Way Translate & Interpreter Mode</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Inline AI Assistant (Explain & Generate answers)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">SRT subtitle export (original & translated)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Custom speaker names</span>
+            </li>
+          </ul>
+          <a href="https://buy.polar.sh/polar_cl_sKJ2QJ0i8hUxHkDdwHYYLfrVbQMOy7tgWHVAj0aAIa0" target="_blank" rel="noopener" class="btn-primary relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              Buy Pro Monthly
+            </span>
+          </a>
+        </div>
+
+        <!-- Pro Yearly Plan -->
+        <div class="glass-card rounded-3xl p-8 reveal relative border-accent-emerald/30" style="border-color: rgba(16,185,129,0.25); box-shadow: 0 0 60px rgba(16,185,129,0.06);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-emerald text-white text-xs font-display font-semibold shadow-lg shadow-accent-emerald/30">
+              Save More
+            </div>
+          </div>
+          <div class="mb-6">
+            <h3 class="font-display font-bold text-2xl mb-1">Pro (Yearly)</h3>
+            <p class="font-body text-sm text-slate-500">Best value for long-term use</p>
+          </div>
+          <div class="flex items-baseline gap-1 mb-2">
+            <span class="font-display font-extrabold text-4xl text-accent-emerald">$59</span>
+            <span class="font-body text-sm text-slate-500">/ year</span>
+          </div>
+          <p class="font-body text-xs text-slate-600 mb-8">Equivalent to about $4.92/month.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">Everything in Free</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Narrate Their Voice — hear translations read aloud</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Narrate My Voice — speak into meetings in their language</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Two-Way Translate & Interpreter Mode</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Inline AI Assistant (Explain & Generate answers)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">SRT subtitle export (original & translated)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Custom speaker names</span>
+            </li>
+          </ul>
+          <a href="https://buy.polar.sh/polar_cl_qmxm3j7fFaBF2S2olQzH65YKRIy9SkBMviYGB2qJLoe" target="_blank" rel="noopener" class="btn-primary relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-emerald/20">
+            <span class="relative z-10 flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              Buy Pro Yearly
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <p class="font-body text-sm text-slate-600">
+          All plans require your own Soniox API key for translation. Pro plans also use your own OpenAI API key for TTS/AI — you only pay API providers for actual usage.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- ===== PLATFORMS ===== -->
   <section id="platforms" class="relative py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -669,11 +879,11 @@
           Works Where <span class="gradient-text">You Already&nbsp;Are</span>
         </h2>
         <p class="font-body text-lg text-slate-400 leading-relaxed">
-          Integrates directly into the platforms you use every day for meetings and learning.
+          Integrates directly into the platforms you use every day for meetings, video content, social media, and online learning.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
         <!-- Google Meet -->
         <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
           <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-green-500/10 to-blue-500/10 flex items-center justify-center border border-white/5">
@@ -712,7 +922,7 @@
             </svg>
           </div>
           <h3 class="font-display font-bold text-base mb-2">Microsoft Teams</h3>
-          <p class="font-body text-xs text-slate-500 leading-relaxed">Seamless translation for your Teams meetings and calls</p>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Supports teams.microsoft.com and teams.live.com</p>
         </div>
 
         <!-- YouTube -->
@@ -725,6 +935,60 @@
           </div>
           <h3 class="font-display font-bold text-base mb-2">YouTube</h3>
           <p class="font-body text-xs text-slate-500 leading-relaxed">Translate video captions and learn from content in any language</p>
+        </div>
+
+        <!-- Facebook -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-blue-500/10 to-indigo-600/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-extrabold text-2xl text-blue-400">f</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Facebook</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate live/video content on facebook.com</p>
+        </div>
+
+        <!-- TikTok -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-slate-500/10 to-rose-500/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-bold text-xl text-white">TT</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">TikTok</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate short-form videos on tiktok.com</p>
+        </div>
+
+        <!-- Douyin -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-bold text-xl text-cyan-300">DY</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Douyin</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Support for douyin.com video translation</p>
+        </div>
+
+        <!-- Dailymotion -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-sky-500/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-bold text-xl text-indigo-300">DM</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Dailymotion</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate videos on dailymotion.com</p>
+        </div>
+
+        <!-- Vimeo -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-sky-500/10 to-cyan-500/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-extrabold text-xl text-sky-300">V</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Vimeo</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate professional video content on vimeo.com</p>
+        </div>
+
+        <!-- Udemy -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10 flex items-center justify-center border border-white/5">
+            <span class="font-display font-bold text-xl text-violet-300">U</span>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Udemy</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Translate online course videos on udemy.com</p>
         </div>
       </div>
     </div>
@@ -780,7 +1044,7 @@
           </div>
           <h3 class="font-display font-bold text-xl mb-3">Start Translating</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-            Open Google Meet, Teams, Zoom, or YouTube. A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
+            Open a supported platform (Google Meet, Zoom, Teams, YouTube, Facebook, TikTok, Douyin, Dailymotion, Vimeo, or Udemy). A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
           </p>
         </div>
       </div>
@@ -804,14 +1068,29 @@
         </p>
       </div>
 
-      <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
-        <ol class="space-y-4 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
-          <li>Open Live Translator during a meeting or video and start translation.</li>
-          <li>Click the Narration button, then enter your OpenAI API key (required for TTS), get your API key <a href="https://platform.openai.com/account/api-keys" target="_blank"><b>HERE</b></a>.</li>
-          <li>Choose a voice and adjust speed/volume settings to your preference.</li>
-          <li>Use <strong>Test</strong> to preview the voice, then click <strong>Start</strong> to enable narration.</li>
-          <li>Optionally enable auto-sync speed to keep narration close to live translation when conversations are fast.</li>
-        </ol>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
+          <h3 class="font-display font-semibold text-base text-accent-violet mb-4">Narrate Their Voice</h3>
+          <p class="font-body text-sm text-slate-500 mb-4">Hear translations from other participants read aloud to you.</p>
+          <ol class="space-y-3 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
+            <li>Open Live Translator during a meeting and start translation.</li>
+            <li>Click the Narration button and enter your OpenAI API key (<a href="https://platform.openai.com/account/api-keys" target="_blank" class="text-accent-cyan hover:underline"><b>get key here</b></a>).</li>
+            <li>Choose a voice and adjust speed/volume settings.</li>
+            <li>Use <strong>Test</strong> to preview, then click <strong>Start</strong> to enable narration.</li>
+            <li>Narration automatically skips your own voice — only other participants' speech is read aloud.</li>
+          </ol>
+        </div>
+        <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
+          <h3 class="font-display font-semibold text-base text-accent-emerald mb-4">Narrate My Voice</h3>
+          <p class="font-body text-sm text-slate-500 mb-4">Speak your words into the meeting in the other person's language.</p>
+          <ol class="space-y-3 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
+            <li>Configure two-way translation: set <strong>My language</strong> and <strong>Their language</strong>.</li>
+            <li>Open Narration settings and toggle on <strong>Narrate my voice</strong>.</li>
+            <li>Click <strong>Start</strong> — your speech is translated and spoken into the meeting in real time.</li>
+            <li>Your original voice is muted while translated audio plays, avoiding overlap.</li>
+            <li>Both "Narrate their voice" and "Narrate my voice" can be used at the same time.</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -955,7 +1234,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                The extension is completely free to install and use. You only pay Soniox for the API usage you consume (pay-as-you-go). There is no monthly subscription from Live Translator, and you can control your usage directly from your Soniox account.
+                The Free plan gives you full real-time translation with 60+ languages — no charge. You only pay Soniox for API usage (pay-as-you-go). If you want advanced features, choose Pro Monthly ($5.99/month) or Pro Yearly ($59/year) for narration, two-way interpreter mode, AI assistant, and SRT export.
               </p>
             </div>
           </div>
@@ -1040,7 +1319,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                Yes! After your meeting ends, you can download the full translated transcript as a text file. This includes both the original speech and translations, timestamped for easy reference. Great for meeting notes and follow-ups.
+                Yes! Download transcripts as TXT or JSON for free. Pro users can also export as SRT subtitle files with original or translated text — perfect for video editing, media players, or archiving. All formats include timestamps for easy reference.
               </p>
             </div>
           </div>
@@ -1138,7 +1417,7 @@
           <div class="w-10 h-10 rounded-xl bg-accent-emerald/10 text-accent-emerald font-display font-bold text-lg flex items-center justify-center mb-4">3</div>
           <h3 class="font-display font-bold text-lg mb-3">Drag ZIP into Extensions Page</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Drag and drop the downloaded ZIP file into <span class="text-slate-300">chrome://extensions</span>. After install, open Google Meet, Teams, Zoom, or YouTube. A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
+            Drag and drop the downloaded ZIP file into <span class="text-slate-300">chrome://extensions</span>. After install, open any supported platform (Google Meet, Zoom, Teams, YouTube, Facebook, TikTok, Douyin, Dailymotion, Vimeo, or Udemy). A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
           </p>
         </div>
       </div>
@@ -1178,6 +1457,7 @@
           <h4 class="font-display font-semibold text-sm mb-4">Product</h4>
           <ul class="space-y-3">
             <li><a href="#features" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Features</a></li>
+            <li><a href="#pricing" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Pricing</a></li>
             <li><a href="#platforms" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Platforms</a></li>
             <li><a href="#how-it-works" class="font-body text-sm text-slate-500 hover:text-white transition-colors">How It Works</a></li>
             <li><a href="#narration-guide" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Narration Guide</a></li>
