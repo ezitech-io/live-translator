@@ -111,74 +111,98 @@
       <p class="meta">
         Developer: Doan Pham &nbsp;·&nbsp;
         Contact: <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a> &nbsp;·&nbsp;
-        Last updated: March 2026
+        Last updated: April 2026
       </p>
     </header>
 
     <div class="highlight-box">
-      <p><strong>Summary:</strong> Live Translator does not collect, store, or share any personal data on its own servers. Audio is processed exclusively by the Soniox API using your own API key. All settings are stored locally on your device.</p>
+      <p><strong>Summary:</strong> Live Translator is designed to minimize data collection and does not run ads or usage analytics. Depending on the features you enable, data is processed locally in your browser and by third-party services you choose or use (including Soniox, OpenAI, Google Translate, and EziTranslate licensing/update APIs).</p>
     </div>
 
     <h2>1. What Is Live Translator?</h2>
     <p>
-      Live Translator is a Chrome browser extension that provides real-time speech transcription and translation during online meetings and video calls on platforms such as Google Meet, Zoom, Microsoft Teams, and YouTube. It captures audio from your browser tab or microphone and sends it to the <a href="https://soniox.com" target="_blank" rel="noopener">Soniox</a> speech-to-text API for processing, then displays the transcription and translation in a floating overlay panel.
+      Live Translator is a browser extension that provides real-time speech transcription and translation in supported web apps (for example Google Meet, Zoom, Microsoft Teams, YouTube, WhatsApp Web, and other listed domains). Depending on enabled features, it can also provide subtitle mode, text-to-speech narration, inline AI assistance, and chat message insertion into supported meeting platforms.
     </p>
 
-    <h2>2. Data We Collect</h2>
-    <p>Live Translator collects and processes only the minimum data necessary to function:</p>
+    <h2>2. Data We Process</h2>
+    <p>Live Translator processes the minimum data required for the features you choose to use:</p>
 
     <ul>
       <li>
-        <strong>Audio data</strong> — When you start a translation session, the extension captures audio from the current browser tab (via the browser's screen-sharing API) or, as a fallback, from your microphone. This audio stream is transmitted in real time to the Soniox API over an encrypted WebSocket connection (<code>wss://stt-rt.soniox.com</code>). Audio data is <em>not</em> stored by this extension; it is processed transiently by Soniox for transcription purposes only.
+        <strong>Audio data for transcription</strong> — During an active translation session, the extension captures tab audio (and optional microphone audio) and streams it to Soniox in real time for speech recognition and translation. This extension does not upload audio to any developer-operated server.
       </li>
       <li>
-        <strong>Soniox API key</strong> — You provide your own Soniox API key in the extension settings. This key is stored locally on your device using the browser's built-in <code>chrome.storage.local</code> API and is never transmitted to any server other than Soniox's own API endpoints.
+        <strong>Transcript and prompt text</strong> — Transcribed/translated text can be processed by third-party services when you enable related features. For example, inline assistant requests may send transcript context and your prompt to OpenAI; narration features may send text to OpenAI TTS or Google Translate TTS.
       </li>
       <li>
-        <strong>Target language preference</strong> — Your chosen translation target language is stored locally in <code>chrome.storage.local</code> on your device. It is not shared or transmitted anywhere.
+        <strong>Meeting chat actions</strong> — If you enable chat-send features, the extension can insert/send translated text into supported meeting chat inputs on the current page. The message is then handled by that platform under your account/session.
+      </li>
+      <li>
+        <strong>Local extension settings</strong> — The extension stores settings locally using <code>chrome.storage.local</code>, including configured API keys, language preferences, voice options, subtitle/display preferences, speaker labels, and saved context presets.
+      </li>
+      <li>
+        <strong>License and subscription metadata</strong> — If you activate premium features, license metadata (such as access token, activation identifier, expiry, and licensed customer name/email returned by the licensing API) is stored locally to maintain your license state.
+      </li>
+      <li>
+        <strong>Page context data (limited)</strong> — On supported pages (for example YouTube), title/description text may be read from the page DOM to help prefill context fields when that workflow is used.
       </li>
     </ul>
 
     <div class="highlight-box section-no-data">
-      <p><strong>We do not collect:</strong> browsing history, page content, cookies, personally identifiable information, usage analytics, crash reports, or any data beyond what is described above.</p>
+      <p><strong>We do not use your data for advertising or analytics:</strong> Live Translator does not run ad tracking, behavioral profiling, or sell your data. It also does not request or collect your full browsing history.</p>
     </div>
 
-    <h2>3. Transcription and Translation Data</h2>
+    <h2>3. Transcript Handling and Export</h2>
     <p>
-      Transcription and translation results (the text displayed in the panel) exist only in memory during an active session. When you close or minimize the panel, this data is discarded.
+      Live transcript text displayed in the panel is kept in memory for the active session and is cleared when the session or panel is closed.
     </p>
     <p>
-      A future version of the extension will include an opt-in feature allowing you to export your transcription history as a local file. If implemented, this data will remain entirely on your device and will not be transmitted to any external server without your explicit action.
+      If you choose to export transcript files (<code>.txt</code>, <code>.json</code>, or <code>.srt</code>), files are generated and downloaded locally in your browser. You control where those files are stored after download.
     </p>
 
     <h2>4. Third-Party Services</h2>
     <p>
-      Live Translator uses the <strong>Soniox API</strong> for real-time speech recognition and translation. Audio data sent to Soniox is governed by <a href="https://soniox.com/privacy" target="_blank" rel="noopener">Soniox's own Privacy Policy</a> and Terms of Service. You are responsible for reviewing and accepting Soniox's policies when you obtain an API key.
+      Live Translator integrates with third-party services selected by feature usage:
+    </p>
+    <ul>
+      <li><strong>Soniox</strong> — Real-time speech transcription/translation.</li>
+      <li><strong>OpenAI</strong> — Optional inline assistant and optional TTS narration features.</li>
+      <li><strong>Google Translate</strong> — Optional TTS narration provider.</li>
+      <li><strong>EziTranslate API</strong> — License activation/verification and extension update checks.</li>
+    </ul>
+    <p>
+      Data sent to these services is governed by each provider's own terms and privacy policy. You are responsible for reviewing and accepting applicable third-party policies.
     </p>
     <p>
-      Live Translator has no affiliation with Google, Zoom, Microsoft, YouTube, or any other platform it operates alongside.
+      Live Translator is an independent product and is not affiliated with Google, Zoom, Microsoft, YouTube, WhatsApp, Soniox, or OpenAI.
     </p>
 
     <h2>5. Permissions Explanation</h2>
-    <p>The extension requests the following browser permissions:</p>
+    <p>The extension requests the following permissions and access scopes:</p>
     <ul>
-      <li><strong>storage</strong> — To save your API key and language preference locally on your device.</li>
-      <li><strong>activeTab</strong> — To inject the translation panel into the currently active browser tab when you click the extension icon.</li>
-      <li><strong>scripting</strong> — To programmatically inject the panel UI into tabs on demand (when used on pages outside the auto-injected list).</li>
-      <li><strong>Microphone / display-capture</strong> — Prompted at runtime. Required to capture audio for transcription. The extension only accesses audio when you explicitly start a translation session. Video tracks are immediately discarded if display-capture is used.</li>
+      <li><strong>storage</strong> — Store settings, API keys, context presets, and local license state.</li>
+      <li><strong>activeTab</strong> — Open/toggle the panel in the active tab when you invoke the extension.</li>
+      <li><strong>scripting</strong> — Inject and control panel scripts/styles on supported pages.</li>
+      <li><strong>offscreen</strong> — Play narration audio in an offscreen document to reduce feedback loops during live transcription.</li>
+      <li><strong>declarativeNetRequest</strong> — Apply scoped header rules required for specific supported platforms (for example WhatsApp Web compatibility).</li>
+      <li><strong>Host permissions</strong> — Limited host access for <code>https://translate.google.com/</code> (Google TTS) and <code>https://web.whatsapp.com/*</code> (platform compatibility).</li>
+      <li><strong>Microphone / display-capture</strong> — Runtime browser prompts; used only when you explicitly start a translation session or related audio workflow.</li>
     </ul>
     <p>
-      The extension does <strong>not</strong> request broad host permissions (<code>*://*/*</code>). It auto-injects only on Google Meet, Zoom, Microsoft Teams, and YouTube. On other sites, injection happens only when you explicitly click the extension icon.
+      The extension does not request universal host permission (<code>&lt;all_urls&gt;</code>). Content scripts run only on an explicit allowlist of supported domains defined in the manifest.
     </p>
 
-    <h2>6. Data Security</h2>
+    <h2>6. Security</h2>
     <p>
-      All communication between the extension and the Soniox API uses encrypted connections (WSS/HTTPS). Your API key is stored locally and is never logged or transmitted by the extension itself. No data is stored on external servers operated by the developer.
+      Network communication to supported service providers uses encrypted HTTPS/WSS connections. Sensitive settings (such as API keys and license token data) are stored locally in extension storage on your device.
     </p>
 
     <h2>7. Data Retention</h2>
     <p>
-      No data is retained by this extension beyond your active browser session. Local settings (API key, language preference) persist across sessions but are stored only on your device. You can remove all stored data at any time by uninstalling the extension or clearing extension data in Chrome settings (<em>chrome://extensions → Details → Clear data</em>).
+      Session transcript state is temporary in memory. Locally saved settings, API keys, saved contexts, and license metadata remain on your device until you change/remove them, clear extension storage, or uninstall the extension.
+    </p>
+    <p>
+      Data processed by third-party providers is retained according to each provider's policy and is outside the direct control of this extension.
     </p>
 
     <h2>8. Children's Privacy</h2>
