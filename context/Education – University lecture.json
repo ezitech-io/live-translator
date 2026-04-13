@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "exportedAt": "2026-04-13T02:59:35.984Z",
+  "contexts": [
+    {
+      "id": "ctx-education-001",
+      "name": "Education – University lecture",
+      "domain": "Education",
+      "topic": "A university lecturer delivers an introductory class on microeconomics, explaining supply and demand, market equilibrium, and price elasticity to undergraduate students.",
+      "terms": "microeconomics, supply curve, demand curve, equilibrium, elasticity, marginal cost, marginal benefit, market price",
+      "speakers": "",
+      "savedAt": 1776049201001
+    }
+  ]
+}
