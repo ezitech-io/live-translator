@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "exportedAt": "2026-04-13T02:59:35.984Z",
+  "contexts": [
+    {
+      "id": "ctx-healthcare-002",
+      "name": "Healthcare – Hospital ward round",
+      "domain": "Healthcare",
+      "topic": "Daily multidisciplinary ward round in an internal medicine department, where doctors, nurses, and residents discuss lab results, imaging findings, and adjust treatment plans for inpatients.",
+      "terms": "blood pressure, heart rate, oxygen saturation, intravenous, antibiotic, lab results, ultrasound, biopsy, discharge plan",
+      "speakers": "",
+      "savedAt": 1776049200002
+    }
+  ]
+}

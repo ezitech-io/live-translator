@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "exportedAt": "2026-04-13T02:59:35.984Z",
+  "contexts": [
+    {
+      "id": "ctx-healthcare-001",
+      "name": "Healthcare – Telemedicine consultation",
+      "domain": "Healthcare",
+      "topic": "A remote telemedicine consultation where a general practitioner reviews the patient's symptoms, medical history, current medications, and explains the diagnosis and treatment plan in simple language.",
+      "terms": "hypertension, diabetes, chronic kidney disease, MRI, CT scan, dosage, contraindication, allergy, prescription, side effects",
+      "speakers": "",
+      "savedAt": 1776049200001
+    }
+  ]
+}
