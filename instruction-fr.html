@@ -421,6 +421,7 @@
 <div class="header-actions">
 <select aria-label="Select language guide version" class="language-select" id="languageSelect">
 <option value="instruction.html">🇺🇸 - English</option>
+      <option value="instruction-vi.html">🇻🇳 - Vietnamese</option>
 <option value="instruction-zh.html">🇨🇳 - Chinese</option>
 <option value="instruction-hi.html">🇮🇳 - Hindi</option>
 <option value="instruction-es.html">🇪🇸 - Spanish</option>
@@ -1404,6 +1405,7 @@ La liste déroulante  <strong>"Leur langue"</strong>  est définie sur la langue
     const currentFile = window.location.pathname.split('/').pop() || 'instruction.html';
     languageSelect.value = currentFile in {
       'instruction.html': true,
+      'instruction-vi.html': true,
       'instruction-zh.html': true,
       'instruction-hi.html': true,
       'instruction-es.html': true,

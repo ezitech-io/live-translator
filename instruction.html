@@ -422,6 +422,7 @@
   <div class="header-actions">
     <select id="languageSelect" class="language-select" aria-label="Select language guide version">
       <option value="instruction.html">🇺🇸 - English</option>
+      <option value="instruction-vi.html">🇻🇳 - Vietnamese</option>
       <option value="instruction-zh.html">🇨🇳 - Chinese</option>
       <option value="instruction-hi.html">🇮🇳 - Hindi</option>
       <option value="instruction-es.html">🇪🇸 - Spanish</option>
@@ -1551,6 +1552,7 @@
     const currentFile = window.location.pathname.split('/').pop() || 'instruction.html';
     languageSelect.value = currentFile in {
       'instruction.html': true,
+      'instruction-vi.html': true,
       'instruction-zh.html': true,
       'instruction-hi.html': true,
       'instruction-es.html': true,
