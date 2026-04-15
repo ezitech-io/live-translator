@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Guide de l'utilisateur — Traducteur en direct</title>
+<title>Guide d'utilisation — Live Translator</title>
 <meta content="Guide d'utilisation complet de l'extension de navigateur Live Translator. Apprenez à installer, configurer des clés API, traduire des réunions en temps réel, utiliser la narration, les sous-titres et toutes les fonctionnalités." name="description"/>
 <link href="./icons/icon-128x128.png" rel="icon" sizes="128x128" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -416,8 +416,8 @@
 <body>
 <!-- ═══ Header ═══ -->
 <header class="site-header">
-<img alt="Traducteur en direct" height="32" src="./icons/icon-128x128.png" width="32"/>
-<h1>Traducteur en direct — Guide de l'utilisateur</h1>
+<img alt="Live Translator" height="32" src="./icons/icon-128x128.png" width="32"/>
+<h1>Live Translator — Guide d'utilisation</h1>
 <div class="header-actions">
 <select aria-label="Select language guide version" class="language-select" id="languageSelect">
 <option value="instruction.html">🇺🇸 - English</option>
@@ -430,7 +430,7 @@
 <option value="instruction-pt.html">🇵🇹 - Portuguese</option>
 <option value="instruction-ru.html">🇷🇺 - Russian</option>
 </select>
-<a class="home-link" href="https://translate.ezitech.io">Retour à la page d'accueil</a>
+<a class="home-link" href="https://translate.ezitech.io">Retour à l'accueil</a>
 </div>
 </header>
 <!-- ═══ Sidebar overlay (mobile) ═══ -->
@@ -441,45 +441,45 @@
 <aside class="sidebar" id="sidebar">
 <nav>
 <div class="nav-group">
-<div class="nav-group-title">Démarrage</div>
+<div class="nav-group-title">Pour commencer</div>
 <a href="#installation">Installation</a>
-<a href="#supported-platforms">Plateformes prises en charge</a>
-<a href="#overview">Présentation des extensions</a>
+<a href="#supported-platforms">Plateformes compatibles</a>
+<a href="#overview">Présentation de l'extension</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">Configuration des clés API</div>
 <a href="#soniox-key">Obtenir une clé API Soniox</a>
 <a href="#openai-key">Obtenir une clé API OpenAI (facultatif)</a>
-<a href="#enter-keys">Entrez vos clés API</a>
+<a href="#enter-keys">Saisir vos clés API</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">Licence &amp; Pro</div>
 <a href="#buy-license">Acheter une clé de licence</a>
-<a href="#activate-license">Activez votre licence</a>
-<a href="#free-vs-pro">Fonctionnalités gratuites ou professionnelles</a>
+<a href="#activate-license">Activer votre licence</a>
+<a href="#free-vs-pro">Gratuit vs Pro</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">Utilisation de base</div>
 <a href="#start-translation">Démarrer une session de traduction</a>
-<a href="#controls">Contrôles : Pause, Reprise, Fin</a>
+<a href="#controls">Contrôles : Pause, Reprise, Fin</a>
 <a href="#language-selection">Changer de langue</a>
-<a href="#microphone">Allumez votre microphone</a>
+<a href="#microphone">Activer votre microphone</a>
 <a href="#font-size">Modifier la taille de la police</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">Caractéristiques</div>
-<a href="#speaker-names">Noms des intervenants</a>
-<a href="#narration">Narration (texte-parole)</a>
-<a href="#narrate-my-voice">Narrate My Voice (Interprète)</a>
-<a href="#send-chat">Envoyer la traduction via le chat</a>
+<div class="nav-group-title">Fonctionnalités</div>
+<a href="#speaker-names">Noms des locuteurs</a>
+<a href="#narration">Narration (synthèse vocale)</a>
+<a href="#narrate-my-voice">Narrer ma voix (Interprète)</a>
+<a href="#send-chat">Envoyer la traduction par chat</a>
 <a href="#subtitle-mode">Mode sous-titres</a>
-<a href="#inline-assistant">Assistant IA en ligne</a>
-<a href="#context-setting">Paramètres contextuels</a>
+<a href="#inline-assistant">Assistant IA intégré</a>
+<a href="#context-setting">Paramètres de contexte</a>
 <a href="#download-transcript">Télécharger la transcription</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">Plus</div>
-<a href="#auto-update">Vérification des mises à jour automatiques</a>
+<a href="#auto-update">Mise à jour automatique</a>
 <a href="#troubleshooting">Dépannage</a>
 <a href="#contact">Contact et assistance</a>
 </div>
@@ -494,33 +494,31 @@
 <p class="section-intro">Installez l'extension Live Translator sur n'importe quel navigateur basé sur Chromium (Chrome, Edge, Brave, Arc, Opera, etc.).</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Ouvrez le site Web Live Translator</span>
+<span class="step-title">Ouvrir le site Web de Live Translator</span>
 <div class="step-body">
-<p>Aller à <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> dans votre navigateur.</p>
+<p>Rendez-vous sur <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> dans votre navigateur.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Cliquez sur le bouton "Installer"</span>
+<span class="step-title">Cliquer sur le bouton « Installer »</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>Ajouter à Chrome
-bouton </strong> . Cela téléchargera le fichier d'extension.</p>
+<p>Cliquez sur le bouton <strong>Add To Chrome</strong>. Le fichier de l'extension sera alors téléchargé.</p>
 <div class="img-placeholder">
-<img alt="Ajouter à Chrome
-bouton " src="./images/add-to-chrome.png" loading="lazy"/>
+<img alt="Add To Chrome" src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Activez le mode développeur dans votre navigateur</span>
+<span class="step-title">Activer le mode développeur dans votre navigateur</span>
 <div class="step-body">
-<p>Ouvrez la page de gestion des extensions de votre navigateur :</p>
+<p>Ouvrez la page de gestion des extensions de votre navigateur :</p>
 <ul>
-<li><strong>Chrome/Brave/Arc :</strong> Type <code>chrome://extensions</code> dans la barre d'adresse et appuyez sur Entrée.</li>
-<li><strong>Bord :</strong> Type <code>edge://extensions</code> dans la barre d'adresse et appuyez sur Entrée.</li>
+<li><strong>Chrome/Brave/Arc :</strong> Saisissez <code>chrome://extensions</code> dans la barre d'adresse et appuyez sur Entrée.</li>
+<li><strong>Edge :</strong> Saisissez <code>edge://extensions</code> dans la barre d'adresse et appuyez sur Entrée.</li>
 </ul>
-<p>Basculer <strong>Mode développeur</strong> ON dans le coin supérieur droit de la page.</p>
+<p>Activez le <strong>Mode développeur</strong> dans le coin supérieur droit de la page.</p>
 <div class="img-placeholder">
 <img alt="Activer le mode développeur" src="./images/enable-dev-mode.png" loading="lazy"/>
 </div>
@@ -528,86 +526,86 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Installer le fichier d'extension</span>
+<span class="step-title">Installer le fichier de l'extension</span>
 <div class="step-body">
-<p>Faites glisser et déposez le fichier téléchargé <code>.zip</code> fichier sur la page des extensions.</p>
+<p>Faites glisser et déposez le fichier <code>.zip</code> téléchargé sur la page des extensions.</p>
 <div class="img-placeholder">
 <img alt="Installer l'extension" src="./images/drag-drop.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">Fait !</div>
+<div class="callout-label">Terminé !</div>
 <p>Vous devriez maintenant voir l'icône Live Translator dans la barre d'outils de votre navigateur. L'extension est installée et prête à être configurée.</p>
 </div>
 <hr class="section-divider"/>
 <!-- Supported Platforms -->
-<h2 id="supported-platforms">Plateformes prises en charge</h2>
-<p class="section-intro">Live Translator fonctionne sur ces sites Web et plateformes. Ouvrez simplement l'un de ces sites et cliquez sur l'icône d'extension pour commencer la traduction.</p>
+<h2 id="supported-platforms">Plateformes compatibles</h2>
+<p class="section-intro">Live Translator fonctionne sur les sites Web et plateformes suivants. Ouvrez simplement l'un de ces sites et cliquez sur l'icône de l'extension pour commencer à traduire.</p>
 <table>
 <thead>
 <tr><th>Plateforme</th><th>Ce que vous pouvez faire</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Google Meet</strong></td><td>Traduisez les réunions, racontez votre voix, envoyez un chat</td></tr>
-<tr><td><strong>Zoom (Web)</strong></td><td>Traduisez les réunions, racontez votre voix, envoyez un chat</td></tr>
-<tr><td><strong>Microsoft Teams (Web)</strong></td><td>Traduisez les réunions, racontez votre voix, envoyez un chat</td></tr>
+<tr><td><strong>Google Meet</strong></td><td>Traduire des réunions, narrer votre voix, envoyer par chat</td></tr>
+<tr><td><strong>Zoom (Web)</strong></td><td>Traduire des réunions, narrer votre voix, envoyer par chat</td></tr>
+<tr><td><strong>Microsoft Teams (Web)</strong></td><td>Traduire des réunions, narrer votre voix, envoyer par chat</td></tr>
 <tr><td><strong>YouTube</strong></td><td>Traduire des vidéos, remplir automatiquement le contexte à partir du titre de la vidéo</td></tr>
-<tr><td><strong>WhatsApp Web</strong></td><td>Traduisez les appels, racontez votre voix</td></tr>
-<tr><td><strong>Facebook</strong></td><td>Traduire des vidéos et des flux en direct</td></tr>
-<tr><td><strong>Tik Tok</strong></td><td>Traduire des vidéos</td></tr>
+<tr><td><strong>WhatsApp Web</strong></td><td>Traduire des appels, narrer votre voix</td></tr>
+<tr><td><strong>Facebook</strong></td><td>Traduire des vidéos et des diffusions en direct</td></tr>
+<tr><td><strong>TikTok</strong></td><td>Traduire des vidéos</td></tr>
 <tr><td><strong>Douyin</strong></td><td>Traduire des vidéos</td></tr>
-<tr><td><strong>Viméo</strong></td><td>Traduire des vidéos</td></tr>
-<tr><td><strong>Mouvement quotidien</strong></td><td>Traduire des vidéos</td></tr>
-<tr><td><strong>Udemy</strong></td><td>Traduire les vidéos de cours</td></tr>
-<tr><td><strong>Domestique</strong></td><td>Traduire les vidéos de cours</td></tr>
+<tr><td><strong>Vimeo</strong></td><td>Traduire des vidéos</td></tr>
+<tr><td><strong>Dailymotion</strong></td><td>Traduire des vidéos</td></tr>
+<tr><td><strong>Udemy</strong></td><td>Traduire des vidéos de cours</td></tr>
+<tr><td><strong>Domestika</strong></td><td>Traduire des vidéos de cours</td></tr>
 </tbody>
 </table>
 <div class="callout callout-tip">
 <div class="callout-label">Astuce</div>
-<p>L'extension capture <strong>onglet audio</strong> directement, de sorte qu'il fonctionne avec n'importe quel audio lu dans l'onglet du navigateur sur les sites pris en charge - aucune configuration de microphone séparée n'est nécessaire pour l'audio de l'autre partie.</p>
+<p>L'extension capture directement <strong>l'audio de l'onglet</strong>, ce qui lui permet de fonctionner avec n'importe quel son diffusé dans l'onglet du navigateur sur les sites compatibles — aucune configuration de microphone supplémentaire n'est nécessaire pour capter l'audio de l'autre personne.</p>
 </div>
 <hr class="section-divider"/>
 <!-- Extension Overview -->
-<h2 id="overview">Présentation des extensions</h2>
-<p class="section-intro">Un aperçu rapide de l'interface principale et de l'endroit où tout se trouve.</p>
+<h2 id="overview">Présentation de l'extension</h2>
+<p class="section-intro">Un aperçu rapide de l'interface principale et de l'emplacement de chaque élément.</p>
 <div class="img-placeholder" style="min-height: 200px;">
-<img alt="Présentation des extensions" src="./images/extension-overview.png" loading="lazy"/>
+<img alt="Présentation de l'extension" src="./images/extension-overview.png" loading="lazy"/>
 </div>
-<p>Le panneau Live Translator comprend les zones principales suivantes :</p>
+<p>Le panneau Live Translator comprend les zones principales suivantes :</p>
 <ul>
-<li><strong>Barre de titre</strong> — Bouton Paramètres, bascule du mode Sous-titres, bouton Fermer. Si une mise à jour est disponible, vous verrez un badge ici.</li>
-<li><strong>Sélecteur de langue</strong> — Deux listes déroulantes : « Ma langue » (la langue que vous parlez) et « Leur langue » (la langue à partir de laquelle vous souhaitez traduire).</li>
-<li><strong>Zone de transcription</strong> — Où le texte traduit apparaît en temps réel, organisé par locuteur.</li>
-<li><strong>Barre de contrôle</strong> — Bouton Démarrer/Arrêter/Pause, bascule du microphone, paramètres de narration, assistant IA, taille de police, téléchargement et autres options.</li>
+<li><strong>Barre de titre</strong> — Bouton Paramètres, bouton Mode sous-titres, bouton Fermer. Si une mise à jour est disponible, un badge s'affiche ici.</li>
+<li><strong>Sélecteur de langue</strong> — Deux menus déroulants : « Ma langue » (la langue que vous parlez) et « Leur langue » (la langue depuis laquelle vous souhaitez traduire).</li>
+<li><strong>Zone de transcription</strong> — L'endroit où le texte traduit apparaît en temps réel, organisé par locuteur.</li>
+<li><strong>Barre de contrôle</strong> — Bouton Démarrer/Arrêter/Pause, bouton microphone, paramètres de narration, assistant IA, taille de police, téléchargement et autres options.</li>
 </ul>
 <div class="callout callout-tip">
 <div class="callout-label">Astuce</div>
-<p>Vous pouvez <strong>faites glisser le panneau</strong> par sa barre de titre pour le déplacer n'importe où sur l'écran, et <strong>redimensionner</strong> en faisant glisser les bords. De cette façon, il ne bloquera pas le contenu important lors de réunions ou de vidéos.</p>
+<p>Vous pouvez <strong>déplacer le panneau</strong> en le faisant glisser par sa barre de titre, et le <strong>redimensionner</strong> en faisant glisser ses bords. Ainsi, il ne masquera pas le contenu important pendant vos réunions ou vidéos.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- API KEYS SETUP                             -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="soniox-key">Obtenir une clé API Soniox</h2>
-<p class="section-intro">Soniox fournit le moteur de reconnaissance vocale et de traduction en temps réel. Vous avez besoin d'une clé API Soniox pour utiliser Live Translator. <span class="badge badge-free">Obligatoire</span></p>
+<p class="section-intro">Soniox fournit le moteur de reconnaissance vocale et de traduction en temps réel. Vous avez besoin d'une clé API Soniox pour utiliser Live Translator. <span class="badge badge-free">Requis</span></p>
 <div class="callout callout-warn">
 <div class="callout-label">Important</div>
-<p>Une clé API Soniox est <strong>obligatoire</strong> pour que l'extension fonctionne. Sans cela, l’extension ne peut transcrire ou traduire aucun audio.</p>
+<p>Une clé API Soniox est <strong>indispensable</strong> au fonctionnement de l'extension. Sans elle, l'extension ne peut ni transcrire ni traduire l'audio.</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Aller sur le site de Soniox</span>
+<span class="step-title">Accéder au site de Soniox</span>
 <div class="step-body">
-<p>Ouvrir <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> dans votre navigateur. Créez un compte en utilisant votre adresse e-mail ou votre connexion Google.</p>
+<p>Ouvrez <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> dans votre navigateur. Créez un compte avec votre adresse e-mail ou via votre compte Google.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Obtenez votre clé API</span>
+<span class="step-title">Obtenir votre clé API</span>
 <div class="step-body">
-<p>Après vous être connecté, accédez à la section API de votre tableau de bord Soniox. Vous pouvez également vous rendre directement sur <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Guide de démarrage de Soniox</a> pour des instructions étape par étape.</p>
-<p>Copiez votre clé API : vous en aurez besoin dans les prochaines étapes.</p>
+<p>Une fois connecté, rendez-vous dans la section API de votre tableau de bord Soniox. Vous pouvez également consulter directement le <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">guide de démarrage de Soniox</a> pour des instructions détaillées.</p>
+<p>Copiez votre clé API — vous en aurez besoin dans les étapes suivantes.</p>
 <div class="img-placeholder">
 <img alt="Obtenir la clé API" src="./images/create-soniox-api.png" loading="lazy"/>
 </div>
@@ -615,41 +613,41 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Ajouter une facturation (obligatoire pour l'utilisation de l'API)</span>
+<span class="step-title">Ajouter un moyen de paiement (requis pour utiliser l'API)</span>
 <div class="step-body">
-<p>Ajoutez un mode de paiement à votre compte Soniox. Vous pouvez utiliser une carte de crédit, PayPal ou d'autres méthodes de paiement. L'API Soniox est payante : vous ne payez que pour ce que vous utilisez.</p>
+<p>Ajoutez un moyen de paiement à votre compte Soniox. Vous pouvez utiliser une carte bancaire, PayPal ou d'autres méthodes de paiement. L'API Soniox fonctionne à l'usage — vous ne payez que ce que vous consommez.</p>
 <div class="img-placeholder">
-<img alt="Ajouter un mode de paiement" src="./images/payment-soniox.png" loading="lazy"/>
+<img alt="Ajouter un moyen de paiement" src="./images/payment-soniox.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Remarque</div>
-<p>Vous devez déposer au moins 1 $ sur votre compte pour utiliser l'API. Vous pouvez déposer davantage si vous le souhaitez.</p>
+<p>Vous devez déposer au minimum 1 $ sur votre compte pour utiliser l'API. Vous pouvez déposer davantage si vous le souhaitez.</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="openai-key">Obtenir une clé API OpenAI (facultatif)</h2>
-<p class="section-intro">Une clé API OpenAI est <strong>facultatif</strong> — vous n'en avez besoin que si vous souhaitez utiliser les voix OpenAI pour la narration ou la fonction Inline AI Assistant. <span class="badge badge-pro">Pro</span></p>
+<p class="section-intro">Une clé API OpenAI est <strong>facultative</strong> — elle n'est nécessaire que si vous souhaitez utiliser les voix OpenAI pour la narration ou la fonctionnalité Assistant IA intégré. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Accéder à la plateforme OpenAI</span>
 <div class="step-body">
-<p>Ouvrir <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> dans votre navigateur.</p>
+<p>Ouvrez <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> dans votre navigateur.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Créez un compte ou connectez-vous</span>
+<span class="step-title">Créer un compte ou se connecter</span>
 <div class="step-body">
-<p>Si vous n'avez pas de compte OpenAI, cliquez sur <strong>"Inscription"</strong> et créez-en un. Si vous en avez déjà un, connectez-vous.</p>
+<p>Si vous n'avez pas encore de compte OpenAI, cliquez sur <strong>« Sign Up »</strong> pour en créer un. Si vous en avez déjà un, connectez-vous.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">Créer une nouvelle clé API</span>
 <div class="step-body">
-<p>Cliquez <strong>"+ Créer une nouvelle clé secrète"</strong>, donnez-lui un nom comme "Live Translator", et cliquez sur <strong>"Créer une clé secrète"</strong>.</p>
-<p><strong>Copiez et enregistrez la clé immédiatement</strong> — OpenAI ne l'affichera qu'une seule fois.</p>
+<p>Cliquez sur <strong>« + Create new secret key »</strong>, donnez-lui un nom comme « Live Translator », puis cliquez sur <strong>« Create secret key »</strong>.</p>
+<p><strong>Copiez et sauvegardez la clé immédiatement</strong> — OpenAI ne l'affichera qu'une seule fois.</p>
 <div class="img-placeholder">
 <img alt="Créer une clé API OpenAI" src="./images/openai-key.png" loading="lazy"/>
 </div>
@@ -657,9 +655,9 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Ajouter une facturation (obligatoire pour l'utilisation de l'API)</span>
+<span class="step-title">Ajouter un moyen de paiement (requis pour utiliser l'API)</span>
 <div class="step-body">
-<p>Aller à <a href="https://platform.openai.com/account/billing" target="_blank">Paramètres de facturation</a> et ajoutez un mode de paiement. L'API OpenAI est payante : vous ne payez que pour ce que vous utilisez.</p>
+<p>Rendez-vous dans les <a href="https://platform.openai.com/account/billing" target="_blank">paramètres de facturation</a> et ajoutez un moyen de paiement. L'API OpenAI fonctionne à l'usage — vous ne payez que ce que vous consommez.</p>
 <div class="img-placeholder">
 <img alt="Créer une clé API OpenAI" src="./images/openai-billing.png" loading="lazy"/>
 </div>
@@ -667,20 +665,20 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Remarque</div>
-<p>Si vous souhaitez uniquement une narration (texte-parole), vous pouvez utiliser <strong>Voix Google Translate gratuites</strong> à la place. La clé OpenAI n'est requise que si vous souhaitez les voix premium d'OpenAI ou la fonctionnalité AI Assistant.</p>
+<p>Si vous souhaitez uniquement la narration (synthèse vocale), vous pouvez utiliser gratuitement les <strong>voix Google Translate</strong>. La clé OpenAI n'est requise que si vous souhaitez bénéficier des voix premium d'OpenAI ou de la fonctionnalité Assistant IA.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="enter-keys">Entrez vos clés API</h2>
-<p class="section-intro">Une fois que vous avez vos clés API, saisissez-les dans la page des paramètres de Live Translator.</p>
+<h2 id="enter-keys">Saisir vos clés API</h2>
+<p class="section-intro">Une fois vos clés API obtenues, saisissez-les dans la page des paramètres de Live Translator.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Ouvrir les paramètres du traducteur en direct</span>
+<span class="step-title">Ouvrir les paramètres de Live Translator</span>
 <div class="step-body">
-<p>Vous pouvez ouvrir les paramètres de l'une des manières suivantes :</p>
+<p>Vous pouvez accéder aux paramètres de plusieurs façons :</p>
 <ul>
-<li>Cliquez sur le <strong>icône d'engrenage</strong> (⚙) en haut à droite du panneau de traduction.</li>
-<li>Cliquez avec le bouton droit sur l'icône Live Translator dans votre barre d'outils → <strong>"Options"</strong>.</li>
-<li>Accédez à la page des extensions de votre navigateur → recherchez Live Translator → <strong>"Détails"</strong> → <strong>"Options d'extension"</strong>.</li>
+<li>Cliquez sur l'<strong>icône d'engrenage</strong> (⚙) en haut à droite du panneau de traduction.</li>
+<li>Faites un clic droit sur l'icône Live Translator dans votre barre d'outils → <strong>« Options »</strong>.</li>
+<li>Rendez-vous sur la page des extensions de votre navigateur → trouvez Live Translator → <strong>« Détails »</strong> → <strong>« Options de l'extension »</strong>.</li>
 </ul>
 <div class="img-placeholder">
 <img alt="Page des paramètres" src="./images/gear.png" loading="lazy"/>
@@ -689,9 +687,9 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Entrez votre clé API Soniox</span>
+<span class="step-title">Saisir votre clé API Soniox</span>
 <div class="step-body">
-<p>Dans la page des paramètres, cliquez sur <strong>"Soniox"</strong> dans la barre latérale gauche. Collez votre clé API Soniox dans le champ de saisie. La clé est enregistrée automatiquement.</p>
+<p>Dans la page des paramètres, cliquez sur <strong>« Soniox »</strong> dans la barre latérale gauche. Collez votre clé API Soniox dans le champ de saisie. La clé est enregistrée automatiquement.</p>
 <div class="img-placeholder">
 <img alt="Paramètres Soniox" src="./images/enter-soniox-key.png" loading="lazy"/>
 </div>
@@ -699,9 +697,9 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Entrez votre clé API OpenAI (facultatif)</span>
+<span class="step-title">Saisir votre clé API OpenAI (facultatif)</span>
 <div class="step-body">
-<p>Cliquez sur <strong>"OpenAI"</strong> dans la barre latérale gauche. Collez votre clé API OpenAI dans le champ de saisie. La clé est enregistrée automatiquement.</p>
+<p>Cliquez sur <strong>« OpenAI »</strong> dans la barre latérale gauche. Collez votre clé API OpenAI dans le champ de saisie. La clé est enregistrée automatiquement.</p>
 <div class="img-placeholder">
 <img alt="Paramètres OpenAI" src="./images/enter-openai-key.png" loading="lazy"/>
 </div>
@@ -709,7 +707,7 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Note de sécurité</div>
-<p>Vos clés API sont stockées <strong>localement sur votre appareil uniquement</strong> en utilisant le stockage d'extensions sécurisé de Chrome. Ils ne sont jamais envoyés aux serveurs de Live Translator — ils sont uniquement utilisés pour communiquer directement avec Soniox et OpenAI.</p>
+<p>Vos clés API sont stockées <strong>uniquement en local sur votre appareil</strong>, via le stockage sécurisé des extensions Chrome. Elles ne sont jamais envoyées aux serveurs de Live Translator — elles servent uniquement à communiquer directement avec Soniox et OpenAI.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
@@ -721,7 +719,7 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 <span class="step-number">1</span>
 <span class="step-title">Accéder à la page d'achat</span>
 <div class="step-body">
-<p>Visitez la page d'accueil de Live Translator à l'adresse <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> et faites défiler jusqu'à <strong>Tarifs</strong> , ou cliquez sur l'icône <strong>"Acheter une licence"</strong> lien dans la page des paramètres de l'extension.</p>
+<p>Rendez-vous sur la page d'accueil de Live Translator à l'adresse <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> et faites défiler jusqu'à la section <strong>Tarifs</strong>, ou cliquez sur le lien <strong>« Acheter une licence »</strong> dans la page des paramètres de l'extension.</p>
 <div class="img-placeholder">
 <img alt="Page d'achat" src="./images/pricing.jpeg" loading="lazy"/>
 </div>
@@ -729,21 +727,21 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Choisissez votre forfait</span>
+<span class="step-title">Choisir votre formule</span>
 <div class="step-body">
-<p>Sélectionnez :</p>
+<p>Sélectionnez l'une des options suivantes :</p>
 <ul>
-<li><strong>Mensuel</strong>  – 5,99 $/mois</li>
-<li><strong>Annuel</strong> — 59 $/an (économisez ~18 %)</li>
+<li><strong>Mensuel</strong> — 5,99 $/mois</li>
+<li><strong>Annuel</strong> — 59 $/an (économisez environ 18 %)</li>
 </ul>
-<p>Vous pouvez obtenir un <strong>Essai gratuit de 7 jours</strong> pour essayer les fonctionnalités Pro. Après l'essai, vous pouvez acheter une licence pour continuer à utiliser les fonctionnalités Pro.</p>
+<p>Vous pouvez bénéficier d'un <strong>essai gratuit de 7 jours</strong> pour tester les fonctionnalités Pro. À la fin de l'essai, vous pouvez acheter une licence pour continuer à utiliser les fonctionnalités Pro.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Terminer le paiement</span>
+<span class="step-title">Finaliser le paiement</span>
 <div class="step-body">
-<p>Vous serez redirigé vers la page de paiement Polar. Entrez votre e-mail et vos informations de paiement, puis finalisez l'achat.</p>
+<p>Vous serez redirigé vers la page de paiement Polar. Saisissez votre adresse e-mail et vos informations de paiement, puis finalisez l'achat.</p>
 <div class="img-placeholder">
 <img alt="Page de paiement" src="./images/purchase.png" loading="lazy"/>
 </div>
@@ -751,23 +749,23 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Recevez votre clé de licence</span>
+<span class="step-title">Recevoir votre clé de licence</span>
 <div class="step-body">
-<p>Après le paiement, vous recevrez un <strong>clé de licence</strong> par e-mail. La clé de licence ressemble à un long code (par exemple, <code>LT-XXXX-XXXX-XXXX-XXXX</code>). Copiez cette clé.</p>
+<p>Après le paiement, vous recevrez une <strong>clé de licence</strong> par e-mail. La clé de licence se présente sous la forme d'un long code (par exemple, <code>LT-XXXX-XXXX-XXXX-XXXX</code>). Copiez cette clé.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Politique de remboursement</div>
-<p>Vous pouvez demander un remboursement dans un délai <strong>30 jours</strong> à compter de la date de paiement en contactant <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
+<p>Vous pouvez demander un remboursement dans les <strong>30 jours</strong> suivant la date de paiement en contactant <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="activate-license">Activez votre licence</h2>
+<h2 id="activate-license">Activer votre licence</h2>
 <p class="section-intro">Après l'achat, activez votre clé de licence dans les paramètres de l'extension.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Entrez et activez votre clé de licence</span>
+<span class="step-title">Saisir et activer votre clé de licence</span>
 <div class="step-body">
-<p>Ouvrez les paramètres de l'extension (icône d'engrenage ou clic droit → Options). Cliquez sur <strong>"Licence"</strong> dans la barre latérale gauche. Collez votre clé de licence dans le champ de saisie et cliquez sur <strong>"Activer"</strong>. L'extension vérifiera votre licence auprès du serveur.</p>
+<p>Ouvrez les paramètres de l'extension (icône d'engrenage ou clic droit → Options). Cliquez sur <strong>« Licence »</strong> dans la barre latérale gauche. Collez votre clé de licence dans le champ de saisie et cliquez sur <strong>« Activer »</strong>. L'extension vérifiera votre licence auprès du serveur.</p>
 <div class="img-placeholder">
 <img alt="Activer la licence" src="./images/enter-license-key.png" loading="lazy"/>
 </div>
@@ -777,18 +775,18 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 <span class="step-number">2</span>
 <span class="step-title">Vérifier l'activation</span>
 <div class="step-body">
-<p>Une fois activé, vous verrez l'état de votre licence, l'e-mail associé à la licence et la date d'expiration. Toutes les fonctionnalités Pro sont désormais débloquées.</p>
+<p>Une fois la licence activée, vous verrez son statut, l'adresse e-mail associée et la date d'expiration. Toutes les fonctionnalités Pro sont désormais débloquées.</p>
 <div class="img-placeholder">
 <img alt="Activer la licence" src="./images/license-activated.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-warn">
-<div class="callout-label">Changer d'appareil ?</div>
-<p>Si vous avez préalablement activé la licence sur un autre appareil, vous pouvez utiliser le <strong>« Activation forcée »</strong> option pour déplacer la licence sur votre appareil actuel. Chaque licence ne peut être active que sur un seul appareil à la fois.</p>
+<div class="callout-label">Changement d'appareil ?</div>
+<p>Si vous avez précédemment activé la licence sur un autre appareil, vous pouvez utiliser l'option <strong>« Forcer l'activation »</strong> pour transférer la licence sur votre appareil actuel. Chaque licence ne peut être active que sur un seul appareil à la fois.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="free-vs-pro">Fonctionnalités gratuites ou professionnelles</h2>
+<h2 id="free-vs-pro">Gratuit vs Pro</h2>
 <p class="section-intro">Voici ce que vous pouvez faire avec la version gratuite et ce qui nécessite une licence Pro.</p>
 <table>
 <thead>
@@ -796,19 +794,19 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </thead>
 <tbody>
 <tr><td>Traduction en temps réel</td><td>✓</td><td>✓</td></tr>
-<tr><td>60+ langues</td><td>✓</td><td>✓</td></tr>
-<tr><td>Étiquettes des enceintes</td><td>✓</td><td>✓</td></tr>
-<tr><td>Faites glisser, redimensionnez, réduisez le panneau</td><td>✓</td><td>✓</td></tr>
-<tr><td>Contrôle de la taille de la police</td><td>✓</td><td>✓</td></tr>
+<tr><td>Plus de 60 langues</td><td>✓</td><td>✓</td></tr>
+<tr><td>Identification des locuteurs</td><td>✓</td><td>✓</td></tr>
+<tr><td>Déplacer, redimensionner, réduire le panneau</td><td>✓</td><td>✓</td></tr>
+<tr><td>Réglage de la taille de la police</td><td>✓</td><td>✓</td></tr>
 <tr><td>Télécharger la transcription (TXT/JSON)</td><td>—</td><td>✓</td></tr>
 <tr><td>Télécharger la transcription (SRT)</td><td>—</td><td>✓</td></tr>
-<tr><td>Raconter leur voix (TTS)</td><td>—</td><td>✓</td></tr>
-<tr><td>Narrate My Voice (Interprète)</td><td>—</td><td>✓</td></tr>
-<tr><td>Envoyer la traduction via le chat</td><td>—</td><td>✓</td></tr>
+<tr><td>Narrer leur voix (TTS)</td><td>—</td><td>✓</td></tr>
+<tr><td>Narrer ma voix (Interprète)</td><td>—</td><td>✓</td></tr>
+<tr><td>Envoyer la traduction par chat</td><td>—</td><td>✓</td></tr>
 <tr><td>Mode sous-titres</td><td>—</td><td>✓</td></tr>
-<tr><td>Assistant IA en ligne</td><td>—</td><td>✓</td></tr>
-<tr><td>Paramètres contextuels</td><td>✓</td><td>✓</td></tr>
-<tr><td>Noms des intervenants</td><td>✓</td><td>✓</td></tr>
+<tr><td>Assistant IA intégré</td><td>—</td><td>✓</td></tr>
+<tr><td>Paramètres de contexte</td><td>✓</td><td>✓</td></tr>
+<tr><td>Noms des locuteurs</td><td>✓</td><td>✓</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
@@ -816,32 +814,32 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 <!-- BASIC USAGE                                -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="start-translation">Démarrer une session de traduction</h2>
-<p class="section-intro">Découvrez comment commencer à traduire lors d'une réunion ou d'une vidéo.</p>
+<p class="section-intro">Découvrez comment lancer une traduction lors d'une réunion ou d'une vidéo.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Ouvrir un site Web pris en charge</span>
+<span class="step-title">Ouvrir un site compatible</span>
 <div class="step-body">
-<p>Aller à n'importe quel <a href="#supported-platforms">plateforme prise en charge</a> (par exemple, Google Meet, Zoom, YouTube, etc.) et rejoignez une réunion ou lisez une vidéo.</p>
+<p>Rendez-vous sur l'une des <a href="#supported-platforms">plateformes compatibles</a> (par exemple, Google Meet, Zoom, YouTube, etc.) et rejoignez une réunion ou lancez une vidéo.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Ouvrez le panneau Live Translator</span>
+<span class="step-title">Ouvrir le panneau Live Translator</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>Icône du traducteur en direct</strong> dans la barre d'outils de votre navigateur. Le panneau de traduction apparaîtra sur la page. Vous pouvez également cliquer sur le <strong>icône flottante</strong> qui apparaît sur la page.</p>
+<p>Cliquez sur l'<strong>icône Live Translator</strong> dans la barre d'outils de votre navigateur. Le panneau de traduction apparaîtra sur la page. Vous pouvez également cliquer sur l'<strong>icône flottante</strong> qui s'affiche sur la page.</p>
 <div class="img-placeholder">
-<img alt="Panneau ouvert" src="./images/floating-icon.png" loading="lazy"/>
+<img alt="Ouvrir le panneau" src="./images/floating-icon.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Sélectionnez vos langues</span>
+<span class="step-title">Sélectionner vos langues</span>
 <div class="step-body">
-<p>Utilisez les deux listes déroulantes de langue en haut du panneau :</p>
+<p>Utilisez les deux menus déroulants de langue en haut du panneau :</p>
 <ul>
-<li><strong>"Ma langue"</strong> — La langue <em>vous</em> parler (par exemple, le vietnamien).</li>
-<li><strong>"Leur langue"</strong> — La langue <em>autres</em> parlez que vous souhaitez traduire (par exemple, l'anglais).</li>
+<li><strong>« Ma langue »</strong> — La langue que <em>vous</em> parlez (par exemple, le français).</li>
+<li><strong>« Leur langue »</strong> — La langue que parlent <em>les autres</em> et que vous souhaitez traduire (par exemple, l'anglais).</li>
 </ul>
 <div class="img-placeholder">
 <img alt="Sélection de la langue" src="./images/language.png" loading="lazy"/>
@@ -850,10 +848,10 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Appuyez sur le bouton Démarrer</span>
+<span class="step-title">Appuyer sur le bouton Démarrer</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>Démarrer</strong>  (icône de lecture) dans la barre de contrôle en bas du panneau.</p>
-<p>Votre navigateur peut demander l'autorisation de capturer de l'audio — cliquez sur <strong>"Autoriser"</strong> et sélectionnez l'onglet que vous souhaitez capturer.</p>
+<p>Cliquez sur le bouton <strong>Démarrer</strong> (icône lecture ▶) dans la barre de contrôle en bas du panneau.</p>
+<p>Votre navigateur peut vous demander l'autorisation de capturer l'audio — cliquez sur <strong>« Autoriser »</strong> et sélectionnez l'onglet que vous souhaitez capturer.</p>
 <div class="img-placeholder">
 <img alt="Bouton Démarrer" src="./images/press-start.png" loading="lazy"/>
 </div>
@@ -863,7 +861,7 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 <span class="step-number">5</span>
 <span class="step-title">Voir les traductions en temps réel</span>
 <div class="step-body">
-<p>Au fur et à mesure que les gens parlent, vous verrez à la fois le <strong>texte original</strong> et le <strong>texte traduit</strong> apparaissent dans la zone de transcription. Les lignes sont automatiquement regroupées par haut-parleur.</p>
+<p>Au fur et à mesure que les participants parlent, le <strong>texte original</strong> et le <strong>texte traduit</strong> apparaissent dans la zone de transcription. Les lignes sont automatiquement regroupées par locuteur.</p>
 <div class="img-placeholder">
 <img alt="Traduction en temps réel" src="./images/translate-real.png" loading="lazy"/>
 </div>
@@ -871,21 +869,20 @@ bouton " src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Défilement automatique</div>
-<p>La transcription défile automatiquement pour afficher le dernier texte. Si vous faites défiler vers le haut pour lire un texte précédent, le défilement automatique s'arrête. Cliquez sur le <strong>"Faire défiler jusqu'au dernier"
-Bouton </strong> qui semble revenir au texte en direct.</p>
+<p>La transcription défile automatiquement pour afficher le texte le plus récent. Si vous faites défiler vers le haut pour relire un passage précédent, le défilement automatique se met en pause. Cliquez sur le bouton <strong>« Aller au plus récent »</strong> qui apparaît pour revenir au texte en direct.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="controls">Contrôles : Pause, Reprise, Fin</h2>
-<p class="section-intro">Comprendre les commandes de la session de traduction.</p>
+<h2 id="controls">Contrôles : Pause, Reprise, Fin</h2>
+<p class="section-intro">Présentation des commandes de la session de traduction.</p>
 <table>
 <thead>
-<tr><th>Bouton</th><th>Ce qu'il fait</th></tr>
+<tr><th>Bouton</th><th>Fonction</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Démarrer</strong> (▶)</td><td>Démarre une nouvelle session de traduction. Efface toute transcription précédente.</td></tr>
-<tr><td><strong>Pause</strong> (⏸)</td><td>Arrête temporairement la traduction. La transcription est conservée. La capture audio continue mais le texte est mis en pause.</td></tr>
-<tr><td><strong>Reprendre</strong> (▶)</td><td>Continue la traduction après une pause. Un nouveau texte apparaît après le contenu précédent.</td></tr>
-<tr><td><strong>Fin</strong> (⏹)</td><td>Arrête complètement la session. La transcription est conservée à l'écran jusqu'à ce que vous démarriez une nouvelle session. Termine la capture audio, désactive le micro et la narration.</td></tr>
+<tr><td><strong>Démarrer</strong> (▶)</td><td>Lance une nouvelle session de traduction. Efface toute transcription précédente.</td></tr>
+<tr><td><strong>Pause</strong> (⏸)</td><td>Interrompt temporairement la traduction. La transcription est conservée. La capture audio continue, mais le texte est mis en pause.</td></tr>
+<tr><td><strong>Reprendre</strong> (▶)</td><td>Reprend la traduction après une pause. Le nouveau texte s'affiche à la suite du contenu précédent.</td></tr>
+<tr><td><strong>Fin</strong> (⏹)</td><td>Arrête complètement la session. La transcription reste affichée jusqu'au démarrage d'une nouvelle session. Met fin à la capture audio et désactive le microphone et la narration.</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
@@ -893,33 +890,33 @@ Bouton </strong> qui semble revenir au texte en direct.</p>
 <p class="section-intro">Vous pouvez modifier les langues de traduction à tout moment.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur la liste déroulante des langues</span>
+<span class="step-title">Cliquer sur le menu déroulant de langue</span>
 <div class="step-body">
-<p>Cliquez sur l'un ou l'autre <strong>"Ma langue"</strong> ou <strong>"Leur langue"</strong> liste déroulante en haut du panneau.</p>
+<p>Cliquez sur le menu déroulant <strong>« Ma langue »</strong> ou <strong>« Leur langue »</strong> en haut du panneau.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
 <span class="step-title">Sélectionner une nouvelle langue</span>
 <div class="step-body">
-<p>La liste prend en charge <strong>60+ langues</strong> triés par ordre alphabétique. Faites défiler ou tapez pour rechercher votre langue. Cliquez pour le sélectionner.</p>
+<p>La liste propose <strong>plus de 60 langues</strong> classées par ordre alphabétique. Faites défiler ou tapez pour rechercher votre langue, puis cliquez pour la sélectionner.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">La traduction redémarre automatiquement</span>
 <div class="step-body">
-<p>Si une session est active, le changement de langue relancera automatiquement la traduction avec la nouvelle paire de langues. Votre sélection de langue est enregistrée pour la prochaine fois.</p>
+<p>Si une session est en cours, le changement de langue relancera automatiquement la traduction avec la nouvelle paire de langues. Votre sélection de langue est mémorisée pour la prochaine utilisation.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="microphone">Allumez votre microphone</h2>
-<p class="section-intro">Activez votre microphone pour que votre propre discours soit également traduit parallèlement à l'audio de la réunion/vidéo.</p>
+<h2 id="microphone">Activer votre microphone</h2>
+<p class="section-intro">Activez votre microphone pour que votre propre voix soit également transcrite et traduite en parallèle de l'audio de la réunion ou de la vidéo.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur le bouton du microphone</span>
+<span class="step-title">Cliquer sur le bouton microphone</span>
 <div class="step-body">
-<p>Dans la barre de contrôle, cliquez sur l'icône <strong>icône de microphone</strong>. L'icône devient active (en surbrillance) lorsque le micro est allumé.</p>
+<p>Dans la barre de contrôle, cliquez sur l'<strong>icône du microphone</strong>. L'icône s'allume (en surbrillance) lorsque le micro est activé.</p>
 <div class="img-placeholder">
 <img alt="Bouton du microphone" src="./images/micro.png" loading="lazy"/>
 </div>
@@ -929,27 +926,27 @@ Bouton </strong> qui semble revenir au texte en direct.</p>
 <span class="step-number">2</span>
 <span class="step-title">Autoriser l'accès au microphone</span>
 <div class="step-body">
-<p>Si c'est la première fois, votre navigateur vous demandera l'autorisation du microphone. Cliquez <strong>"Autoriser"</strong>.</p>
+<p>Si c'est la première fois, votre navigateur vous demandera l'autorisation d'accéder au microphone. Cliquez sur <strong>« Autoriser »</strong>.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Astuce</div>
-<p>Le microphone est <strong>désactivé par défaut</strong> lorsque vous ouvrez le panneau. Activez-le uniquement si vous souhaitez que votre propre discours soit transcrit et traduit. Quand vous appuyez <strong>Fin</strong>, le microphone s'éteint automatiquement.</p>
+<p>Le microphone est <strong>désactivé par défaut</strong> à l'ouverture du panneau. Activez-le uniquement si vous souhaitez que votre propre voix soit transcrite et traduite. Lorsque vous appuyez sur <strong>Fin</strong>, le microphone se désactive automatiquement.</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="font-size">Modifier la taille de la police</h2>
-<p class="section-intro">Ajustez la taille du texte de la transcription pour une lecture confortable.</p>
+<p class="section-intro">Ajustez la taille du texte de la transcription pour un confort de lecture optimal.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur le bouton de taille de police</span>
+<span class="step-title">Cliquer sur le bouton de taille de police</span>
 <div class="step-body">
-<p>Dans la barre de contrôle, cliquez sur l'icône <strong>bouton de taille de police</strong> (Icône Aa). Un menu apparaît avec trois tailles :</p>
+<p>Dans la barre de contrôle, cliquez sur le <strong>bouton de taille de police</strong> (icône Aa). Un menu apparaît avec trois options :</p>
 <ul>
-<li><strong>Petit</strong>  – Vue compacte, peut contenir davantage de texte</li>
+<li><strong>Petit</strong> — Vue compacte, affiche davantage de texte</li>
 <li><strong>Moyen</strong> — Taille équilibrée par défaut</li>
 <li><strong>Grand</strong> — Plus facile à lire à distance</li>
 </ul>
-<p>Cliquez sur votre taille préférée. La modification s'applique immédiatement et est enregistrée pour la prochaine fois.</p>
+<p>Cliquez sur la taille souhaitée. La modification s'applique immédiatement et est mémorisée pour la prochaine utilisation.</p>
 <div class="img-placeholder">
 <img alt="Sélecteur de taille de police" src="./images/font.png" loading="lazy"/>
 </div>
@@ -959,24 +956,22 @@ Bouton </strong> qui semble revenir au texte en direct.</p>
 <!-- ────────────────────────────────────────── -->
 <!-- FEATURES                                   -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="speaker-names">Noms des intervenants</h2>
-<p class="section-intro">Attribuez de vrais noms aux orateurs afin de pouvoir facilement identifier qui a dit quoi dans la transcription. <span class="badge badge-free">Gratuit</span></p>
+<h2 id="speaker-names">Noms des locuteurs</h2>
+<p class="section-intro">Attribuez de vrais noms aux locuteurs afin d'identifier facilement qui a dit quoi dans la transcription. <span class="badge badge-free">Gratuit</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Ouvrez le menu "Plus"</span>
+<span class="step-title">Ouvrir le menu « Plus »</span>
 <div class="step-body">
-<p>Dans la barre de contrôle, cliquez sur l'icône <strong>"Plus"
-Bouton </strong>  (icône ⋯). Puis cliquez <strong>"Paramètres des enceintes"
-bouton </strong> .</p>
+<p>Dans la barre de contrôle, cliquez sur le bouton <strong>« Plus »</strong> (icône ⋯). Puis cliquez sur le bouton <strong>« Paramètres des locuteurs »</strong>.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Ouvrir la boîte de dialogue « Paramètres des enceintes »</span>
+<span class="step-title">Ouvrir la boîte de dialogue « Paramètres des locuteurs »</span>
 <div class="step-body">
-<p>La boîte de dialogue Paramètres des haut-parleurs s'ouvrira.</p>
+<p>La boîte de dialogue Paramètres des locuteurs s'ouvrira.</p>
 <div class="img-placeholder">
-<img alt="Boîte de dialogue Paramètres des enceintes" src="./images/speaker.png" loading="lazy"/>
+<img alt="Boîte de dialogue Paramètres des locuteurs" src="./images/speaker.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -984,18 +979,18 @@ bouton </strong> .</p>
 <span class="step-number">3</span>
 <span class="step-title">Attribuer des noms</span>
 <div class="step-body">
-<p>Vous verrez une liste des haut-parleurs détectés (Haut-parleur 1, Haut-parleur 2, etc.). Tapez un vrai nom à côté de chacun (par exemple, « John », « Sarah »). Cliquez <strong>"Ajouter une ligne"</strong> si vous avez besoin de plus.</p>
-<p>Cliquez <strong>"Enregistrer"</strong>. Toutes les lignes de transcription – passées et futures – utiliseront désormais les noms que vous avez attribués.</p>
+<p>Vous verrez la liste des locuteurs détectés (Locuteur 1, Locuteur 2, etc.). Saisissez un vrai nom à côté de chacun d'eux (par exemple, « Jean », « Sarah »). Cliquez sur <strong>« Ajouter une ligne »</strong> si vous avez besoin de plus d'entrées.</p>
+<p>Cliquez sur <strong>« Enregistrer »</strong>. Toutes les lignes de transcription — passées et futures — utiliseront désormais les noms que vous avez attribués.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narration">Narration (texte-parole)</h2>
-<p class="section-intro">Faites lire les traductions à haute voix afin que vous puissiez les écouter au lieu de les lire. Il s'agit de la fonctionnalité « Narrer leur voix ». <span class="badge badge-pro">Pro</span></p>
+<h2 id="narration">Narration (synthèse vocale)</h2>
+<p class="section-intro">Faites lire les traductions à voix haute pour pouvoir écouter au lieu de lire. Il s'agit de la fonctionnalité « Narrer leur voix ». <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Ouvrir les paramètres de narration</span>
 <div class="step-body">
-<p>Dans la barre de contrôle, cliquez sur l'icône <strong>bouton de narration</strong> (icône de haut-parleur). La boîte de dialogue Paramètres de narration s'ouvre.</p>
+<p>Dans la barre de contrôle, cliquez sur le <strong>bouton de narration</strong> (icône haut-parleur). La boîte de dialogue Paramètres de narration s'ouvre.</p>
 <div class="img-placeholder">
 <img alt="Paramètres de narration" src="./images/narration-setting.png" loading="lazy"/>
 </div>
@@ -1003,32 +998,31 @@ bouton </strong> .</p>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Choisissez un fournisseur TTS et une voix</span>
+<span class="step-title">Choisir un fournisseur TTS et une voix</span>
 <div class="step-body">
-<p>Sélectionnez votre fournisseur de voix :</p>
+<p>Sélectionnez votre fournisseur de voix :</p>
 <ul>
-<li><strong>Google Traduction</strong> (Gratuit) — Fonctionne sans aucune clé API. Des voix de bonne qualité dans plus de 60 langues.</li>
-<li><strong>OpenAI</strong> (Premium) — Des voix de meilleure qualité et plus naturelles. Nécessite une clé API OpenAI.</li>
+<li><strong>Google Translate</strong> (Gratuit) — Fonctionne sans clé API. Voix de bonne qualité dans plus de 60 langues.</li>
+<li><strong>OpenAI</strong> (Premium) — Voix de meilleure qualité, plus naturelles. Nécessite une clé API OpenAI.</li>
 </ul>
-<p>Sélectionnez un <strong>voix</strong> dans la liste déroulante et cliquez sur <strong>"Tester"</strong> pour prévisualiser le son.</p>
-<p>Ajuster <strong>vitesse de la voix</strong> et <strong>volume</strong> si nécessaire.</p>
+<p>Sélectionnez une <strong>voix</strong> dans le menu déroulant et cliquez sur <strong>« Tester »</strong> pour écouter un aperçu.</p>
+<p>Ajustez la <strong>vitesse de la voix</strong> et le <strong>volume</strong> si nécessaire.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">Démarrer la narration</span>
 <div class="step-body">
-<p>Cliquez <strong>« Racontez leur voix »
-bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une traduction apparaîtra, elle vous sera lue à haute voix.</p>
-<p>Pour arrêter, cliquez à nouveau sur le bouton de narration, puis cliquez sur <strong>"Arrêter"</strong>.</p>
+<p>Cliquez sur le bouton <strong>« Narrer leur voix »</strong> dans la boîte de dialogue. Désormais, chaque traduction sera automatiquement lue à voix haute.</p>
+<p>Pour arrêter, cliquez à nouveau sur le bouton de narration, puis sur <strong>« Arrêter »</strong>.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narrate-my-voice">Raconter ma voix (mode interprète)</h2>
-<p class="section-intro">Parlez dans votre langue et faites écouter votre voix traduite aux autres participants à la réunion, comme si vous aviez un interprète personnel. <span class="badge badge-pro">Pro</span></p>
+<h2 id="narrate-my-voice">Narrer ma voix (mode Interprète)</h2>
+<p class="section-intro">Parlez dans votre langue et faites entendre votre voix traduite aux autres participants de la réunion — comme si vous aviez un interprète personnel. <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">Exigences</div>
-<p>Cette fonctionnalité fonctionne sur <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, <strong>Microsoft Teams (Web)</strong>, et <strong>WhatsApp Web</strong>. Vous avez besoin de votre <strong>microphone activé</strong> et une séance de traduction <strong>en cours d'exécution</strong>.</p>
+<div class="callout-label">Prérequis</div>
+<p>Cette fonctionnalité est disponible sur <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, <strong>Microsoft Teams (Web)</strong> et <strong>WhatsApp Web</strong>. Votre <strong>microphone doit être activé</strong> et une session de traduction doit être <strong>en cours</strong>.</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
@@ -1041,10 +1035,10 @@ bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une trad
 <span class="step-number">2</span>
 <span class="step-title">Configurer « Narrer ma voix »</span>
 <div class="step-body">
-<p>Dans la boîte de dialogue, recherchez le <strong>« Racontez ma voix »</strong> section. Choisissez votre voix et votre fournisseur préférés (Google ou OpenAI). Vous pouvez définir un <strong>voix différente</strong> pour la narration « Ma voix » et « Leur voix ».</p>
-<p>Cliquez <strong>"Tester"</strong> pour prévisualiser la voix sélectionnée.</p>
+<p>Dans la boîte de dialogue, repérez la section <strong>« Narrer ma voix »</strong>. Choisissez votre voix et votre fournisseur préférés (Google ou OpenAI). Vous pouvez attribuer une <strong>voix différente</strong> pour la narration de « Ma voix » et « Leur voix ».</p>
+<p>Cliquez sur <strong>« Tester »</strong> pour écouter un aperçu de la voix sélectionnée.</p>
 <div class="img-placeholder">
-<img alt="Raconter ma voix" src="./images/my-voice-setting.png" loading="lazy"/>
+<img alt="Narrer ma voix" src="./images/my-voice-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1052,15 +1046,15 @@ bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une trad
 <span class="step-number">3</span>
 <span class="step-title">Démarrer « Narrer ma voix »</span>
 <div class="step-body">
-<p>Cliquez <strong>« Commencer à raconter ma voix »</strong>. Lorsque vous parlez, vos mots sont :</p>
+<p>Cliquez sur <strong>« Démarrer Narrer ma voix »</strong>. Lorsque vous parlez, vos paroles sont :</p>
 <ol>
-<li>Transcrit dans votre langue</li>
-<li>Traduit dans l'autre langue</li>
-<li>Parlé à voix haute lors de la réunion pour que l'autre personne entende votre voix traduite</li>
+<li>Transcrites dans votre langue</li>
+<li>Traduites dans l'autre langue</li>
+<li>Prononcées à voix haute dans la réunion pour que l'autre personne entende votre voix traduite</li>
 </ol>
-<p>Votre microphone est automatiquement coupé pendant la lecture de l'audio traduit pour éviter l'écho.</p>
+<p>Votre microphone est automatiquement mis en sourdine pendant la diffusion de l'audio traduit pour éviter les échos.</p>
 <div class="img-placeholder">
-<img alt="Commencer à raconter ma voix" src="./images/narrate-my-voice.png" loading="lazy"/>
+<img alt="Démarrer Narrer ma voix" src="./images/narrate-my-voice.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1068,46 +1062,46 @@ bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une trad
 <span class="step-number">4</span>
 <span class="step-title">Arrêter la narration</span>
 <div class="step-body">
-<p>Cliquez sur le bouton de narration puis <strong>"Arrêter"</strong>, ou appuyez sur <strong>Fin</strong> pour arrêter toute la session (ce qui arrête également la narration).</p>
+<p>Cliquez sur le bouton de narration puis sur <strong>« Arrêter »</strong>, ou appuyez sur <strong>Fin</strong> pour mettre fin à toute la session (ce qui arrête également la narration).</p>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Remarque</div>
-<p>Vous ne pouvez exécuter que <strong>un mode de narration à la fois</strong> — soit « Narrate My Voice » ou « Narrate Their Voice », pas les deux simultanément. L'icône de la barre d'outils change pour indiquer quel mode est actif.</p>
+<p>Vous ne pouvez utiliser qu'<strong>un seul mode de narration à la fois</strong> — soit « Narrer ma voix », soit « Narrer leur voix », mais pas les deux simultanément. L'icône de la barre d'outils change pour indiquer le mode actif.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="send-chat">Envoyer la traduction via le chat</h2>
+<h2 id="send-chat">Envoyer la traduction par chat</h2>
 <p class="section-intro">Envoyez automatiquement votre discours traduit sous forme de messages texte dans le chat de la réunion. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Activer « Envoyer via Chat »</span>
+<span class="step-title">Activer « Envoyer par chat »</span>
 <div class="step-body">
-<p>Dans la barre de contrôle, recherchez le <strong>bouton d'envoi de chat</strong> (à côté de l'icône du microphone). Cliquez dessus pour l'activer - le bouton s'allume <strong>vert</strong> lorsqu'il est actif.</p>
+<p>Dans la barre de contrôle, repérez le <strong>bouton d'envoi par chat</strong> (à côté de l'icône du microphone). Cliquez dessus pour l'activer — le bouton devient <strong>vert</strong> lorsqu'il est actif.</p>
 <div class="img-placeholder">
-<img alt="Envoyer le chat" src="./images/send-via-chat.png" loading="lazy"/>
+<img alt="Envoyer par chat" src="./images/send-via-chat.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Parlez et ça envoie automatiquement</span>
+<span class="step-title">Parlez et l'envoi se fait automatiquement</span>
 <div class="step-body">
 <p>Avec votre microphone activé et une session de traduction en cours, lorsque vous parlez, votre texte traduit est automatiquement inséré dans le chat de la réunion et envoyé.</p>
-<p>Cela fonctionne sur <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, et <strong>Microsoft Teams (Web)</strong>.</p>
+<p>Cette fonctionnalité est disponible sur <strong>Google Meet</strong>, <strong>Zoom (Web)</strong> et <strong>Microsoft Teams (Web)</strong>.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Astuce</div>
-<p>Ceci est utile lorsque « Narrate My Voice » n'est pas disponible pour votre plate-forme, ou si vous souhaitez simultanément une narration vocale ET une traduction de chat textuel.</p>
+<p>Cette option est utile lorsque « Narrer ma voix » n'est pas disponible pour votre plateforme, ou si vous souhaitez combiner la narration vocale ET l'envoi par chat simultanément.</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="subtitle-mode">Mode sous-titres</h2>
-<p class="section-intro">Passez à une barre de sous-titres minimale de style film qui affiche uniquement la dernière traduction en bas de l'écran. <span class="badge badge-pro">Pro</span></p>
+<p class="section-intro">Passez à une barre de sous-titres minimaliste, style cinéma, qui affiche uniquement la dernière traduction en bas de l'écran. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Activer le mode sous-titres</span>
 <div class="step-body">
-<p>Dans la barre de titre du panneau de traduction, cliquez sur l'icône <strong>icône de sous-titre</strong> (icône de sous-titres codés).</p>
+<p>Dans la barre de titre du panneau de traduction, cliquez sur l'<strong>icône de sous-titres</strong> (icône sous-titres codés).</p>
 <p>Le panneau complet sera remplacé par une fine barre de sous-titres en bas de l'écran.</p>
 <div class="img-placeholder">
 <img alt="Mode sous-titres" src="./images/subtitle.png" loading="lazy"/>
@@ -1118,14 +1112,14 @@ bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une trad
 <span class="step-number">2</span>
 <span class="step-title">Personnaliser la barre de sous-titres</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>icône de réglage</strong> (engrenage de paramètres) sur la barre de sous-titres pour régler :</p>
+<p>Cliquez sur l'<strong>icône de réglage</strong> (engrenage) sur la barre de sous-titres pour ajuster :</p>
 <ul>
-<li><strong>Opacité</strong> — Faites glisser pour rendre la barre plus ou moins transparente.</li>
-<li><strong>Taille de la police</strong> — Choisissez parmi un texte petit, moyen ou grand.</li>
+<li><strong>Opacité</strong> — Déplacez le curseur pour rendre la barre plus ou moins transparente.</li>
+<li><strong>Taille de la police</strong> — Choisissez entre petit, moyen ou grand.</li>
 </ul>
-<p>Vous pouvez également <strong>glisser</strong> la barre de sous-titre pour la déplacer, et <strong>redimensionner</strong> en faisant glisser les bords.</p>
+<p>Vous pouvez également <strong>déplacer</strong> la barre de sous-titres par glisser-déposer, et la <strong>redimensionner</strong> en faisant glisser ses bords.</p>
 <div class="img-placeholder">
-<img alt="Paramètre des sous-titres" src="./images/customize-subtitle-bar.png" loading="lazy"/>
+<img alt="Paramètres des sous-titres" src="./images/customize-subtitle-bar.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1133,103 +1127,102 @@ bouton </strong> dans la boîte de dialogue. Désormais, chaque fois qu'une trad
 <span class="step-number">3</span>
 <span class="step-title">Quitter le mode sous-titres</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>bouton de fermeture</strong> (✕) sur la barre de sous-titres pour revenir au panneau de traduction complet.</p>
+<p>Cliquez sur le <strong>bouton de fermeture</strong> (✕) de la barre de sous-titres pour revenir au panneau de traduction complet.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="inline-assistant">Assistant IA en ligne</h2>
-<p class="section-intro">Obtenez des explications basées sur l'IA et des réponses générées en fonction du contexte de la conversation, directement à partir de la transcription. <span class="badge badge-pro">Pro</span></p>
+<h2 id="inline-assistant">Assistant IA intégré</h2>
+<p class="section-intro">Obtenez des explications et des réponses générées par l'IA en fonction du contexte de la conversation, directement depuis la transcription. <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">Exigence</div>
-<p>L'assistant IA en ligne nécessite un <strong>Clé API OpenAI</strong> à configurer dans les paramètres.</p>
+<div class="callout-label">Prérequis</div>
+<p>L'Assistant IA intégré nécessite qu'une <strong>clé API OpenAI</strong> soit configurée dans les paramètres.</p>
 </div>
-<h3>Expliquez une ligne</h3>
+<h3>Expliquer une ligne</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Survolez une ligne de transcription</span>
+<span class="step-title">Survoler une ligne de la transcription</span>
 <div class="step-body">
-<p>Lorsque vous survolez n'importe quelle ligne de la transcription, un <strong>Icône IA</strong> (🤖) apparaît.</p>
+<p>Lorsque vous survolez n'importe quelle ligne de la transcription, une <strong>icône IA</strong> (🤖) apparaît.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Cliquez sur l'icône IA et choisissez "Expliquer"</span>
+<span class="step-title">Cliquer sur l'icône IA et choisir « Expliquer »</span>
 <div class="step-body">
-<p>L'assistant IA s'ouvre dans une fenêtre séparée. Il utilisera le contexte complet de la transcription et la ligne sélectionnée pour vous donner une explication détaillée.</p>
+<p>L'assistant IA s'ouvre dans une fenêtre séparée. Il utilise le contexte complet de la transcription et la ligne sélectionnée pour vous fournir une explication détaillée.</p>
 <div class="img-placeholder">
-<img alt="Expliquez" src="./images/ai-explain.png" loading="lazy"/>
+<img alt="Expliquer" src="./images/ai-explain.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <h3>Générer une réponse</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur l'icône AI et choisissez "Générer la réponse"</span>
+<span class="step-title">Cliquer sur l'icône IA et choisir « Générer une réponse »</span>
 <div class="step-body">
-<p>L'assistant IA générera une suggestion de réponse basée sur ce qui a été dit lors de la conversation. Il peut même utiliser la recherche sur le Web pour fournir des réponses plus précises.</p>
+<p>L'assistant IA génère une suggestion de réponse basée sur ce qui a été dit dans la conversation. Il peut même effectuer une recherche sur le Web pour fournir des réponses plus précises.</p>
 <div class="img-placeholder">
 <img alt="Générer une réponse" src="./images/ai-help-answer.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>Ouvrez le panneau Assistant</h3>
+<h3>Ouvrir le panneau de l'assistant</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur le bouton Assistant dans la barre de contrôle</span>
+<span class="step-title">Cliquer sur le bouton Assistant dans la barre de contrôle</span>
 <div class="step-body">
-<p>Vous pouvez également ouvrir le panneau de l'assistant AI directement depuis le <strong>bouton Assistant</strong> (icône 🤖) dans la barre de contrôle. Cela ouvre une fenêtre de discussion déplaçable dans laquelle vous pouvez saisir n'importe quelle question. L'assistant a accès à la transcription complète comme contexte.</p>
+<p>Vous pouvez également ouvrir le panneau de l'assistant IA directement depuis le <strong>bouton Assistant</strong> (icône 🤖) dans la barre de contrôle. Une fenêtre de discussion déplaçable s'ouvre, dans laquelle vous pouvez poser n'importe quelle question. L'assistant a accès à l'intégralité de la transcription comme contexte.</p>
 <div class="img-placeholder">
-<img alt="Panneau adjoint" src="./images/ai.png" loading="lazy"/>
+<img alt="Panneau de l'assistant" src="./images/ai.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="context-setting">Paramètres contextuels</h2>
-<p class="section-intro">Fournissez un contexte sur le sujet de la conversation pour améliorer la précision de la traduction. <span class="badge badge-free">Gratuit</span></p>
+<h2 id="context-setting">Paramètres de contexte</h2>
+<p class="section-intro">Fournissez des informations sur le sujet de la conversation pour améliorer la précision de la traduction. <span class="badge badge-free">Gratuit</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Ouvrir les paramètres contextuels</span>
+<span class="step-title">Ouvrir les paramètres de contexte</span>
 <div class="step-body">
-<p>Cliquez sur le <strong>"Plus"
-Bouton </strong> bouton (⋯) dans la barre de contrôle, puis cliquez sur <strong>"Contexte"</strong>.</p>
+<p>Cliquez sur le bouton <strong>« Plus »</strong> (⋯) dans la barre de contrôle, puis cliquez sur <strong>« Contexte »</strong>.</p>
 <div class="img-placeholder">
-<img alt="Paramètre de contexte" src="./images/context.png" loading="lazy"/>
+<img alt="Paramètres de contexte" src="./images/context.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Remplissez les champs contextuels</span>
+<span class="step-title">Remplir les champs de contexte</span>
 <div class="step-body">
-<p>Vous pouvez fournir :</p>
+<p>Vous pouvez renseigner :</p>
 <ul>
-<li><strong>Domaine / Sujet</strong>  – Le sujet de la conversation (par exemple, "Conférence médicale", "Standup sur l'ingénierie logicielle").</li>
-<li><strong>Termes clés</strong> — Termes techniques, noms propres ou jargon qui peuvent être difficiles à reconnaître (par exemple, « Kubernetes, passerelle API, microservices »).</li>
-<li><strong>Informations sur le haut-parleur</strong> — Noms et rôles des participants (par exemple, « Dr Smith — cardiologue, présentateur »).</li>
+<li><strong>Domaine / Sujet</strong> — Le thème de la conversation (par exemple, « Conférence médicale », « Réunion quotidienne d'ingénierie logicielle »).</li>
+<li><strong>Termes clés</strong> — Termes techniques, noms propres ou jargon susceptibles d'être difficiles à reconnaître (par exemple, « Kubernetes, passerelle API, microservices »).</li>
+<li><strong>Informations sur les locuteurs</strong> — Noms et rôles des participants (par exemple, « Dr Dupont — cardiologue, présentateur »).</li>
 </ul>
-<p>Cliquez <strong>"Appliquer"</strong> pour envoyer ce contexte au moteur de traduction de la session en cours.</p>
+<p>Cliquez sur <strong>« Appliquer »</strong> pour envoyer ce contexte au moteur de traduction pour la session en cours.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Enregistrer les préréglages (facultatif)</span>
+<span class="step-title">Enregistrer des préréglages (facultatif)</span>
 <div class="step-body">
-<p>Si vous organisez des réunions récurrentes sur des sujets similaires, cliquez sur <strong>"Enregistrer le préréglage"</strong> pour enregistrer le contexte actuel. La prochaine fois, chargez simplement le préréglage au lieu de tout retaper.</p>
-<p>Vous pouvez également <strong>Importer/Exporter</strong> préréglages sous forme de fichiers JSON pour les partager ou les sauvegarder.</p>
+<p>Si vous avez des réunions récurrentes sur des sujets similaires, cliquez sur <strong>« Enregistrer le préréglage »</strong> pour sauvegarder le contexte actuel. La prochaine fois, il vous suffira de charger le préréglage au lieu de tout ressaisir.</p>
+<p>Vous pouvez également <strong>importer/exporter</strong> des préréglages au format JSON pour les partager ou les sauvegarder.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Remplissage automatique YouTube</div>
-<p>Lors de l'utilisation de Live Translator sur <strong>YouTube</strong>, les champs contextuels peuvent être <strong>rempli automatiquement</strong> avec le titre et la description de la vidéo. Cela aide le moteur de traduction à mieux comprendre le sujet de la vidéo.</p>
+<p>Lorsque vous utilisez Live Translator sur <strong>YouTube</strong>, les champs de contexte peuvent être <strong>remplis automatiquement</strong> avec le titre et la description de la vidéo. Cela aide le moteur de traduction à mieux comprendre le sujet de la vidéo.</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="download-transcript">Télécharger la transcription</h2>
-<p class="section-intro">Enregistrez vos transcriptions traduites sous forme de fichiers pour référence ultérieure ou pour utilisation dans d'autres outils. <span class="badge badge-pro">Pro</span></p>
+<p class="section-intro">Enregistrez vos transcriptions traduites sous forme de fichiers pour les consulter ultérieurement ou les utiliser dans d'autres outils. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Cliquez sur le bouton Télécharger</span>
+<span class="step-title">Cliquer sur le bouton Télécharger</span>
 <div class="step-body">
-<p>Après une session de traduction (ou pendant une), cliquez sur l'icône <strong>bouton de téléchargement</strong> (icône ↓) dans la barre de contrôle. La boîte de dialogue Télécharger la transcription s'ouvre.</p>
+<p>Après une session de traduction (ou pendant celle-ci), cliquez sur le <strong>bouton de téléchargement</strong> (icône ↓) dans la barre de contrôle. La boîte de dialogue Télécharger la transcription s'ouvre.</p>
 <div class="img-placeholder">
 <img alt="Télécharger la transcription" src="./images/download-transcript.png" loading="lazy"/>
 </div>
@@ -1237,18 +1230,18 @@ Bouton </strong> bouton (⋯) dans la barre de contrôle, puis cliquez sur <stro
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Choisissez un format</span>
+<span class="step-title">Choisir un format</span>
 <div class="step-body">
-<p>Sélectionnez votre format préféré :</p>
+<p>Sélectionnez votre format préféré :</p>
 <table>
 <thead>
 <tr><th>Format</th><th>Idéal pour</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>TXT</strong></td><td>Fichier texte simple avec horodatages et noms de locuteurs. Facile à lire.</td></tr>
-<tr><td><strong>JSON</strong></td><td>Format de données structurées. Idéal pour le traitement avec d'autres outils ou scripts.</td></tr>
-<tr><td><strong>SRT (original)</strong></td><td>Fichier de sous-titres avec le texte dans la langue d'origine. Utilisation dans un logiciel de montage vidéo.</td></tr>
-<tr><td><strong>SRT (Traduit)</strong></td><td>Fichier de sous-titres avec le texte traduit. Utilisation dans un logiciel de montage vidéo.</td></tr>
+<tr><td><strong>TXT</strong></td><td>Fichier texte simple avec horodatages et noms des locuteurs. Facile à lire.</td></tr>
+<tr><td><strong>JSON</strong></td><td>Format de données structuré. Idéal pour le traitement avec d'autres outils ou scripts.</td></tr>
+<tr><td><strong>SRT (Original)</strong></td><td>Fichier de sous-titres avec le texte dans la langue d'origine. À utiliser dans un logiciel de montage vidéo.</td></tr>
+<tr><td><strong>SRT (Traduit)</strong></td><td>Fichier de sous-titres avec le texte traduit. À utiliser dans un logiciel de montage vidéo.</td></tr>
 </tbody>
 </table>
 </div>
@@ -1262,19 +1255,19 @@ Bouton </strong> bouton (⋯) dans la barre de contrôle, puis cliquez sur <stro
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Confidentialité</div>
-<p>Les fichiers de transcription sont générés <strong>entièrement dans votre navigateur</strong>. Aucune donnée de transcription n'est envoyée à un serveur pendant le processus de téléchargement.</p>
+<p>Les fichiers de transcription sont générés <strong>entièrement dans votre navigateur</strong>. Aucune donnée de transcription n'est envoyée à un serveur lors du processus de téléchargement.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- MORE                                       -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="auto-update">Vérification des mises à jour automatiques</h2>
-<p class="section-intro">L'extension recherche automatiquement les mises à jour à chaque fois que vous l'ouvrez.</p>
+<h2 id="auto-update">Mise à jour automatique</h2>
+<p class="section-intro">L'extension vérifie automatiquement la disponibilité de mises à jour à chaque ouverture.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Recherchez le badge de mise à jour</span>
+<span class="step-title">Repérer le badge de mise à jour</span>
 <div class="step-body">
-<p>Lorsqu'une nouvelle version est disponible, vous verrez un <strong>"Mise à jour disponible"</strong> badge dans la barre de titre du panneau de traduction.</p>
+<p>Lorsqu'une nouvelle version est disponible, un badge <strong>« Mise à jour disponible »</strong> s'affiche dans la barre de titre du panneau de traduction.</p>
 <div class="img-placeholder">
 <img alt="Mise à jour disponible" src="./images/update-badge.png" loading="lazy"/>
 </div>
@@ -1282,32 +1275,32 @@ Bouton </strong> bouton (⋯) dans la barre de contrôle, puis cliquez sur <stro
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Cliquez pour mettre à jour</span>
+<span class="step-title">Cliquer pour mettre à jour</span>
 <div class="step-body">
-<p>Cliquez sur le badge pour accéder à la page d'installation où vous pourrez télécharger la dernière version. Suivez la même chose <a href="#installation">étapes d'installation</a> à mettre à jour.</p>
+<p>Cliquez sur le badge pour accéder à la page d'installation où vous pourrez télécharger la dernière version. Suivez les mêmes <a href="#installation">étapes d'installation</a> pour effectuer la mise à jour.</p>
 </div>
 </div>
 <hr class="section-divider"/>
 <h2 id="troubleshooting">Dépannage</h2>
 <p class="section-intro">Problèmes courants et comment les résoudre.</p>
-<h3>Message "Aucune clé API Soniox"</h3>
+<h3>Message « Aucune clé API Soniox »</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Solution</span>
 <div class="step-body">
-<p>Vous n'avez pas encore saisi votre clé API Soniox. Aller à <a href="#enter-keys">Entrez vos clés API</a> pour le configurer.</p>
+<p>Vous n'avez pas encore saisi votre clé API Soniox. Consultez la section <a href="#enter-keys">Saisir vos clés API</a> pour la configurer.</p>
 </div>
 </div>
-<h3>Aucun son n'est capturé</h3>
+<h3>Aucun audio n'est capturé</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Solution</span>
 <div class="step-body">
 <ul>
-<li>Assurez-vous d'avoir cliqué sur <strong>"Autoriser"</strong> lorsque le navigateur a demandé l'autorisation de capture audio.</li>
-<li>Assurez-vous d'avoir sélectionné le <strong>onglet correct</strong> à partager lorsque vous y êtes invité.</li>
-<li>Essayez d'actualiser la page et d'ouvrir à nouveau le traducteur.</li>
-<li>Vérifiez que la réunion/la vidéo comporte réellement une lecture audio.</li>
+<li>Assurez-vous d'avoir cliqué sur <strong>« Autoriser »</strong> lorsque le navigateur a demandé l'autorisation de capture audio.</li>
+<li>Vérifiez que vous avez sélectionné le <strong>bon onglet</strong> à partager lorsque vous y avez été invité.</li>
+<li>Essayez d'actualiser la page et de rouvrir le traducteur.</li>
+<li>Vérifiez que la réunion ou la vidéo diffuse bien de l'audio.</li>
 </ul>
 </div>
 </div>
@@ -1317,22 +1310,21 @@ Bouton </strong> bouton (⋯) dans la barre de contrôle, puis cliquez sur <stro
 <span class="step-title">Solution</span>
 <div class="step-body">
 <ul>
-<li>Assurez-vous que
-La liste déroulante  <strong>"Leur langue"</strong>  est définie sur la langue correcte parlée.</li>
-<li>Utiliser <a href="#context-setting">Paramètres contextuels</a> pour fournir des informations sur le sujet et des termes clés.</li>
-<li>Assurez-vous que la qualité audio est claire : le bruit de fond peut affecter la précision.</li>
+<li>Vérifiez que le menu déroulant <strong>« Leur langue »</strong> est bien réglé sur la langue réellement parlée.</li>
+<li>Utilisez les <a href="#context-setting">paramètres de contexte</a> pour fournir des informations sur le sujet et les termes clés.</li>
+<li>Assurez-vous que la qualité audio est bonne — le bruit de fond peut affecter la précision.</li>
 </ul>
 </div>
 </div>
-<h3>« Narrate My Voice » — les autres n'entendent pas la traduction</h3>
+<h3>« Narrer ma voix » — les autres n'entendent pas la traduction</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Solution</span>
 <div class="step-body">
 <ul>
-<li>Confirmez que vous êtes sur un <strong>plateforme prise en charge</strong> (Google Meet, Zoom Web, Teams Web, WhatsApp Web).</li>
-<li>Assurez-vous qu'une session de traduction est <strong>en cours d'exécution</strong> et votre <strong>le microphone est allumé</strong>.</li>
-<li>Vérifiez que vous disposez d'un <strong>Licence Pro</strong> activé.</li>
+<li>Vérifiez que vous êtes sur une <strong>plateforme compatible</strong> (Google Meet, Zoom Web, Teams Web, WhatsApp Web).</li>
+<li>Assurez-vous qu'une session de traduction est <strong>en cours</strong> et que votre <strong>microphone est activé</strong>.</li>
+<li>Vérifiez que vous disposez d'une <strong>licence Pro</strong> activée.</li>
 <li>Essayez d'actualiser la page de la réunion et de recommencer.</li>
 </ul>
 </div>
@@ -1343,9 +1335,9 @@ La liste déroulante  <strong>"Leur langue"</strong>  est définie sur la langue
 <span class="step-title">Solution</span>
 <div class="step-body">
 <ul>
-<li>Vérifiez votre <strong>Clé API OpenAI</strong> est saisi correctement dans <a href="#enter-keys">paramètres</a>.</li>
-<li>Assurez-vous que votre compte OpenAI a <strong>configuration de la facturation</strong> avec suffisamment de crédits.</li>
-<li>Si vous n'avez pas besoin des fonctionnalités OpenAI, utilisez <strong>Voix Google Traduction</strong> pour la narration à la place (gratuit, aucune clé API requise).</li>
+<li>Vérifiez que votre <strong>clé API OpenAI</strong> est correctement saisie dans les <a href="#enter-keys">paramètres</a>.</li>
+<li>Assurez-vous que votre compte OpenAI dispose d'un <strong>moyen de paiement configuré</strong> avec suffisamment de crédits.</li>
+<li>Si vous n'avez pas besoin des fonctionnalités OpenAI, utilisez les <strong>voix Google Translate</strong> pour la narration (gratuites, sans clé API).</li>
 </ul>
 </div>
 </div>
@@ -1355,25 +1347,25 @@ La liste déroulante  <strong>"Leur langue"</strong>  est définie sur la langue
 <span class="step-title">Solution</span>
 <div class="step-body">
 <ul>
-<li>Live Translator ne fonctionne que sur <a href="#supported-platforms">plateformes prises en charge</a>. Il n'apparaîtra pas sur les sites Web non pris en charge.</li>
-<li>Si le site est pris en charge mais que l'extension ne s'affiche pas, essayez <strong>actualisation de la page</strong>.</li>
-<li>Assurez-vous que l'extension est <strong>activé</strong> dans la page de gestion des extensions de votre navigateur.</li>
+<li>Live Translator ne fonctionne que sur les <a href="#supported-platforms">plateformes compatibles</a>. L'extension n'apparaîtra pas sur les sites non pris en charge.</li>
+<li>Si le site est compatible mais que l'extension ne s'affiche pas, essayez d'<strong>actualiser la page</strong>.</li>
+<li>Assurez-vous que l'extension est <strong>activée</strong> dans la page de gestion des extensions de votre navigateur.</li>
 </ul>
 </div>
 </div>
 <hr class="section-divider"/>
 <h2 id="contact">Contact et assistance</h2>
 <p class="section-intro">Besoin d'aide ? Vous avez une question ou une suggestion ?</p>
-<p>Contactez le développeur :</p>
+<p>Contactez le développeur :</p>
 <ul>
-<li><strong>E-mail :</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
-<li><strong>Site Web :</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
-<li><strong>WhatsApp :</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
-<li><strong>Télégramme :</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
+<li><strong>E-mail :</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
+<li><strong>Site Web :</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
+<li><strong>WhatsApp :</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
+<li><strong>Telegram :</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
 </ul>
 <div class="callout callout-tip">
-<div class="callout-label">Commentaires Bienvenue</div>
-<p>Si vous avez des idées de nouvelles fonctionnalités ou d'améliorations, nous serions ravis de vous entendre. Envoyez-nous un email avec vos suggestions!</p>
+<div class="callout-label">Vos retours sont les bienvenus</div>
+<p>Si vous avez des idées de nouvelles fonctionnalités ou d'améliorations, nous serions ravis de vous entendre. Envoyez-nous un e-mail avec vos suggestions !</p>
 </div>
 <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.82rem; color: var(--c-text-secondary);">
 <p>© 2026 Doan Pham. Live Translator est une extension de navigateur indépendante et n'est pas affiliée à Google, Zoom, Microsoft, Soniox ou OpenAI.</p>

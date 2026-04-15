@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>उपयोगकर्ता गाइड - लाइव अनुवादक</title>
-<meta content="लाइव ट्रांसलेटर ब्राउज़र एक्सटेंशन के लिए संपूर्ण उपयोगकर्ता मार्गदर्शिका। जानें कि कैसे इंस्टॉल करें, एपीआई कुंजियों को कॉन्फ़िगर करें, वास्तविक समय में मीटिंग का अनुवाद करें, कथन, उपशीर्षक और सभी सुविधाओं का उपयोग करें।" name="description"/>
+<title>User Guide — Live Translator</title>
+<meta content="Live Translator browser extension की पूरी user guide। जानें कैसे install करें, API keys setup करें, real-time में meetings translate करें, narration, subtitles और सभी features use करें।" name="description"/>
 <link href="./icons/icon-128x128.png" rel="icon" sizes="128x128" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -416,8 +416,8 @@
 <body>
 <!-- ═══ Header ═══ -->
 <header class="site-header">
-<img alt="लाइव अनुवादक" height="32" src="./icons/icon-128x128.png" width="32"/>
-<h1>लाइव अनुवादक — उपयोगकर्ता गाइड</h1>
+<img alt="Live Translator" height="32" src="./icons/icon-128x128.png" width="32"/>
+<h1>Live Translator — User Guide</h1>
 <div class="header-actions">
 <select aria-label="Select language guide version" class="language-select" id="languageSelect">
 <option value="instruction.html">🇺🇸 - English</option>
@@ -430,7 +430,7 @@
 <option value="instruction-pt.html">🇵🇹 - Portuguese</option>
 <option value="instruction-ru.html">🇷🇺 - Russian</option>
 </select>
-<a class="home-link" href="https://translate.ezitech.io">होमपेज पर वापस जाएं</a>
+<a class="home-link" href="https://translate.ezitech.io">Homepage पर जाएं</a>
 </div>
 </header>
 <!-- ═══ Sidebar overlay (mobile) ═══ -->
@@ -441,47 +441,47 @@
 <aside class="sidebar" id="sidebar">
 <nav>
 <div class="nav-group">
-<div class="nav-group-title">आरंभ करना</div>
-<a href="#installation">स्थापना</a>
-<a href="#supported-platforms">समर्थित प्लेटफार्म</a>
-<a href="#overview">एक्सटेंशन अवलोकन</a>
+<div class="nav-group-title">शुरू करें</div>
+<a href="#installation">Installation</a>
+<a href="#supported-platforms">Supported Platforms</a>
+<a href="#overview">Extension का Overview</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">एपीआई कुंजी सेटअप</div>
-<a href="#soniox-key">सोनियोक्स एपीआई कुंजी प्राप्त करें</a>
-<a href="#openai-key">ओपनएआई एपीआई कुंजी प्राप्त करें (वैकल्पिक)</a>
-<a href="#enter-keys">अपनी एपीआई कुंजी दर्ज करें</a>
+<div class="nav-group-title">API Keys Setup</div>
+<a href="#soniox-key">Soniox API Key लें</a>
+<a href="#openai-key">OpenAI API Key लें (Optional)</a>
+<a href="#enter-keys">अपनी API Keys डालें</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">लाइसेंस एवं प्रो</div>
-<a href="#buy-license">लाइसेंस कुंजी खरीदें</a>
-<a href="#activate-license">अपना लाइसेंस सक्रिय करें</a>
-<a href="#free-vs-pro">मुफ़्त बनाम प्रो सुविधाएँ</a>
+<div class="nav-group-title">License &amp; Pro</div>
+<a href="#buy-license">License Key खरीदें</a>
+<a href="#activate-license">License Activate करें</a>
+<a href="#free-vs-pro">Free vs Pro Features</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">बुनियादी उपयोग</div>
-<a href="#start-translation">एक अनुवाद सत्र प्रारंभ करें</a>
-<a href="#controls">नियंत्रण: रोकें, फिर से शुरू करें, समाप्त करें</a>
-<a href="#language-selection">भाषाएं बदलें</a>
-<a href="#microphone">अपना माइक्रोफोन चालू करें</a>
-<a href="#font-size">फ़ॉन्ट आकार बदलें</a>
+<div class="nav-group-title">बुनियादी इस्तेमाल</div>
+<a href="#start-translation">Translation शुरू करें</a>
+<a href="#controls">Controls: Pause, Resume, End</a>
+<a href="#language-selection">भाषा बदलें</a>
+<a href="#microphone">Microphone चालू करें</a>
+<a href="#font-size">Font Size बदलें</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">विशेषताएं</div>
-<a href="#speaker-names">वक्ता के नाम</a>
-<a href="#narration">कथन (पाठ से वाक्)</a>
-<a href="#narrate-my-voice">मेरी आवाज सुनाओ (दुभाषिया)</a>
-<a href="#send-chat">चैट के माध्यम से अनुवाद भेजें</a>
-<a href="#subtitle-mode">उपशीर्षक मोड</a>
-<a href="#inline-assistant">इनलाइन एआई असिस्टेंट</a>
-<a href="#context-setting">संदर्भ सेटिंग्स</a>
-<a href="#download-transcript">प्रतिलेख डाउनलोड करें</a>
+<div class="nav-group-title">Features</div>
+<a href="#speaker-names">Speaker के नाम</a>
+<a href="#narration">Narration (Text-to-Speech)</a>
+<a href="#narrate-my-voice">Narrate My Voice (Interpreter)</a>
+<a href="#send-chat">Chat से Translation भेजें</a>
+<a href="#subtitle-mode">Subtitle Mode</a>
+<a href="#inline-assistant">Inline AI Assistant</a>
+<a href="#context-setting">Context Settings</a>
+<a href="#download-transcript">Transcript Download करें</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">और अधिक</div>
-<a href="#auto-update">ऑटो अपडेट जांच</a>
-<a href="#troubleshooting">समस्या निवारण</a>
-<a href="#contact">संपर्क एवं सहायता</a>
+<div class="nav-group-title">और भी</div>
+<a href="#auto-update">Auto Update Check</a>
+<a href="#troubleshooting">समस्या और समाधान</a>
+<a href="#contact">संपर्क और सहायता</a>
 </div>
 </nav>
 </aside>
@@ -490,345 +490,345 @@
 <!-- ────────────────────────────────────────── -->
 <!-- GETTING STARTED                            -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="installation">स्थापना</h2>
-<p class="section-intro">किसी भी क्रोमियम-आधारित ब्राउज़र (क्रोम, एज, ब्रेव, आर्क, ओपेरा, आदि) पर लाइव ट्रांसलेटर एक्सटेंशन इंस्टॉल करें।</p>
+<h2 id="installation">Installation</h2>
+<p class="section-intro">Live Translator extension को किसी भी Chromium-based browser (Chrome, Edge, Brave, Arc, Opera, आदि) पर install करें।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">लाइव ट्रांसलेटर वेबसाइट खोलें</span>
+<span class="step-title">Live Translator की website खोलें</span>
 <div class="step-body">
-<p>पर जाएँ <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> आपके ब्राउज़र में।</p>
+<p>अपने browser में <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> खोलें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">"इंस्टॉल करें" बटन पर क्लिक करें</span>
+<span class="step-title">"Install" button पर click करें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>क्रोम में जोड़ें</strong> बटन। इससे एक्सटेंशन फ़ाइल डाउनलोड हो जाएगी.</p>
+<p><strong>Add To Chrome</strong> button पर click करें। इससे extension की file download हो जाएगी।</p>
 <div class="img-placeholder">
-<img alt="क्रोम में जोड़ें" src="./images/add-to-chrome.png" loading="lazy"/>
+<img alt="Add To Chrome" src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">अपने ब्राउज़र में डेवलपर मोड सक्षम करें</span>
+<span class="step-title">Browser में Developer Mode चालू करें</span>
 <div class="step-body">
-<p>अपने ब्राउज़र का एक्सटेंशन प्रबंधन पृष्ठ खोलें:</p>
+<p>अपने browser का extensions page खोलें:</p>
 <ul>
-<li><strong>क्रोम/ब्रेव/आर्क:</strong> प्रकार <code>chrome://extensions</code> एड्रेस बार में और एंटर दबाएं।</li>
-<li><strong>किनारा:</strong> प्रकार <code>edge://extensions</code> एड्रेस बार में और एंटर दबाएं।</li>
+<li><strong>Chrome/Brave/Arc:</strong> Address bar में <code>chrome://extensions</code> type करें और Enter दबाएं।</li>
+<li><strong>Edge:</strong> Address bar में <code>edge://extensions</code> type करें और Enter दबाएं।</li>
 </ul>
-<p>टॉगल करें <strong>डेवलपर मोड</strong> पेज के ऊपरी दाएं कोने में चालू है।</p>
+<p>Page के ऊपर दाईं तरफ <strong>Developer mode</strong> को ON करें।</p>
 <div class="img-placeholder">
-<img alt="डेवलपर मोड सक्षम करें" src="./images/enable-dev-mode.png" loading="lazy"/>
+<img alt="Enable Developer Mode" src="./images/enable-dev-mode.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">एक्सटेंशन फ़ाइल इंस्टॉल करें</span>
+<span class="step-title">Extension file install करें</span>
 <div class="step-body">
-<p>डाउनलोड किए गए को खींचें और छोड़ें <code>.zip</code> एक्सटेंशन पेज पर फ़ाइल करें।</p>
+<p>Download की हुई <code>.zip</code> file को extensions page पर drag and drop करें।</p>
 <div class="img-placeholder">
-<img alt="एक्सटेंशन इंस्टॉल करें" src="./images/drag-drop.png" loading="lazy"/>
+<img alt="Install Extension" src="./images/drag-drop.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">हो गया!</div>
-<p>अब आपको अपने ब्राउज़र टूलबार में लाइव ट्रांसलेटर आइकन देखना चाहिए। एक्सटेंशन स्थापित है और कॉन्फ़िगर होने के लिए तैयार है।</p>
+<p>अब आपको browser toolbar में Live Translator का icon दिखना चाहिए। Extension install हो गया है और setup के लिए तैयार है।</p>
 </div>
 <hr class="section-divider"/>
 <!-- Supported Platforms -->
-<h2 id="supported-platforms">समर्थित प्लेटफार्म</h2>
-<p class="section-intro">लाइव ट्रांसलेटर इन वेबसाइटों और प्लेटफार्मों पर काम करता है। बस इनमें से कोई भी साइट खोलें और अनुवाद शुरू करने के लिए एक्सटेंशन आइकन पर क्लिक करें।</p>
+<h2 id="supported-platforms">Supported Platforms</h2>
+<p class="section-intro">Live Translator इन websites और platforms पर काम करता है। बस कोई भी supported site खोलें और translate करने के लिए extension icon पर click करें।</p>
 <table>
 <thead>
-<tr><th>प्लेटफार्म</th><th>आप क्या कर सकते हैं</th></tr>
+<tr><th>Platform</th><th>आप क्या कर सकते हैं</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>गूगल मीट</strong></td><td>बैठकों का अनुवाद करें, अपनी आवाज बताएं, चैट भेजें</td></tr>
-<tr><td><strong>ज़ूम (वेब)</strong></td><td>बैठकों का अनुवाद करें, अपनी आवाज बताएं, चैट भेजें</td></tr>
-<tr><td><strong>माइक्रोसॉफ्ट टीमें (वेब)</strong></td><td>बैठकों का अनुवाद करें, अपनी आवाज बताएं, चैट भेजें</td></tr>
-<tr><td><strong>यूट्यूब</strong></td><td>वीडियो का अनुवाद करें, वीडियो शीर्षक से संदर्भ स्वतः भरें</td></tr>
-<tr><td><strong>व्हाट्सएप वेब</strong></td><td>कॉल का अनुवाद करें, अपनी आवाज़ बताएं</td></tr>
-<tr><td><strong>फेसबुक</strong></td><td>वीडियो और लाइव स्ट्रीम का अनुवाद करें</td></tr>
-<tr><td><strong>टिकटॉक</strong></td><td>वीडियो का अनुवाद करें</td></tr>
-<tr><td><strong>डौयिन</strong></td><td>वीडियो का अनुवाद करें</td></tr>
-<tr><td><strong>वीमियो</strong></td><td>वीडियो का अनुवाद करें</td></tr>
-<tr><td><strong>डेलीमोशन</strong></td><td>वीडियो का अनुवाद करें</td></tr>
-<tr><td><strong>उडेमी</strong></td><td>पाठ्यक्रम वीडियो का अनुवाद करें</td></tr>
-<tr><td><strong>डोमेस्टिका</strong></td><td>पाठ्यक्रम वीडियो का अनुवाद करें</td></tr>
+<tr><td><strong>Google Meet</strong></td><td>Meetings translate करें, अपनी आवाज़ narrate करें, chat भेजें</td></tr>
+<tr><td><strong>Zoom (Web)</strong></td><td>Meetings translate करें, अपनी आवाज़ narrate करें, chat भेजें</td></tr>
+<tr><td><strong>Microsoft Teams (Web)</strong></td><td>Meetings translate करें, अपनी आवाज़ narrate करें, chat भेजें</td></tr>
+<tr><td><strong>YouTube</strong></td><td>Videos translate करें, video title से context auto-fill होता है</td></tr>
+<tr><td><strong>WhatsApp Web</strong></td><td>Calls translate करें, अपनी आवाज़ narrate करें</td></tr>
+<tr><td><strong>Facebook</strong></td><td>Videos और live streams translate करें</td></tr>
+<tr><td><strong>TikTok</strong></td><td>Videos translate करें</td></tr>
+<tr><td><strong>Douyin</strong></td><td>Videos translate करें</td></tr>
+<tr><td><strong>Vimeo</strong></td><td>Videos translate करें</td></tr>
+<tr><td><strong>Dailymotion</strong></td><td>Videos translate करें</td></tr>
+<tr><td><strong>Udemy</strong></td><td>Course videos translate करें</td></tr>
+<tr><td><strong>Domestika</strong></td><td>Course videos translate करें</td></tr>
 </tbody>
 </table>
 <div class="callout callout-tip">
-<div class="callout-label">टिप</div>
-<p>एक्सटेंशन कैप्चर करता है <strong>टैब ऑडियो</strong> सीधे, इसलिए यह समर्थित साइटों पर ब्राउज़र टैब में चल रहे किसी भी ऑडियो के साथ काम करता है - दूसरे पक्ष के ऑडियो के लिए अलग माइक्रोफोन सेटअप की आवश्यकता नहीं है।</p>
+<div class="callout-label">Tip</div>
+<p>Extension सीधे <strong>tab audio</strong> capture करता है, इसलिए यह supported sites पर browser tab में चल रहे किसी भी audio के साथ काम करता है — सामने वाले का audio सुनने के लिए अलग से microphone setup करने की ज़रूरत नहीं है।</p>
 </div>
 <hr class="section-divider"/>
 <!-- Extension Overview -->
-<h2 id="overview">एक्सटेंशन अवलोकन</h2>
-<p class="section-intro">मुख्य इंटरफ़ेस का एक त्वरित अवलोकन और जहां सब कुछ स्थित है।</p>
+<h2 id="overview">Extension का Overview</h2>
+<p class="section-intro">Main interface का एक quick overview — सब कुछ कहाँ है, यह जानें।</p>
 <div class="img-placeholder" style="min-height: 200px;">
-<img alt="एक्सटेंशन अवलोकन" src="./images/extension-overview.png" loading="lazy"/>
+<img alt="Extension Overview" src="./images/extension-overview.png" loading="lazy"/>
 </div>
-<p>लाइव ट्रांसलेटर पैनल में ये मुख्य क्षेत्र हैं:</p>
+<p>Live Translator panel के मुख्य हिस्से ये हैं:</p>
 <ul>
-<li><strong>शीर्षक पट्टी</strong> - सेटिंग्स बटन, उपशीर्षक मोड टॉगल, बंद करें बटन। यदि कोई अपडेट उपलब्ध है, तो आपको यहां एक बैज दिखाई देगा।</li>
-<li><strong>भाषा चयनकर्ता</strong> — दो ड्रॉपडाउन: "मेरी भाषा" (वह भाषा जो आप बोलते हैं) और "उनकी भाषा" (वह भाषा जिससे आप अनुवाद करना चाहते हैं)।</li>
-<li><strong>प्रतिलेख क्षेत्र</strong> - जहां अनुवादित पाठ स्पीकर द्वारा व्यवस्थित होकर वास्तविक समय में दिखाई देता है।</li>
-<li><strong>कंट्रोल बार</strong> - प्रारंभ/रोकें/रोकें बटन, माइक्रोफ़ोन टॉगल, वर्णन सेटिंग, एआई सहायक, फ़ॉन्ट आकार, डाउनलोड, और अधिक विकल्प।</li>
+<li><strong>Title bar</strong> — Settings button, Subtitle mode toggle, Close button। अगर कोई update available है, तो यहाँ एक badge दिखेगा।</li>
+<li><strong>Language selector</strong> — दो dropdowns: "My language" (जो भाषा आप बोलते हैं) और "Their language" (जिस भाषा का translation चाहिए)।</li>
+<li><strong>Transcript area</strong> — यहाँ translated text real-time में दिखता है, speaker के हिसाब से organize होता है।</li>
+<li><strong>Control bar</strong> — Start/Stop/Pause button, microphone toggle, narration settings, AI assistant, font size, download, और बाकी options।</li>
 </ul>
 <div class="callout callout-tip">
-<div class="callout-label">टिप</div>
-<p>आप कर सकते हैं <strong>पैनल को खींचें</strong> इसे स्क्रीन पर कहीं भी ले जाने के लिए इसके टाइटल बार का उपयोग करें, और <strong>इसका आकार बदलें</strong> किनारों को खींचकर। इस तरह यह मीटिंग या वीडियो के दौरान महत्वपूर्ण सामग्री को ब्लॉक नहीं करेगा।</p>
+<div class="callout-label">Tip</div>
+<p>आप panel को उसके title bar से <strong>drag</strong> करके screen पर कहीं भी ले जा सकते हैं, और किनारों को खींचकर <strong>resize</strong> भी कर सकते हैं। इससे meeting या video के दौरान ज़रूरी content छुपेगा नहीं।</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- API KEYS SETUP                             -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="soniox-key">सोनियोक्स एपीआई कुंजी प्राप्त करें</h2>
-<p class="section-intro">Soniox वास्तविक समय वाक् पहचान और अनुवाद इंजन प्रदान करता है। लाइव ट्रांसलेटर का उपयोग करने के लिए आपको एक सोनियोक्स एपीआई कुंजी की आवश्यकता है। <span class="badge badge-free">आवश्यक है</span></p>
+<h2 id="soniox-key">Soniox API Key लें</h2>
+<p class="section-intro">Soniox real-time speech recognition और translation engine provide करता है। Live Translator use करने के लिए आपको Soniox API key चाहिए। <span class="badge badge-free">ज़रूरी</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">महत्वपूर्ण</div>
-<p>एक सोनियोक्स एपीआई कुंजी है <strong>आवश्यक है</strong> कार्य विस्तार के लिए। इसके बिना, एक्सटेंशन किसी भी ऑडियो को ट्रांसक्राइब या अनुवाद नहीं कर सकता है।</p>
+<div class="callout-label">ज़रूरी</div>
+<p>Extension काम करने के लिए Soniox API key <strong>ज़रूरी</strong> है। इसके बिना extension कोई भी audio transcribe या translate नहीं कर पाएगा।</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">सोनियोक्स वेबसाइट पर जाएं</span>
+<span class="step-title">Soniox की website पर जाएं</span>
 <div class="step-body">
-<p>खुला <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> आपके ब्राउज़र में। अपने ईमेल या Google साइन-इन का उपयोग करके एक खाता बनाएं।</p>
+<p>अपने browser में <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> खोलें। अपने email या Google sign-in से account बनाएं।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">अपनी एपीआई कुंजी प्राप्त करें</span>
+<span class="step-title">अपनी API key लें</span>
 <div class="step-body">
-<p>साइन इन करने के बाद, अपने सोनियोक्स डैशबोर्ड के एपीआई अनुभाग पर जाएँ। आप सीधे भी जा सकते हैं <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Soniox प्रारंभ करें मार्गदर्शिका</a> चरण-दर-चरण निर्देशों के लिए।</p>
-<p>अपनी एपीआई कुंजी कॉपी करें - आपको अगले चरणों में इसकी आवश्यकता होगी।</p>
+<p>Sign in करने के बाद, अपने Soniox dashboard के API section में जाएं। आप सीधे <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Soniox Get Started guide</a> भी देख सकते हैं, जिसमें step-by-step instructions हैं।</p>
+<p>अपनी API key copy करें — अगले steps में इसकी ज़रूरत पड़ेगी।</p>
 <div class="img-placeholder">
-<img alt="एपीआई कुंजी प्राप्त करें" src="./images/create-soniox-api.png" loading="lazy"/>
+<img alt="Get API Key" src="./images/create-soniox-api.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">बिलिंग जोड़ें (एपीआई उपयोग के लिए आवश्यक)</span>
+<span class="step-title">Billing add करें (API use करने के लिए ज़रूरी)</span>
 <div class="step-body">
-<p>अपने सोनीओक्स खाते में एक भुगतान विधि जोड़ें। आप क्रेडिट कार्ड, पेपाल या अन्य भुगतान विधियों का उपयोग कर सकते हैं। सोनियोक्स एपीआई भुगतान-जैसा-आप-जाना है - आप केवल उसी के लिए भुगतान करते हैं जो आप उपयोग करते हैं।</p>
+<p>अपने Soniox account में payment method add करें। आप credit card, PayPal, या दूसरे payment methods use कर सकते हैं। Soniox API pay-as-you-go है — आप जितना use करेंगे, उतना ही pay करेंगे।</p>
 <div class="img-placeholder">
-<img alt="भुगतान विधि जोड़ें" src="./images/payment-soniox.png" loading="lazy"/>
+<img alt="Add Payment Method" src="./images/payment-soniox.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">नोट</div>
-<p>एपीआई का उपयोग करने के लिए आपको अपने खाते में न्यूनतम $1 जमा करना होगा। आप चाहें तो और भी जमा कर सकते हैं.</p>
+<div class="callout-label">Note</div>
+<p>API use करने के लिए आपको अपने account में कम से कम $1 deposit करना होगा। आप चाहें तो ज़्यादा भी deposit कर सकते हैं।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="openai-key">ओपनएआई एपीआई कुंजी प्राप्त करें (वैकल्पिक)</h2>
-<p class="section-intro">एक OpenAI API कुंजी है <strong>वैकल्पिक</strong> - आपको इसकी आवश्यकता केवल तभी होगी जब आप कथन के लिए ओपनएआई आवाज या इनलाइन एआई सहायक सुविधा का उपयोग करना चाहते हैं। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="openai-key">OpenAI API Key लें (Optional)</h2>
+<p class="section-intro">OpenAI API key <strong>optional</strong> है — इसकी ज़रूरत सिर्फ़ तब है जब आप narration के लिए OpenAI की voices या Inline AI Assistant feature use करना चाहते हैं। <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">ओपनएआई प्लेटफॉर्म पर जाएं</span>
+<span class="step-title">OpenAI Platform पर जाएं</span>
 <div class="step-body">
-<p>खुला <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> आपके ब्राउज़र में।</p>
+<p>अपने browser में <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> खोलें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">एक खाता बनाएं या साइन इन करें</span>
+<span class="step-title">Account बनाएं या sign in करें</span>
 <div class="step-body">
-<p>यदि आपके पास OpenAI खाता नहीं है, तो क्लिक करें <strong>"साइन अप करें"</strong> और एक बनाएं। यदि आपके पास पहले से ही एक है, तो साइन इन करें।</p>
+<p>अगर आपका OpenAI account नहीं है, तो <strong>"Sign Up"</strong> पर click करके बना लें। अगर पहले से account है, तो sign in करें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">एक नई एपीआई कुंजी बनाएं</span>
+<span class="step-title">नई API key बनाएं</span>
 <div class="step-body">
-<p>क्लिक करें <strong>"+ नई गुप्त कुंजी बनाएं"</strong>, इसे "लाइव ट्रांसलेटर" जैसा नाम दें और क्लिक करें <strong>"गुप्त कुंजी बनाएं"</strong>.</p>
-<p><strong>कुंजी को तुरंत कॉपी करें और सहेजें</strong> - ओपनएआई इसे केवल एक बार दिखाएगा।</p>
+<p><strong>"+ Create new secret key"</strong> पर click करें, इसे कोई नाम दें जैसे "Live Translator", और <strong>"Create secret key"</strong> पर click करें।</p>
+<p><strong>Key को तुरंत copy करके कहीं सुरक्षित save करें</strong> — OpenAI इसे सिर्फ़ एक बार दिखाता है।</p>
 <div class="img-placeholder">
-<img alt="ओपनएआई एपीआई कुंजी बनाएं" src="./images/openai-key.png" loading="lazy"/>
+<img alt="Create OpenAI API Key" src="./images/openai-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">बिलिंग जोड़ें (एपीआई उपयोग के लिए आवश्यक)</span>
+<span class="step-title">Billing add करें (API use करने के लिए ज़रूरी)</span>
 <div class="step-body">
-<p>पर जाएँ <a href="https://platform.openai.com/account/billing" target="_blank">बिलिंग सेटिंग</a> और एक भुगतान विधि जोड़ें। ओपनएआई एपीआई भुगतान-जैसा-आप-जाना है - आप केवल उसी के लिए भुगतान करते हैं जो आप उपयोग करते हैं।</p>
+<p><a href="https://platform.openai.com/account/billing" target="_blank">Billing settings</a> में जाकर payment method add करें। OpenAI API भी pay-as-you-go है — आप जितना use करेंगे, उतना ही pay करेंगे।</p>
 <div class="img-placeholder">
-<img alt="ओपनएआई एपीआई कुंजी बनाएं" src="./images/openai-billing.png" loading="lazy"/>
+<img alt="Create OpenAI API Key" src="./images/openai-billing.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">नोट</div>
-<p>यदि आप केवल वर्णन (पाठ से वाक्) चाहते हैं, तो आप इसका उपयोग कर सकते हैं <strong>Google अनुवाद आवाजें निःशुल्क</strong> इसके बजाय। OpenAI कुंजी केवल तभी आवश्यक है जब आप OpenAI की प्रीमियम आवाज़ें या AI सहायक सुविधा चाहते हैं।</p>
+<div class="callout-label">Note</div>
+<p>अगर आपको सिर्फ़ narration (text-to-speech) चाहिए, तो आप <strong>Google Translate voices मुफ़्त में</strong> use कर सकते हैं। OpenAI key सिर्फ़ तब चाहिए जब आप OpenAI की premium voices या AI Assistant feature use करना चाहते हैं।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="enter-keys">अपनी एपीआई कुंजी दर्ज करें</h2>
-<p class="section-intro">एक बार जब आपके पास अपनी एपीआई कुंजियाँ हों, तो उन्हें लाइव ट्रांसलेटर सेटिंग पृष्ठ में दर्ज करें।</p>
+<h2 id="enter-keys">अपनी API Keys डालें</h2>
+<p class="section-intro">API keys मिलने के बाद, उन्हें Live Translator की settings में डालें।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">लाइव ट्रांसलेटर सेटिंग खोलें</span>
+<span class="step-title">Live Translator की settings खोलें</span>
 <div class="step-body">
-<p>आप इनमें से किसी भी तरीके से सेटिंग खोल सकते हैं:</p>
+<p>Settings खोलने के ये तरीके हैं:</p>
 <ul>
-<li>क्लिक करें <strong>गियर आइकन</strong> (⚙) अनुवादक पैनल के शीर्ष दाईं ओर।</li>
-<li>अपने टूलबार में लाइव ट्रांसलेटर आइकन पर राइट-क्लिक करें → <strong>"विकल्प"</strong>.</li>
-<li>अपने ब्राउज़र के एक्सटेंशन पेज पर जाएं → लाइव ट्रांसलेटर ढूंढें → <strong>"विवरण"</strong> → <strong>"विस्तार विकल्प"</strong>.</li>
+<li>Translator panel के ऊपर दाईं तरफ <strong>gear icon</strong> (⚙) पर click करें।</li>
+<li>Toolbar में Live Translator icon पर right-click करें → <strong>"Options"</strong> चुनें।</li>
+<li>Browser के extensions page पर जाएं → Live Translator ढूंढें → <strong>"Details"</strong> → <strong>"Extension options"</strong>।</li>
 </ul>
 <div class="img-placeholder">
-<img alt="सेटिंग्स पृष्ठ" src="./images/gear.png" loading="lazy"/>
+<img alt="Settings Page" src="./images/gear.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">अपनी सोनियोक्स एपीआई कुंजी दर्ज करें</span>
+<span class="step-title">Soniox API key डालें</span>
 <div class="step-body">
-<p>सेटिंग्स पेज में, पर क्लिक करें <strong>"सोनियोक्स"</strong> बाएं साइडबार में। अपनी सोनियोक्स एपीआई कुंजी को इनपुट फ़ील्ड में चिपकाएँ। कुंजी स्वचालित रूप से सहेजी जाती है.</p>
+<p>Settings page में, बाएं sidebar में <strong>"Soniox"</strong> पर click करें। Input field में अपनी Soniox API key paste करें। Key automatically save हो जाएगी।</p>
 <div class="img-placeholder">
-<img alt="Soniox सेटिंग्स" src="./images/enter-soniox-key.png" loading="lazy"/>
+<img alt="Soniox Settings" src="./images/enter-soniox-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">अपनी OpenAI API कुंजी दर्ज करें (वैकल्पिक)</span>
+<span class="step-title">OpenAI API key डालें (optional)</span>
 <div class="step-body">
-<p>पर क्लिक करें <strong>"ओपनएआई"</strong> बाएँ साइडबार में। अपनी OpenAI API कुंजी को इनपुट फ़ील्ड में चिपकाएँ। कुंजी स्वचालित रूप से सहेजी जाती है.</p>
+<p>बाएं sidebar में <strong>"OpenAI"</strong> पर click करें। Input field में अपनी OpenAI API key paste करें। Key automatically save हो जाएगी।</p>
 <div class="img-placeholder">
-<img alt="ओपनएआई सेटिंग्स" src="./images/enter-openai-key.png" loading="lazy"/>
+<img alt="OpenAI Settings" src="./images/enter-openai-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">सुरक्षा नोट</div>
-<p>आपकी एपीआई कुंजियाँ संग्रहीत हैं <strong>स्थानीय रूप से केवल आपके डिवाइस पर</strong> क्रोम के सुरक्षित एक्सटेंशन स्टोरेज का उपयोग करना। उन्हें लाइव ट्रांसलेटर के सर्वर पर कभी नहीं भेजा जाता है - उनका उपयोग केवल सोनियोक्स और ओपनएआई के साथ सीधे संचार करने के लिए किया जाता है।</p>
+<div class="callout-label">Security Note</div>
+<p>आपकी API keys <strong>सिर्फ़ आपके device पर locally</strong> store होती हैं, Chrome के secure extension storage में। ये कभी भी Live Translator के servers पर नहीं भेजी जातीं — इनका use सिर्फ़ Soniox और OpenAI से सीधे communicate करने के लिए होता है।</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- LICENSE & PRO                              -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="buy-license">लाइसेंस कुंजी खरीदें</h2>
-<p class="section-intro">एक लाइसेंस कुंजी प्रो सुविधाओं जैसे कथन, एसआरटी डाउनलोड, एआई सहायक और बहुत कुछ को अनलॉक करती है।</p>
+<h2 id="buy-license">License Key खरीदें</h2>
+<p class="section-intro">License key से Pro features unlock होते हैं जैसे narration, SRT download, AI assistant, और बहुत कुछ।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">खरीदारी पृष्ठ पर जाएं</span>
+<span class="step-title">Purchase page पर जाएं</span>
 <div class="step-body">
-<p>लाइव ट्रांसलेटर होमपेज पर जाएं <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> और स्क्रॉल करें <strong>मूल्य निर्धारण</strong> अनुभाग, या क्लिक करें <strong>"लाइसेंस खरीदें"</strong> एक्सटेंशन के सेटिंग पेज में लिंक।</p>
+<p>Live Translator के homepage <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> पर जाएं और <strong>Pricing</strong> section तक scroll करें, या extension की settings page में <strong>"Purchase a license"</strong> link पर click करें।</p>
 <div class="img-placeholder">
-<img alt="खरीदारी पृष्ठ" src="./images/pricing.jpeg" loading="lazy"/>
+<img alt="Purchase Page" src="./images/pricing.jpeg" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">अपनी योजना चुनें</span>
+<span class="step-title">अपना plan चुनें</span>
 <div class="step-body">
-<p>किसी एक को चुनें:</p>
+<p>दोनों में से कोई एक चुनें:</p>
 <ul>
-<li><strong>मासिक</strong> - $5.99/माह</li>
-<li><strong>वार्षिक</strong> - $59/वर्ष (~18% बचाएं)</li>
+<li><strong>Monthly</strong> — $5.99/महीना</li>
+<li><strong>Yearly</strong> — $59/साल (~18% बचत)</li>
 </ul>
-<p>आप एक प्राप्त कर सकते हैं <strong>7 दिन का निःशुल्क परीक्षण</strong> प्रो सुविधाओं को आज़माने के लिए। परीक्षण के बाद, आप प्रो सुविधाओं का उपयोग जारी रखने के लिए लाइसेंस खरीद सकते हैं।</p>
+<p>Pro features आज़माने के लिए <strong>7 दिन का free trial</strong> मिलता है। Trial के बाद, Pro features जारी रखने के लिए license खरीद सकते हैं।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">भुगतान पूरा करें</span>
+<span class="step-title">Payment पूरा करें</span>
 <div class="step-body">
-<p>आपको पोलर भुगतान पृष्ठ पर पुनः निर्देशित किया जाएगा। अपना ईमेल और भुगतान विवरण दर्ज करें, फिर खरीदारी पूरी करें।</p>
+<p>आपको Polar payment page पर redirect किया जाएगा। अपना email और payment details डालें, फिर purchase पूरा करें।</p>
 <div class="img-placeholder">
-<img alt="भुगतान पृष्ठ" src="./images/purchase.png" loading="lazy"/>
+<img alt="Payment Page" src="./images/purchase.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">अपनी लाइसेंस कुंजी प्राप्त करें</span>
+<span class="step-title">अपनी license key पाएं</span>
 <div class="step-body">
-<p>भुगतान के बाद, आपको एक प्राप्त होगा <strong>लाइसेंस कुंजी</strong> ईमेल के माध्यम से। लाइसेंस कुंजी एक लंबे कोड की तरह दिखती है (उदाहरण के लिए, <code>LT-XXXX-XXXX-XXXX-XXXX</code>). इस कुंजी को कॉपी करें.</p>
+<p>Payment के बाद, आपको email पर एक <strong>license key</strong> मिलेगी। License key एक लंबे code जैसी दिखती है (जैसे, <code>LT-XXXX-XXXX-XXXX-XXXX</code>)। इस key को copy करें।</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">रिफंड नीति</div>
-<p>आप भीतर धनवापसी का अनुरोध कर सकते हैं <strong>30 दिन</strong> भुगतान तिथि से संपर्क करके <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
+<div class="callout-label">Refund Policy</div>
+<p>Payment की तारीख से <strong>30 दिन</strong> के अंदर आप refund के लिए <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a> पर संपर्क कर सकते हैं।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="activate-license">अपना लाइसेंस सक्रिय करें</h2>
-<p class="section-intro">खरीदने के बाद, एक्सटेंशन सेटिंग्स में अपनी लाइसेंस कुंजी सक्रिय करें।</p>
+<h2 id="activate-license">License Activate करें</h2>
+<p class="section-intro">License खरीदने के बाद, उसे extension settings में activate करें।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">अपनी लाइसेंस कुंजी दर्ज करें और सक्रिय करें</span>
+<span class="step-title">License key डालें और activate करें</span>
 <div class="step-body">
-<p>एक्सटेंशन सेटिंग्स खोलें (गियर आइकन या राइट-क्लिक → विकल्प)। पर क्लिक करें <strong>"लाइसेंस"</strong> बाएं साइडबार में। अपनी लाइसेंस कुंजी को इनपुट फ़ील्ड में चिपकाएँ और क्लिक करें <strong>"सक्रिय करें"</strong>। एक्सटेंशन आपके लाइसेंस को सर्वर से सत्यापित करेगा।</p>
+<p>Extension settings खोलें (gear icon या right-click → Options)। बाएं sidebar में <strong>"License"</strong> पर click करें। Input field में अपनी license key paste करें और <strong>"Activate"</strong> पर click करें। Extension server से आपकी license verify करेगा।</p>
 <div class="img-placeholder">
-<img alt="लाइसेंस सक्रिय करें" src="./images/enter-license-key.png" loading="lazy"/>
+<img alt="Activate License" src="./images/enter-license-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">सक्रियण सत्यापित करें</span>
+<span class="step-title">Activation confirm करें</span>
 <div class="step-body">
-<p>एक बार सक्रिय होने पर, आपको अपने लाइसेंस की स्थिति, लाइसेंस से जुड़ा ईमेल और समाप्ति तिथि दिखाई देगी। सभी प्रो सुविधाएँ अब अनलॉक हो गई हैं।</p>
+<p>Activate होने के बाद, आपको license status, license से जुड़ा email, और expiry date दिखेगी। सभी Pro features अब unlock हो गए हैं।</p>
 <div class="img-placeholder">
-<img alt="लाइसेंस सक्रिय करें" src="./images/license-activated.png" loading="lazy"/>
+<img alt="Activate License" src="./images/license-activated.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-warn">
-<div class="callout-label">डिवाइस स्विच कर रहे हैं?</div>
-<p>यदि आपने पहले किसी अन्य डिवाइस पर लाइसेंस सक्रिय किया है, तो आप इसका उपयोग कर सकते हैं <strong>"बलपूर्वक सक्रिय करें"</strong> लाइसेंस को अपने वर्तमान डिवाइस पर स्थानांतरित करने का विकल्प। प्रत्येक लाइसेंस एक समय में केवल एक डिवाइस पर सक्रिय हो सकता है।</p>
+<div class="callout-label">Device बदल रहे हैं?</div>
+<p>अगर आपने पहले किसी और device पर license activate किया था, तो आप <strong>"Force Activate"</strong> option use करके license को अपने नए device पर ला सकते हैं। हर license एक बार में सिर्फ़ एक device पर active रह सकता है।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="free-vs-pro">मुफ़्त बनाम प्रो सुविधाएँ</h2>
-<p class="section-intro">यहां बताया गया है कि आप मुफ़्त संस्करण के साथ क्या कर सकते हैं और प्रो लाइसेंस की आवश्यकता क्या है।</p>
+<h2 id="free-vs-pro">Free vs Pro Features</h2>
+<p class="section-intro">यहाँ देखें कि Free version में क्या-क्या मिलता है और किन features के लिए Pro license चाहिए।</p>
 <table>
 <thead>
-<tr><th>फ़ीचर</th><th>निःशुल्क</th><th>प्रो</th></tr>
+<tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
 </thead>
 <tbody>
-<tr><td>वास्तविक समय में अनुवाद</td><td>✓</td><td>✓</td></tr>
-<tr><td>60+ भाषाएँ</td><td>✓</td><td>✓</td></tr>
-<tr><td>स्पीकर लेबल</td><td>✓</td><td>✓</td></tr>
-<tr><td>पैनल को खींचें, आकार बदलें, छोटा करें</td><td>✓</td><td>✓</td></tr>
-<tr><td>फ़ॉन्ट आकार नियंत्रण</td><td>✓</td><td>✓</td></tr>
-<tr><td>प्रतिलेख डाउनलोड करें (TXT/JSON)</td><td>—</td><td>✓</td></tr>
-<tr><td>प्रतिलेख डाउनलोड करें (एसआरटी)</td><td>—</td><td>✓</td></tr>
-<tr><td>उनकी आवाज़ सुनाएँ (टीटीएस)</td><td>—</td><td>✓</td></tr>
-<tr><td>मेरी आवाज सुनाओ (दुभाषिया)</td><td>—</td><td>✓</td></tr>
-<tr><td>चैट के माध्यम से अनुवाद भेजें</td><td>—</td><td>✓</td></tr>
-<tr><td>उपशीर्षक मोड</td><td>—</td><td>✓</td></tr>
-<tr><td>इनलाइन एआई असिस्टेंट</td><td>—</td><td>✓</td></tr>
-<tr><td>संदर्भ सेटिंग्स</td><td>✓</td><td>✓</td></tr>
-<tr><td>वक्ता के नाम</td><td>✓</td><td>✓</td></tr>
+<tr><td>Real-time translation</td><td>✓</td><td>✓</td></tr>
+<tr><td>60+ भाषाएं</td><td>✓</td><td>✓</td></tr>
+<tr><td>Speaker labels</td><td>✓</td><td>✓</td></tr>
+<tr><td>Panel drag, resize, minimize</td><td>✓</td><td>✓</td></tr>
+<tr><td>Font size control</td><td>✓</td><td>✓</td></tr>
+<tr><td>Transcript download (TXT/JSON)</td><td>—</td><td>✓</td></tr>
+<tr><td>Transcript download (SRT)</td><td>—</td><td>✓</td></tr>
+<tr><td>Narrate Their Voice (TTS)</td><td>—</td><td>✓</td></tr>
+<tr><td>Narrate My Voice (Interpreter)</td><td>—</td><td>✓</td></tr>
+<tr><td>Chat से Translation भेजें</td><td>—</td><td>✓</td></tr>
+<tr><td>Subtitle Mode</td><td>—</td><td>✓</td></tr>
+<tr><td>Inline AI Assistant</td><td>—</td><td>✓</td></tr>
+<tr><td>Context Settings</td><td>✓</td><td>✓</td></tr>
+<tr><td>Speaker Names</td><td>✓</td><td>✓</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- BASIC USAGE                                -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="start-translation">एक अनुवाद सत्र प्रारंभ करें</h2>
-<p class="section-intro">जानें कि किसी मीटिंग या वीडियो में अनुवाद कैसे शुरू करें।</p>
+<h2 id="start-translation">Translation शुरू करें</h2>
+<p class="section-intro">जानें कि meeting या video में translation कैसे शुरू करें।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">एक समर्थित वेबसाइट खोलें</span>
+<span class="step-title">कोई supported website खोलें</span>
 <div class="step-body">
-<p>किसी पर भी जाएं <a href="#supported-platforms">समर्थित मंच</a> (उदाहरण के लिए, Google मीट, ज़ूम, यूट्यूब, आदि) और किसी मीटिंग में शामिल हों या वीडियो चलाएं।</p>
+<p>किसी भी <a href="#supported-platforms">supported platform</a> (जैसे Google Meet, Zoom, YouTube, आदि) पर जाएं और meeting join करें या video चलाएं।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">लाइव ट्रांसलेटर पैनल खोलें</span>
+<span class="step-title">Live Translator panel खोलें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>लाइव ट्रांसलेटर आइकन</strong> आपके ब्राउज़र टूलबार में। अनुवादक पैनल पृष्ठ पर दिखाई देगा. आप भी क्लिक कर सकते हैं <strong>फ्लोटिंग आइकन</strong> जो पेज पर दिखाई देता है।</p>
+<p>अपने browser toolbar में <strong>Live Translator icon</strong> पर click करें। Translator panel page पर दिखेगा। आप page पर दिखने वाले <strong>floating icon</strong> पर भी click कर सकते हैं।</p>
 <div class="img-placeholder">
-<img alt="खुला पैनल" src="./images/floating-icon.png" loading="lazy"/>
+<img alt="Open Panel" src="./images/floating-icon.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -836,119 +836,119 @@
 <span class="step-number">3</span>
 <span class="step-title">अपनी भाषाएं चुनें</span>
 <div class="step-body">
-<p>पैनल के शीर्ष पर दो भाषा ड्रॉपडाउन का उपयोग करें:</p>
+<p>Panel के ऊपर दो language dropdowns हैं, उन्हें use करें:</p>
 <ul>
-<li><strong>"मेरी भाषा"</strong> - भाषा <em>आप</em> बोलें (उदाहरण के लिए, वियतनामी)।</li>
-<li><strong>"उनकी भाषा"</strong> - भाषा <em>अन्य</em> बोलें कि आप अनुवाद करना चाहते हैं (उदाहरण के लिए, अंग्रेजी)।</li>
+<li><strong>"My language"</strong> — वो भाषा जो <em>आप</em> बोलते हैं (जैसे, हिन्दी)।</li>
+<li><strong>"Their language"</strong> — वो भाषा जो <em>सामने वाले</em> बोल रहे हैं जिसका translation चाहिए (जैसे, English)।</li>
 </ul>
 <div class="img-placeholder">
-<img alt="भाषा चयन" src="./images/language.png" loading="lazy"/>
+<img alt="Language Selection" src="./images/language.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">स्टार्ट बटन दबाएँ</span>
+<span class="step-title">Start button दबाएं</span>
 <div class="step-body">
-<p>क्लिक करें <strong>शुरू करें</strong> पैनल के नीचे कंट्रोल बार में बटन (प्ले आइकन)।</p>
-<p>आपका ब्राउज़र ऑडियो कैप्चर करने की अनुमति मांग सकता है - क्लिक करें <strong>"अनुमति दें"</strong> और वह टैब चुनें जिसे आप कैप्चर करना चाहते हैं।</p>
+<p>Panel के नीचे control bar में <strong>Start</strong> button (play icon) पर click करें।</p>
+<p>Browser audio capture करने की permission माँग सकता है — <strong>"Allow"</strong> पर click करें और वो tab select करें जिसे capture करना है।</p>
 <div class="img-placeholder">
-<img alt="स्टार्ट बटन" src="./images/press-start.png" loading="lazy"/>
+<img alt="Start Button" src="./images/press-start.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">5</span>
-<span class="step-title">वास्तविक समय में अनुवाद देखें</span>
+<span class="step-title">Real-time में translation देखें</span>
 <div class="step-body">
-<p>जैसे लोग बोलते हैं, आपको दोनों दिखाई देंगे <strong>मूल पाठ</strong> और <strong>अनुवादित पाठ</strong> प्रतिलेख क्षेत्र में दिखाई देते हैं। लाइनें स्वचालित रूप से स्पीकर द्वारा समूहीकृत हो जाती हैं।</p>
+<p>जैसे-जैसे लोग बोलेंगे, आपको transcript area में <strong>original text</strong> और <strong>translated text</strong> दोनों दिखेंगे। Lines automatically speaker के हिसाब से group हो जाती हैं।</p>
 <div class="img-placeholder">
-<img alt="वास्तविक समय अनुवाद" src="./images/translate-real.png" loading="lazy"/>
+<img alt="Real Time Translation" src="./images/translate-real.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">ऑटो-स्क्रॉल</div>
-<p>प्रतिलेख नवीनतम पाठ दिखाने के लिए स्वतः स्क्रॉल होता है। यदि आप पहले का पाठ पढ़ने के लिए ऊपर स्क्रॉल करते हैं, तो स्वतः-स्क्रॉल रुक जाता है। क्लिक करें <strong>"नवीनतम तक स्क्रॉल करें"</strong> बटन जो लाइव टेक्स्ट पर वापस जाता हुआ प्रतीत होता है।</p>
+<div class="callout-label">Auto-scroll</div>
+<p>Transcript अपने आप scroll होता रहता है ताकि latest text दिखे। अगर आप पहले का text पढ़ने के लिए ऊपर scroll करते हैं, तो auto-scroll रुक जाता है। Live text पर वापस जाने के लिए <strong>"Scroll to latest"</strong> button पर click करें।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="controls">नियंत्रण: रोकें, फिर से शुरू करें, समाप्त करें</h2>
-<p class="section-intro">अनुवाद सत्र नियंत्रणों को समझें।</p>
+<h2 id="controls">Controls: Pause, Resume, End</h2>
+<p class="section-intro">Translation session के controls समझें।</p>
 <table>
 <thead>
-<tr><th>बटन</th><th>यह क्या करता है</th></tr>
+<tr><th>Button</th><th>क्या करता है</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>शुरू करें</strong> (▶)</td><td>एक नया अनुवाद सत्र शुरू होता है। किसी भी पिछले प्रतिलेख को साफ़ करता है।</td></tr>
-<tr><td><strong>रोकें</strong> (⏸)</td><td>अस्थायी रूप से अनुवाद रोक देता है। प्रतिलेख रखा गया है. ऑडियो कैप्चर जारी है लेकिन टेक्स्ट रुका हुआ है।</td></tr>
-<tr><td><strong>फिर से शुरू करें</strong> (▶)</td><td>विराम के बाद अनुवाद जारी रखता है। नया पाठ पिछली सामग्री के बाद प्रकट होता है।</td></tr>
-<tr><td><strong>समाप्त</strong> (⏹)</td><td>सत्र को पूरी तरह से रोक देता है। जब तक आप नया सत्र शुरू नहीं करते तब तक प्रतिलेख स्क्रीन पर रखा जाता है। ऑडियो कैप्चर समाप्त करता है, माइक और कथन बंद करता है।</td></tr>
+<tr><td><strong>Start</strong> (▶)</td><td>नया translation session शुरू करता है। पहले का transcript clear हो जाता है।</td></tr>
+<tr><td><strong>Pause</strong> (⏸)</td><td>Translation को कुछ देर के लिए रोकता है। Transcript बना रहता है। Audio capture जारी रहता है लेकिन text रुक जाता है।</td></tr>
+<tr><td><strong>Resume</strong> (▶)</td><td>Pause के बाद translation फिर से शुरू करता है। नया text पहले वाले content के बाद दिखता है।</td></tr>
+<tr><td><strong>End</strong> (⏹)</td><td>Session पूरी तरह बंद करता है। जब तक नया session शुरू नहीं करते, transcript screen पर रहता है। Audio capture बंद होता है, mic और narration भी बंद हो जाते हैं।</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
-<h2 id="language-selection">भाषाएं बदलें</h2>
-<p class="section-intro">आप किसी भी समय अनुवाद की भाषाएँ बदल सकते हैं।</p>
+<h2 id="language-selection">भाषा बदलें</h2>
+<p class="section-intro">आप कभी भी translation की भाषाएं बदल सकते हैं।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">भाषा ड्रॉपडाउन पर क्लिक करें</span>
+<span class="step-title">Language dropdown पर click करें</span>
 <div class="step-body">
-<p>दोनों में से किसी एक पर क्लिक करें <strong>"मेरी भाषा"</strong> या <strong>"उनकी भाषा"</strong> पैनल के शीर्ष पर ड्रॉपडाउन।</p>
+<p>Panel के ऊपर <strong>"My language"</strong> या <strong>"Their language"</strong> dropdown में से किसी पर click करें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">एक नई भाषा चुनें</span>
+<span class="step-title">नई भाषा चुनें</span>
 <div class="step-body">
-<p>सूची समर्थन करती है <strong>60+ भाषाएँ</strong> वर्णानुक्रम में क्रमबद्ध। अपनी भाषा खोजने के लिए स्क्रॉल करें या टाइप करें। इसे चुनने के लिए क्लिक करें.</p>
+<p>List में <strong>60+ भाषाएं</strong> alphabetical order में हैं। अपनी भाषा ढूंढने के लिए scroll करें या type करें। Select करने के लिए click करें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">अनुवाद स्वचालित रूप से पुनः आरंभ होता है</span>
+<span class="step-title">Translation अपने आप restart होता है</span>
 <div class="step-body">
-<p>यदि कोई सत्र सक्रिय है, तो भाषा बदलने से नई भाषा जोड़ी के साथ अनुवाद स्वचालित रूप से पुनः आरंभ हो जाएगा। आपका भाषा चयन अगली बार के लिए सहेजा गया है।</p>
+<p>अगर session चल रहा है, तो भाषा बदलने पर translation नई language pair के साथ अपने आप restart हो जाएगा। आपकी language selection अगली बार के लिए save रहती है।</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="microphone">अपना माइक्रोफोन चालू करें</h2>
-<p class="section-intro">अपना माइक्रोफ़ोन सक्षम करें ताकि मीटिंग/वीडियो ऑडियो के साथ-साथ आपका अपना भाषण भी अनुवादित हो सके।</p>
+<h2 id="microphone">Microphone चालू करें</h2>
+<p class="section-intro">अपना microphone on करें ताकि meeting/video audio के साथ-साथ आपकी अपनी बातचीत भी translate हो सके।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">माइक्रोफ़ोन बटन पर क्लिक करें</span>
+<span class="step-title">Microphone button पर click करें</span>
 <div class="step-body">
-<p>कंट्रोल बार में, क्लिक करें <strong>माइक्रोफोन आइकन</strong>। माइक चालू होने पर आइकन सक्रिय (हाइलाइट) हो जाता है।</p>
+<p>Control bar में <strong>microphone icon</strong> पर click करें। Mic चालू होने पर icon highlight हो जाता है।</p>
 <div class="img-placeholder">
-<img alt="माइक्रोफोन बटन" src="./images/micro.png" loading="lazy"/>
+<img alt="Microphone Button" src="./images/micro.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">माइक्रोफ़ोन पहुंच की अनुमति दें</span>
+<span class="step-title">Microphone access की permission दें</span>
 <div class="step-body">
-<p>यदि यह पहली बार है, तो आपका ब्राउज़र माइक्रोफ़ोन की अनुमति मांगेगा। क्लिक करें <strong>"अनुमति दें"</strong>.</p>
+<p>अगर पहली बार है, तो browser microphone permission माँगेगा। <strong>"Allow"</strong> पर click करें।</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">टिप</div>
-<p>माइक्रोफोन है <strong>डिफ़ॉल्ट रूप से बंद</strong> जब आप पैनल खोलते हैं। इसे केवल तभी चालू करें जब आप चाहते हैं कि आपका भाषण प्रतिलेखित और अनुवादित किया जाए। जब आप दबाते हैं <strong>समाप्त</strong>, माइक्रोफ़ोन स्वचालित रूप से बंद हो जाता है।</p>
+<div class="callout-label">Tip</div>
+<p>Panel खोलने पर microphone <strong>by default बंद</strong> रहता है। इसे सिर्फ़ तब on करें जब आप चाहते हैं कि आपकी बात भी transcribe और translate हो। जब आप <strong>End</strong> दबाते हैं, तो microphone अपने आप बंद हो जाता है।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="font-size">फ़ॉन्ट आकार बदलें</h2>
-<p class="section-intro">आरामदायक पढ़ने के लिए प्रतिलेख पाठ का आकार समायोजित करें।</p>
+<h2 id="font-size">Font Size बदलें</h2>
+<p class="section-intro">Transcript text का size अपनी सुविधा के हिसाब से adjust करें।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">फ़ॉन्ट आकार बटन पर क्लिक करें</span>
+<span class="step-title">Font size button पर click करें</span>
 <div class="step-body">
-<p>कंट्रोल बार में, क्लिक करें <strong>फ़ॉन्ट आकार बटन</strong> (एए आइकन)। एक मेनू तीन आकारों के साथ प्रकट होता है:</p>
+<p>Control bar में <strong>font size button</strong> (Aa icon) पर click करें। तीन sizes का menu आएगा:</p>
 <ul>
-<li><strong>छोटा</strong> —संक्षिप्त दृश्य, अधिक पाठ में फिट बैठता है</li>
-<li><strong>मध्यम</strong> - डिफ़ॉल्ट संतुलित आकार</li>
-<li><strong>बड़ा</strong> - दूर से पढ़ना आसान</li>
+<li><strong>Small</strong> — छोटा view, ज़्यादा text fit होता है</li>
+<li><strong>Medium</strong> — Default balanced size</li>
+<li><strong>Large</strong> — दूर से पढ़ने में आसान</li>
 </ul>
-<p>अपने पसंदीदा आकार पर क्लिक करें। परिवर्तन तुरंत लागू होता है और अगली बार के लिए सहेजा जाता है।</p>
+<p>अपना पसंदीदा size click करें। बदलाव तुरंत लागू होता है और अगली बार के लिए save रहता है।</p>
 <div class="img-placeholder">
-<img alt="फ़ॉन्ट आकार चयनकर्ता" src="./images/font.png" loading="lazy"/>
+<img alt="Font Size Selector" src="./images/font.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -956,419 +956,419 @@
 <!-- ────────────────────────────────────────── -->
 <!-- FEATURES                                   -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="speaker-names">वक्ता के नाम</h2>
-<p class="section-intro">वक्ताओं को वास्तविक नाम निर्दिष्ट करें ताकि आप आसानी से पहचान सकें कि प्रतिलेख में किसने क्या कहा है। <span class="badge badge-free">निःशुल्क</span></p>
+<h2 id="speaker-names">Speaker के नाम</h2>
+<p class="section-intro">Speakers को असली नाम दें ताकि transcript में आसानी से पता चले कि किसने क्या कहा। <span class="badge badge-free">Free</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">"अधिक" मेनू खोलें</span>
+<span class="step-title">"More" menu खोलें</span>
 <div class="step-body">
-<p>कंट्रोल बार में, क्लिक करें <strong>"अधिक"</strong> बटन (⋯ आइकन)। फिर क्लिक करें <strong>"स्पीकर सेटिंग्स"</strong> बटन।</p>
+<p>Control bar में <strong>"More"</strong> button (⋯ icon) पर click करें। फिर <strong>"Speaker Settings"</strong> button पर click करें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">"स्पीकर सेटिंग्स" संवाद खोलें</span>
+<span class="step-title">"Speaker Settings" dialog खोलें</span>
 <div class="step-body">
-<p>स्पीकर सेटिंग्स संवाद खुल जाएगा।</p>
+<p>Speaker Settings dialog खुल जाएगा।</p>
 <div class="img-placeholder">
-<img alt="स्पीकर सेटिंग्स डायलॉग" src="./images/speaker.png" loading="lazy"/>
+<img alt="Speaker Settings Dialog" src="./images/speaker.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">नाम निर्दिष्ट करें</span>
+<span class="step-title">नाम डालें</span>
 <div class="step-body">
-<p>आपको पता लगाए गए स्पीकर (स्पीकर 1, स्पीकर 2, आदि) की एक सूची दिखाई देगी। प्रत्येक के आगे एक वास्तविक नाम टाइप करें (उदाहरण के लिए, "जॉन", "सारा")। क्लिक करें <strong>"पंक्ति जोड़ें"</strong> अगर आपको और चाहिए।</p>
-<p>क्लिक करें <strong>"सहेजें"</strong>। सभी प्रतिलेख पंक्तियाँ - अतीत और भविष्य - अब आपके द्वारा निर्दिष्ट नामों का उपयोग करेंगी।</p>
+<p>आपको detected speakers की list दिखेगी (Speaker 1, Speaker 2, आदि)। हर एक के सामने असली नाम type करें (जैसे, "Rahul", "Priya")। ज़्यादा speakers के लिए <strong>"Add row"</strong> पर click करें।</p>
+<p><strong>"Save"</strong> पर click करें। अब सभी transcript lines — पहले वाली और आने वाली — आपके दिए हुए नामों से दिखेंगी।</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narration">कथन (पाठ से वाक्)</h2>
-<p class="section-intro">अनुवादों को ऊंची आवाज में पढ़कर सुनाएं ताकि आप पढ़ने के बजाय सुन सकें। यह "उनकी आवाज़ सुनाएँ" सुविधा है। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="narration">Narration (Text-to-Speech)</h2>
+<p class="section-intro">Translation को आवाज़ में सुनें ताकि पढ़ने की बजाय सुन सकें। यह "Narrate Their Voice" feature है। <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">नैरेशन सेटिंग्स खोलें</span>
+<span class="step-title">Narration Settings खोलें</span>
 <div class="step-body">
-<p>कंट्रोल बार में, क्लिक करें <strong> कथन बटन</strong> (स्पीकर आइकन)। कथन सेटिंग संवाद खुलता है.</p>
+<p>Control bar में <strong>narration button</strong> (speaker icon) पर click करें। Narration Settings dialog खुलेगा।</p>
 <div class="img-placeholder">
-<img alt="कथन सेटिंग्स" src="./images/narration-setting.png" loading="lazy"/>
+<img alt="Narration Settings" src="./images/narration-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">एक टीटीएस प्रदाता और आवाज चुनें</span>
+<span class="step-title">TTS provider और voice चुनें</span>
 <div class="step-body">
-<p>अपना वॉयस प्रदाता चुनें:</p>
+<p>अपना voice provider चुनें:</p>
 <ul>
-<li><strong>Google अनुवाद</strong> (निःशुल्क) - बिना किसी एपीआई कुंजी के काम करता है। 60+ भाषाओं में अच्छी गुणवत्ता वाली आवाज़ें।</li>
-<li><strong>ओपनएआई</strong> (प्रीमियम) - उच्च गुणवत्ता, अधिक प्राकृतिक आवाजें। OpenAI API कुंजी की आवश्यकता है.</li>
+<li><strong>Google Translate</strong> (Free) — बिना किसी API key के काम करता है। 60+ भाषाओं में अच्छी quality की voices।</li>
+<li><strong>OpenAI</strong> (Premium) — बेहतर quality, ज़्यादा natural voices। OpenAI API key ज़रूरी है।</li>
 </ul>
-<p>ए चुनें <strong>आवाज</strong> ड्रॉपडाउन से क्लिक करें <strong>"परीक्षण"</strong> यह पूर्वावलोकन करने के लिए कि यह कैसा लगता है।</p>
-<p>समायोजित करें <strong>आवाज की गति</strong> और <strong>वॉल्यूम</strong> यदि आवश्यक हो।</p>
+<p>Dropdown से <strong>voice</strong> चुनें और <strong>"Test"</strong> पर click करके सुनें कि कैसी लगती है।</p>
+<p>ज़रूरत हो तो <strong>voice speed</strong> और <strong>volume</strong> adjust करें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">कथन प्रारंभ करें</span>
+<span class="step-title">Narration शुरू करें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>"उनकी आवाज़ सुनाएँ"</strong> संवाद में बटन। अब, जब भी कोई अनुवाद आएगा, वह आपको ऊंचे स्वर में पढ़कर सुनाया जाएगा।</p>
-<p>रोकने के लिए, कथन बटन पर फिर से क्लिक करें और क्लिक करें <strong>"रुको"</strong>.</p>
+<p>Dialog में <strong>"Narrate Their Voice"</strong> button पर click करें। अब जब भी translation आएगा, वो आपको आवाज़ में सुनाया जाएगा।</p>
+<p>बंद करने के लिए, narration button पर फिर से click करें और <strong>"Stop"</strong> दबाएं।</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narrate-my-voice">मेरी आवाज सुनाओ (दुभाषिया मोड)</h2>
-<p class="section-intro">अपनी भाषा में बात करें और अपनी अनुवादित आवाज को अन्य मीटिंग प्रतिभागियों को सुनाएं - जैसे एक निजी दुभाषिया रखना। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="narrate-my-voice">Narrate My Voice (Interpreter Mode)</h2>
+<p class="section-intro">अपनी भाषा में बोलें और आपकी translated आवाज़ meeting में दूसरे लोगों को सुनाई दे — जैसे आपका अपना personal interpreter हो। <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">आवश्यकताएँ</div>
-<p>यह सुविधा चालू रहती है <strong>गूगल मीट</strong>, <strong>ज़ूम (वेब)</strong>, <strong>माइक्रोसॉफ्ट टीमें (वेब)</strong>, और <strong>व्हाट्सएप वेब</strong>। आपको आपकी जरूरत है <strong>माइक्रोफ़ोन सक्षम</strong> और एक अनुवाद सत्र <strong>चल रहा है</strong>.</p>
+<div class="callout-label">ज़रूरी शर्तें</div>
+<p>यह feature <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, <strong>Microsoft Teams (Web)</strong>, और <strong>WhatsApp Web</strong> पर काम करता है। आपका <strong>microphone on</strong> होना चाहिए और translation session <strong>चालू</strong> होना चाहिए।</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">नैरेशन सेटिंग्स खोलें</span>
+<span class="step-title">Narration Settings खोलें</span>
 <div class="step-body">
-<p>क्लिक करें <strong> कथन बटन</strong> नैरेशन सेटिंग्स डायलॉग खोलने के लिए कंट्रोल बार में।</p>
+<p>Control bar में <strong>narration button</strong> पर click करके Narration Settings dialog खोलें।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">"मेरी आवाज़ सुनाएँ" कॉन्फ़िगर करें</span>
+<span class="step-title">"Narrate My Voice" setup करें</span>
 <div class="step-body">
-<p>संवाद में, खोजें <strong>"मेरी आवाज सुनाओ"</strong> अनुभाग। अपनी पसंदीदा आवाज़ और प्रदाता (Google या OpenAI) चुनें। आप एक सेट कर सकते हैं <strong>अलग आवाज</strong> "मेरी आवाज़" और "उनकी आवाज़" कथन के लिए।</p>
-<p>क्लिक करें <strong>"परीक्षण"</strong> अपनी चयनित आवाज का पूर्वावलोकन करने के लिए।</p>
+<p>Dialog में <strong>"Narrate My Voice"</strong> section ढूंढें। अपनी पसंदीदा voice और provider (Google या OpenAI) चुनें। आप "My voice" और "Their voice" narration के लिए <strong>अलग-अलग voice</strong> set कर सकते हैं।</p>
+<p>चुनी हुई voice सुनने के लिए <strong>"Test"</strong> पर click करें।</p>
 <div class="img-placeholder">
-<img alt="मेरी आवाज सुनाओ" src="./images/my-voice-setting.png" loading="lazy"/>
+<img alt="Narrate My Voice" src="./images/my-voice-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">"मेरी आवाज़ सुनाओ" शुरू करें</span>
+<span class="step-title">"Narrate My Voice" शुरू करें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>"मेरी आवाज़ सुनाना शुरू करें"</strong>। जब आप बोलते हैं, तो आपके शब्द होते हैं:</p>
+<p><strong>"Start Narrate My Voice"</strong> पर click करें। जब आप बोलेंगे, तो आपके शब्द:</p>
 <ol>
-<li>आपकी भाषा में प्रतिलेखित</li>
-<li>दूसरी भाषा में अनुवादित</li>
-<li>बैठक में ज़ोर से बोला जाए ताकि दूसरा व्यक्ति आपकी अनुवादित आवाज़ सुन सके</li>
+<li>आपकी भाषा में transcribe होंगे</li>
+<li>दूसरी भाषा में translate होंगे</li>
+<li>Meeting में बोले जाएंगे ताकि सामने वाला आपकी translated आवाज़ सुन सके</li>
 </ol>
-<p>प्रतिध्वनि को रोकने के लिए अनुवादित ऑडियो चलने के दौरान आपका माइक्रोफ़ोन स्वचालित रूप से म्यूट हो जाता है।</p>
+<p>Echo से बचने के लिए translated audio चलने के दौरान आपका microphone अपने आप mute हो जाता है।</p>
 <div class="img-placeholder">
-<img alt="मेरी आवाज सुनाना शुरू करें" src="./images/narrate-my-voice.png" loading="lazy"/>
+<img alt="Start Narrate My Voice" src="./images/narrate-my-voice.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">कथन बंद करो</span>
+<span class="step-title">Narration बंद करें</span>
 <div class="step-body">
-<p> कथन बटन पर क्लिक करें और फिर <strong>"रुको"</strong>, या दबाएँ <strong>समाप्त</strong> पूरे सत्र को रोकने के लिए (जिससे कथन भी रुक जाता है)।</p>
+<p>Narration button पर click करें और फिर <strong>"Stop"</strong> दबाएं, या <strong>End</strong> दबाकर पूरा session बंद करें (इससे narration भी बंद हो जाता है)।</p>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">नोट</div>
-<p>आप केवल दौड़ सकते हैं <strong>एक समय में एक कथन विधा</strong> - या तो "मेरी आवाज़ सुनाओ" या "उनकी आवाज़ सुनाओ", दोनों एक साथ नहीं। कौन सा मोड सक्रिय है यह दिखाने के लिए टूलबार आइकन बदल जाता है।</p>
+<div class="callout-label">Note</div>
+<p>एक बार में <strong>सिर्फ़ एक narration mode</strong> चल सकता है — या तो "Narrate My Voice" या "Narrate Their Voice", दोनों एक साथ नहीं। Toolbar icon बदलकर दिखाता है कि कौन सा mode active है।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="send-chat">चैट के माध्यम से अनुवाद भेजें</h2>
-<p class="section-intro">मीटिंग की चैट में अपने अनुवादित भाषण को टेक्स्ट संदेश के रूप में स्वचालित रूप से भेजें। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="send-chat">Chat से Translation भेजें</h2>
+<p class="section-intro">आपकी translated बात अपने आप meeting की chat में text message के रूप में भेजें। <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">"चैट के माध्यम से भेजें" सक्षम करें</span>
+<span class="step-title">"Send via Chat" चालू करें</span>
 <div class="step-body">
-<p>कंट्रोल बार में, देखें <strong>चैट भेजें बटन</strong> (माइक्रोफ़ोन आइकन के बगल में)। टॉगल ऑन करने के लिए इसे क्लिक करें - बटन बदल जाता है <strong>हरा</strong> सक्रिय होने पर।</p>
+<p>Control bar में, microphone icon के बगल में <strong>chat send button</strong> देखें। इसे on करने के लिए click करें — active होने पर button <strong>green</strong> हो जाता है।</p>
 <div class="img-placeholder">
-<img alt="चैट भेजें" src="./images/send-via-chat.png" loading="lazy"/>
+<img alt="Send Chat" src="./images/send-via-chat.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">बोलें और यह स्वचालित रूप से भेज देता है</span>
+<span class="step-title">बोलें और अपने आप भेजा जाएगा</span>
 <div class="step-body">
-<p>आपका माइक्रोफ़ोन चालू होने और अनुवाद सत्र चलने पर, जब आप बोलते हैं, तो आपका अनुवादित पाठ स्वचालित रूप से मीटिंग के चैट इनपुट में डाला जाता है और भेजा जाता है।</p>
-<p>यह काम करता है <strong>गूगल मीट</strong>, <strong>ज़ूम (वेब)</strong>, और <strong>माइक्रोसॉफ्ट टीमें (वेब)</strong>.</p>
+<p>Microphone on और translation session चालू होने पर, जब आप बोलेंगे, तो आपका translated text अपने आप meeting की chat में type होकर send हो जाएगा।</p>
+<p>यह <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, और <strong>Microsoft Teams (Web)</strong> पर काम करता है।</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">टिप</div>
-<p>यह तब उपयोगी है जब आपके प्लेटफ़ॉर्म के लिए "नैरेट माई वॉइस" उपलब्ध नहीं है, या यदि आप वॉयस नैरेशन और टेक्स्ट चैट अनुवाद दोनों एक साथ चाहते हैं।</p>
+<div class="callout-label">Tip</div>
+<p>यह तब काम आता है जब आपके platform पर "Narrate My Voice" available नहीं है, या अगर आप voice narration और text chat translation दोनों एक साथ चाहते हैं।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="subtitle-mode">उपशीर्षक मोड</h2>
-<p class="section-intro">एक न्यूनतम, मूवी-शैली उपशीर्षक बार पर स्विच करें जो स्क्रीन के नीचे केवल नवीनतम अनुवाद दिखाता है। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="subtitle-mode">Subtitle Mode</h2>
+<p class="section-intro">Movie जैसा minimal subtitle bar लगाएं जो screen के नीचे सिर्फ़ latest translation दिखाता है। <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">उपशीर्षक मोड सक्षम करें</span>
+<span class="step-title">Subtitle Mode चालू करें</span>
 <div class="step-body">
-<p>अनुवादक पैनल के शीर्षक बार में, क्लिक करें <strong>उपशीर्षक चिह्न</strong> (बंद कैप्शन आइकन)।</p>
-<p>पूरे पैनल को स्क्रीन के नीचे एक पतली उपशीर्षक बार से बदल दिया जाएगा।</p>
+<p>Translator panel के title bar में <strong>subtitle icon</strong> (closed captions icon) पर click करें।</p>
+<p>पूरा panel हटकर screen के नीचे एक पतली subtitle bar में बदल जाएगा।</p>
 <div class="img-placeholder">
-<img alt="उपशीर्षक मोड" src="./images/subtitle.png" loading="lazy"/>
+<img alt="Subtitle Mode" src="./images/subtitle.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">उपशीर्षक बार को अनुकूलित करें</span>
+<span class="step-title">Subtitle bar customize करें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>ट्यून आइकन</strong> (सेटिंग्स गियर) समायोजित करने के लिए उपशीर्षक पट्टी पर:</p>
+<p>Subtitle bar पर <strong>tune icon</strong> (settings gear) click करके adjust करें:</p>
 <ul>
-<li><strong>अस्पष्टता</strong> —बार को अधिक या कम पारदर्शी बनाने के लिए स्लाइड करें।</li>
-<li><strong>फ़ॉन्ट आकार</strong> - छोटे, मध्यम या बड़े टेक्स्ट में से चुनें।</li>
+<li><strong>Opacity</strong> — Bar को ज़्यादा या कम transparent बनाने के लिए slide करें।</li>
+<li><strong>Font size</strong> — Small, medium, या large text में से चुनें।</li>
 </ul>
-<p>आप भी कर सकते हैं <strong>खींचें</strong> उपशीर्षक पट्टी को स्थानांतरित करने के लिए, और <strong>आकार बदलें</strong> किनारों को खींचकर।</p>
+<p>आप subtitle bar को <strong>drag</strong> करके हिला सकते हैं, और किनारों को खींचकर <strong>resize</strong> भी कर सकते हैं।</p>
 <div class="img-placeholder">
-<img alt="उपशीर्षक सेटिंग" src="./images/customize-subtitle-bar.png" loading="lazy"/>
+<img alt="Subtitle Setting" src="./images/customize-subtitle-bar.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">उपशीर्षक मोड से बाहर निकलें</span>
+<span class="step-title">Subtitle Mode से बाहर निकलें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>बटन बंद करें</strong> (✕) पूर्ण अनुवादक पैनल पर लौटने के लिए उपशीर्षक पट्टी पर।</p>
+<p>Subtitle bar पर <strong>close button</strong> (✕) click करें और पूरे translator panel पर वापस आएं।</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="inline-assistant">इनलाइन एआई असिस्टेंट</h2>
-<p class="section-intro">ट्रांसक्रिप्ट से सीधे बातचीत के संदर्भ के आधार पर एआई-संचालित स्पष्टीकरण और उत्पन्न उत्तर प्राप्त करें। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="inline-assistant">Inline AI Assistant</h2>
+<p class="section-intro">Transcript से सीधे बातचीत के context के आधार पर AI से explanation और suggested answers पाएं। <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">आवश्यकता</div>
-<p>इनलाइन एआई असिस्टेंट के लिए एक की आवश्यकता होती है <strong>ओपनएआई एपीआई कुंजी</strong> सेटिंग्स में कॉन्फ़िगर किया जाना है।</p>
+<div class="callout-label">ज़रूरी</div>
+<p>Inline AI Assistant के लिए settings में <strong>OpenAI API key</strong> डालना ज़रूरी है।</p>
 </div>
-<h3>एक पंक्ति समझाइये</h3>
+<h3>किसी line की व्याख्या पाएं</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">एक ट्रांसक्रिप्ट लाइन पर होवर करें</span>
+<span class="step-title">Transcript की किसी line पर hover करें</span>
 <div class="step-body">
-<p>जब आप प्रतिलेख में किसी पंक्ति पर होवर करते हैं, तो <strong>एआई आइकन</strong> (🤖) प्रकट होता है।</p>
+<p>जब आप transcript में किसी line पर hover करेंगे, तो एक <strong>AI icon</strong> (🤖) दिखेगा।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">एआई आइकन पर क्लिक करें और "स्पष्ट करें" चुनें</span>
+<span class="step-title">AI icon click करें और "Explain" चुनें</span>
 <div class="step-body">
-<p>एआई सहायक एक अलग विंडो में खुलता है। यह आपको विस्तृत विवरण देने के लिए पूर्ण प्रतिलेख संदर्भ और चयनित पंक्ति का उपयोग करेगा।</p>
+<p>AI assistant एक अलग window में खुलेगा। वो पूरे transcript context और selected line का use करके आपको detail में समझाएगा।</p>
 <div class="img-placeholder">
-<img alt="स्पष्ट करें" src="./images/ai-explain.png" loading="lazy"/>
+<img alt="Explain" src="./images/ai-explain.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>एक उत्तर उत्पन्न करें</h3>
+<h3>जवाब generate करें</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">एआई आइकन पर क्लिक करें और "उत्तर उत्पन्न करें" चुनें</span>
+<span class="step-title">AI icon click करें और "Generate Answer" चुनें</span>
 <div class="step-body">
-<p>एआई सहायक बातचीत में कही गई बातों के आधार पर एक सुझाया गया उत्तर तैयार करेगा। यह अधिक सटीक उत्तर प्रदान करने के लिए वेब खोज का भी उपयोग कर सकता है।</p>
+<p>AI assistant बातचीत में कही गई बातों के आधार पर एक suggested answer बनाएगा। ज़्यादा सटीक जवाब देने के लिए यह web search भी use कर सकता है।</p>
 <div class="img-placeholder">
-<img alt="उत्तर उत्पन्न करें" src="./images/ai-help-answer.png" loading="lazy"/>
+<img alt="Generate Answer" src="./images/ai-help-answer.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>सहायक पैनल खोलें</h3>
+<h3>Assistant panel खोलें</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">कंट्रोल बार में असिस्टेंट बटन पर क्लिक करें</span>
+<span class="step-title">Control bar में Assistant button click करें</span>
 <div class="step-body">
-<p>आप एआई असिस्टेंट पैनल को सीधे यहां से भी खोल सकते हैं <strong>सहायक बटन</strong> (🤖 आइकन) कंट्रोल बार में। यह एक ड्रैग करने योग्य चैट विंडो खोलता है जहां आप कोई भी प्रश्न टाइप कर सकते हैं। सहायक के पास संदर्भ के रूप में पूर्ण प्रतिलेख तक पहुंच होती है।</p>
+<p>AI assistant panel को सीधे control bar में <strong>assistant button</strong> (🤖 icon) से भी खोल सकते हैं। यह एक draggable chat window खोलता है जहाँ आप कोई भी सवाल type कर सकते हैं। Assistant के पास पूरे transcript का context होता है।</p>
 <div class="img-placeholder">
-<img alt="सहायक पैनल" src="./images/ai.png" loading="lazy"/>
+<img alt="Assistant Panel" src="./images/ai.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="context-setting">संदर्भ सेटिंग्स</h2>
-<p class="section-intro">अनुवाद सटीकता में सुधार के लिए बातचीत के विषय के बारे में संदर्भ प्रदान करें। <span class="badge badge-free">निःशुल्क</span></p>
+<h2 id="context-setting">Context Settings</h2>
+<p class="section-intro">बातचीत के topic के बारे में context दें ताकि translation ज़्यादा accurate हो। <span class="badge badge-free">Free</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">संदर्भ सेटिंग्स खोलें</span>
+<span class="step-title">Context Settings खोलें</span>
 <div class="step-body">
-<p>क्लिक करें <strong>"अधिक"</strong> कंट्रोल बार में बटन (⋯), फिर क्लिक करें <strong>"संदर्भ"</strong>.</p>
+<p>Control bar में <strong>"More"</strong> button (⋯) पर click करें, फिर <strong>"Context"</strong> पर click करें।</p>
 <div class="img-placeholder">
-<img alt="संदर्भ सेटिंग" src="./images/context.png" loading="lazy"/>
+<img alt="Context Setting" src="./images/context.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">संदर्भ फ़ील्ड भरें</span>
+<span class="step-title">Context fields भरें</span>
 <div class="step-body">
-<p>आप प्रदान कर सकते हैं:</p>
+<p>आप ये जानकारी दे सकते हैं:</p>
 <ul>
-<li><strong>डोमेन/विषय</strong> - बातचीत किस बारे में है (उदाहरण के लिए, "मेडिकल कॉन्फ्रेंस", "सॉफ्टवेयर इंजीनियरिंग स्टैंडअप")।</li>
-<li><strong>मुख्य शब्द</strong> - तकनीकी शब्द, व्यक्तिवाचक संज्ञा, या शब्दजाल जिन्हें पहचानना मुश्किल हो सकता है (उदाहरण के लिए, "कुबेरनेट्स, एपीआई गेटवे, माइक्रोसर्विसेज")।</li>
-<li><strong>स्पीकर की जानकारी</strong> - प्रतिभागियों के नाम और भूमिकाएं (उदाहरण के लिए, "डॉ. स्मिथ - हृदय रोग विशेषज्ञ, प्रस्तुतिकरण")।</li>
+<li><strong>Domain / Topic</strong> — बातचीत किस बारे में है (जैसे, "Medical conference", "Software engineering standup")।</li>
+<li><strong>Key terms</strong> — Technical terms, proper nouns, या jargon जो पहचानने में मुश्किल हो सकते हैं (जैसे, "Kubernetes, API gateway, microservices")।</li>
+<li><strong>Speaker info</strong> — Participants के नाम और roles (जैसे, "Dr. Sharma — cardiologist, presentation दे रहे हैं")।</li>
 </ul>
-<p>क्लिक करें <strong>"लागू करें"</strong> इस संदर्भ को वर्तमान सत्र के लिए अनुवाद इंजन को भेजने के लिए।</p>
+<p><strong>"Apply"</strong> पर click करें ताकि यह context current session के translation engine को भेजा जाए।</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">प्रीसेट सहेजें (वैकल्पिक)</span>
+<span class="step-title">Presets save करें (optional)</span>
 <div class="step-body">
-<p>यदि आपकी समान विषयों पर बार-बार बैठकें होती हैं, तो क्लिक करें <strong>"प्रीसेट सहेजें"</strong> वर्तमान संदर्भ को सहेजने के लिए। अगली बार, सब कुछ दोबारा टाइप करने के बजाय बस प्रीसेट लोड करें।</p>
-<p>आप भी कर सकते हैं <strong>आयात/निर्यात</strong> उन्हें साझा करने या बैकअप लेने के लिए JSON फ़ाइलों के रूप में प्रीसेट।</p>
+<p>अगर आपकी similar topics पर बार-बार meetings होती हैं, तो <strong>"Save Preset"</strong> click करके current context save कर लें। अगली बार सब दोबारा type करने की बजाय बस preset load कर लें।</p>
+<p>आप presets को JSON files के रूप में <strong>Import/Export</strong> भी कर सकते हैं, share करने या backup लेने के लिए।</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">यूट्यूब ऑटो-फिल</div>
-<p>लाइव ट्रांसलेटर का उपयोग करते समय <strong>यूट्यूब</strong>, संदर्भ फ़ील्ड हो सकते हैं <strong>स्वचालित रूप से भरा हुआ</strong> वीडियो के शीर्षक और विवरण के साथ। इससे अनुवाद इंजन को वीडियो के विषय को बेहतर ढंग से समझने में मदद मिलती है।</p>
+<div class="callout-label">YouTube Auto-fill</div>
+<p><strong>YouTube</strong> पर Live Translator use करते समय, context fields video के title और description से <strong>अपने आप भर</strong> सकते हैं। इससे translation engine को video का topic बेहतर समझने में मदद मिलती है।</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="download-transcript">प्रतिलेख डाउनलोड करें</h2>
-<p class="section-intro">अपने अनुवादित प्रतिलेखों को बाद में संदर्भ या अन्य टूल में उपयोग के लिए फ़ाइलों के रूप में सहेजें। <span class="badge badge-pro">प्रो</span></p>
+<h2 id="download-transcript">Transcript Download करें</h2>
+<p class="section-intro">अपने translated transcripts को files के रूप में save करें — बाद में देखने या दूसरे tools में use करने के लिए। <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">डाउनलोड बटन पर क्लिक करें</span>
+<span class="step-title">Download button click करें</span>
 <div class="step-body">
-<p>अनुवाद सत्र के बाद (या एक के दौरान), क्लिक करें <strong>डाउनलोड बटन</strong> (↓ आइकन) कंट्रोल बार में। डाउनलोड ट्रांसक्रिप्ट संवाद खुलता है।</p>
+<p>Translation session के बाद (या session के दौरान भी), control bar में <strong>download button</strong> (↓ icon) पर click करें। Download Transcript dialog खुलेगा।</p>
 <div class="img-placeholder">
-<img alt="प्रतिलेख डाउनलोड करें" src="./images/download-transcript.png" loading="lazy"/>
+<img alt="Download Transcript" src="./images/download-transcript.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">एक प्रारूप चुनें</span>
+<span class="step-title">Format चुनें</span>
 <div class="step-body">
-<p>अपना पसंदीदा प्रारूप चुनें:</p>
+<p>अपना पसंदीदा format चुनें:</p>
 <table>
 <thead>
-<tr><th>प्रारूप</th><th>के लिए सर्वोत्तम</th></tr>
+<tr><th>Format</th><th>किसके लिए बेहतर है</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>टेक्स्ट</strong></td><td>टाइमस्टैम्प और स्पीकर नामों के साथ सरल टेक्स्ट फ़ाइल। पढ़ने में आसान.</td></tr>
-<tr><td><strong>जेएसओएन</strong></td><td>संरचित डेटा प्रारूप। अन्य टूल या स्क्रिप्ट के साथ प्रसंस्करण के लिए अच्छा है।</td></tr>
-<tr><td><strong>एसआरटी (मूल)</strong></td><td>मूल भाषा पाठ के साथ उपशीर्षक फ़ाइल। वीडियो संपादन सॉफ़्टवेयर में उपयोग करें.</td></tr>
-<tr><td><strong>एसआरटी (अनुवादित)</strong></td><td>अनुवादित पाठ के साथ उपशीर्षक फ़ाइल। वीडियो संपादन सॉफ़्टवेयर में उपयोग करें.</td></tr>
+<tr><td><strong>TXT</strong></td><td>Timestamps और speaker names के साथ simple text file। पढ़ने में आसान।</td></tr>
+<tr><td><strong>JSON</strong></td><td>Structured data format। दूसरे tools या scripts से process करने के लिए अच्छा है।</td></tr>
+<tr><td><strong>SRT (Original)</strong></td><td>Original language text वाली subtitle file। Video editing software में use करें।</td></tr>
+<tr><td><strong>SRT (Translated)</strong></td><td>Translated text वाली subtitle file। Video editing software में use करें।</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">फ़ाइल डाउनलोड करें</span>
+<span class="step-title">File download करें</span>
 <div class="step-body">
-<p>अपने चुने हुए प्रारूप के लिए डाउनलोड बटन पर क्लिक करें। फ़ाइल आपके ब्राउज़र में जेनरेट होती है और आपके डिफ़ॉल्ट डाउनलोड फ़ोल्डर में सहेजी जाती है।</p>
+<p>अपने चुने हुए format का download button click करें। File आपके browser में generate होती है और default download folder में save होती है।</p>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">गोपनीयता</div>
-<p>ट्रांसक्रिप्ट फ़ाइलें उत्पन्न होती हैं <strong>पूरी तरह से आपके ब्राउज़र में</strong>। डाउनलोड प्रक्रिया के दौरान किसी भी सर्वर पर कोई ट्रांसक्रिप्ट डेटा नहीं भेजा जाता है।</p>
+<div class="callout-label">Privacy</div>
+<p>Transcript files <strong>पूरी तरह आपके browser में</strong> generate होती हैं। Download के दौरान किसी भी server पर कोई transcript data नहीं भेजा जाता।</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- MORE                                       -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="auto-update">ऑटो अपडेट जांच</h2>
-<p class="section-intro">हर बार जब आप इसे खोलते हैं तो एक्सटेंशन स्वचालित रूप से अपडेट की जांच करता है।</p>
+<h2 id="auto-update">Auto Update Check</h2>
+<p class="section-intro">Extension हर बार खोलने पर अपने आप updates check करता है।</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">अपडेट बैज देखें</span>
+<span class="step-title">Update badge देखें</span>
 <div class="step-body">
-<p>जब कोई नया संस्करण उपलब्ध होगा, तो आपको एक दिखाई देगा <strong>"अपडेट उपलब्ध है"</strong> अनुवादक पैनल के शीर्षक बार में बैज।</p>
+<p>जब नया version available होगा, तो translator panel के title bar में <strong>"Update available"</strong> badge दिखेगा।</p>
 <div class="img-placeholder">
-<img alt="अपडेट उपलब्ध है" src="./images/update-badge.png" loading="lazy"/>
+<img alt="Update Available" src="./images/update-badge.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">अपडेट करने के लिए क्लिक करें</span>
+<span class="step-title">Update करने के लिए click करें</span>
 <div class="step-body">
-<p>इंस्टॉल पेज पर ले जाने के लिए बैज पर क्लिक करें जहां आप नवीनतम संस्करण डाउनलोड कर सकते हैं। उसी का पालन करें <a href="#installation">स्थापना चरण</a> अद्यतन करने के लिए।</p>
+<p>Badge पर click करें — install page खुलेगा जहाँ से latest version download कर सकते हैं। Update करने के लिए वही <a href="#installation">installation steps</a> follow करें।</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="troubleshooting">समस्या निवारण</h2>
-<p class="section-intro">सामान्य समस्याएं और उन्हें कैसे ठीक करें।</p>
-<h3>"कोई सोनियोक्स एपीआई कुंजी नहीं" संदेश</h3>
+<h2 id="troubleshooting">समस्या और समाधान</h2>
+<p class="section-intro">आम समस्याएं और उन्हें कैसे ठीक करें।</p>
+<h3>"No Soniox API key" message आ रहा है</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
-<p>आपने अभी तक अपनी सोनियोक्स एपीआई कुंजी दर्ज नहीं की है। पर जाएँ <a href="#enter-keys">अपनी एपीआई कुंजी दर्ज करें</a> इसे स्थापित करने के लिए।</p>
+<p>आपने अभी तक Soniox API key नहीं डाली है। Setup करने के लिए <a href="#enter-keys">अपनी API Keys डालें</a> section देखें।</p>
 </div>
 </div>
-<h3>कोई ऑडियो कैप्चर नहीं किया जा रहा है</h3>
+<h3>Audio capture नहीं हो रहा</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
 <ul>
-<li>सुनिश्चित करें कि आपने क्लिक किया है <strong>"अनुमति दें"</strong> जब ब्राउज़र ने ऑडियो कैप्चर की अनुमति मांगी।</li>
-<li>सुनिश्चित करें कि आपने इसका चयन किया है <strong>सही टैब</strong> संकेत मिलने पर साझा करें।</li>
-<li>पृष्ठ को ताज़ा करने और अनुवादक को फिर से खोलने का प्रयास करें।</li>
-<li>जांचें कि मीटिंग/वीडियो में वास्तव में ऑडियो चल रहा है।</li>
+<li>Check करें कि जब browser ने audio capture permission माँगी थी तब आपने <strong>"Allow"</strong> click किया था।</li>
+<li>Check करें कि prompt आने पर आपने <strong>सही tab</strong> select किया था।</li>
+<li>Page refresh करें और translator दोबारा खोलें।</li>
+<li>Check करें कि meeting/video में audio चल रहा है।</li>
 </ul>
 </div>
 </div>
-<h3>अनुवाद ग़लत लगता है</h3>
+<h3>Translation सही नहीं लग रहा</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
 <ul>
-<li>सुनिश्चित करें <strong>"उनकी भाषा"</strong> ड्रॉपडाउन बोली जाने वाली सही भाषा पर सेट है।</li>
-<li>उपयोग करें <a href="#context-setting">संदर्भ सेटिंग्स</a> विषय संबंधी जानकारी और मुख्य शब्द उपलब्ध कराने के लिए।</li>
-<li>सुनिश्चित करें कि ऑडियो गुणवत्ता स्पष्ट है - पृष्ठभूमि शोर सटीकता को प्रभावित कर सकता है।</li>
+<li>Check करें कि <strong>"Their language"</strong> dropdown में सही भाषा select है जो बोली जा रही है।</li>
+<li>Topic की जानकारी और key terms देने के लिए <a href="#context-setting">Context Settings</a> use करें।</li>
+<li>Audio quality clear होनी चाहिए — background noise accuracy पर असर डालता है।</li>
 </ul>
 </div>
 </div>
-<h3>"मेरी आवाज़ सुनाओ" - अन्य लोग अनुवाद नहीं सुन सकते</h3>
+<h3>"Narrate My Voice" — दूसरे लोग translation नहीं सुन पा रहे</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
 <ul>
-<li>पुष्टि करें कि आप ए पर हैं <strong>समर्थित मंच</strong> (गूगल मीट, ज़ूम वेब, टीम्स वेब, व्हाट्सएप वेब)।</li>
-<li>सुनिश्चित करें कि एक अनुवाद सत्र है <strong>चल रहा है</strong> और आपका <strong>माइक्रोफ़ोन चालू है</strong>.</li>
-<li>जांचें कि आपके पास एक है <strong>प्रो लाइसेंस</strong> सक्रिय।</li>
-<li>मीटिंग पेज को रीफ्रेश करके फिर से शुरू करने का प्रयास करें।</li>
+<li>Confirm करें कि आप <strong>supported platform</strong> पर हैं (Google Meet, Zoom Web, Teams Web, WhatsApp Web)।</li>
+<li>Check करें कि translation session <strong>चालू</strong> है और <strong>microphone on</strong> है।</li>
+<li>Check करें कि आपका <strong>Pro license</strong> activated है।</li>
+<li>Meeting page refresh करके फिर से try करें।</li>
 </ul>
 </div>
 </div>
-<h3>ओपनएआई सुविधाएं काम नहीं कर रही हैं</h3>
+<h3>OpenAI features काम नहीं कर रहे</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
 <ul>
-<li>अपना सत्यापन करें <strong>ओपनएआई एपीआई कुंजी</strong>  सही ढंग से दर्ज किया गया है <a href="#enter-keys">सेटिंग्स</a>.</li>
-<li>सुनिश्चित करें कि आपके पास OpenAI खाता है <strong>बिलिंग सेट अप</strong> पर्याप्त क्रेडिट के साथ।</li>
-<li>यदि आपको OpenAI सुविधाओं की आवश्यकता नहीं है, तो उपयोग करें <strong>गूगल अनुवाद आवाजें</strong> इसके बजाय कथन के लिए (निःशुल्क, कोई एपीआई कुंजी की आवश्यकता नहीं है)।</li>
+<li>Check करें कि <a href="#enter-keys">settings</a> में आपकी <strong>OpenAI API key</strong> सही से डाली गई है।</li>
+<li>Check करें कि आपके OpenAI account में <strong>billing set up</strong> है और पर्याप्त credits हैं।</li>
+<li>अगर OpenAI features की ज़रूरत नहीं है, तो narration के लिए <strong>Google Translate voices</strong> use करें (free है, कोई API key नहीं चाहिए)।</li>
 </ul>
 </div>
 </div>
-<h3>वेबसाइट पर एक्सटेंशन दिखाई नहीं दे रहा है</h3>
+<h3>किसी website पर extension नहीं दिख रहा</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">समाधान</span>
 <div class="step-body">
 <ul>
-<li>लाइव ट्रांसलेटर केवल पर काम करता है <a href="#supported-platforms">समर्थित प्लेटफार्म</a>। यह असमर्थित वेबसाइटों पर दिखाई नहीं देगा.</li>
-<li>यदि साइट समर्थित है लेकिन एक्सटेंशन दिखाई नहीं देता है, तो प्रयास करें <strong>पेज को रिफ्रेश कर रहा हूं</strong>.</li>
-<li>सुनिश्चित करें कि एक्सटेंशन है <strong>सक्षम</strong> आपके ब्राउज़र के एक्सटेंशन प्रबंधन पृष्ठ में।</li>
+<li>Live Translator सिर्फ़ <a href="#supported-platforms">supported platforms</a> पर काम करता है। Unsupported websites पर यह नहीं दिखेगा।</li>
+<li>अगर site supported है लेकिन extension नहीं दिख रहा, तो <strong>page refresh</strong> करके देखें।</li>
+<li>Check करें कि browser के extension management page में extension <strong>enabled</strong> है।</li>
 </ul>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="contact">संपर्क एवं सहायता</h2>
-<p class="section-intro">मदद चाहिए? कोई प्रश्न या सुझाव है?</p>
-<p>डेवलपर से संपर्क करें:</p>
+<h2 id="contact">संपर्क और सहायता</h2>
+<p class="section-intro">कोई मदद चाहिए? कोई सवाल या सुझाव है?</p>
+<p>Developer से संपर्क करें:</p>
 <ul>
-<li><strong>ईमेल:</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
-<li><strong>वेबसाइट:</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
-<li><strong>व्हाट्सएप:</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
-<li><strong>टेलीग्राम:</strong> <a href="https://t.me/ezi_tech" target="_blank">ईज़ीटेक</a></li>
+<li><strong>Email:</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
+<li><strong>Website:</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
+<li><strong>WhatsApp:</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
+<li><strong>Telegram:</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
 </ul>
 <div class="callout callout-tip">
-<div class="callout-label">प्रतिक्रिया का स्वागत है</div>
-<p>यदि आपके पास नई सुविधाओं या सुधारों के लिए विचार हैं, तो हमें आपसे सुनना अच्छा लगेगा। अपने सुझावों के साथ हमें एक ईमेल भेजें!</p>
+<div class="callout-label">Feedback Welcome</div>
+<p>अगर आपके पास नए features या improvements के कोई ideas हैं, तो हमें ज़रूर बताएं। हमें email भेजें — हमें आपकी राय सुनकर खुशी होगी!</p>
 </div>
 <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.82rem; color: var(--c-text-secondary);">
-<p>© 2026 दून फाम। लाइव ट्रांसलेटर एक स्वतंत्र ब्राउज़र एक्सटेंशन है और यह Google, Zoom, Microsoft,oniox, या OpenAI से संबद्ध नहीं है।</p>
+<p>&copy; 2026 Doan Pham. Live Translator एक independent browser extension है और Google, Zoom, Microsoft, Soniox, या OpenAI से इसका कोई संबंध नहीं है।</p>
 </footer>
 </main>
 </div>

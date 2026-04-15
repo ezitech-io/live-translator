@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>用户指南 — 实时翻译</title>
-<meta content="实时翻译浏览器扩展程序的完整用户指南。了解如何安装、配置 API 密钥、实时翻译会议、使用旁白、字幕和所有功能。" name="description"/>
+<title>用户指南 — Live Translator</title>
+<meta content="Live Translator 浏览器扩展的完整用户指南。了解如何安装、配置 API 密钥、实时翻译会议、使用语音朗读、字幕等全部功能。" name="description"/>
 <link href="./icons/icon-128x128.png" rel="icon" sizes="128x128" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -416,8 +416,8 @@
 <body>
 <!-- ═══ Header ═══ -->
 <header class="site-header">
-<img alt="实时翻译" height="32" src="./icons/icon-128x128.png" width="32"/>
-<h1>实时翻译 — 用户指南</h1>
+<img alt="Live Translator" height="32" src="./icons/icon-128x128.png" width="32"/>
+<h1>Live Translator — 用户指南</h1>
 <div class="header-actions">
 <select aria-label="Select language guide version" class="language-select" id="languageSelect">
 <option value="instruction.html">🇺🇸 - English</option>
@@ -441,10 +441,10 @@
 <aside class="sidebar" id="sidebar">
 <nav>
 <div class="nav-group">
-<div class="nav-group-title">开始使用</div>
+<div class="nav-group-title">快速入门</div>
 <a href="#installation">安装</a>
 <a href="#supported-platforms">支持的平台</a>
-<a href="#overview">扩展概述</a>
+<a href="#overview">功能概览</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">API 密钥设置</div>
@@ -453,34 +453,34 @@
 <a href="#enter-keys">输入您的 API 密钥</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">许可证和专业版</div>
+<div class="nav-group-title">许可证与 Pro 版</div>
 <a href="#buy-license">购买许可证密钥</a>
-<a href="#activate-license">激活您的许可证</a>
-<a href="#free-vs-pro">免费与专业功能</a>
+<a href="#activate-license">激活许可证</a>
+<a href="#free-vs-pro">免费版与 Pro 版对比</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">基本用法</div>
-<a href="#start-translation">开始翻译会话</a>
-<a href="#controls">控件：暂停、恢复、结束</a>
-<a href="#language-selection">更改语言</a>
-<a href="#microphone">打开你的麦克风</a>
-<a href="#font-size">更改字体大小</a>
+<a href="#start-translation">开始翻译</a>
+<a href="#controls">控制：暂停、继续、结束</a>
+<a href="#language-selection">切换语言</a>
+<a href="#microphone">开启麦克风</a>
+<a href="#font-size">调整字体大小</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">特点</div>
-<a href="#speaker-names">发言者姓名</a>
-<a href="#narration">旁白（文本转语音）</a>
-<a href="#narrate-my-voice">讲述我的声音（口译员）</a>
+<div class="nav-group-title">功能</div>
+<a href="#speaker-names">发言者名称</a>
+<a href="#narration">语音朗读（文字转语音）</a>
+<a href="#narrate-my-voice">朗读我的语音（口译模式）</a>
 <a href="#send-chat">通过聊天发送翻译</a>
 <a href="#subtitle-mode">字幕模式</a>
-<a href="#inline-assistant">内嵌人工智能助手</a>
-<a href="#context-setting">上下文设置</a>
-<a href="#download-transcript">下载文字记录</a>
+<a href="#inline-assistant">AI 智能助手</a>
+<a href="#context-setting">场景设置</a>
+<a href="#download-transcript">下载记录</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">更多</div>
-<a href="#auto-update">自动更新检查</a>
-<a href="#troubleshooting">故障排除</a>
+<a href="#auto-update">自动检查更新</a>
+<a href="#troubleshooting">常见问题</a>
 <a href="#contact">联系与支持</a>
 </div>
 </nav>
@@ -491,19 +491,19 @@
 <!-- GETTING STARTED                            -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="installation">安装</h2>
-<p class="section-intro">在任何基于 Chromium 的浏览器（Chrome、Edge、Brave、Arc、Opera 等）上安装实时翻译扩展。</p>
+<p class="section-intro">在任何基于 Chromium 内核的浏览器（Chrome、Edge、Brave、Arc、Opera 等）上安装 Live Translator 扩展。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开实时翻译网站</span>
+<span class="step-title">打开 Live Translator 网站</span>
 <div class="step-body">
-<p>前往 <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> 在您的浏览器中。</p>
+<p>在浏览器中打开 <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a>。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">单击“安装”按钮</span>
+<span class="step-title">点击"安装"按钮</span>
 <div class="step-body">
-<p>单击 <strong>添加到 Chrome</strong> 按钮。这将下载扩展文件。</p>
+<p>点击 <strong>Add To Chrome</strong> 按钮，浏览器会下载扩展文件。</p>
 <div class="img-placeholder">
 <img alt="添加到 Chrome" src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
@@ -511,19 +511,16 @@
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">在浏览器中启用开发者模式</span>
+<span class="step-title">在浏览器中开启开发者模式</span>
 <div class="step-body">
-<p>打开浏览器的扩展程序管理页面：</p>
+<p>打开浏览器的扩展管理页面：</p>
 <ul>
-<li><strong>镀铬/勇敢/电弧：</strong> 类型
-在地址栏中输入  <code>chrome://extensions</code> ，然后按 Enter。</li>
-<li><strong>边缘：</strong> 类型
-在地址栏中输入  <code>edge://extensions</code> ，然后按 Enter。</li>
+<li><strong>Chrome/Brave/Arc：</strong>在地址栏输入 <code>chrome://extensions</code>，然后按回车键。</li>
+<li><strong>Edge：</strong>在地址栏输入 <code>edge://extensions</code>，然后按回车键。</li>
 </ul>
-<p>切换 <strong>开发者模式
-页面右上角的</strong> ON。</p>
+<p>打开页面右上角的<strong>开发者模式</strong>开关。</p>
 <div class="img-placeholder">
-<img alt="启用开发者模式" src="./images/enable-dev-mode.png" loading="lazy"/>
+<img alt="开启开发者模式" src="./images/enable-dev-mode.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -531,7 +528,7 @@
 <span class="step-number">4</span>
 <span class="step-title">安装扩展文件</span>
 <div class="step-body">
-<p>拖放下载的 <code>.zip</code> 文件到扩展页面。</p>
+<p>将下载好的 <code>.zip</code> 文件拖放到扩展管理页面上即可。</p>
 <div class="img-placeholder">
 <img alt="安装扩展" src="./images/drag-drop.png" loading="lazy"/>
 </div>
@@ -539,22 +536,22 @@
 </div>
 <div class="callout callout-note">
 <div class="callout-label">完成！</div>
-<p>您现在应该在浏览器工具栏中看到实时翻译器图标。扩展已安装并准备好进行配置。</p>
+<p>现在您应该能在浏览器工具栏中看到 Live Translator 的图标了。扩展已安装完毕，可以开始配置。</p>
 </div>
 <hr class="section-divider"/>
 <!-- Supported Platforms -->
 <h2 id="supported-platforms">支持的平台</h2>
-<p class="section-intro">实时翻译适用于这些网站和平台。只需打开这些网站中的任何一个并单击扩展图标即可开始翻译。</p>
+<p class="section-intro">Live Translator 支持以下网站和平台。只需打开其中任意一个网站，点击扩展图标即可开始翻译。</p>
 <table>
 <thead>
-<tr><th>平台</th><th>你能做什么</th></tr>
+<tr><th>平台</th><th>可以做什么</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Google Meet</strong></td><td>翻译会议、叙述你的声音、发送聊天</td></tr>
-<tr><td><strong>Zoom (Web)</strong></td><td>翻译会议、叙述你的声音、发送聊天</td></tr>
-<tr><td><strong>Microsoft Teams（web）</strong></td><td>翻译会议、叙述你的声音、发送聊天</td></tr>
-<tr><td><strong>YouTube</strong></td><td>翻译视频，自动填充视频标题的上下文</td></tr>
-<tr><td><strong>WhatsApp (web)</strong></td><td>翻译通话，讲述你的声音</td></tr>
+<tr><td><strong>Google Meet</strong></td><td>翻译会议内容、朗读语音、发送聊天消息</td></tr>
+<tr><td><strong>Zoom (Web)</strong></td><td>翻译会议内容、朗读语音、发送聊天消息</td></tr>
+<tr><td><strong>Microsoft Teams (Web)</strong></td><td>翻译会议内容、朗读语音、发送聊天消息</td></tr>
+<tr><td><strong>YouTube</strong></td><td>翻译视频内容，自动获取视频标题作为场景信息</td></tr>
+<tr><td><strong>WhatsApp Web</strong></td><td>翻译通话内容、朗读语音</td></tr>
 <tr><td><strong>Facebook</strong></td><td>翻译视频和直播</td></tr>
 <tr><td><strong>TikTok</strong></td><td>翻译视频</td></tr>
 <tr><td><strong>Douyin</strong></td><td>翻译视频</td></tr>
@@ -566,59 +563,59 @@
 </table>
 <div class="callout callout-tip">
 <div class="callout-label">提示</div>
-<p>扩展捕获 <strong>标签音频</strong> 直接，因此它适用于受支持网站上浏览器选项卡中播放的任何音频 - 无需为另一方的音频单独设置麦克风。</p>
+<p>扩展会直接捕获<strong>标签页的音频</strong>，所以在支持的网站上，无论标签页里正在播放什么音频都能翻译——不需要为对方的声音单独设置麦克风。</p>
 </div>
 <hr class="section-divider"/>
 <!-- Extension Overview -->
-<h2 id="overview">扩展概述</h2>
-<p class="section-intro">主界面和所有内容所在位置的快速概述。</p>
+<h2 id="overview">功能概览</h2>
+<p class="section-intro">快速了解主界面各部分的位置和功能。</p>
 <div class="img-placeholder" style="min-height: 200px;">
-<img alt="扩展概述" src="./images/extension-overview.png" loading="lazy"/>
+<img alt="功能概览" src="./images/extension-overview.png" loading="lazy"/>
 </div>
-<p>实时翻译面板有以下主要区域：</p>
+<p>Live Translator 面板主要有以下几个区域：</p>
 <ul>
-<li><strong>标题栏</strong> — 设置按钮、字幕模式切换、关闭按钮。如果有可用更新，您将在此处看到一个徽章。</li>
-<li><strong>语言选择器</strong> — 两个下拉菜单：“我的语言”（您所说的语言）和“他们的语言”（您要翻译的语言）。</li>
-<li><strong>转录区</strong> ——翻译文本实时出现，由演讲者组织。</li>
-<li><strong>控制栏</strong> — 开始/停止/暂停按钮、麦克风切换、旁白设置、AI 助手、字体大小、下载和更多选项。</li>
+<li><strong>标题栏</strong> — 设置按钮、字幕模式开关、关闭按钮。如果有新版本可用，这里会显示一个更新提示。</li>
+<li><strong>语言选择器</strong> — 两个下拉菜单："我的语言"（您说的语言）和"对方语言"（您想翻译的来源语言）。</li>
+<li><strong>翻译区</strong> — 翻译后的文字会实时显示在这里，按发言者分组。</li>
+<li><strong>控制栏</strong> — 开始/停止/暂停按钮、麦克风开关、朗读设置、AI 助手、字体大小、下载等更多选项。</li>
 </ul>
 <div class="callout callout-tip">
 <div class="callout-label">提示</div>
-<p>你可以 <strong>拖动面板</strong>  通过其标题栏将其移动到屏幕上的任何位置，以及 <strong>调整大小</strong> 通过拖动边缘。这样，它就不会在会议或视频期间屏蔽重要内容。</p>
+<p>您可以通过拖动标题栏来<strong>移动面板</strong>到屏幕上的任意位置，也可以通过拖动边缘来<strong>调整面板大小</strong>。这样在开会或看视频时就不会挡住重要内容了。</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- API KEYS SETUP                             -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="soniox-key">获取 Soniox API 密钥</h2>
-<p class="section-intro">Soniox 提供实时语音识别和翻译引擎。您需要 Soniox API 密钥才能使用实时翻译器。 <span class="badge badge-free">必填</span></p>
+<p class="section-intro">Soniox 提供实时语音识别和翻译引擎。使用 Live Translator 必须要有 Soniox API 密钥。 <span class="badge badge-free">必需</span></p>
 <div class="callout callout-warn">
 <div class="callout-label">重要</div>
-<p>Soniox API 密钥是 <strong>必填</strong> 使扩展能够正常工作。如果没有它，扩展程序就无法转录或翻译任何音频。</p>
+<p>Soniox API 密钥是<strong>必需的</strong>，没有它扩展就无法识别和翻译任何音频。</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">前往 Soniox 网站</span>
+<span class="step-title">打开 Soniox 网站</span>
 <div class="step-body">
-<p>打开 <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> 在您的浏览器中。使用您的电子邮件或 Google 登录创建帐户。</p>
+<p>在浏览器中打开 <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a>，使用您的邮箱或 Google 账号注册。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
 <span class="step-title">获取您的 API 密钥</span>
 <div class="step-body">
-<p>登录后，导航至 Soniox 仪表板的 API 部分。您也可以直接前往 <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Soniox 入门指南</a> 了解分步说明。</p>
-<p>复制您的 API 密钥 - 您将在后续步骤中需要它。</p>
+<p>登录后，进入 Soniox 控制台的 API 部分。您也可以直接查看 <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Soniox 入门指南</a>，里面有详细的步骤说明。</p>
+<p>复制您的 API 密钥——后面的步骤中会用到。</p>
 <div class="img-placeholder">
-<img alt="获取API密钥" src="./images/create-soniox-api.png" loading="lazy"/>
+<img alt="获取 API 密钥" src="./images/create-soniox-api.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">添加计费（API 使用所需）</span>
+<span class="step-title">添加付款方式（使用 API 必需）</span>
 <div class="step-body">
-<p>向您的 Soniox 帐户添加付款方式。您可以使用信用卡、PayPal 或其他付款方式。 Soniox API 是即用即付的 — 您只需为使用的内容付费。</p>
+<p>在您的 Soniox 账户中添加付款方式。可以使用信用卡、PayPal 或其他支付方式。Soniox API 按实际用量计费——用多少付多少。</p>
 <div class="img-placeholder">
 <img alt="添加付款方式" src="./images/payment-soniox.png" loading="lazy"/>
 </div>
@@ -626,31 +623,31 @@
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">注意</div>
-<p>您需要向您的帐户存入至少 1 美元才能使用 API。如果您愿意，您可以存入更多资金。</p>
+<p>您需要至少充值 1 美元才能使用 API。如果需要，也可以充值更多。</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="openai-key">获取 OpenAI API 密钥（可选）</h2>
-<p class="section-intro">OpenAI API 密钥是 <strong>可选</strong> ——仅当您想使用 OpenAI 语音进行旁白或内联 AI 助手功能时才需要它。 <span class="badge badge-pro">临</span></p>
+<p class="section-intro">OpenAI API 密钥是<strong>可选的</strong>——只有当您想使用 OpenAI 语音进行朗读或使用 AI 智能助手功能时才需要。 <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">前往OpenAI平台</span>
+<span class="step-title">打开 OpenAI 平台</span>
 <div class="step-body">
-<p>打开 <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> 在您的浏览器中。</p>
+<p>在浏览器中打开 <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a>。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">创建帐户或登录</span>
+<span class="step-title">注册或登录账号</span>
 <div class="step-body">
-<p>如果您没有 OpenAI 帐户，请单击 <strong>“注册”</strong> 并创建一个。如果您已有，请登录。</p>
+<p>如果还没有 OpenAI 账号，点击<strong>"Sign Up"</strong>注册一个。如果已有账号，直接登录即可。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">创建新的 API 密钥</span>
 <div class="step-body">
-<p>点击 <strong>“+创建新的密钥”</strong>，将其命名为“Live Translator”，然后单击 <strong>“创建密钥”</strong>.</p>
-<p><strong>立即复制并保存密钥</strong> — OpenAI 只会显示一次。</p>
+<p>点击<strong>"+ Create new secret key"</strong>，输入一个名称（比如"Live Translator"），然后点击<strong>"Create secret key"</strong>。</p>
+<p><strong>请立刻复制并保存密钥</strong>——OpenAI 只会显示一次。</p>
 <div class="img-placeholder">
 <img alt="创建 OpenAI API 密钥" src="./images/openai-key.png" loading="lazy"/>
 </div>
@@ -658,30 +655,30 @@
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">添加计费（API 使用所需）</span>
+<span class="step-title">添加付款方式（使用 API 必需）</span>
 <div class="step-body">
-<p>前往 <a href="https://platform.openai.com/account/billing" target="_blank">计费设置</a> 并添加付款方式。 OpenAI API 是按需付费的——您只需为使用的内容付费。</p>
+<p>前往<a href="https://platform.openai.com/account/billing" target="_blank">账单设置</a>，添加付款方式。OpenAI API 也是按用量计费——用多少付多少。</p>
 <div class="img-placeholder">
-<img alt="创建 OpenAI API 密钥" src="./images/openai-billing.png" loading="lazy"/>
+<img alt="OpenAI 账单设置" src="./images/openai-billing.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">注意</div>
-<p>如果您只想旁白（文字转语音），您可以使用 <strong>免费谷歌翻译语音</strong> 代替。仅当您需要 OpenAI 的高级语音或 AI Assistant 功能时才需要 OpenAI 密钥。</p>
+<p>如果您只想使用语音朗读（文字转语音）功能，可以<strong>免费使用 Google 翻译的语音</strong>。只有当您需要 OpenAI 的高品质语音或 AI 智能助手功能时，才需要 OpenAI 密钥。</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="enter-keys">输入您的 API 密钥</h2>
-<p class="section-intro">获得 API 密钥后，将其输入到实时翻译器设置页面中。</p>
+<p class="section-intro">拿到 API 密钥后，将它们填入 Live Translator 的设置页面。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开实时翻译设置</span>
+<span class="step-title">打开 Live Translator 设置</span>
 <div class="step-body">
-<p>您可以通过以下任一方式打开设置：</p>
+<p>您可以通过以下任意方式打开设置：</p>
 <ul>
-<li>单击 <strong>齿轮图标</strong> (⚙) 位于翻译器面板的右上角。</li>
-<li>右键单击工具栏中的实时翻译图标 → <strong>“选项”</strong>.</li>
-<li>转到浏览器的扩展页面→找到实时翻译→ <strong>“详细信息”</strong> → <strong>“扩展选项”</strong>.</li>
+<li>点击翻译面板右上角的<strong>齿轮图标</strong>（⚙）。</li>
+<li>右键点击工具栏中的 Live Translator 图标 → 选择<strong>"选项"</strong>。</li>
+<li>在浏览器的扩展管理页面 → 找到 Live Translator → 点击<strong>"详情"</strong> → <strong>"扩展程序选项"</strong>。</li>
 </ul>
 <div class="img-placeholder">
 <img alt="设置页面" src="./images/gear.png" loading="lazy"/>
@@ -690,9 +687,9 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">输入您的 Soniox API 密钥</span>
+<span class="step-title">输入 Soniox API 密钥</span>
 <div class="step-body">
-<p>在设置页面中，单击 <strong>“索尼克斯”</strong> 在左侧边栏中。将您的 Soniox API 密钥粘贴到输入字段中。密钥会自动保存。</p>
+<p>在设置页面中，点击左侧边栏的<strong>"Soniox"</strong>，将您的 Soniox API 密钥粘贴到输入框中。密钥会自动保存。</p>
 <div class="img-placeholder">
 <img alt="Soniox 设置" src="./images/enter-soniox-key.png" loading="lazy"/>
 </div>
@@ -700,9 +697,9 @@
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">输入您的 OpenAI API 密钥（可选）</span>
+<span class="step-title">输入 OpenAI API 密钥（可选）</span>
 <div class="step-body">
-<p>点击 <strong>“OpenAI”</strong> 在左侧边栏中。将您的 OpenAI API 密钥粘贴到输入字段中。密钥会自动保存。</p>
+<p>点击左侧边栏的<strong>"OpenAI"</strong>，将您的 OpenAI API 密钥粘贴到输入框中。密钥会自动保存。</p>
 <div class="img-placeholder">
 <img alt="OpenAI 设置" src="./images/enter-openai-key.png" loading="lazy"/>
 </div>
@@ -710,20 +707,19 @@
 </div>
 <div class="callout callout-note">
 <div class="callout-label">安全说明</div>
-<p>您的 API 密钥已存储 <strong>仅在您的设备本地</strong> 使用 Chrome 的安全扩展存储。它们永远不会发送到 Live Translator 的服务器 - 它们仅用于直接与 Soniox 和 OpenAI 通信。</p>
+<p>您的 API 密钥<strong>仅保存在您自己的设备上</strong>，使用的是 Chrome 的安全扩展存储。密钥不会发送到 Live Translator 的服务器——它们只用于直接与 Soniox 和 OpenAI 通信。</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- LICENSE & PRO                              -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="buy-license">购买许可证密钥</h2>
-<p class="section-intro">许可证密钥可解锁 Pro 功能，如旁白、SRT 下载、AI 助手等。</p>
+<p class="section-intro">许可证密钥可以解锁 Pro 功能，包括语音朗读、SRT 字幕下载、AI 智能助手等。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">进入购买页面</span>
+<span class="step-title">打开购买页面</span>
 <div class="step-body">
-<p>访问实时翻译主页： <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> 并滚动到 <strong>定价</strong> 部分，或单击 <strong>“购买许可证”
-扩展程序设置页面中的 </strong>  链接。</p>
+<p>访问 Live Translator 主页 <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a>，滚动到<strong>价格</strong>部分；也可以在扩展设置页面中点击<strong>"购买许可证"</strong>链接。</p>
 <div class="img-placeholder">
 <img alt="购买页面" src="./images/pricing.jpeg" loading="lazy"/>
 </div>
@@ -731,21 +727,21 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">选择您的计划</span>
+<span class="step-title">选择您的套餐</span>
 <div class="step-body">
-<p>选择：</p>
+<p>可选择：</p>
 <ul>
-<li><strong>每月</strong> — 5.99 美元/月</li>
-<li><strong>每年</strong> — 59 美元/年（节省约 18%）</li>
+<li><strong>月付</strong> — 5.99 美元/月</li>
+<li><strong>年付</strong> — 59 美元/年（约省 18%）</li>
 </ul>
-<p>你可以获得 <strong>7天免费试用</strong> 尝试专业版功能。试用后，您可以购买许可证以继续使用专业版功能。</p>
+<p>您可以先领取<strong>7 天免费试用</strong>来体验 Pro 功能。试用结束后，可以购买许可证继续使用 Pro 功能。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">完成付款</span>
 <div class="step-body">
-<p>您将被重定向至 Polar 付款页面。输入您的电子邮件和付款详细信息，然后完成购买。</p>
+<p>您会跳转到 Polar 支付页面。填写您的邮箱和付款信息，然后完成购买即可。</p>
 <div class="img-placeholder">
 <img alt="付款页面" src="./images/purchase.png" loading="lazy"/>
 </div>
@@ -753,23 +749,23 @@
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">接收您的许可证密钥</span>
+<span class="step-title">收到许可证密钥</span>
 <div class="step-body">
-<p>付款后，您将收到 <strong>许可证密钥</strong> 通过电子邮件。许可证密钥看起来像一个长代码（例如， <code>LT-XXXX-XXXX-XXXX-XXXX</code>）。复制此密钥。</p>
+<p>付款后，您会通过邮件收到一个<strong>许可证密钥</strong>。密钥看起来像一串长代码（例如 <code>LT-XXXX-XXXX-XXXX-XXXX</code>）。请复制这个密钥。</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">退款政策</div>
-<p>您可以在以下时间内申请退款 <strong>30 天</strong> 从付款之日起联系 <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
+<p>自付款之日起 <strong>30 天</strong>内，您可以联系 <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a> 申请退款。</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="activate-license">激活您的许可证</h2>
+<h2 id="activate-license">激活许可证</h2>
 <p class="section-intro">购买后，在扩展设置中激活您的许可证密钥。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">输入并激活您的许可证密钥</span>
+<span class="step-title">输入并激活许可证密钥</span>
 <div class="step-body">
-<p>打开扩展设置（齿轮图标或右键单击→选项）。点击 <strong>“许可证”</strong> 在左侧边栏中。将您的许可证密钥粘贴到输入字段中，然后单击 <strong>“激活”</strong>。该扩展程序将通过服务器验证您的许可证。</p>
+<p>打开扩展设置（点击齿轮图标或右键 → 选项）。点击左侧边栏的<strong>"License"</strong>，将许可证密钥粘贴到输入框中，然后点击<strong>"Activate"</strong>。扩展会自动向服务器验证您的许可证。</p>
 <div class="img-placeholder">
 <img alt="激活许可证" src="./images/enter-license-key.png" loading="lazy"/>
 </div>
@@ -777,61 +773,60 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">验证激活</span>
+<span class="step-title">确认激活成功</span>
 <div class="step-body">
-<p>激活后，您将看到您的许可证状态、与许可证关联的电子邮件以及到期日期。所有 Pro 功能现已解锁。</p>
+<p>激活后，您可以看到许可证状态、关联的邮箱以及到期日期。此时所有 Pro 功能已解锁。</p>
 <div class="img-placeholder">
 <img alt="激活许可证" src="./images/license-activated.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-warn">
-<div class="callout-label">切换设备？</div>
-<p>如果您之前在其他设备上激活了许可证，则可以使用 <strong>“强制激活”</strong> 选项可将许可证移至您当前的设备。每个许可证一次只能在一台设备上处于活动状态。</p>
+<div class="callout-label">更换设备？</div>
+<p>如果您之前在其他设备上激活过许可证，可以使用<strong>"Force Activate"（强制激活）</strong>选项将许可证转移到当前设备。每个许可证同一时间只能在一台设备上使用。</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="free-vs-pro">免费与专业功能</h2>
-<p class="section-intro">以下是免费版本可以执行的操作以及需要专业版许可证的操作。</p>
+<h2 id="free-vs-pro">免费版与 Pro 版对比</h2>
+<p class="section-intro">以下是免费版和 Pro 版各自可以使用的功能。</p>
 <table>
 <thead>
-<tr><th>特征</th><th>免费</th><th>临</th></tr>
+<tr><th>功能</th><th>免费</th><th>Pro</th></tr>
 </thead>
 <tbody>
 <tr><td>实时翻译</td><td>✓</td><td>✓</td></tr>
-<tr><td>60 多种语言</td><td>✓</td><td>✓</td></tr>
-<tr><td>演讲者标签</td><td>✓</td><td>✓</td></tr>
+<tr><td>60+ 种语言</td><td>✓</td><td>✓</td></tr>
+<tr><td>发言者标识</td><td>✓</td><td>✓</td></tr>
 <tr><td>拖动、调整大小、最小化面板</td><td>✓</td><td>✓</td></tr>
-<tr><td>字体大小控制</td><td>✓</td><td>✓</td></tr>
-<tr><td>下载文字记录 (TXT/JSON)</td><td>—</td><td>✓</td></tr>
-<tr><td>下载文字记录（SRT）</td><td>—</td><td>✓</td></tr>
-<tr><td>讲述他们的声音（TTS）</td><td>—</td><td>✓</td></tr>
-<tr><td>讲述我的声音（口译员）</td><td>—</td><td>✓</td></tr>
+<tr><td>字体大小调节</td><td>✓</td><td>✓</td></tr>
+<tr><td>下载记录（TXT/JSON）</td><td>—</td><td>✓</td></tr>
+<tr><td>下载记录（SRT 字幕）</td><td>—</td><td>✓</td></tr>
+<tr><td>朗读对方语音（文字转语音）</td><td>—</td><td>✓</td></tr>
+<tr><td>朗读我的语音（口译模式）</td><td>—</td><td>✓</td></tr>
 <tr><td>通过聊天发送翻译</td><td>—</td><td>✓</td></tr>
 <tr><td>字幕模式</td><td>—</td><td>✓</td></tr>
-<tr><td>内嵌人工智能助手</td><td>—</td><td>✓</td></tr>
-<tr><td>上下文设置</td><td>✓</td><td>✓</td></tr>
-<tr><td>发言者姓名</td><td>✓</td><td>✓</td></tr>
+<tr><td>AI 智能助手</td><td>—</td><td>✓</td></tr>
+<tr><td>场景设置</td><td>✓</td><td>✓</td></tr>
+<tr><td>发言者名称</td><td>✓</td><td>✓</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- BASIC USAGE                                -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="start-translation">开始翻译会话</h2>
-<p class="section-intro">了解如何在会议或视频中开始翻译。</p>
+<h2 id="start-translation">开始翻译</h2>
+<p class="section-intro">了解如何在会议或视频中启动翻译。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开支持的网站</span>
+<span class="step-title">打开一个支持的网站</span>
 <div class="step-body">
-<p>前往任意 <a href="#supported-platforms">支持的平台</a> （例如 Google Meet、Zoom、YouTube 等）并加入会议或播放视频。</p>
+<p>进入任意一个<a href="#supported-platforms">支持的平台</a>（例如 Google Meet、Zoom、YouTube 等），加入会议或播放视频。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">打开实时翻译面板</span>
+<span class="step-title">打开 Live Translator 面板</span>
 <div class="step-body">
-<p>单击 <strong>实时翻译图标</strong> 在浏览器工具栏中。翻译面板将出现在页面上。您还可以单击 <strong>浮动图标
-页面上显示的</strong> 。</p>
+<p>点击浏览器工具栏中的 <strong>Live Translator 图标</strong>，翻译面板就会出现在页面上。您也可以点击页面上出现的<strong>悬浮图标</strong>来打开面板。</p>
 <div class="img-placeholder">
 <img alt="打开面板" src="./images/floating-icon.png" loading="lazy"/>
 </div>
@@ -839,12 +834,12 @@
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">选择您的语言</span>
+<span class="step-title">选择语言</span>
 <div class="step-body">
-<p>使用面板顶部的两种语言下拉菜单：</p>
+<p>使用面板顶部的两个语言下拉菜单：</p>
 <ul>
-<li><strong>“我的语言”</strong> ——语言 <em>你</em> 说话（例如越南语）。</li>
-<li><strong>“他们的语言”</strong> ——语言 <em>其他</em> 说出您想要翻译的内容（例如英语）。</li>
+<li><strong>"我的语言"</strong> — 就是<em>您</em>说的语言（例如中文）。</li>
+<li><strong>"对方语言"</strong> — <em>对方</em>说的语言，也就是您想翻译的语言（例如英语）。</li>
 </ul>
 <div class="img-placeholder">
 <img alt="语言选择" src="./images/language.png" loading="lazy"/>
@@ -853,10 +848,10 @@
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">按开始按钮</span>
+<span class="step-title">点击"开始"按钮</span>
 <div class="step-body">
-<p>单击 <strong>开始</strong> 按钮（播放图标）。</p>
-<p>您的浏览器可能会请求捕获音频的权限 - 单击 <strong>“允许”</strong> and select the tab you want to capture.</p>
+<p>点击控制栏底部的<strong>开始</strong>按钮（播放图标）。</p>
+<p>浏览器可能会请求捕获音频的权限——点击<strong>"允许"</strong>，然后选择您想要翻译的标签页。</p>
 <div class="img-placeholder">
 <img alt="开始按钮" src="./images/press-start.png" loading="lazy"/>
 </div>
@@ -864,9 +859,9 @@
 </div>
 <div class="step">
 <span class="step-number">5</span>
-<span class="step-title">See translations in real time</span>
+<span class="step-title">实时查看翻译</span>
 <div class="step-body">
-<p>当人们说话时，你会看到 <strong>原文</strong> 和 <strong>翻译文本</strong> 出现在成绩单区域。 Lines are automatically grouped by speaker.</p>
+<p>当有人说话时，翻译区会同时显示<strong>原文</strong>和<strong>译文</strong>。内容会自动按发言者分组显示。</p>
 <div class="img-placeholder">
 <img alt="实时翻译" src="./images/translate-real.png" loading="lazy"/>
 </div>
@@ -874,55 +869,54 @@
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">自动滚动</div>
-<p>记录会自动滚动以显示最新文本。如果您向上滚动以阅读较早的文本，自动滚动会暂停。单击 <strong>“滚动到最新”</strong> 按钮跳回实时文本。</p>
+<p>翻译记录会自动滚动到最新内容。如果您向上滚动查看之前的内容，自动滚动会暂停。点击出现的<strong>"滚动到最新"</strong>按钮即可跳回最新内容。</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="controls">控件：暂停、恢复、结束</h2>
-<p class="section-intro">了解翻译会话控制。</p>
+<h2 id="controls">控制：暂停、继续、结束</h2>
+<p class="section-intro">了解翻译过程中的各个控制按钮。</p>
 <table>
 <thead>
-<tr><th>按钮</th><th>它的作用</th></tr>
+<tr><th>按钮</th><th>作用</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>开始</strong> (▶)</td><td>Begins a new translation session.清除任何以前的记录。</td></tr>
-<tr><td><strong>暂停</strong> (⏸)</td><td>Temporarily stops translation.成绩单被保留。音频捕获继续，但文本暂停。</td></tr>
-<tr><td><strong>简历</strong> (▶)</td><td>暂停后继续翻译。新文本出现在先前内容之后。</td></tr>
-<tr><td><strong>结束</strong> (⏹)</td><td>完全停止会话。文字记录将保留在屏幕上，直到您开始新的会话。结束音频捕获，关闭麦克风和旁白。</td></tr>
+<tr><td><strong>开始</strong> (▶)</td><td>开始一个新的翻译会话，之前的记录会被清除。</td></tr>
+<tr><td><strong>暂停</strong> (⏸)</td><td>临时暂停翻译。已有的记录会保留，音频仍在捕获但暂停显示文字。</td></tr>
+<tr><td><strong>继续</strong> (▶)</td><td>暂停后继续翻译，新的文字会接在之前内容后面。</td></tr>
+<tr><td><strong>结束</strong> (⏹)</td><td>完全停止翻译。记录保留在屏幕上直到您开始新的会话。同时关闭音频捕获、麦克风和朗读功能。</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
-<h2 id="language-selection">更改语言</h2>
+<h2 id="language-selection">切换语言</h2>
 <p class="section-intro">您可以随时更改翻译语言。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">单击语言下拉列表</span>
+<span class="step-title">点击语言下拉菜单</span>
 <div class="step-body">
-<p>单击 <strong>“我的语言”</strong> 或
-面板顶部的 <strong>“他们的语言”</strong> 下拉菜单。</p>
+<p>点击面板顶部的<strong>"我的语言"</strong>或<strong>"对方语言"</strong>下拉菜单。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">选择新语言</span>
+<span class="step-title">选择新的语言</span>
 <div class="step-body">
-<p>列表支持 <strong>60 多种语言</strong> 按字母顺序排序。滚动或键入以搜索您的语言。单击以选择它。</p>
+<p>列表中有<strong>60 多种语言</strong>，按字母顺序排列。您可以滚动或输入关键词来搜索，然后点击选择。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">翻译自动重新开始</span>
+<span class="step-title">翻译自动重启</span>
 <div class="step-body">
-<p>如果会话处于活动状态，更改语言将自动使用新语言对重新启动翻译。您的语言选择将被保存以供下次使用。</p>
+<p>如果当前正在翻译，切换语言后会自动以新的语言组合重新开始翻译。您选择的语言会被保存，下次打开时无需重新选择。</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="microphone">打开你的麦克风</h2>
-<p class="section-intro">启用您的麦克风，以便您自己的演讲也会与会议/视频音频一起翻译。</p>
+<h2 id="microphone">开启麦克风</h2>
+<p class="section-intro">开启麦克风后，您自己说的话也会和会议/视频音频一起被翻译。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">单击麦克风按钮</span>
+<span class="step-title">点击麦克风按钮</span>
 <div class="step-body">
-<p>在控制栏中，单击 <strong>麦克风图标</strong>。当麦克风打开时，该图标将变为活动状态（突出显示）。</p>
+<p>在控制栏中，点击<strong>麦克风图标</strong>。麦克风开启后，图标会变为高亮状态。</p>
 <div class="img-placeholder">
 <img alt="麦克风按钮" src="./images/micro.png" loading="lazy"/>
 </div>
@@ -930,31 +924,31 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">允许麦克风访问</span>
+<span class="step-title">允许麦克风权限</span>
 <div class="step-body">
-<p>如果这是第一次，您的浏览器将请求麦克风权限。点击 <strong>“允许”</strong>.</p>
+<p>如果是第一次使用，浏览器会弹出麦克风权限请求，点击<strong>"允许"</strong>即可。</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">提示</div>
-<p>麦克风正在 <strong>默认关闭</strong> 当您打开面板时。仅当您希望转录和翻译您自己的演讲时才打开它。当您按下 <strong>结束</strong>，麦克风自动关闭。</p>
+<p>打开面板时，麦克风<strong>默认是关闭的</strong>。只有当您希望自己的声音也被识别和翻译时才需要打开它。按下<strong>结束</strong>按钮时，麦克风会自动关闭。</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="font-size">更改字体大小</h2>
-<p class="section-intro">调整文字大小以方便阅读。</p>
+<h2 id="font-size">调整字体大小</h2>
+<p class="section-intro">调整翻译文字的大小，让您阅读更舒适。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">单击字体大小按钮</span>
+<span class="step-title">点击字体大小按钮</span>
 <div class="step-body">
-<p>在控制栏中，单击 <strong>字体大小按钮</strong> （Aa 图标）。将出现一个具有三种尺寸的菜单：</p>
+<p>在控制栏中，点击<strong>字体大小按钮</strong>（Aa 图标），会出现三种大小可选：</p>
 <ul>
-<li><strong>小</strong> ——紧凑的视图，适合更多文本</li>
-<li><strong>中</strong> —默认平衡尺寸</li>
-<li><strong>大</strong> ——更容易从远处阅读</li>
+<li><strong>小</strong> — 紧凑显示，可以看到更多内容</li>
+<li><strong>中</strong> — 默认大小，大小适中</li>
+<li><strong>大</strong> — 字更大，远一点也能看清</li>
 </ul>
-<p>单击您的首选尺寸。更改会立即应用并保存以供下次使用。</p>
+<p>点击您想要的大小即可。更改会立即生效，并自动保存。</p>
 <div class="img-placeholder">
-<img alt="字体大小选择器" src="./images/font.png" loading="lazy"/>
+<img alt="字体大小选择" src="./images/font.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -962,156 +956,153 @@
 <!-- ────────────────────────────────────────── -->
 <!-- FEATURES                                   -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="speaker-names">发言者姓名</h2>
-<p class="section-intro">为发言者指定真实姓名，以便您可以轻松识别谁在文字记录中说了些什么。 <span class="badge badge-free">免费</span></p>
+<h2 id="speaker-names">发言者名称</h2>
+<p class="section-intro">给发言者设置真实姓名，方便您在翻译记录中快速分辨是谁在说话。 <span class="badge badge-free">免费</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开“更多”菜单</span>
+<span class="step-title">打开"更多"菜单</span>
 <div class="step-body">
-<p>在控制栏中，单击 <strong>“更多”</strong> 按钮（⋯图标）。然后点击 <strong>“扬声器设置”</strong> 按钮。</p>
+<p>在控制栏中，点击<strong>"更多"</strong>按钮（⋯ 图标），然后点击<strong>"发言者设置"</strong>按钮。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">打开“扬声器设置”对话框</span>
+<span class="step-title">打开"发言者设置"对话框</span>
 <div class="step-body">
-<p>扬声器设置对话框将打开。</p>
+<p>发言者设置对话框会弹出。</p>
 <div class="img-placeholder">
-<img alt="扬声器设置对话框" src="./images/speaker.png" loading="lazy"/>
+<img alt="发言者设置对话框" src="./images/speaker.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">分配名称</span>
+<span class="step-title">设置名称</span>
 <div class="step-body">
-<p>您将看到检测到的扬声器列表（扬声器 1、扬声器 2 等）。在每个名字旁边输入真实姓名（例如“John”、“Sarah”）。点击 <strong>“添加行”</strong> 如果您需要更多。</p>
-<p>点击 <strong>“保存”</strong>。所有转录行——过去的和未来的——现在都将使用您指定的名称。</p>
+<p>您会看到系统自动识别出的发言者列表（发言者 1、发言者 2 等）。在每个发言者旁边输入真实姓名（例如"张三"、"李四"）。如果需要添加更多，点击<strong>"添加行"</strong>。</p>
+<p>点击<strong>"保存"</strong>后，所有翻译记录（包括之前的和之后的）都会显示您设置的名称。</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narration">旁白（文本转语音）</h2>
-<p class="section-intro">让翻译大声朗读给您听，这样您就可以听而不是读。这就是“讲述他们的声音”功能。 <span class="badge badge-pro">临</span></p>
+<h2 id="narration">语音朗读（文字转语音）</h2>
+<p class="section-intro">让翻译内容自动朗读出来，您不用看文字，听就行。这就是"朗读对方语音"功能。 <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开旁白设置</span>
+<span class="step-title">打开朗读设置</span>
 <div class="step-body">
-<p>在控制栏中，单击 <strong>旁白按钮</strong> （扬声器图标）。 “旁白设置”对话框打开。</p>
+<p>在控制栏中，点击<strong>朗读按钮</strong>（喇叭图标），朗读设置对话框会弹出。</p>
 <div class="img-placeholder">
-<img alt="旁白设置" src="./images/narration-setting.png" loading="lazy"/>
+<img alt="朗读设置" src="./images/narration-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">选择 TTS 提供商和语音</span>
+<span class="step-title">选择语音引擎和声音</span>
 <div class="step-body">
-<p>选择您的语音提供商：</p>
+<p>选择您想使用的语音引擎：</p>
 <ul>
-<li><strong>谷歌翻译</strong> （免费）— 无需任何 API 密钥即可工作。 60 多种语言的优质语音。</li>
-<li><strong>OpenAI</strong> (高级) — 更高质量、更自然的声音。需要 OpenAI API 密钥。</li>
+<li><strong>Google 翻译</strong>（免费）— 无需 API 密钥即可使用，支持 60 多种语言，音质不错。</li>
+<li><strong>OpenAI</strong>（高级）— 音质更好，声音更自然。需要 OpenAI API 密钥。</li>
 </ul>
-<p>选择一个 <strong>声音
-从下拉菜单中选择 </strong> ，然后单击 <strong>“测试”</strong> 预览它的声音。</p>
-<p>调整 <strong>语速</strong> 和 <strong>音量</strong> 如果需要的话。</p>
+<p>从下拉菜单中选择一个<strong>声音</strong>，然后点击<strong>"测试"</strong>试听效果。</p>
+<p>您还可以根据需要调整<strong>语速</strong>和<strong>音量</strong>。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">开始旁白</span>
+<span class="step-title">开始朗读</span>
 <div class="step-body">
-<p>点击 <strong>“讲述他们的声音”
-对话框中的</strong> 按钮。现在，每当出现翻译时，都会大声朗读给您听。</p>
-<p>要停止，请再次单击旁白按钮，然后单击 <strong>“停止”</strong>.</p>
+<p>点击对话框中的<strong>"朗读对方语音"</strong>按钮。之后每当有新的翻译出现，系统就会自动朗读给您听。</p>
+<p>如需停止，再次点击朗读按钮，然后点击<strong>"停止"</strong>。</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narrate-my-voice">讲述我的声音（口译模式）</h2>
-<p class="section-intro">用您的语言讲话并向其他会议参与者播放翻译后的声音 - 就像拥有私人口译员一样。 <span class="badge badge-pro">临</span></p>
+<h2 id="narrate-my-voice">朗读我的语音（口译模式）</h2>
+<p class="section-intro">用您的语言说话，系统会将翻译后的语音播放给会议中的其他人听——就像有一位随身翻译。 <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">要求</div>
-<p>此功能适用于 <strong>Google Meet</strong>, <strong>缩放（网页）</strong>, <strong>Microsoft Teams（网络）</strong>，以及 <strong>WhatsApp 网页版</strong>。你需要你的 <strong>麦克风已启用</strong> 和翻译会议 <strong>正在运行
-控制栏中的 </strong>.</p>
+<div class="callout-label">使用条件</div>
+<p>此功能适用于 <strong>Google Meet</strong>、<strong>Zoom (Web)</strong>、<strong>Microsoft Teams (Web)</strong> 和 <strong>WhatsApp Web</strong>。使用前需要<strong>打开麦克风</strong>，并且翻译会话已经<strong>开始运行</strong>。</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开旁白设置</span>
+<span class="step-title">打开朗读设置</span>
 <div class="step-body">
-<p>单击 <strong>旁白按钮</strong>  打开“旁白设置”对话框。</p>
+<p>点击控制栏中的<strong>朗读按钮</strong>，打开朗读设置对话框。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">配置“讲述我的声音”</span>
+<span class="step-title">配置"朗读我的语音"</span>
 <div class="step-body">
-<p>在对话框中，找到 <strong>“讲述我的声音”</strong> 部分。选择您喜欢的语音和提供商（Google 或 OpenAI）。您可以设置一个 <strong>不同的声音</strong> 为“我的声音”和“他们的声音”旁白。</p>
-<p>点击 <strong>“测试”</strong> 预览您选择的声音。</p>
+<p>在对话框中找到<strong>"朗读我的语音"</strong>部分。选择您喜欢的声音和语音引擎（Google 或 OpenAI）。您可以为"我的语音"和"对方语音"分别设置<strong>不同的声音</strong>。</p>
+<p>点击<strong>"测试"</strong>可以试听所选声音的效果。</p>
 <div class="img-placeholder">
-<img alt="讲述我的声音" src="./images/my-voice-setting.png" loading="lazy"/>
+<img alt="朗读我的语音" src="./images/my-voice-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">开始“讲述我的声音”</span>
+<span class="step-title">开始"朗读我的语音"</span>
 <div class="step-body">
-<p>点击 <strong>“开始讲述我的声音”</strong>。当你说话时，你的话是：</p>
+<p>点击<strong>"开始朗读我的语音"</strong>。当您说话时，系统会：</p>
 <ol>
-<li>以您的语言转录</li>
-<li>翻译成其他语言</li>
-<li>在会议中大声讲话，以便其他人听到您翻译的声音</li>
+<li>将您的语音转录为文字</li>
+<li>翻译成对方的语言</li>
+<li>在会议中播放翻译后的语音，让对方听到</li>
 </ol>
-<p>播放翻译后的音频时，您的麦克风会自动静音，以防止出现回声。</p>
+<p>播放翻译语音时，您的麦克风会自动静音，以避免产生回声。</p>
 <div class="img-placeholder">
-<img alt="开始讲述我的声音" src="./images/narrate-my-voice.png" loading="lazy"/>
+<img alt="开始朗读我的语音" src="./images/narrate-my-voice.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">停止旁白</span>
+<span class="step-title">停止朗读</span>
 <div class="step-body">
-<p>单击旁白按钮，然后 <strong>“停止”</strong>，或按 <strong>结束</strong> 停止整个会话（这也会停止旁白）。</p>
+<p>点击朗读按钮再点<strong>"停止"</strong>，或者直接按<strong>结束</strong>按钮来停止整个翻译会话（朗读也会随之停止）。</p>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">注意</div>
-<p>你只能运行 <strong>一次一种旁白模式</strong> ——“讲述我的声音”或“讲述他们的声音”，不能同时两者。工具栏图标会发生变化以显示哪种模式处于活动状态。</p>
+<p>同一时间只能使用<strong>一种朗读模式</strong>——要么"朗读我的语音"，要么"朗读对方语音"，不能同时使用。工具栏图标会显示当前正在使用哪种模式。</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="send-chat">通过聊天发送翻译</h2>
-<p class="section-intro">在会议聊天中自动将翻译后的演讲作为短信发送。 <span class="badge badge-pro">临</span></p>
+<p class="section-intro">将您翻译后的语音自动以文字消息发送到会议的聊天框中。 <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">启用“通过聊天发送”</span>
+<span class="step-title">开启"通过聊天发送"</span>
 <div class="step-body">
-<p>在控制栏中查找 <strong>聊天发送按钮</strong> （麦克风图标旁边）。单击它即可打开 - 按钮会转动 <strong>绿色</strong> 激活时。</p>
+<p>在控制栏中找到<strong>聊天发送按钮</strong>（在麦克风图标旁边），点击开启——按钮变为<strong>绿色</strong>表示已开启。</p>
 <div class="img-placeholder">
-<img alt="发送聊天" src="./images/send-via-chat.png" loading="lazy"/>
+<img alt="通过聊天发送" src="./images/send-via-chat.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">说话并自动发送</span>
+<span class="step-title">说话即自动发送</span>
 <div class="step-body">
-<p>打开麦克风并运行翻译会话后，当您讲话时，您的翻译文本会自动插入到会议的聊天输入中并发送。</p>
-<p>这适用于 <strong>Google Meet</strong>, <strong>缩放（网页）</strong>，以及 <strong>Microsoft Teams（网络）</strong>.</p>
+<p>在麦克风开启并且翻译正在运行的情况下，您说话后，翻译文字会自动填入会议的聊天输入框并发送。</p>
+<p>此功能支持 <strong>Google Meet</strong>、<strong>Zoom (Web)</strong> 和 <strong>Microsoft Teams (Web)</strong>。</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">提示</div>
-<p>当“讲述我的声音”不适用于您的平台时，或者如果您想要同时进行语音旁白和文本聊天翻译，这非常有用。</p>
+<p>当您所在的平台不支持"朗读我的语音"功能时，或者您想同时使用语音朗读和文字聊天翻译时，这个功能特别实用。</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="subtitle-mode">字幕模式</h2>
-<p class="section-intro">切换到最小的电影风格字幕栏，仅在屏幕底部显示最新的翻译。 <span class="badge badge-pro">临</span></p>
+<p class="section-intro">切换为简洁的电影式字幕条，在屏幕底部只显示最新的翻译内容。 <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">启用字幕模式</span>
+<span class="step-title">开启字幕模式</span>
 <div class="step-body">
-<p>在翻译器面板的标题栏中，单击 <strong>字幕图标</strong> （隐藏式字幕图标）。</p>
-<p>整个面板将被屏幕底部的细长字幕栏取代。</p>
+<p>在翻译面板的标题栏中，点击<strong>字幕图标</strong>（CC 图标）。</p>
+<p>完整面板会变成屏幕底部的一个细长字幕条。</p>
 <div class="img-placeholder">
 <img alt="字幕模式" src="./images/subtitle.png" loading="lazy"/>
 </div>
@@ -1119,15 +1110,14 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">自定义字幕栏</span>
+<span class="step-title">自定义字幕条</span>
 <div class="step-body">
-<p>单击 <strong>调整图标
-字幕栏上的</strong> （设置档位）调整：</p>
+<p>点击字幕条上的<strong>设置图标</strong>（齿轮），可以调整：</p>
 <ul>
-<li><strong>不透明度</strong> — 滑动以使栏或多或少透明。</li>
-<li><strong>字体大小</strong> — 选择小、中或大文本。</li>
+<li><strong>透明度</strong> — 拖动滑块可以让字幕条变得更透明或更不透明。</li>
+<li><strong>字体大小</strong> — 选择小号、中号或大号文字。</li>
 </ul>
-<p>您还可以 <strong>拖动</strong> 移动字幕栏，然后 <strong>调整大小</strong> 通过拖动边缘来实现。</p>
+<p>您还可以<strong>拖动</strong>字幕条来移动位置，<strong>拖动边缘</strong>来调整大小。</p>
 <div class="img-placeholder">
 <img alt="字幕设置" src="./images/customize-subtitle-bar.png" loading="lazy"/>
 </div>
@@ -1137,108 +1127,104 @@
 <span class="step-number">3</span>
 <span class="step-title">退出字幕模式</span>
 <div class="step-body">
-<p>单击 <strong>关闭按钮
-字幕栏上的 </strong> (✕) 可返回完整翻译面板。</p>
+<p>点击字幕条上的<strong>关闭按钮</strong>（✕）即可返回完整的翻译面板。</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="inline-assistant">内嵌人工智能助手</h2>
-<p class="section-intro">直接从记录中获取人工智能驱动的解释并根据对话上下文生成答案。 <span class="badge badge-pro">临</span></p>
+<h2 id="inline-assistant">AI 智能助手</h2>
+<p class="section-intro">根据对话内容，直接在翻译记录中获取 AI 驱动的解释和自动生成的回答。 <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
-<div class="callout-label">要求</div>
-<p>内联人工智能助手需要一个 <strong>OpenAI API 密钥</strong> 在设置中配置。</p>
+<div class="callout-label">使用条件</div>
+<p>AI 智能助手需要在设置中配置 <strong>OpenAI API 密钥</strong>。</p>
 </div>
-<h3>解释一行</h3>
+<h3>解释某句话</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">将鼠标悬停在转录行上</span>
+<span class="step-title">将鼠标悬停在翻译记录的某一行上</span>
 <div class="step-body">
-<p>当您将鼠标悬停在记录中的任何行上时， <strong>人工智能图标
-出现</strong> (🤖)。</p>
+<p>当您把鼠标移到翻译记录中的任意一行上时，会出现一个 <strong>AI 图标</strong>（🤖）。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">点击AI图标并选择“解释”</span>
+<span class="step-title">点击 AI 图标，选择"解释"</span>
 <div class="step-body">
-<p>AI 助手在单独的窗口中打开。它将使用完整的文字记录上下文和选定的行来为您提供详细的解释。</p>
+<p>AI 助手会在新窗口中打开，它会结合完整的对话记录和您选中的那句话，给出详细的解释。</p>
 <div class="img-placeholder">
-<img alt="解释一下" src="./images/ai-explain.png" loading="lazy"/>
+<img alt="解释功能" src="./images/ai-explain.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>生成答案</h3>
+<h3>生成回答</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">点击AI图标并选择“生成答案”</span>
+<span class="step-title">点击 AI 图标，选择"生成回答"</span>
 <div class="step-body">
-<p>人工智能助手将根据对话内容生成建议答案。它甚至可以使用网络搜索来提供更准确的答案。</p>
+<p>AI 助手会根据对话内容自动生成一个建议回答。它还可以通过网络搜索来提供更准确的答案。</p>
 <div class="img-placeholder">
-<img alt="生成答案" src="./images/ai-help-answer.png" loading="lazy"/>
+<img alt="生成回答" src="./images/ai-help-answer.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <h3>打开助手面板</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">单击控制栏中的“助手”按钮</span>
+<span class="step-title">点击控制栏中的"助手"按钮</span>
 <div class="step-body">
-<p>您也可以直接从桌面打开AI助手面板 <strong>助理按钮
-控制栏中的</strong> （🤖图标）。这将打开一个可拖动的聊天窗口，您可以在其中键入任何问题。助理可以访问完整的文字记录作为上下文。</p>
+<p>您也可以通过控制栏中的<strong>助手按钮</strong>（🤖 图标）直接打开 AI 助手面板。这会弹出一个可拖动的聊天窗口，您可以在里面输入任何问题。助手能够读取完整的对话记录作为参考。</p>
 <div class="img-placeholder">
-<img alt="助理小组" src="./images/ai.png" loading="lazy"/>
+<img alt="助手面板" src="./images/ai.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="context-setting">上下文设置</h2>
-<p class="section-intro">提供有关对话主题的上下文以提高翻译准确性。 <span class="badge badge-free">免费</span></p>
+<h2 id="context-setting">场景设置</h2>
+<p class="section-intro">提供对话主题的背景信息，帮助提升翻译准确度。 <span class="badge badge-free">免费</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">打开上下文设置
-控制栏中的</span>
+<span class="step-title">打开场景设置</span>
 <div class="step-body">
-<p>单击 <strong>“更多”</strong> 按钮(⋯)，然后单击 <strong>“上下文”</strong>.</p>
+<p>点击控制栏中的<strong>"更多"</strong>按钮（⋯），然后点击<strong>"场景"</strong>。</p>
 <div class="img-placeholder">
-<img alt="上下文设置" src="./images/context.png" loading="lazy"/>
+<img alt="场景设置" src="./images/context.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">填写上下文字段</span>
+<span class="step-title">填写场景信息</span>
 <div class="step-body">
-<p>您可以提供：</p>
+<p>您可以填写：</p>
 <ul>
-<li><strong>域/主题</strong> ——对话的内容（例如“医学会议”、“软件工程站立”）。</li>
-<li><strong>关键术语</strong> ——可能难以识别的技术术语、专有名词或行话（例如“Kubernetes、API 网关、微服务”）。</li>
-<li><strong>演讲者信息</strong> — 参与者的姓名和角色（例如，“Smith 博士 — 心脏病专家，主讲”）。</li>
+<li><strong>领域/主题</strong> — 对话内容是关于什么的（例如"医学会议"、"软件工程每日站会"）。</li>
+<li><strong>关键术语</strong> — 可能难以识别的专业术语、专有名词或行话（例如"Kubernetes、API 网关、微服务"）。</li>
+<li><strong>发言者信息</strong> — 参与者的姓名和角色（例如"Smith 医生——心脏科专家，主讲人"）。</li>
 </ul>
-<p>点击 <strong>“申请”</strong> 将此上下文发送到当前会话的翻译引擎。</p>
+<p>点击<strong>"应用"</strong>，将这些信息发送给翻译引擎，用于当前翻译会话。</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
 <span class="step-title">保存预设（可选）</span>
 <div class="step-body">
-<p>如果您有类似主题的定期会议，请单击 <strong>“保存预设”</strong> 保存当前上下文。下次，只需加载预设即可，而不必再次输入所有内容。</p>
-<p>您还可以 <strong>导入/导出</strong> 预设为 JSON 文件以共享或备份它们。</p>
+<p>如果您经常参加类似主题的会议，可以点击<strong>"保存预设"</strong>来保存当前的场景信息。下次直接加载预设，不用重新输入。</p>
+<p>您还可以将预设<strong>导入/导出</strong>为 JSON 文件，方便分享或备份。</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">YouTube 自动填充</div>
-<p>使用实时翻译器时 <strong>YouTube</strong>，上下文字段可以是 <strong>自动填充</strong> 包含视频的标题和说明。这有助于翻译引擎更好地理解视频的主题。</p>
+<p>在 <strong>YouTube</strong> 上使用 Live Translator 时，场景信息可以<strong>自动填充</strong>视频的标题和描述，帮助翻译引擎更好地理解视频内容。</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="download-transcript">下载文字记录</h2>
-<p class="section-intro">将翻译后的文字记录保存为文件，以供以后参考或在其他工具中使用。 <span class="badge badge-pro">临</span></p>
+<h2 id="download-transcript">下载记录</h2>
+<p class="section-intro">将翻译记录保存为文件，方便日后查看或在其他工具中使用。 <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">单击下载按钮</span>
+<span class="step-title">点击下载按钮</span>
 <div class="step-body">
-<p>翻译会话结束后（或翻译会话期间），单击 <strong>下载按钮</strong> （↓图标）。 “下载脚本”对话框打开。</p>
+<p>翻译结束后（或翻译过程中），点击控制栏中的<strong>下载按钮</strong>（↓ 图标），下载对话框会弹出。</p>
 <div class="img-placeholder">
-<img alt="下载文字记录" src="./images/download-transcript.png" loading="lazy"/>
+<img alt="下载记录" src="./images/download-transcript.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1246,16 +1232,16 @@
 <span class="step-number">2</span>
 <span class="step-title">选择格式</span>
 <div class="step-body">
-<p>选择您的首选格式：</p>
+<p>选择您需要的格式：</p>
 <table>
 <thead>
-<tr><th>格式</th><th>最适合</th></tr>
+<tr><th>格式</th><th>适合场景</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>TXT</strong></td><td>带有时间戳和演讲者姓名的简单文本文件。易于阅读。</td></tr>
-<tr><td><strong>JSON</strong></td><td>结构化数据格式。适合与其他工具或脚本一起处理。</td></tr>
-<tr><td><strong>SRT（原始）</strong></td><td>带有原始语言文本的字幕文件。用于视频编辑软件。</td></tr>
-<tr><td><strong>SRT（已翻译）</strong></td><td>包含翻译文本的字幕文件。用于视频编辑软件。</td></tr>
+<tr><td><strong>TXT</strong></td><td>纯文本文件，包含时间戳和发言者姓名，阅读方便。</td></tr>
+<tr><td><strong>JSON</strong></td><td>结构化数据格式，适合用其他工具或脚本进一步处理。</td></tr>
+<tr><td><strong>SRT（原文）</strong></td><td>原始语言的字幕文件，可导入视频编辑软件使用。</td></tr>
+<tr><td><strong>SRT（译文）</strong></td><td>翻译后的字幕文件，可导入视频编辑软件使用。</td></tr>
 </tbody>
 </table>
 </div>
@@ -1264,27 +1250,26 @@
 <span class="step-number">3</span>
 <span class="step-title">下载文件</span>
 <div class="step-body">
-<p>单击您选择的格式的下载按钮。该文件在您的浏览器中生成并保存到您的默认下载文件夹中。</p>
+<p>点击对应格式的下载按钮即可。文件会在浏览器中生成，并保存到您的默认下载文件夹中。</p>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">隐私</div>
-<p>生成脚本文件 <strong>完全在您的浏览器中</strong>。下载过程中不会将任何转录数据发送到任何服务器。</p>
+<p>记录文件<strong>完全在您的浏览器中生成</strong>，下载过程中不会将任何数据发送到服务器。</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- MORE                                       -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="auto-update">自动更新检查</h2>
-<p class="section-intro">每次您打开扩展程序时，它都会自动检查更新。</p>
+<h2 id="auto-update">自动检查更新</h2>
+<p class="section-intro">每次打开扩展时，它会自动检查是否有新版本。</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">寻找更新徽章</span>
+<span class="step-title">查看更新提示</span>
 <div class="step-body">
-<p>当有新版本可用时，您将看到 <strong>“有更新”
-翻译器面板标题栏中的 </strong>  徽章。</p>
+<p>当有新版本可用时，翻译面板的标题栏中会出现一个<strong>"有更新可用"</strong>的提示标记。</p>
 <div class="img-placeholder">
-<img alt="有更新" src="./images/update-badge.png" loading="lazy"/>
+<img alt="有更新可用" src="./images/update-badge.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1292,99 +1277,98 @@
 <span class="step-number">2</span>
 <span class="step-title">点击更新</span>
 <div class="step-body">
-<p>单击徽章即可进入安装页面，您可以在其中下载最新版本。遵循同样的 <a href="#installation">安装步骤</a> 更新。</p>
+<p>点击该提示标记，即可跳转到安装页面下载最新版本。更新方法和<a href="#installation">安装步骤</a>相同。</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="troubleshooting">故障排除</h2>
-<p class="section-intro">常见问题以及如何解决这些问题。</p>
-<h3>“没有 Soniox API 密钥”消息</h3>
+<h2 id="troubleshooting">常见问题</h2>
+<p class="section-intro">遇到问题了？来这里看看怎么解决。</p>
+<h3>提示"没有 Soniox API 密钥"</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
-<p>您尚未输入您的 Soniox API 密钥。前往 <a href="#enter-keys">输入您的 API 密钥</a> 进行设置。</p>
+<p>您还没有输入 Soniox API 密钥。请前往<a href="#enter-keys">输入 API 密钥</a>部分进行设置。</p>
 </div>
 </div>
-<h3>没有捕获任何音频</h3>
+<h3>没有捕获到任何音频</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
 <ul>
-<li>确保您点击了 <strong>“允许”</strong> 当浏览器请求音频捕获权限时。</li>
-<li>确保您选择了 <strong>正确的选项卡</strong> 出现提示时进行分享。</li>
-<li>尝试刷新页面并再次打开翻译器。</li>
-<li>检查会议/视频是否确实有音频播放。</li>
+<li>确认在浏览器弹出音频捕获权限时点击了<strong>"允许"</strong>。</li>
+<li>确认弹出提示时选择了<strong>正确的标签页</strong>进行共享。</li>
+<li>尝试刷新页面并重新打开翻译面板。</li>
+<li>检查会议/视频是否确实有声音在播放。</li>
 </ul>
 </div>
 </div>
-<h3>翻译似乎不准确</h3>
+<h3>翻译不够准确</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
 <ul>
-<li>确保 <strong>“他们的语言”</strong> 下拉菜单设置为所讲的正确语言。</li>
-<li>使用 <a href="#context-setting">上下文设置</a> 提供主题信息和关键术语。</li>
-<li>确保音频质量清晰——背景噪音会影响准确性。</li>
+<li>确认<strong>"对方语言"</strong>下拉菜单选择的是对方实际在说的语言。</li>
+<li>使用<a href="#context-setting">场景设置</a>提供对话主题和关键术语信息。</li>
+<li>确保音频清晰——背景噪音会影响翻译准确度。</li>
 </ul>
 </div>
 </div>
-<h3>“讲述我的声音”-其他人听不到翻译</h3>
+<h3>"朗读我的语音"——对方听不到翻译</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
 <ul>
-<li>确认您正在使用 <strong>支持的平台</strong> （Google Meet、Zoom Web、Teams Web、WhatsApp Web）。</li>
-<li>确保翻译会话已启动 <strong>正在运行
-控制栏中的 </strong> 和你的 <strong>麦克风已打开</strong>.</li>
-<li>检查您是否有 <strong>专业许可证</strong> 已激活。</li>
+<li>确认您使用的是<strong>支持的平台</strong>（Google Meet、Zoom Web、Teams Web、WhatsApp Web）。</li>
+<li>确认翻译会话已<strong>开始运行</strong>，并且<strong>麦克风已开启</strong>。</li>
+<li>检查是否已激活 <strong>Pro 许可证</strong>。</li>
 <li>尝试刷新会议页面并重新开始。</li>
 </ul>
 </div>
 </div>
-<h3>OpenAI 功能不起作用</h3>
+<h3>OpenAI 相关功能无法使用</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
 <ul>
-<li>验证您的 <strong>OpenAI API 密钥</strong> 已正确输入 <a href="#enter-keys">设置</a>.</li>
-<li>确保您的 OpenAI 帐户已 <strong>计费设置</strong> 有足够的学分。</li>
-<li>如果不需要 OpenAI 功能，请使用 <strong>谷歌翻译语音</strong>  用于旁白（免费，无需 API 密钥）。</li>
+<li>检查<strong>OpenAI API 密钥</strong>是否在<a href="#enter-keys">设置</a>中正确输入。</li>
+<li>确认您的 OpenAI 账户已<strong>设置好付款方式</strong>且余额充足。</li>
+<li>如果不需要 OpenAI 功能，可以使用<strong>Google 翻译语音</strong>进行朗读（免费，无需 API 密钥）。</li>
 </ul>
 </div>
 </div>
-<h3>扩展程序未出现在网站上</h3>
+<h3>扩展没有出现在网站上</h3>
 <div class="step">
 <span class="step-number">!</span>
-<span class="step-title">解决方案</span>
+<span class="step-title">解决方法</span>
 <div class="step-body">
 <ul>
-<li>实时翻译仅适用于 <a href="#supported-platforms">支持的平台</a>。它不会出现在不受支持的网站上。</li>
-<li>如果该网站受支持但扩展名不显示，请尝试 <strong>正在刷新页面</strong>.</li>
-<li>确保扩展名是 <strong>已启用</strong> 在浏览器的扩展程序管理页面中。</li>
+<li>Live Translator 仅在<a href="#supported-platforms">支持的平台</a>上可用，不支持的网站上不会显示。</li>
+<li>如果网站是支持的但扩展没有显示，请尝试<strong>刷新页面</strong>。</li>
+<li>确认扩展在浏览器的扩展管理页面中处于<strong>已启用</strong>状态。</li>
 </ul>
 </div>
 </div>
 <hr class="section-divider"/>
 <h2 id="contact">联系与支持</h2>
-<p class="section-intro">需要帮助吗？有问题或建议吗？</p>
-<p>联系开发商：</p>
+<p class="section-intro">需要帮助？有问题或建议？</p>
+<p>联系开发者：</p>
 <ul>
-<li><strong>电子邮件：</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
+<li><strong>邮箱：</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
 <li><strong>网站：</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
-<li><strong>WhatsApp:</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
-<li><strong>电报：</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
+<li><strong>WhatsApp：</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
+<li><strong>Telegram：</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
 </ul>
 <div class="callout callout-tip">
 <div class="callout-label">欢迎反馈</div>
-<p>如果您对新功能或改进有任何想法，我们很乐意听取您的意见。请向我们发送电子邮件并提出您的建议！</p>
+<p>如果您有新功能的想法或改进建议，我们非常乐意听取！请发邮件告诉我们您的想法。</p>
 </div>
 <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.82rem; color: var(--c-text-secondary);">
-<p>© 2026 Doan Pham。 Live Translator 是一个独立的浏览器扩展，不隶属于 Google、Zoom、Microsoft、Soniox 或 OpenAI。</p>
+<p>© 2026 Doan Pham。Live Translator 是一个独立的浏览器扩展，与 Google、Zoom、Microsoft、Soniox 或 OpenAI 没有关联。</p>
 </footer>
 </main>
 </div>

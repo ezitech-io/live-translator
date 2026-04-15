@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Руководство пользователя — Живой переводчик</title>
-<meta content="Полное руководство пользователя расширения для браузера Live Translator. Узнайте, как устанавливать, настраивать ключи API, переводить собрания в режиме реального времени, использовать дикторское сопровождение, субтитры и все функции." name="description"/>
+<title>Руководство пользователя — Live Translator</title>
+<meta content="Полное руководство пользователя расширения Live Translator для браузера. Узнайте, как установить расширение, настроить API-ключи, переводить встречи в реальном времени, использовать озвучивание, субтитры и все остальные функции." name="description"/>
 <link href="./icons/icon-128x128.png" rel="icon" sizes="128x128" type="image/png"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -416,8 +416,8 @@
 <body>
 <!-- ═══ Header ═══ -->
 <header class="site-header">
-<img alt="Живой переводчик" height="32" src="./icons/icon-128x128.png" width="32"/>
-<h1>Живой переводчик — Руководство пользователя</h1>
+<img alt="Live Translator" height="32" src="./icons/icon-128x128.png" width="32"/>
+<h1>Live Translator — Руководство пользователя</h1>
 <div class="header-actions">
 <select aria-label="Select language guide version" class="language-select" id="languageSelect">
 <option value="instruction.html">🇺🇸 - English</option>
@@ -430,7 +430,7 @@
 <option value="instruction-pt.html">🇵🇹 - Portuguese</option>
 <option value="instruction-ru.html">🇷🇺 - Russian</option>
 </select>
-<a class="home-link" href="https://translate.ezitech.io">Вернуться на главную страницу</a>
+<a class="home-link" href="https://translate.ezitech.io">На главную</a>
 </div>
 </header>
 <!-- ═══ Sidebar overlay (mobile) ═══ -->
@@ -447,38 +447,38 @@
 <a href="#overview">Обзор расширения</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">Настройка ключей API</div>
-<a href="#soniox-key">Получите ключ API Soniox</a>
-<a href="#openai-key">Получите ключ API OpenAI (необязательно)</a>
-<a href="#enter-keys">Введите свои ключи API</a>
+<div class="nav-group-title">Настройка API-ключей</div>
+<a href="#soniox-key">Получение API-ключа Soniox</a>
+<a href="#openai-key">Получение API-ключа OpenAI (необязательно)</a>
+<a href="#enter-keys">Ввод API-ключей</a>
 </div>
 <div class="nav-group">
 <div class="nav-group-title">Лицензия и Pro</div>
-<a href="#buy-license">Купить лицензионный ключ</a>
-<a href="#activate-license">Активируйте свою лицензию</a>
-<a href="#free-vs-pro">Бесплатные и профессиональные функции</a>
+<a href="#buy-license">Покупка лицензионного ключа</a>
+<a href="#activate-license">Активация лицензии</a>
+<a href="#free-vs-pro">Бесплатная vs Pro-версия</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">Основное использование</div>
-<a href="#start-translation">Начать сеанс перевода</a>
-<a href="#controls">Элементы управления: Пауза, Возобновление, Конец</a>
-<a href="#language-selection">Изменить язык</a>
-<a href="#microphone">Включите микрофон</a>
-<a href="#font-size">Изменить размер шрифта</a>
+<div class="nav-group-title">Основы использования</div>
+<a href="#start-translation">Запуск сеанса перевода</a>
+<a href="#controls">Управление: пауза, продолжение, завершение</a>
+<a href="#language-selection">Смена языка</a>
+<a href="#microphone">Включение микрофона</a>
+<a href="#font-size">Изменение размера шрифта</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">Особенности</div>
-<a href="#speaker-names">Имена докладчиков</a>
-<a href="#narration">Повествование (преобразование текста в речь)</a>
-<a href="#narrate-my-voice">Расскажи моим голосом (переводчик)</a>
-<a href="#send-chat">Отправить перевод через чат</a>
+<div class="nav-group-title">Функции</div>
+<a href="#speaker-names">Имена говорящих</a>
+<a href="#narration">Озвучивание (текст в речь)</a>
+<a href="#narrate-my-voice">Озвучить мой голос (переводчик)</a>
+<a href="#send-chat">Отправка перевода в чат</a>
 <a href="#subtitle-mode">Режим субтитров</a>
 <a href="#inline-assistant">Встроенный AI-помощник</a>
 <a href="#context-setting">Настройки контекста</a>
-<a href="#download-transcript">Загрузить стенограмму</a>
+<a href="#download-transcript">Скачать стенограмму</a>
 </div>
 <div class="nav-group">
-<div class="nav-group-title">Еще</div>
+<div class="nav-group-title">Дополнительно</div>
 <a href="#auto-update">Автоматическая проверка обновлений</a>
 <a href="#troubleshooting">Устранение неполадок</a>
 <a href="#contact">Контакты и поддержка</a>
@@ -491,36 +491,34 @@
 <!-- GETTING STARTED                            -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="installation">Установка</h2>
-<p class="section-intro">Установите расширение Live Translator в любой браузер на базе Chromium (Chrome, Edge, Brave, Arc, Opera и т. д.).</p>
+<p class="section-intro">Установите расширение Live Translator в любой браузер на базе Chromium (Chrome, Edge, Brave, Arc, Opera и др.).</p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Откройте сайт Live Translator</span>
 <div class="step-body">
-<p>Перейти <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> в вашем браузере.</p>
+<p>Перейдите по ссылке <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a> в вашем браузере.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Нажмите кнопку «Установить».</span>
+<span class="step-title">Нажмите кнопку «Установить»</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>Добавить в Chrome
-Кнопка </strong> . Это позволит загрузить файл расширения.</p>
+<p>Нажмите кнопку <strong>Add To Chrome</strong>. Будет загружен файл расширения.</p>
 <div class="img-placeholder">
-<img alt="Добавить в Chrome
-Кнопка " src="./images/add-to-chrome.png" loading="lazy"/>
+<img alt="Add To Chrome" src="./images/add-to-chrome.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Включите режим разработчика в вашем браузере</span>
+<span class="step-title">Включите режим разработчика в браузере</span>
 <div class="step-body">
 <p>Откройте страницу управления расширениями вашего браузера:</p>
 <ul>
-<li><strong>Хром/Храбрый/Арка:</strong> Тип <code>chrome://extensions</code> в адресной строке и нажмите Enter.</li>
-<li><strong>Край:</strong> Тип <code>edge://extensions</code> в адресной строке и нажмите Enter.</li>
+<li><strong>Chrome/Brave/Arc:</strong> введите <code>chrome://extensions</code> в адресной строке и нажмите Enter.</li>
+<li><strong>Edge:</strong> введите <code>edge://extensions</code> в адресной строке и нажмите Enter.</li>
 </ul>
-<p>Переключить <strong>Режим разработчика</strong> ON в правом верхнем углу страницы.</p>
+<p>Включите переключатель <strong>Режим разработчика</strong> в правом верхнем углу страницы.</p>
 <div class="img-placeholder">
 <img alt="Включить режим разработчика" src="./images/enable-dev-mode.png" loading="lazy"/>
 </div>
@@ -530,7 +528,7 @@
 <span class="step-number">4</span>
 <span class="step-title">Установите файл расширения</span>
 <div class="step-body">
-<p>Перетащите загруженный <code>.zip</code> файл на страницу расширений.</p>
+<p>Перетащите скачанный файл <code>.zip</code> на страницу расширений.</p>
 <div class="img-placeholder">
 <img alt="Установить расширение" src="./images/drag-drop.png" loading="lazy"/>
 </div>
@@ -538,86 +536,86 @@
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Готово!</div>
-<p>Теперь вы должны увидеть значок Live Translator на панели инструментов браузера. Расширение установлено и готово к настройке.</p>
+<p>Теперь вы увидите значок Live Translator на панели инструментов браузера. Расширение установлено и готово к настройке.</p>
 </div>
 <hr class="section-divider"/>
 <!-- Supported Platforms -->
 <h2 id="supported-platforms">Поддерживаемые платформы</h2>
-<p class="section-intro">Live Translator работает на этих сайтах и ​​платформах. Просто откройте любой из этих сайтов и щелкните значок расширения, чтобы начать перевод.</p>
+<p class="section-intro">Live Translator работает на перечисленных ниже сайтах и платформах. Просто откройте любой из них и нажмите на значок расширения, чтобы начать перевод.</p>
 <table>
 <thead>
-<tr><th>Платформа</th><th>Что вы можете сделать</th></tr>
+<tr><th>Платформа</th><th>Возможности</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Google Meet</strong></td><td>Переводите встречи, озвучивайте свой голос, отправляйте сообщения в чат</td></tr>
-<tr><td><strong>Масштаб (Интернет)</strong></td><td>Переводите встречи, озвучивайте свой голос, отправляйте сообщения в чат</td></tr>
-<tr><td><strong>Команды Microsoft (Интернет)</strong></td><td>Переводите встречи, озвучивайте свой голос, отправляйте сообщения в чат</td></tr>
-<tr><td><strong>YouTube</strong></td><td>Переведите видео, автозаполнение контекста из названия видео</td></tr>
-<tr><td><strong>Веб-сайт WhatsApp</strong></td><td>Переводите звонки, озвучивайте свой голос</td></tr>
-<tr><td><strong>Фейсбук</strong></td><td>Перевод видео и прямых трансляций</td></tr>
-<tr><td><strong>Тик Ток</strong></td><td>Перевести видео</td></tr>
-<tr><td><strong>Доуин</strong></td><td>Перевести видео</td></tr>
-<tr><td><strong>Вимео</strong></td><td>Перевести видео</td></tr>
-<tr><td><strong>Ежедневное движение</strong></td><td>Перевести видео</td></tr>
-<tr><td><strong>Удеми</strong></td><td>Переведите видео курса</td></tr>
-<tr><td><strong>Доместика</strong></td><td>Переведите видео курса</td></tr>
+<tr><td><strong>Google Meet</strong></td><td>Перевод встреч, озвучивание вашего голоса, отправка в чат</td></tr>
+<tr><td><strong>Zoom (Web)</strong></td><td>Перевод встреч, озвучивание вашего голоса, отправка в чат</td></tr>
+<tr><td><strong>Microsoft Teams (Web)</strong></td><td>Перевод встреч, озвучивание вашего голоса, отправка в чат</td></tr>
+<tr><td><strong>YouTube</strong></td><td>Перевод видео, автозаполнение контекста из названия видео</td></tr>
+<tr><td><strong>WhatsApp Web</strong></td><td>Перевод звонков, озвучивание вашего голоса</td></tr>
+<tr><td><strong>Facebook</strong></td><td>Перевод видео и прямых трансляций</td></tr>
+<tr><td><strong>TikTok</strong></td><td>Перевод видео</td></tr>
+<tr><td><strong>Douyin</strong></td><td>Перевод видео</td></tr>
+<tr><td><strong>Vimeo</strong></td><td>Перевод видео</td></tr>
+<tr><td><strong>Dailymotion</strong></td><td>Перевод видео</td></tr>
+<tr><td><strong>Udemy</strong></td><td>Перевод видеокурсов</td></tr>
+<tr><td><strong>Domestika</strong></td><td>Перевод видеокурсов</td></tr>
 </tbody>
 </table>
 <div class="callout callout-tip">
 <div class="callout-label">Совет</div>
-<p>Расширение фиксирует <strong>вкладка аудио</strong>  напрямую, поэтому он работает с любым звуком, воспроизводимым на вкладке браузера на поддерживаемых сайтах — для звука другой стороны не требуется отдельная настройка микрофона.</p>
+<p>Расширение захватывает <strong>аудио вкладки</strong> напрямую, поэтому оно работает с любым звуком, воспроизводимым на вкладке браузера на поддерживаемых сайтах — отдельная настройка микрофона для звука собеседника не требуется.</p>
 </div>
 <hr class="section-divider"/>
 <!-- Extension Overview -->
 <h2 id="overview">Обзор расширения</h2>
-<p class="section-intro">Краткий обзор основного интерфейса и того, где все находится.</p>
+<p class="section-intro">Краткий обзор основного интерфейса и расположения элементов.</p>
 <div class="img-placeholder" style="min-height: 200px;">
 <img alt="Обзор расширения" src="./images/extension-overview.png" loading="lazy"/>
 </div>
-<p>Панель Live Translator имеет следующие основные области:</p>
+<p>Панель Live Translator состоит из следующих основных областей:</p>
 <ul>
-<li><strong>Строка заголовка</strong>  — кнопка «Настройки», переключатель режима субтитров, кнопка «Закрыть». Если доступно обновление, здесь вы увидите значок.</li>
-<li><strong>Выбор языка</strong> — Два раскрывающихся списка: «Мой язык» (язык, на котором вы говорите) и «Их язык» (язык, с которого вы хотите перевести).</li>
-<li><strong>Область стенограммы</strong>  — Здесь в реальном времени отображается переведенный текст, упорядоченный по докладчику.</li>
-<li><strong>Панель управления</strong>  — кнопка «Пуск/Стоп/Пауза», переключение микрофона, настройки комментирования, AI-помощник, размер шрифта, загрузка и другие параметры.</li>
+<li><strong>Строка заголовка</strong> — кнопка настроек, переключатель режима субтитров, кнопка закрытия. Если доступно обновление, здесь появится соответствующий значок.</li>
+<li><strong>Выбор языка</strong> — два выпадающих списка: «Мой язык» (язык, на котором говорите вы) и «Их язык» (язык, с которого нужно переводить).</li>
+<li><strong>Область стенограммы</strong> — здесь в реальном времени отображается переведённый текст, сгруппированный по говорящим.</li>
+<li><strong>Панель управления</strong> — кнопки «Старт/Стоп/Пауза», переключатель микрофона, настройки озвучивания, AI-помощник, размер шрифта, скачивание и другие опции.</li>
 </ul>
 <div class="callout callout-tip">
 <div class="callout-label">Совет</div>
-<p>Вы можете <strong>перетащите панель</strong> по строке заголовка, чтобы переместить его в любое место экрана, и <strong>измените размер</strong> перетаскивая края. Таким образом, он не будет блокировать важный контент во время встреч или видео.</p>
+<p>Вы можете <strong>перетащить панель</strong> за строку заголовка в любое место на экране, а также <strong>изменить её размер</strong>, потянув за края. Это позволяет не перекрывать важное содержимое во время встреч или просмотра видео.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- API KEYS SETUP                             -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="soniox-key">Получите ключ API Soniox</h2>
-<p class="section-intro">Soniox предоставляет механизм распознавания и перевода речи в реальном времени. Для использования Live Translator вам понадобится ключ API Soniox. <span class="badge badge-free">Обязательно</span></p>
+<h2 id="soniox-key">Получение API-ключа Soniox</h2>
+<p class="section-intro">Soniox обеспечивает распознавание речи и перевод в реальном времени. Для работы Live Translator вам понадобится API-ключ Soniox. <span class="badge badge-free">Обязательно</span></p>
 <div class="callout callout-warn">
 <div class="callout-label">Важно</div>
-<p>Ключ API Soniox <strong>обязательно</strong> чтобы расширение работало. Без него расширение не сможет транскрибировать или переводить аудио.</p>
+<p>API-ключ Soniox <strong>обязателен</strong> для работы расширения. Без него расширение не сможет распознавать и переводить аудио.</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Перейти на сайт Soniox</span>
+<span class="step-title">Перейдите на сайт Soniox</span>
 <div class="step-body">
-<p>Открыть <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> в вашем браузере. Создайте учетную запись, используя свою электронную почту или вход в Google.</p>
+<p>Откройте <a href="https://console.soniox.com/signup" target="_blank">https://console.soniox.com/signup</a> в браузере. Создайте учётную запись с помощью электронной почты или входа через Google.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Получите ключ API</span>
+<span class="step-title">Получите API-ключ</span>
 <div class="step-body">
-<p>После входа в систему перейдите в раздел API на панели инструментов Soniox. Вы также можете перейти непосредственно к <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">Руководство по началу работы с Soniox</a> пошаговые инструкции.</p>
-<p>Скопируйте ключ API — он понадобится вам на следующих шагах.</p>
+<p>После входа перейдите в раздел API на панели управления Soniox. Вы также можете воспользоваться <a href="https://soniox.com/docs/stt/get-started#get-api-key" target="_blank">руководством по началу работы Soniox</a> с пошаговыми инструкциями.</p>
+<p>Скопируйте API-ключ — он понадобится вам на следующих шагах.</p>
 <div class="img-placeholder">
-<img alt="Получить ключ API" src="./images/create-soniox-api.png" loading="lazy"/>
+<img alt="Получить API-ключ" src="./images/create-soniox-api.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Добавить биллинг (требуется для использования API)</span>
+<span class="step-title">Добавьте способ оплаты (обязательно для использования API)</span>
 <div class="step-body">
-<p>Добавьте способ оплаты в свою учетную запись Soniox. Вы можете использовать кредитную карту, PayPal или другие способы оплаты. API Soniox оплачивается по мере использования — вы платите только за то, что используете.</p>
+<p>Привяжите способ оплаты к вашей учётной записи Soniox. Можно использовать банковскую карту, PayPal или другие методы оплаты. API Soniox работает по принципу оплаты по мере использования — вы платите только за фактический объём.</p>
 <div class="img-placeholder">
 <img alt="Добавить способ оплаты" src="./images/payment-soniox.png" loading="lazy"/>
 </div>
@@ -625,62 +623,62 @@
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Примечание</div>
-<p>Чтобы использовать API, вам необходимо внести на свой счет минимум 1 доллар США. Если хотите, можете внести больше.</p>
+<p>Для использования API необходимо пополнить счёт минимум на $1. При желании вы можете внести большую сумму.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="openai-key">Получите ключ API OpenAI (необязательно)</h2>
-<p class="section-intro">Ключ API OpenAI <strong>необязательно</strong>  — он понадобится вам только в том случае, если вы хотите использовать голоса OpenAI для повествования или функцию встроенного AI Assistant. <span class="badge badge-pro">Профи</span></p>
+<h2 id="openai-key">Получение API-ключа OpenAI (необязательно)</h2>
+<p class="section-intro">API-ключ OpenAI <strong>не обязателен</strong> — он нужен только для использования голосов OpenAI при озвучивании или функции встроенного AI-помощника. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Перейти на платформу OpenAI</span>
+<span class="step-title">Перейдите на платформу OpenAI</span>
 <div class="step-body">
-<p>Открыть <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> в вашем браузере.</p>
+<p>Откройте <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a> в браузере.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Создайте аккаунт или войдите в систему</span>
+<span class="step-title">Создайте аккаунт или войдите</span>
 <div class="step-body">
-<p>Если у вас нет учетной записи OpenAI, нажмите <strong>"Зарегистрироваться"</strong> и создайте его. Если он у вас уже есть, войдите в систему.</p>
+<p>Если у вас нет учётной записи OpenAI, нажмите <strong>«Sign Up»</strong> и создайте её. Если аккаунт уже есть — просто войдите.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Создайте новый ключ API</span>
+<span class="step-title">Создайте новый API-ключ</span>
 <div class="step-body">
-<p>Нажмите <strong>"+ Создать новый секретный ключ"</strong>, дайте ему имя, например «Живой переводчик», и нажмите <strong>"Создать секретный ключ"</strong>.</p>
-<p><strong>Немедленно скопируйте и сохраните ключ</strong>  — OpenAI покажет его только один раз.</p>
+<p>Нажмите <strong>«+ Create new secret key»</strong>, задайте имя, например «Live Translator», и нажмите <strong>«Create secret key»</strong>.</p>
+<p><strong>Сразу скопируйте и сохраните ключ</strong> — OpenAI покажет его только один раз.</p>
 <div class="img-placeholder">
-<img alt="Создайте ключ API OpenAI" src="./images/openai-key.png" loading="lazy"/>
+<img alt="Создание API-ключа OpenAI" src="./images/openai-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Добавить биллинг (требуется для использования API)</span>
+<span class="step-title">Добавьте способ оплаты (обязательно для использования API)</span>
 <div class="step-body">
-<p>Перейти <a href="https://platform.openai.com/account/billing" target="_blank">Платежные настройки</a> и добавьте способ оплаты. API OpenAI оплачивается по мере использования — вы платите только за то, что используете.</p>
+<p>Перейдите в <a href="https://platform.openai.com/account/billing" target="_blank">настройки оплаты</a> и привяжите способ оплаты. API OpenAI работает по принципу оплаты по мере использования — вы платите только за фактический объём.</p>
 <div class="img-placeholder">
-<img alt="Создайте ключ API OpenAI" src="./images/openai-billing.png" loading="lazy"/>
+<img alt="Настройки оплаты OpenAI" src="./images/openai-billing.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Примечание</div>
-<p>Если вам нужно только повествование (преобразование текста в речь), вы можете использовать <strong>Голоса Google Translate бесплатно</strong> вместо этого. Ключ OpenAI требуется только в том случае, если вам нужны премиум-голоса OpenAI или функция AI Assistant.</p>
+<p>Если вам нужно только озвучивание (текст в речь), вы можете бесплатно использовать <strong>голоса Google Translate</strong>. API-ключ OpenAI требуется только для премиум-голосов OpenAI или функции AI-помощника.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="enter-keys">Введите свои ключи API</h2>
-<p class="section-intro">После получения ключей API введите их на странице настроек Live Translator.</p>
+<h2 id="enter-keys">Ввод API-ключей</h2>
+<p class="section-intro">Получив API-ключи, введите их на странице настроек Live Translator.</p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Откройте настройки Live Translator</span>
 <div class="step-body">
-<p>Открыть настройки можно любым из этих способов:</p>
+<p>Открыть настройки можно любым из следующих способов:</p>
 <ul>
-<li>Нажмите кнопку <strong>значок шестеренки</strong> (⚙) в правом верхнем углу панели переводчика.</li>
-<li>Щелкните правой кнопкой мыши значок Live Translator на панели инструментов → <strong>"Опции"</strong>.</li>
-<li>Перейдите на страницу расширений вашего браузера → найдите Live Translator → <strong>"Подробности"</strong> → <strong>"Параметры расширения"</strong>.</li>
+<li>Нажмите на <strong>значок шестерёнки</strong> (⚙) в правом верхнем углу панели переводчика.</li>
+<li>Щёлкните правой кнопкой мыши по значку Live Translator на панели инструментов → <strong>«Options»</strong>.</li>
+<li>Перейдите на страницу расширений в браузере → найдите Live Translator → <strong>«Подробнее»</strong> → <strong>«Параметры расширения»</strong>.</li>
 </ul>
 <div class="img-placeholder">
 <img alt="Страница настроек" src="./images/gear.png" loading="lazy"/>
@@ -689,9 +687,9 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Введите ключ API Soniox</span>
+<span class="step-title">Введите API-ключ Soniox</span>
 <div class="step-body">
-<p>На странице настроек нажмите на <strong>"Сониокс"</strong> на левой боковой панели. Вставьте свой ключ API Soniox в поле ввода. Ключ сохраняется автоматически.</p>
+<p>На странице настроек нажмите <strong>«Soniox»</strong> в левой боковой панели. Вставьте API-ключ Soniox в поле ввода. Ключ сохранится автоматически.</p>
 <div class="img-placeholder">
 <img alt="Настройки Soniox" src="./images/enter-soniox-key.png" loading="lazy"/>
 </div>
@@ -699,30 +697,29 @@
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Введите ключ API OpenAI (необязательно)</span>
+<span class="step-title">Введите API-ключ OpenAI (необязательно)</span>
 <div class="step-body">
-<p>Нажмите <strong>"Открытый AI"</strong> на левой боковой панели. Вставьте ключ API OpenAI в поле ввода. Ключ сохраняется автоматически.</p>
+<p>Нажмите <strong>«OpenAI»</strong> в левой боковой панели. Вставьте API-ключ OpenAI в поле ввода. Ключ сохранится автоматически.</p>
 <div class="img-placeholder">
-<img alt="Открыть настройки AI" src="./images/enter-openai-key.png" loading="lazy"/>
+<img alt="Настройки OpenAI" src="./images/enter-openai-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-note">
-<div class="callout-label">Примечание по безопасности</div>
-<p>Ваши ключи API хранятся <strong>только локально на вашем устройстве</strong> используя безопасное хранилище расширений Chrome. Они никогда не отправляются на серверы Live Translator — они используются только для прямого взаимодействия с Soniox и OpenAI.</p>
+<div class="callout-label">Безопасность</div>
+<p>Ваши API-ключи хранятся <strong>только локально на вашем устройстве</strong> в защищённом хранилище расширений Chrome. Они никогда не отправляются на серверы Live Translator — они используются только для прямого взаимодействия с Soniox и OpenAI.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- LICENSE & PRO                              -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="buy-license">Купить лицензионный ключ</h2>
-<p class="section-intro">Лицензионный ключ открывает такие функции Pro, как дикторство, загрузка SRT, AI-помощник и многое другое.</p>
+<h2 id="buy-license">Покупка лицензионного ключа</h2>
+<p class="section-intro">Лицензионный ключ открывает Pro-функции: озвучивание, скачивание SRT, AI-помощник и многое другое.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Перейти на страницу покупки</span>
+<span class="step-title">Перейдите на страницу покупки</span>
 <div class="step-body">
-<p>Посетите домашнюю страницу Live Translator по адресу <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> и перейдите к <strong>Цены
-раздел </strong> или нажмите кнопку <strong>"Приобрести лицензию"</strong> ссылка на странице настроек расширения.</p>
+<p>Откройте главную страницу Live Translator по адресу <a href="https://translate.ezitech.io/#pricing" target="_blank">https://translate.ezitech.io/#pricing</a> и перейдите в раздел <strong>Pricing</strong>, или нажмите ссылку <strong>«Purchase a license»</strong> на странице настроек расширения.</p>
 <div class="img-placeholder">
 <img alt="Страница покупки" src="./images/pricing.jpeg" loading="lazy"/>
 </div>
@@ -730,21 +727,21 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Выберите свой план</span>
+<span class="step-title">Выберите тарифный план</span>
 <div class="step-body">
-<p>Выберите один из следующих вариантов:</p>
+<p>Доступны два варианта:</p>
 <ul>
-<li><strong>Ежемесячно</strong>  — $5,99/месяц</li>
-<li><strong>Ежегодно</strong> — 59 долларов США в год (экономия ~18%)</li>
+<li><strong>Ежемесячный</strong> — $5,99/месяц</li>
+<li><strong>Годовой</strong> — $59/год (экономия ~18%)</li>
 </ul>
-<p>Вы можете получить <strong>7-дневная бесплатная пробная версия</strong> , чтобы опробовать функции версии Pro. После пробной версии вы можете приобрести лицензию, чтобы продолжить использование функций Pro.</p>
+<p>Вы можете воспользоваться <strong>бесплатным 7-дневным пробным периодом</strong>, чтобы попробовать Pro-функции. По окончании пробного периода вы можете приобрести лицензию для дальнейшего использования.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Завершите платеж</span>
+<span class="step-title">Завершите оплату</span>
 <div class="step-body">
-<p>Вы будете перенаправлены на страницу оплаты Polar. Введите свой адрес электронной почты и платежные данные, затем завершите покупку.</p>
+<p>Вы будете перенаправлены на страницу оплаты Polar. Введите адрес электронной почты и платёжные данные, затем завершите покупку.</p>
 <div class="img-placeholder">
 <img alt="Страница оплаты" src="./images/purchase.png" loading="lazy"/>
 </div>
@@ -754,82 +751,82 @@
 <span class="step-number">4</span>
 <span class="step-title">Получите лицензионный ключ</span>
 <div class="step-body">
-<p>После оплаты вы получите <strong>лицензионный ключ</strong> по электронной почте. Лицензионный ключ выглядит как длинный код (например, <code>LT-XXXX-XXXX-XXXX-XXXX</code>). Скопируйте этот ключ.</p>
+<p>После оплаты вы получите <strong>лицензионный ключ</strong> на электронную почту. Ключ выглядит как длинный код (например, <code>LT-XXXX-XXXX-XXXX-XXXX</code>). Скопируйте его.</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">Политика возврата средств</div>
-<p>Вы можете запросить возврат средств в течение <strong>30 дней</strong> с даты оплаты, обратившись <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
+<div class="callout-label">Возврат средств</div>
+<p>Вы можете запросить возврат средств в течение <strong>30 дней</strong> с даты оплаты, написав на <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a>.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="activate-license">Активируйте свою лицензию</h2>
+<h2 id="activate-license">Активация лицензии</h2>
 <p class="section-intro">После покупки активируйте лицензионный ключ в настройках расширения.</p>
 <div class="step">
 <span class="step-number">1</span>
 <span class="step-title">Введите и активируйте лицензионный ключ</span>
 <div class="step-body">
-<p>Откройте настройки расширения (значок шестеренки или клик правой кнопкой мыши → Параметры). Нажмите на <strong>"Лицензия"</strong> на левой боковой панели. Вставьте лицензионный ключ в поле ввода и нажмите <strong>"Активировать"</strong>. Расширение проверит вашу лицензию на сервере.</p>
+<p>Откройте настройки расширения (значок шестерёнки или правая кнопка мыши → Options). Нажмите <strong>«License»</strong> в левой боковой панели. Вставьте лицензионный ключ в поле ввода и нажмите <strong>«Activate»</strong>. Расширение проверит вашу лицензию на сервере.</p>
 <div class="img-placeholder">
-<img alt="Активировать лицензию" src="./images/enter-license-key.png" loading="lazy"/>
+<img alt="Активация лицензии" src="./images/enter-license-key.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Проверьте активацию</span>
+<span class="step-title">Проверьте статус активации</span>
 <div class="step-body">
-<p>После активации вы увидите статус вашей лицензии, адрес электронной почты, связанный с лицензией, и дату истечения срока действия. Все функции Pro теперь разблокированы.</p>
+<p>После активации вы увидите статус лицензии, привязанный адрес электронной почты и дату окончания действия. Все Pro-функции теперь разблокированы.</p>
 <div class="img-placeholder">
-<img alt="Активировать лицензию" src="./images/license-activated.png" loading="lazy"/>
+<img alt="Лицензия активирована" src="./images/license-activated.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="callout callout-warn">
-<div class="callout-label">Переключение устройств?</div>
-<p>Если вы ранее активировали лицензию на другом устройстве, вы можете использовать <strong>"Принудительная активация"</strong> возможность перенести лицензию на текущее устройство. Каждая лицензия может быть активна только на одном устройстве одновременно.</p>
+<div class="callout-label">Смена устройства?</div>
+<p>Если вы ранее активировали лицензию на другом устройстве, воспользуйтесь функцией <strong>«Force Activate»</strong>, чтобы перенести лицензию на текущее устройство. Каждая лицензия может быть активна только на одном устройстве одновременно.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="free-vs-pro">Бесплатные и профессиональные функции</h2>
-<p class="section-intro">Вот что вы можете делать в бесплатной версии и для чего требуется лицензия Pro.</p>
+<h2 id="free-vs-pro">Бесплатная vs Pro-версия</h2>
+<p class="section-intro">Вот что доступно в бесплатной версии и что требует лицензии Pro.</p>
 <table>
 <thead>
-<tr><th>Функция</th><th>Бесплатно</th><th>Профи</th></tr>
+<tr><th>Функция</th><th>Бесплатно</th><th>Pro</th></tr>
 </thead>
 <tbody>
 <tr><td>Перевод в реальном времени</td><td>✓</td><td>✓</td></tr>
-<tr><td>более 60 языков</td><td>✓</td><td>✓</td></tr>
-<tr><td>Ярлыки динамиков</td><td>✓</td><td>✓</td></tr>
-<tr><td>Перетащите, измените размер и сверните панель</td><td>✓</td><td>✓</td></tr>
-<tr><td>Регулировка размера шрифта</td><td>✓</td><td>✓</td></tr>
-<tr><td>Загрузить расшифровку (TXT/JSON)</td><td>—</td><td>✓</td></tr>
-<tr><td>Загрузить стенограмму (SRT)</td><td>—</td><td>✓</td></tr>
-<tr><td>Расскажите их голосом (TTS)</td><td>—</td><td>✓</td></tr>
-<tr><td>Расскажи моим голосом (переводчик)</td><td>—</td><td>✓</td></tr>
-<tr><td>Отправить перевод через чат</td><td>—</td><td>✓</td></tr>
+<tr><td>60+ языков</td><td>✓</td><td>✓</td></tr>
+<tr><td>Метки говорящих</td><td>✓</td><td>✓</td></tr>
+<tr><td>Перетаскивание, изменение размера, сворачивание панели</td><td>✓</td><td>✓</td></tr>
+<tr><td>Настройка размера шрифта</td><td>✓</td><td>✓</td></tr>
+<tr><td>Скачивание стенограммы (TXT/JSON)</td><td>—</td><td>✓</td></tr>
+<tr><td>Скачивание стенограммы (SRT)</td><td>—</td><td>✓</td></tr>
+<tr><td>Озвучить их голос (TTS)</td><td>—</td><td>✓</td></tr>
+<tr><td>Озвучить мой голос (переводчик)</td><td>—</td><td>✓</td></tr>
+<tr><td>Отправка перевода в чат</td><td>—</td><td>✓</td></tr>
 <tr><td>Режим субтитров</td><td>—</td><td>✓</td></tr>
 <tr><td>Встроенный AI-помощник</td><td>—</td><td>✓</td></tr>
 <tr><td>Настройки контекста</td><td>✓</td><td>✓</td></tr>
-<tr><td>Имена докладчиков</td><td>✓</td><td>✓</td></tr>
+<tr><td>Имена говорящих</td><td>✓</td><td>✓</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- BASIC USAGE                                -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="start-translation">Начать сеанс перевода</h2>
-<p class="section-intro">Узнайте, как начать переводить во время встречи или видео.</p>
+<h2 id="start-translation">Запуск сеанса перевода</h2>
+<p class="section-intro">Узнайте, как начать перевод во время встречи или при просмотре видео.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Откройте поддерживаемый веб-сайт</span>
+<span class="step-title">Откройте поддерживаемый сайт</span>
 <div class="step-body">
-<p>Перейти к любому <a href="#supported-platforms">поддерживаемая платформа</a> (например, Google Meet, Zoom, YouTube и т. д.) и присоединитесь к собранию или воспроизведите видео.</p>
+<p>Перейдите на любую <a href="#supported-platforms">поддерживаемую платформу</a> (например, Google Meet, Zoom, YouTube и т. д.) и присоединитесь к встрече или откройте видео.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
 <span class="step-title">Откройте панель Live Translator</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>Значок Live Translator</strong> на панели инструментов вашего браузера. На странице появится панель переводчика. Вы также можете нажать кнопку <strong>плавающий значок</strong> , который появляется на странице.</p>
+<p>Нажмите на <strong>значок Live Translator</strong> на панели инструментов браузера. На странице появится панель переводчика. Вы также можете нажать на <strong>плавающий значок</strong>, который появляется на странице.</p>
 <div class="img-placeholder">
 <img alt="Открыть панель" src="./images/floating-icon.png" loading="lazy"/>
 </div>
@@ -839,10 +836,10 @@
 <span class="step-number">3</span>
 <span class="step-title">Выберите языки</span>
 <div class="step-body">
-<p>Используйте два раскрывающихся списка языков в верхней части панели:</p>
+<p>Используйте два выпадающих списка языков в верхней части панели:</p>
 <ul>
-<li><strong>"Мой язык"</strong> — Язык <em>ты</em> говорить (например, по-вьетнамски).</li>
-<li><strong>"Их язык"</strong> — Язык <em>другие</em> скажите, что вы хотите перевести (например, английский).</li>
+<li><strong>«My language»</strong> — язык, на котором говорите <em>вы</em> (например, русский).</li>
+<li><strong>«Their language»</strong> — язык, на котором говорят <em>другие</em> и который нужно переводить (например, английский).</li>
 </ul>
 <div class="img-placeholder">
 <img alt="Выбор языка" src="./images/language.png" loading="lazy"/>
@@ -851,20 +848,20 @@
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Нажмите кнопку «Пуск».</span>
+<span class="step-title">Нажмите кнопку «Старт»</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>Начать</strong>  (значок воспроизведения) на панели управления в нижней части панели.</p>
-<p>Ваш браузер может запросить разрешение на запись звука — нажмите <strong>"Разрешить"</strong> и выберите вкладку, которую хотите захватить.</p>
+<p>Нажмите кнопку <strong>Start</strong> (значок воспроизведения) на панели управления в нижней части панели.</p>
+<p>Браузер может запросить разрешение на захват звука — нажмите <strong>«Разрешить»</strong> и выберите нужную вкладку.</p>
 <div class="img-placeholder">
-<img alt="Кнопка «Пуск»" src="./images/press-start.png" loading="lazy"/>
+<img alt="Кнопка Start" src="./images/press-start.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">5</span>
-<span class="step-title">Просматривайте переводы в режиме реального времени</span>
+<span class="step-title">Смотрите перевод в реальном времени</span>
 <div class="step-body">
-<p>Пока люди говорят, вы увидите как <strong>исходный текст</strong> и <strong>переведенный текст</strong> появляются в области расшифровки. Линии автоматически группируются по говорящим.</p>
+<p>Когда участники говорят, в области стенограммы появляются <strong>исходный текст</strong> и <strong>перевод</strong>. Строки автоматически группируются по говорящим.</p>
 <div class="img-placeholder">
 <img alt="Перевод в реальном времени" src="./images/translate-real.png" loading="lazy"/>
 </div>
@@ -872,54 +869,54 @@
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Автопрокрутка</div>
-<p>Стенограмма автоматически прокручивается и показывает последний текст. Если вы прокрутите вверх, чтобы прочитать предыдущий текст, автоматическая прокрутка приостановится. Нажмите кнопку <strong>"Перейти к последней версии"</strong> кнопка, которая позволяет вернуться к живому тексту.</p>
+<p>Стенограмма автоматически прокручивается к последнему тексту. Если вы прокрутите вверх, чтобы прочитать предыдущие строки, автопрокрутка приостановится. Нажмите появившуюся кнопку <strong>«Scroll to latest»</strong>, чтобы вернуться к текущему тексту.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="controls">Элементы управления: Пауза, Возобновление, Конец</h2>
-<p class="section-intro">Понимание элементов управления сеансом перевода.</p>
+<h2 id="controls">Управление: пауза, продолжение, завершение</h2>
+<p class="section-intro">Основные элементы управления сеансом перевода.</p>
 <table>
 <thead>
-<tr><th>Кнопка</th><th>Что он делает</th></tr>
+<tr><th>Кнопка</th><th>Действие</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Начать</strong> (▶)</td><td>Начинает новый сеанс перевода. Очищает любую предыдущую расшифровку.</td></tr>
-<tr><td><strong>Пауза</strong> (⏸)</td><td>Временно останавливает трансляцию. Стенограмма сохраняется. Захват звука продолжается, но текст приостанавливается.</td></tr>
-<tr><td><strong>Резюме</strong> (▶)</td><td>Продолжает перевод после паузы. Новый текст появляется после предыдущего содержимого.</td></tr>
-<tr><td><strong>Конец</strong> (⏹)</td><td>Полностью останавливает сеанс. Транскрипт сохраняется на экране до тех пор, пока вы не начнете новый сеанс. Завершает захват звука, отключает микрофон и дикторство.</td></tr>
+<tr><td><strong>Start</strong> (▶)</td><td>Начинает новый сеанс перевода. Предыдущая стенограмма очищается.</td></tr>
+<tr><td><strong>Pause</strong> (⏸)</td><td>Временно приостанавливает перевод. Стенограмма сохраняется. Захват звука продолжается, но текст не обновляется.</td></tr>
+<tr><td><strong>Resume</strong> (▶)</td><td>Возобновляет перевод после паузы. Новый текст появляется после предыдущего содержимого.</td></tr>
+<tr><td><strong>End</strong> (⏹)</td><td>Полностью завершает сеанс. Стенограмма остаётся на экране до начала нового сеанса. Захват звука прекращается, микрофон и озвучивание отключаются.</td></tr>
 </tbody>
 </table>
 <hr class="section-divider"/>
-<h2 id="language-selection">Изменить язык</h2>
-<p class="section-intro">Вы можете изменить язык перевода в любое время.</p>
+<h2 id="language-selection">Смена языка</h2>
+<p class="section-intro">Вы можете изменить язык перевода в любой момент.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите на раскрывающийся список языков.</span>
+<span class="step-title">Нажмите на выпадающий список языков</span>
 <div class="step-body">
-<p>Нажмите на значок <strong>"Мой язык"</strong> или <strong>"Их язык"</strong> раскрывающийся список в верхней части панели.</p>
+<p>Нажмите на выпадающий список <strong>«My language»</strong> или <strong>«Their language»</strong> в верхней части панели.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
 <span class="step-title">Выберите новый язык</span>
 <div class="step-body">
-<p>Список поддерживает <strong>более 60 языков</strong> отсортировано в алфавитном порядке. Прокрутите или введите текст для поиска вашего языка. Нажмите, чтобы выбрать его.</p>
+<p>Список содержит <strong>более 60 языков</strong>, отсортированных в алфавитном порядке. Прокручивайте или начните вводить название для поиска. Нажмите, чтобы выбрать нужный язык.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Перевод автоматически возобновляется</span>
+<span class="step-title">Перевод перезапустится автоматически</span>
 <div class="step-body">
-<p>Если сеанс активен, изменение языка автоматически перезапустит перевод с новой языковой парой. Выбор языка будет сохранен для следующего раза.</p>
+<p>Если сеанс активен, смена языка автоматически перезапустит перевод с новой языковой парой. Ваш выбор языка сохраняется для следующих сеансов.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="microphone">Включите микрофон</h2>
-<p class="section-intro">Включите микрофон, чтобы ваша речь также переводилась вместе со звуком встречи/видео.</p>
+<h2 id="microphone">Включение микрофона</h2>
+<p class="section-intro">Включите микрофон, чтобы ваша речь также распознавалась и переводилась наряду со звуком встречи или видео.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите кнопку микрофона.</span>
+<span class="step-title">Нажмите кнопку микрофона</span>
 <div class="step-body">
-<p>На панели управления нажмите кнопку <strong>значок микрофона</strong>. Значок становится активным (подсвечивается), когда микрофон включен.</p>
+<p>На панели управления нажмите <strong>значок микрофона</strong>. Значок подсвечивается, когда микрофон включён.</p>
 <div class="img-placeholder">
 <img alt="Кнопка микрофона" src="./images/micro.png" loading="lazy"/>
 </div>
@@ -927,29 +924,29 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Разрешить доступ к микрофону</span>
+<span class="step-title">Разрешите доступ к микрофону</span>
 <div class="step-body">
-<p>Если это первый раз, ваш браузер запросит разрешение на доступ к микрофону. Нажмите <strong>"Разрешить"</strong>.</p>
+<p>При первом использовании браузер запросит разрешение на доступ к микрофону. Нажмите <strong>«Разрешить»</strong>.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Совет</div>
-<p>Микрофон <strong>выключено по умолчанию</strong> при открытии панели. Включайте его только в том случае, если хотите, чтобы ваша собственная речь была расшифрована и переведена. Когда вы нажимаете <strong>Конец</strong> микрофон автоматически выключается.</p>
+<p>По умолчанию микрофон <strong>выключен</strong> при открытии панели. Включайте его только в том случае, если хотите, чтобы ваша речь распознавалась и переводилась. При нажатии <strong>End</strong> микрофон автоматически отключается.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="font-size">Изменить размер шрифта</h2>
-<p class="section-intro">Отрегулируйте размер текста расшифровки для удобства чтения.</p>
+<h2 id="font-size">Изменение размера шрифта</h2>
+<p class="section-intro">Настройте размер текста стенограммы для комфортного чтения.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите кнопку размера шрифта.</span>
+<span class="step-title">Нажмите кнопку размера шрифта</span>
 <div class="step-body">
-<p>На панели управления нажмите кнопку <strong>кнопка размера шрифта</strong> (Значок Aa). Появится меню трех размеров:</p>
+<p>На панели управления нажмите <strong>кнопку размера шрифта</strong> (значок Aa). Появится меню с тремя вариантами:</p>
 <ul>
-<li><strong>Маленький</strong>  — компактный вид, помещается больше текста.</li>
-<li><strong>Средний</strong>  — сбалансированный размер по умолчанию.</li>
-<li><strong>Большой</strong>  — легче читать на расстоянии.</li>
+<li><strong>Small</strong> — компактный вид, больше текста на экране.</li>
+<li><strong>Medium</strong> — сбалансированный размер по умолчанию.</li>
+<li><strong>Large</strong> — крупный текст, удобен для чтения на расстоянии.</li>
 </ul>
-<p>Выберите нужный размер. Изменение вступает в силу немедленно и сохраняется для следующего раза.</p>
+<p>Выберите нужный размер. Изменение применяется сразу и сохраняется на будущее.</p>
 <div class="img-placeholder">
 <img alt="Выбор размера шрифта" src="./images/font.png" loading="lazy"/>
 </div>
@@ -959,156 +956,153 @@
 <!-- ────────────────────────────────────────── -->
 <!-- FEATURES                                   -->
 <!-- ────────────────────────────────────────── -->
-<h2 id="speaker-names">Имена докладчиков</h2>
-<p class="section-intro">Назначайте выступающим настоящие имена, чтобы вы могли легко определить, кто что сказал в стенограмме. <span class="badge badge-free">Бесплатно</span></p>
+<h2 id="speaker-names">Имена говорящих</h2>
+<p class="section-intro">Назначьте настоящие имена говорящим, чтобы легко определять, кто что сказал в стенограмме. <span class="badge badge-free">Бесплатно</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Откройте меню «Еще»</span>
+<span class="step-title">Откройте меню «Ещё»</span>
 <div class="step-body">
-<p>На панели управления нажмите кнопку <strong>"Ещё"
-Кнопка </strong>  (значок ⋯). Затем нажмите <strong>"Настройки динамика"
-Кнопка </strong> .</p>
+<p>На панели управления нажмите кнопку <strong>«More»</strong> (значок ⋯). Затем нажмите <strong>«Speaker Settings»</strong>.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Откройте диалоговое окно «Настройки динамика».</span>
+<span class="step-title">Откройте диалог «Speaker Settings»</span>
 <div class="step-body">
-<p>Откроется диалоговое окно «Настройки динамиков».</p>
+<p>Откроется диалоговое окно настроек говорящих.</p>
 <div class="img-placeholder">
-<img alt="Диалоговое окно настроек динамика" src="./images/speaker.png" loading="lazy"/>
+<img alt="Настройки говорящих" src="./images/speaker.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Присвоение имен</span>
+<span class="step-title">Присвойте имена</span>
 <div class="step-body">
-<p>Вы увидите список обнаруженных динамиков (Динамик 1, Динамик 2 и т. д.). Рядом с каждым введите настоящее имя (например, «Джон», «Сара»). Нажмите <strong>"Добавить строку"</strong> если вам нужно больше.</p>
-<p>Нажмите <strong>"Сохранить"</strong>. Все строки расшифровки — прошлые и будущие — теперь будут использовать назначенные вами имена.</p>
+<p>Вы увидите список обнаруженных говорящих (Speaker 1, Speaker 2 и т. д.). Введите настоящее имя напротив каждого (например, «Иван», «Мария»). Нажмите <strong>«Add row»</strong>, если нужно добавить строки.</p>
+<p>Нажмите <strong>«Save»</strong>. Все строки стенограммы — как уже существующие, так и новые — будут отображаться с указанными именами.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narration">Повествование (преобразование текста в речь)</h2>
-<p class="section-intro">Пусть переводы прочитаются вам вслух, чтобы вы могли слушать, а не читать. Это функция «Рассказать их голос». <span class="badge badge-pro">Профи</span></p>
+<h2 id="narration">Озвучивание (текст в речь)</h2>
+<p class="section-intro">Слушайте перевод вслух вместо чтения. Это функция «Narrate Their Voice» — озвучивание голоса собеседника. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Открыть настройки дикторского текста</span>
+<span class="step-title">Откройте настройки озвучивания</span>
 <div class="step-body">
-<p>На панели управления нажмите кнопку <strong>кнопка повествования</strong> (значок динамика). Откроется диалоговое окно «Настройки повествования».</p>
+<p>На панели управления нажмите <strong>кнопку озвучивания</strong> (значок динамика). Откроется диалоговое окно настроек озвучивания.</p>
 <div class="img-placeholder">
-<img alt="Настройки повествования" src="./images/narration-setting.png" loading="lazy"/>
+<img alt="Настройки озвучивания" src="./images/narration-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Выберите провайдера TTS и голосовую связь</span>
+<span class="step-title">Выберите провайдера и голос</span>
 <div class="step-body">
-<p>Выберите своего провайдера голосовой связи:</p>
+<p>Выберите провайдера озвучивания:</p>
 <ul>
-<li><strong>Google Переводчик</strong> (Бесплатно) — Работает без ключа API. Голоса хорошего качества на более чем 60 языках.</li>
-<li><strong>ОткрытьAI</strong> (Премиум) — Более высокое качество, более естественные голоса. Требуется ключ API OpenAI.</li>
+<li><strong>Google Translate</strong> (бесплатно) — работает без API-ключа. Качественные голоса на 60+ языках.</li>
+<li><strong>OpenAI</strong> (премиум) — более высокое качество и естественное звучание. Требуется API-ключ OpenAI.</li>
 </ul>
-<p>Выберите <strong>голос</strong> из раскрывающегося списка и нажмите <strong>"Тест"</strong> , чтобы просмотреть, как это звучит.</p>
-<p>Отрегулировать <strong>скорость голоса</strong> и <strong>объем</strong> при необходимости.</p>
+<p>Выберите <strong>голос</strong> из выпадающего списка и нажмите <strong>«Test»</strong>, чтобы прослушать его.</p>
+<p>При необходимости отрегулируйте <strong>скорость</strong> и <strong>громкость</strong> голоса.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Начать повествование</span>
+<span class="step-title">Запустите озвучивание</span>
 <div class="step-body">
-<p>Нажмите <strong>"Расскажи их голос"
-Кнопка </strong> в диалоговом окне. Теперь всякий раз, когда появится перевод, он будет прочитан вам вслух.</p>
-<p>Чтобы остановить, нажмите кнопку повествования еще раз и нажмите <strong>"Стоп"</strong>.</p>
+<p>Нажмите кнопку <strong>«Narrate Their Voice»</strong> в диалоговом окне. Теперь при появлении каждого нового перевода он будет озвучен вслух.</p>
+<p>Чтобы остановить, снова нажмите кнопку озвучивания и выберите <strong>«Stop»</strong>.</p>
 </div>
 </div>
 <hr class="section-divider"/>
-<h2 id="narrate-my-voice">Рассказывайте моим голосом (режим переводчика)</h2>
-<p class="section-intro">Говорите на своем языке, и ваш переведенный голос будет воспроизводиться для других участников встречи — как будто у вас есть личный переводчик. <span class="badge badge-pro">Профи</span></p>
+<h2 id="narrate-my-voice">Озвучить мой голос (режим переводчика)</h2>
+<p class="section-intro">Говорите на своём языке — ваш переведённый голос будет воспроизведён для других участников встречи, как если бы у вас был личный переводчик. <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
 <div class="callout-label">Требования</div>
-<p>Эта функция работает на <strong>Google Meet</strong>, <strong>Масштаб (Интернет)</strong>, <strong>Команды Microsoft (Интернет)</strong> и <strong>Веб-сайт WhatsApp</strong>. Вам нужен ваш <strong>микрофон включен</strong> и сеанс перевода <strong>бег</strong>.</p>
+<p>Эта функция работает в <strong>Google Meet</strong>, <strong>Zoom (Web)</strong>, <strong>Microsoft Teams (Web)</strong> и <strong>WhatsApp Web</strong>. Необходимо, чтобы <strong>микрофон был включён</strong>, а сеанс перевода <strong>запущен</strong>.</p>
 </div>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Открыть настройки дикторского текста</span>
+<span class="step-title">Откройте настройки озвучивания</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>кнопка повествования</strong> на панели управления, чтобы открыть диалоговое окно «Настройки дикторского текста».</p>
+<p>Нажмите <strong>кнопку озвучивания</strong> на панели управления, чтобы открыть диалоговое окно настроек.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Настройте «Рассказывайте моим голосом»</span>
+<span class="step-title">Настройте «Narrate My Voice»</span>
 <div class="step-body">
-<p>В диалоговом окне найдите <strong>"Расскажи мой голос"</strong> раздел. Выберите предпочитаемый голос и провайдера (Google или OpenAI). Вы можете установить <strong>другой голос</strong> за повествование «Мой голос» и «Их голос».</p>
-<p>Нажмите <strong>"Тест"</strong> для предварительного просмотра выбранного голоса.</p>
+<p>В диалоговом окне найдите раздел <strong>«Narrate My Voice»</strong>. Выберите предпочитаемый голос и провайдера (Google или OpenAI). Для «My voice» и «Their voice» можно задать <strong>разные голоса</strong>.</p>
+<p>Нажмите <strong>«Test»</strong>, чтобы прослушать выбранный голос.</p>
 <div class="img-placeholder">
-<img alt="Расскажи мой голос" src="./images/my-voice-setting.png" loading="lazy"/>
+<img alt="Narrate My Voice" src="./images/my-voice-setting.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Начать «Рассказать моим голосом»</span>
+<span class="step-title">Запустите «Narrate My Voice»</span>
 <div class="step-body">
-<p>Нажмите <strong>"Начни озвучивать мой голос"</strong>. Когда вы говорите, ваши слова:</p>
+<p>Нажмите <strong>«Start Narrate My Voice»</strong>. Когда вы говорите, ваши слова:</p>
 <ol>
-<li>Расшифровано на вашем языке</li>
-<li>Переведено на другой язык</li>
-<li>Говорите вслух на собрании, чтобы собеседник слышал ваш переведенный голос</li>
+<li>Распознаются на вашем языке</li>
+<li>Переводятся на другой язык</li>
+<li>Озвучиваются на встрече, и собеседник слышит переведённую версию вашей речи</li>
 </ol>
-<p>Во время воспроизведения переведенного звука ваш микрофон автоматически отключается, чтобы предотвратить эхо.</p>
+<p>Пока воспроизводится переведённый звук, ваш микрофон автоматически отключается для предотвращения эха.</p>
 <div class="img-placeholder">
-<img alt="Начать озвучивать мой голос" src="./images/narrate-my-voice.png" loading="lazy"/>
+<img alt="Запуск Narrate My Voice" src="./images/narrate-my-voice.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">4</span>
-<span class="step-title">Остановить повествование</span>
+<span class="step-title">Остановите озвучивание</span>
 <div class="step-body">
-<p>Нажмите кнопку повествования, а затем <strong>"Стоп"</strong> или нажмите <strong>Конец</strong> , чтобы остановить весь сеанс (что также останавливает повествование).</p>
+<p>Нажмите кнопку озвучивания и выберите <strong>«Stop»</strong>, или нажмите <strong>End</strong>, чтобы полностью завершить сеанс (озвучивание также прекратится).</p>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Примечание</div>
-<p>Вы можете запускать только <strong>по одному режиму повествования за раз</strong>  — либо «Расскажи мой голос», либо «Расскажи их голос», но не оба одновременно. Значок на панели инструментов изменится, показывая, какой режим активен.</p>
+<p>Одновременно может работать <strong>только один режим озвучивания</strong> — либо «Narrate My Voice», либо «Narrate Their Voice». Значок на панели инструментов показывает, какой режим сейчас активен.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="send-chat">Отправить перевод через чат</h2>
-<p class="section-intro">Автоматически отправляйте переведенную речь в виде текстовых сообщений в чат собрания. <span class="badge badge-pro">Профи</span></p>
+<h2 id="send-chat">Отправка перевода в чат</h2>
+<p class="section-intro">Автоматически отправляйте переведённую речь текстовыми сообщениями в чат встречи. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Включите «Отправить через чат»</span>
+<span class="step-title">Включите «Send via Chat»</span>
 <div class="step-body">
-<p>На панели управления найдите значок <strong>кнопка отправки в чат</strong> (рядом со значком микрофона). Нажмите на нее, чтобы включить — кнопка повернется <strong>зеленый</strong> когда активно.</p>
+<p>На панели управления найдите <strong>кнопку отправки в чат</strong> (рядом со значком микрофона). Нажмите на неё — при активации кнопка станет <strong>зелёной</strong>.</p>
 <div class="img-placeholder">
-<img alt="Отправить чат" src="./images/send-via-chat.png" loading="lazy"/>
+<img alt="Отправка в чат" src="./images/send-via-chat.png" loading="lazy"/>
 </div>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Говорите, и оно отправится автоматически</span>
+<span class="step-title">Говорите — текст отправляется автоматически</span>
 <div class="step-body">
-<p>Если у вас включен микрофон и запущен сеанс перевода, когда вы говорите, переведенный текст автоматически вставляется во входные данные чата собрания и отправляется.</p>
-<p>Это работает на <strong>Google Meet</strong>, <strong>Масштаб (Интернет)</strong> и <strong>Команды Microsoft (Интернет)</strong>.</p>
+<p>При включённом микрофоне и активном сеансе перевода ваша переведённая речь автоматически вставляется в поле чата встречи и отправляется.</p>
+<p>Функция работает в <strong>Google Meet</strong>, <strong>Zoom (Web)</strong> и <strong>Microsoft Teams (Web)</strong>.</p>
 </div>
 </div>
 <div class="callout callout-tip">
 <div class="callout-label">Совет</div>
-<p>Это полезно, когда функция «Рассказывайте моим голосом» недоступна для вашей платформы или если вы хотите одновременно и голосовое повествование, и перевод текстового чата.</p>
+<p>Эта функция полезна, когда «Narrate My Voice» недоступна на вашей платформе, или если вы хотите одновременно использовать и голосовое озвучивание, и текстовый перевод в чате.</p>
 </div>
 <hr class="section-divider"/>
 <h2 id="subtitle-mode">Режим субтитров</h2>
-<p class="section-intro">Переключитесь на минимальную панель субтитров в стиле кино, которая отображает только последний перевод в нижней части экрана. <span class="badge badge-pro">Профи</span></p>
+<p class="section-intro">Переключитесь на минималистичную панель субтитров в стиле кино — она отображает только последний перевод в нижней части экрана. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Включить режим субтитров</span>
+<span class="step-title">Включите режим субтитров</span>
 <div class="step-body">
-<p>В заголовке панели переводчика нажмите кнопку <strong>значок субтитров</strong> (значок субтитров).</p>
-<p>Полная панель будет заменена тонкой полосой субтитров в нижней части экрана.</p>
+<p>В строке заголовка панели переводчика нажмите <strong>значок субтитров</strong> (значок скрытых субтитров).</p>
+<p>Полная панель сменится узкой полосой субтитров в нижней части экрана.</p>
 <div class="img-placeholder">
 <img alt="Режим субтитров" src="./images/subtitle.png" loading="lazy"/>
 </div>
@@ -1116,14 +1110,14 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Настройка панели субтитров</span>
+<span class="step-title">Настройте панель субтитров</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>значок настройки</strong> (шестеренка настроек) в строке субтитров, чтобы настроить:</p>
+<p>Нажмите <strong>значок настроек</strong> (шестерёнка) на панели субтитров, чтобы изменить:</p>
 <ul>
-<li><strong>Непрозрачность</strong>  — сдвиньте ползунок, чтобы сделать панель более или менее прозрачной.</li>
-<li><strong>Размер шрифта</strong>  — выберите мелкий, средний или крупный текст.</li>
+<li><strong>Прозрачность</strong> — ползунок для настройки степени прозрачности панели.</li>
+<li><strong>Размер шрифта</strong> — мелкий, средний или крупный текст.</li>
 </ul>
-<p>Вы также можете <strong>перетащите</strong> панель субтитров, чтобы переместить ее, и <strong>изменить размер</strong> его, перетаскивая края.</p>
+<p>Панель субтитров можно <strong>перетаскивать</strong> и <strong>изменять по размеру</strong>, потянув за края.</p>
 <div class="img-placeholder">
 <img alt="Настройка субтитров" src="./images/customize-subtitle-bar.png" loading="lazy"/>
 </div>
@@ -1131,54 +1125,53 @@
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Выйти из режима субтитров</span>
+<span class="step-title">Выход из режима субтитров</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>кнопка закрытия</strong> (✕) на панели субтитров, чтобы вернуться к полной панели переводчика.</p>
+<p>Нажмите <strong>кнопку закрытия</strong> (✕) на панели субтитров, чтобы вернуться к полной панели переводчика.</p>
 </div>
 </div>
 <hr class="section-divider"/>
 <h2 id="inline-assistant">Встроенный AI-помощник</h2>
-<p class="section-intro">Получайте объяснения с помощью искусственного интеллекта и генерируйте ответы на основе контекста разговора прямо из стенограммы. <span class="badge badge-pro">Профи</span></p>
+<p class="section-intro">Получайте объяснения и подготовленные ответы на основе контекста разговора прямо из стенограммы. <span class="badge badge-pro">Pro</span></p>
 <div class="callout callout-warn">
 <div class="callout-label">Требование</div>
-<p>Для работы встроенного AI Assistant требуется <strong>Ключ OpenAI API</strong> настраивается в настройках.</p>
+<p>Для работы встроенного AI-помощника необходимо указать <strong>API-ключ OpenAI</strong> в настройках.</p>
 </div>
-<h3>Объясните строку</h3>
+<h3>Объяснение строки</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Наведите курсор на строку расшифровки</span>
+<span class="step-title">Наведите курсор на строку стенограммы</span>
 <div class="step-body">
-<p>При наведении курсора на любую строку стенограммы отображается <strong>Значок AI
-Появляется </strong> (🤖).</p>
+<p>При наведении курсора на любую строку стенограммы появится <strong>значок AI</strong> (🤖).</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Нажмите значок AI и выберите «Объяснить».</span>
+<span class="step-title">Нажмите значок AI и выберите «Explain»</span>
 <div class="step-body">
-<p>ИИ-помощник открывается в отдельном окне. Он будет использовать полный контекст расшифровки и выбранную строку, чтобы дать вам подробное объяснение.</p>
+<p>AI-помощник откроется в отдельном окне. Он проанализирует полный контекст стенограммы и выбранную строку, чтобы дать вам подробное объяснение.</p>
 <div class="img-placeholder">
-<img alt="Объясните" src="./images/ai-explain.png" loading="lazy"/>
+<img alt="Объяснение" src="./images/ai-explain.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>Сгенерировать ответ</h3>
+<h3>Генерация ответа</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите значок AI и выберите «Создать ответ».</span>
+<span class="step-title">Нажмите значок AI и выберите «Generate Answer»</span>
 <div class="step-body">
-<p>ИИ-помощник сгенерирует предложенный ответ на основе того, что было сказано в разговоре. Он даже может использовать веб-поиск для предоставления более точных ответов.</p>
+<p>AI-помощник сформирует предложенный ответ на основе сказанного в разговоре. Он также может использовать веб-поиск для более точных ответов.</p>
 <div class="img-placeholder">
-<img alt="Сгенерировать ответ" src="./images/ai-help-answer.png" loading="lazy"/>
+<img alt="Генерация ответа" src="./images/ai-help-answer.png" loading="lazy"/>
 </div>
 </div>
 </div>
-<h3>Откройте панель Ассистента</h3>
+<h3>Панель помощника</h3>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите кнопку «Ассистент» на панели управления.</span>
+<span class="step-title">Нажмите кнопку помощника на панели управления</span>
 <div class="step-body">
-<p>Вы также можете открыть панель AI-помощника прямо из <strong>кнопка помощника</strong> (значок 🤖) на панели управления. Откроется перетаскиваемое окно чата, где вы можете ввести любой вопрос. Помощник имеет доступ к полной стенограмме в качестве контекста.</p>
+<p>Вы также можете открыть панель AI-помощника, нажав <strong>кнопку помощника</strong> (значок 🤖) на панели управления. Откроется перемещаемое окно чата, в котором можно задать любой вопрос. Помощник имеет доступ к полной стенограмме в качестве контекста.</p>
 <div class="img-placeholder">
 <img alt="Панель помощника" src="./images/ai.png" loading="lazy"/>
 </div>
@@ -1186,13 +1179,12 @@
 </div>
 <hr class="section-divider"/>
 <h2 id="context-setting">Настройки контекста</h2>
-<p class="section-intro">Предоставьте контекст темы разговора, чтобы повысить точность перевода. <span class="badge badge-free">Бесплатно</span></p>
+<p class="section-intro">Укажите тему разговора, чтобы повысить точность перевода. <span class="badge badge-free">Бесплатно</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Открыть настройки контекста</span>
+<span class="step-title">Откройте настройки контекста</span>
 <div class="step-body">
-<p>Нажмите кнопку <strong>"Ещё"
-Кнопка </strong> кнопку (⋯) на панели управления, затем нажмите <strong>"Контекст"</strong>.</p>
+<p>Нажмите кнопку <strong>«More»</strong> (⋯) на панели управления, затем выберите <strong>«Context»</strong>.</p>
 <div class="img-placeholder">
 <img alt="Настройка контекста" src="./images/context.png" loading="lazy"/>
 </div>
@@ -1202,37 +1194,37 @@
 <span class="step-number">2</span>
 <span class="step-title">Заполните поля контекста</span>
 <div class="step-body">
-<p>Вы можете предоставить:</p>
+<p>Вы можете указать:</p>
 <ul>
-<li><strong>Домен/Тема</strong>  — о чем разговор (например, «Медицинская конференция», «Стендап по разработке программного обеспечения»).</li>
-<li><strong>Ключевые термины</strong>  — технические термины, имена собственные или жаргонизмы, которые может быть трудно распознать (например, «Kubernetes, шлюз API, микросервисы»).</li>
-<li><strong>Информация о докладчике</strong>  — имена и роли участников (например, «Доктор Смит — кардиолог, ведущий»).</li>
+<li><strong>Тема / Область</strong> — о чём идёт разговор (например, «Медицинская конференция», «Стендап по разработке»).</li>
+<li><strong>Ключевые термины</strong> — специальные термины, имена собственные или профессиональный жаргон, которые могут быть сложны для распознавания (например, «Kubernetes, API gateway, микросервисы»).</li>
+<li><strong>Информация о говорящих</strong> — имена и роли участников (например, «Доктор Иванов — кардиолог, докладчик»).</li>
 </ul>
-<p>Нажмите <strong>"Применить"</strong> чтобы отправить этот контекст в систему перевода для текущего сеанса.</p>
+<p>Нажмите <strong>«Apply»</strong>, чтобы передать этот контекст системе перевода для текущего сеанса.</p>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Сохранить пресеты (необязательно)</span>
+<span class="step-title">Сохранение пресетов (необязательно)</span>
 <div class="step-body">
-<p>Если у вас есть повторяющиеся встречи на схожие темы, нажмите <strong>"Сохранить предустановку"</strong> для сохранения текущего контекста. В следующий раз просто загрузите пресет вместо того, чтобы вводить все заново.</p>
-<p>Вы также можете <strong>Импорт/Экспорт</strong> предустановлены как файлы JSON для совместного использования или резервного копирования.</p>
+<p>Если у вас регулярно проходят встречи на схожие темы, нажмите <strong>«Save Preset»</strong>, чтобы сохранить текущий контекст. В следующий раз просто загрузите пресет, не вводя всё заново.</p>
+<p>Пресеты можно <strong>импортировать и экспортировать</strong> в формате JSON для обмена или резервного копирования.</p>
 </div>
 </div>
 <div class="callout callout-tip">
-<div class="callout-label">Автозаполнение YouTube</div>
-<p>При использовании Live Translator на <strong>YouTube</strong>, поля контекста могут быть <strong>автоматически заполняется</strong> с названием и описанием видео. Это помогает системе перевода лучше понять тему видео.</p>
+<div class="callout-label">Автозаполнение на YouTube</div>
+<p>При использовании Live Translator на <strong>YouTube</strong> поля контекста могут быть <strong>заполнены автоматически</strong> на основе названия и описания видео. Это помогает системе перевода лучше понять тему.</p>
 </div>
 <hr class="section-divider"/>
-<h2 id="download-transcript">Загрузить стенограмму</h2>
-<p class="section-intro">Сохраните переведенные расшифровки в виде файлов для дальнейшего использования или использования в других инструментах. <span class="badge badge-pro">Профи</span></p>
+<h2 id="download-transcript">Скачать стенограмму</h2>
+<p class="section-intro">Сохраняйте переведённые стенограммы в файлы для дальнейшего использования или обработки в других инструментах. <span class="badge badge-pro">Pro</span></p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Нажмите кнопку «Загрузить».</span>
+<span class="step-title">Нажмите кнопку скачивания</span>
 <div class="step-body">
-<p>После сеанса перевода (или во время него) нажмите кнопку <strong>кнопка загрузки</strong> (значок ↓) на панели управления. Откроется диалоговое окно «Загрузить стенограмму».</p>
+<p>После завершения сеанса перевода (или во время него) нажмите <strong>кнопку скачивания</strong> (значок ↓) на панели управления. Откроется диалоговое окно скачивания стенограммы.</p>
 <div class="img-placeholder">
-<img alt="Загрузить стенограмму" src="./images/download-transcript.png" loading="lazy"/>
+<img alt="Скачать стенограмму" src="./images/download-transcript.png" loading="lazy"/>
 </div>
 </div>
 </div>
@@ -1240,42 +1232,42 @@
 <span class="step-number">2</span>
 <span class="step-title">Выберите формат</span>
 <div class="step-body">
-<p>Выберите предпочитаемый формат:</p>
+<p>Выберите нужный формат:</p>
 <table>
 <thead>
-<tr><th>Формат</th><th>Лучше всего подходит для</th></tr>
+<tr><th>Формат</th><th>Для чего подходит</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>TXT</strong></td><td>Простой текстовый файл с временными метками и именами докладчиков. Легко читать.</td></tr>
-<tr><td><strong>JSON</strong></td><td>Формат структурированных данных. Подходит для обработки другими инструментами или скриптами.</td></tr>
-<tr><td><strong>SRT (оригинал)</strong></td><td>Файл субтитров с текстом на языке оригинала. Используйте в программах для редактирования видео.</td></tr>
-<tr><td><strong>SRT (переведено)</strong></td><td>Файл субтитров с переведенным текстом. Используйте в программах для редактирования видео.</td></tr>
+<tr><td><strong>TXT</strong></td><td>Простой текстовый файл с временными метками и именами говорящих. Легко читать.</td></tr>
+<tr><td><strong>JSON</strong></td><td>Структурированный формат данных. Удобен для обработки скриптами и другими инструментами.</td></tr>
+<tr><td><strong>SRT (оригинал)</strong></td><td>Файл субтитров с текстом на языке оригинала. Для использования в видеоредакторах.</td></tr>
+<tr><td><strong>SRT (перевод)</strong></td><td>Файл субтитров с переведённым текстом. Для использования в видеоредакторах.</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="step">
 <span class="step-number">3</span>
-<span class="step-title">Загрузить файл</span>
+<span class="step-title">Скачайте файл</span>
 <div class="step-body">
-<p>Нажмите кнопку загрузки выбранного формата. Файл создается в вашем браузере и сохраняется в папке загрузки по умолчанию.</p>
+<p>Нажмите кнопку скачивания для выбранного формата. Файл создаётся прямо в вашем браузере и сохраняется в папку загрузок по умолчанию.</p>
 </div>
 </div>
 <div class="callout callout-note">
 <div class="callout-label">Конфиденциальность</div>
-<p>Файлы транскриптов генерируются <strong>полностью в вашем браузере</strong>. Во время процесса загрузки данные расшифровки не отправляются ни на один сервер.</p>
+<p>Файлы стенограмм создаются <strong>полностью в вашем браузере</strong>. Никакие данные стенограммы не передаются на сервер при скачивании.</p>
 </div>
 <hr class="section-divider"/>
 <!-- ────────────────────────────────────────── -->
 <!-- MORE                                       -->
 <!-- ────────────────────────────────────────── -->
 <h2 id="auto-update">Автоматическая проверка обновлений</h2>
-<p class="section-intro">Расширение автоматически проверяет наличие обновлений каждый раз, когда вы его открываете.</p>
+<p class="section-intro">Расширение автоматически проверяет наличие обновлений при каждом открытии.</p>
 <div class="step">
 <span class="step-number">1</span>
-<span class="step-title">Найдите значок обновления</span>
+<span class="step-title">Обратите внимание на значок обновления</span>
 <div class="step-body">
-<p>Когда будет доступна новая версия, вы увидите <strong>"Доступно обновление"</strong> значок в заголовке панели переводчика.</p>
+<p>Когда доступна новая версия, в строке заголовка панели переводчика появится значок <strong>«Update available»</strong>.</p>
 <div class="img-placeholder">
 <img alt="Доступно обновление" src="./images/update-badge.png" loading="lazy"/>
 </div>
@@ -1283,58 +1275,57 @@
 </div>
 <div class="step">
 <span class="step-number">2</span>
-<span class="step-title">Нажмите, чтобы обновить</span>
+<span class="step-title">Нажмите для обновления</span>
 <div class="step-body">
-<p>Нажмите значок, чтобы перейти на страницу установки, где можно загрузить последнюю версию. Следуй тому же <a href="#installation">этапы установки</a> обновить.</p>
+<p>Нажмите на значок — вы перейдёте на страницу установки, где можно скачать последнюю версию. Для обновления следуйте тем же <a href="#installation">шагам установки</a>.</p>
 </div>
 </div>
 <hr class="section-divider"/>
 <h2 id="troubleshooting">Устранение неполадок</h2>
-<p class="section-intro">Распространенные проблемы и способы их устранения.</p>
-<h3>Сообщение «Нет ключа API Soniox»</h3>
+<p class="section-intro">Распространённые проблемы и способы их решения.</p>
+<h3>Сообщение «No Soniox API key»</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Решение</span>
 <div class="step-body">
-<p>Вы еще не ввели свой ключ API Soniox. Перейти к <a href="#enter-keys">Введите свои ключи API</a> , чтобы настроить его.</p>
+<p>Вы ещё не ввели API-ключ Soniox. Перейдите в раздел <a href="#enter-keys">Ввод API-ключей</a>, чтобы настроить его.</p>
 </div>
 </div>
-<h3>Аудио не записывается</h3>
+<h3>Звук не захватывается</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Решение</span>
 <div class="step-body">
 <ul>
-<li>Убедитесь, что вы нажали <strong>"Разрешить"</strong> когда браузер запросил разрешение на захват звука.</li>
-<li>Убедитесь, что вы выбрали <strong>правильная вкладка</strong> чтобы поделиться, когда будет предложено.</li>
+<li>Убедитесь, что вы нажали <strong>«Разрешить»</strong>, когда браузер запросил разрешение на захват звука.</li>
+<li>Убедитесь, что вы выбрали <strong>правильную вкладку</strong> при запросе.</li>
 <li>Попробуйте обновить страницу и снова открыть переводчик.</li>
-<li>Убедитесь, что на встрече/видео действительно воспроизводится звук.</li>
+<li>Проверьте, что на встрече или в видео действительно воспроизводится звук.</li>
 </ul>
 </div>
 </div>
-<h3>Перевод кажется неточным</h3>
+<h3>Перевод неточный</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Решение</span>
 <div class="step-body">
 <ul>
-<li>Убедитесь, что
-В раскрывающемся списке  <strong>"Их язык"</strong>  указан правильный язык общения.</li>
-<li>Использовать <a href="#context-setting">Настройки контекста</a> для предоставления информации по теме и ключевых терминов.</li>
-<li>Убедитесь, что качество звука четкое — фоновый шум может повлиять на точность.</li>
+<li>Убедитесь, что в выпадающем списке <strong>«Their language»</strong> выбран правильный язык, на котором ведётся речь.</li>
+<li>Воспользуйтесь <a href="#context-setting">настройками контекста</a>, чтобы указать тему и ключевые термины.</li>
+<li>Убедитесь, что качество звука достаточное — фоновый шум может снижать точность.</li>
 </ul>
 </div>
 </div>
-<h3>"Расскажи моим голосом" — другие не слышат перевод</h3>
+<h3>«Narrate My Voice» — собеседники не слышат перевод</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Решение</span>
 <div class="step-body">
 <ul>
-<li>Подтвердите, что вы находитесь на <strong>поддерживаемая платформа</strong> (Google Meet, Zoom Web, Teams Web, WhatsApp Web).</li>
-<li>Убедитесь, что сеанс перевода <strong>бег</strong> и ваш <strong>микрофон включен</strong>.</li>
-<li>Проверьте, есть ли у вас <strong>Профессиональная лицензия</strong> активирован.</li>
-<li>Попробуйте обновить страницу собрания и начать заново.</li>
+<li>Убедитесь, что вы находитесь на <strong>поддерживаемой платформе</strong> (Google Meet, Zoom Web, Teams Web, WhatsApp Web).</li>
+<li>Убедитесь, что сеанс перевода <strong>запущен</strong> и <strong>микрофон включён</strong>.</li>
+<li>Проверьте, что <strong>Pro-лицензия</strong> активирована.</li>
+<li>Попробуйте обновить страницу встречи и начать заново.</li>
 </ul>
 </div>
 </div>
@@ -1344,21 +1335,20 @@
 <span class="step-title">Решение</span>
 <div class="step-body">
 <ul>
-<li>Подтвердите свой <strong>Ключ OpenAI API</strong> введено правильно в <a href="#enter-keys">Настройки</a>.</li>
-<li>Убедитесь, что в вашей учетной записи OpenAI <strong>настроены платежные данные</strong> с достаточным количеством кредитов.</li>
-<li>Если вам не нужны функции OpenAI, используйте <strong>Голоса в Google Translate
-Вместо этого </strong> для повествования (бесплатно, ключ API не требуется).</li>
+<li>Убедитесь, что <strong>API-ключ OpenAI</strong> правильно введён в <a href="#enter-keys">настройках</a>.</li>
+<li>Проверьте, что в вашем аккаунте OpenAI <strong>настроена оплата</strong> и на счету достаточно средств.</li>
+<li>Если вам не нужны функции OpenAI, используйте для озвучивания <strong>голоса Google Translate</strong> (бесплатно, API-ключ не требуется).</li>
 </ul>
 </div>
 </div>
-<h3>Расширение не отображается на веб-сайте</h3>
+<h3>Расширение не появляется на сайте</h3>
 <div class="step">
 <span class="step-number">!</span>
 <span class="step-title">Решение</span>
 <div class="step-body">
 <ul>
-<li>Живой переводчик работает только <a href="#supported-platforms">поддерживаемые платформы</a>. Он не будет отображаться на неподдерживаемых веб-сайтах.</li>
-<li>Если сайт поддерживается, но расширение не отображается, попробуйте <strong>обновление страницы</strong>.</li>
+<li>Live Translator работает только на <a href="#supported-platforms">поддерживаемых платформах</a>. На неподдерживаемых сайтах расширение не отображается.</li>
+<li>Если сайт поддерживается, но расширение не появляется, попробуйте <strong>обновить страницу</strong>.</li>
 <li>Убедитесь, что расширение <strong>включено</strong> на странице управления расширениями вашего браузера.</li>
 </ul>
 </div>
@@ -1366,19 +1356,19 @@
 <hr class="section-divider"/>
 <h2 id="contact">Контакты и поддержка</h2>
 <p class="section-intro">Нужна помощь? Есть вопрос или предложение?</p>
-<p>Связаться с разработчиком:</p>
+<p>Свяжитесь с разработчиком:</p>
 <ul>
-<li><strong>Электронная почта:</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
-<li><strong>Веб-сайт:</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
+<li><strong>Email:</strong> <a href="mailto:ezsolu.io@gmail.com">ezsolu.io@gmail.com</a></li>
+<li><strong>Сайт:</strong> <a href="https://translate.ezitech.io" target="_blank">https://translate.ezitech.io</a></li>
 <li><strong>WhatsApp:</strong> <a href="https://wa.me/84355561599" target="_blank">+84 355 561 599</a></li>
-<li><strong>Телеграмма:</strong> <a href="https://t.me/ezi_tech" target="_blank">ЭзиТех</a></li>
+<li><strong>Telegram:</strong> <a href="https://t.me/ezi_tech" target="_blank">EziTech</a></li>
 </ul>
 <div class="callout callout-tip">
-<div class="callout-label">Отзывы приветствуются</div>
-<p>Если у вас есть идеи относительно новых функций или улучшений, мы будем рады услышать ваше мнение. Отправьте нам письмо со своими предложениями!</p>
+<div class="callout-label">Будем рады обратной связи</div>
+<p>Если у вас есть идеи по новым функциям или улучшениям, мы будем рады их услышать. Напишите нам на электронную почту со своими предложениями!</p>
 </div>
 <footer style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--c-border); font-size: 0.82rem; color: var(--c-text-secondary);">
-<p>© 2026 Доан Фам. Live Translator — это независимое расширение для браузера, не связанное с Google, Zoom, Microsoft, Soniox или OpenAI.</p>
+<p>&copy; 2026 Doan Pham. Live Translator — это независимое расширение для браузера, не связанное с Google, Zoom, Microsoft, Soniox или OpenAI.</p>
 </footer>
 </main>
 </div>
