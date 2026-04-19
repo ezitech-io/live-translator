@@ -78,6 +78,17 @@
     <section class="card">
       <h1>Changelog</h1>
       <br />
+      <h2>v0.12.2 (April 19, 2026)</h2>
+      <h3>What's new for you</h3>
+      <ul>
+        <li><strong>YouTube caption-first narration for Their voice</strong> — On YouTube, <strong>Narrate their voice</strong> now prefers YouTube translated captions directly, so narration can start with lower translation cost and less delay.</li>
+        <li><strong>Safer fallback when captions are unavailable</strong> — If matching captions cannot be extracted, the extension now falls back automatically to the Soniox translation pipeline without breaking your narration flow.</li>
+        <li><strong>More stable timeline sync in YouTube narration</strong> — Caption narration now tracks start-at-offset playback and seek changes more accurately, while avoiding overlap between caption narration and Soniox narration.</li>
+        <li><strong>New Minimize action in translator header</strong> — You can now hide the panel using <strong>Minimize</strong> while keeping the extension runtime active in the background.</li>
+        <li><strong>Stop and Close now fully tear down runtime</strong> — Ending a session now consistently stops mic, narration, interpreter mode, and voice injection; pressing <strong>Stop</strong> from controls also auto-opens transcript download when data is available.</li>
+        <li><strong>Clear unsupported-page behavior for call actions</strong> — Microphone, interpreter, and Narrate My Voice actions now show disabled states with clearer tooltip feedback on unsupported pages.</li>
+      </ul>
+      <br />
       <h2>v0.11.5 (April 11, 2026)</h2>
       <h3>What's new for you</h3>
       <ul>
