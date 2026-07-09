@@ -75,7 +75,8 @@
         "Private local processing on browser",
         "Download translated transcripts (TXT, JSON, SRT)",
         "Inline AI Assistant with Explain and Generate Answer actions",
-        "Soniox API integration",
+        "Webpage translate with dual-panel reader overlay",
+        "Included Soniox access with Google sign-in (optional BYOK for unlimited)",
         "OpenAI Realtime API for speech-to-speech translation"
       ]
     }
@@ -695,9 +696,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
             </svg>
           </div>
-          <h3 class="font-display font-bold text-lg mb-3">Bring Your Own Key</h3>
+          <h3 class="font-display font-bold text-lg mb-3">Included Access or Your Own Key</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Connect your Soniox API key and pay only for actual usage. No subscriptions, no hidden fees — complete control over your translation cost.
+            Sign in with Google to use included Soniox translation within your plan limits, or add your own Soniox API key in Settings for unlimited usage and pay-as-you-go billing from Soniox.
           </p>
         </div>
 
@@ -762,7 +763,7 @@
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-slate-300">Real-time translation</span>
+              <span class="font-body text-sm text-slate-300">Included real-time translation — 20 min/day, 400 min/month, up to 4 sessions/day (sign in with Google)</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -778,7 +779,7 @@
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-slate-300">BYO Soniox API key — pay only for usage</span>
+              <span class="font-body text-sm text-slate-300">Optional: your own Soniox API key for unlimited translation</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -823,6 +824,10 @@
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
               <span class="font-body text-sm text-slate-300">Everything in Free</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Included real-time translation — 120 min/day, 1440 min/month, up to 24 sessions/day</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -900,6 +905,10 @@
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Included real-time translation — 120 min/day, 1440 min/month, up to 24 sessions/day</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
               <span class="font-body text-sm text-white font-medium">Narrate Their Voice — unlimited session time</span>
             </li>
             <li class="flex items-start gap-3">
@@ -951,9 +960,12 @@
         </div>
       </div>
 
-      <div class="text-center mt-10 reveal">
-        <p class="font-body text-sm text-slate-600">
-          All plans require your own Soniox API key for translation. Pro plans also use your own OpenAI and ElevenLabs API key for TTS/AI (optional) — you only pay API providers for actual usage.
+      <div class="text-center mt-10 reveal max-w-3xl mx-auto space-y-2">
+        <p class="font-body text-sm text-slate-500 leading-relaxed">
+          Sign in with Google to use included Soniox translation within plan limits. Add your own Soniox API key for unlimited translation. Pro AI and narration features that use OpenAI or ElevenLabs still need your keys for those providers — you pay providers only for actual usage.
+        </p>
+        <p class="font-body text-xs text-slate-600 leading-relaxed">
+          * A session runs from Start to Stop or closing the extension.
         </p>
       </div>
     </div>
@@ -1155,6 +1167,18 @@
           </div>
           <h3 class="font-display font-bold text-base mb-2">Udemy</h3>
           <p class="font-body text-xs text-slate-500 leading-relaxed">Translate online course videos on udemy.com</p>
+        </div>
+
+        <!-- Any Website -->
+        <div class="platform-icon glass-card rounded-2xl p-8 text-center reveal relative">
+          <span class="absolute top-3 right-3 inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-display font-semibold tracking-wide text-accent-cyan bg-accent-cyan/10 border border-accent-cyan/25">+ Any site</span>
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-teal-500/10 flex items-center justify-center border border-white/5">
+            <svg class="w-8 h-8 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-base mb-2">Any Website</h3>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Turn on <strong class="text-slate-400 font-medium">Show translator on all websites</strong> in Settings to use Live Translator in any website.</p>
         </div>
       </div>
     </div>
@@ -1421,7 +1445,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                Yes. Live Translator currently uses Soniox API for translation. After installing the extension, add your Soniox API key once in settings and you're ready to translate in meetings and videos.
+                No, you don't need a Soniox API key to use Live Translator. You can use the free plan with included Soniox access or add your own Soniox API key in Settings for unlimited usage and pay-as-you-go billing from Soniox.
               </p>
             </div>
           </div>
