@@ -111,12 +111,12 @@
       <p class="meta">
         Developer: Doan Pham &nbsp;·&nbsp;
         Contact: <a href="mailto:phampdoan@gmail.com">phampdoan@gmail.com</a> &nbsp;·&nbsp;
-        Last updated: April 2026
+        Last updated: June 2026
       </p>
     </header>
 
     <div class="highlight-box">
-      <p><strong>Summary:</strong> Live Translator is designed to minimize data collection and does not run ads or usage analytics. Depending on the features you enable, data is processed locally in your browser and by third-party services you choose or use (including Soniox, OpenAI, Google Translate, and EziTranslate licensing/update APIs).</p>
+      <p><strong>Summary:</strong> Live Translator is designed to minimize data collection and does not run ads or sell your data. Depending on the features you enable, data is processed locally in your browser and by third-party services you choose or use (including Soniox, OpenAI, Google Translate, and EziTranslate licensing/update APIs). The extension may also send <strong>anonymous usage analytics</strong> (enabled by default) to help improve the product — you can turn this off anytime in <strong>Settings → Extension</strong>.</p>
     </div>
 
     <h2>1. What Is Live Translator?</h2>
@@ -146,13 +146,56 @@
       <li>
         <strong>Page context data (limited)</strong> — On supported pages (for example YouTube), title/description text may be read from the page DOM to help prefill context fields when that workflow is used.
       </li>
+      <li>
+        <strong>Anonymous usage analytics (optional)</strong> — If analytics is enabled, the extension sends anonymous event data (for example: extension installed, settings or translator panel opened, login success or failure, translation started or stopped, and categorized error codes). Events may include non-identifying metadata such as supported site type (for example <code>youtube</code>, <code>meet</code>), extension version, and coarse usage duration buckets. See <a href="#anonymous-analytics">Section 3</a> for details.
+      </li>
     </ul>
 
     <div class="highlight-box section-no-data">
-      <p><strong>We do not use your data for advertising or analytics:</strong> Live Translator does not run ad tracking, behavioral profiling, or sell your data. It also does not request or collect your full browsing history.</p>
+      <p><strong>We do not use your data for advertising or behavioral profiling:</strong> Live Translator does not run ad tracking, sell your data, or request your full browsing history. Anonymous usage analytics (when enabled) is used only to understand product usage and improve reliability — not for ads.</p>
     </div>
 
-    <h2>3. Transcript Handling and Export</h2>
+    <h2 id="anonymous-analytics">3. Anonymous Usage Analytics</h2>
+    <p>
+      To understand how the extension is used and where users encounter problems (for example signing in but not starting translation), Live Translator may collect <strong>anonymous usage analytics</strong>. This feature is <strong>enabled by default</strong> and can be turned off at any time via the <strong>Allow anonymous analytics</strong> toggle at the bottom of <strong>Settings → Extension</strong>.
+    </p>
+
+    <h3 style="font-size:1rem;margin:24px 0 8px;">What we may collect</h3>
+    <p>When analytics is enabled, the extension may send events such as:</p>
+    <ul>
+      <li>Extension installed or updated</li>
+      <li>Settings or translator panel opened</li>
+      <li>Sign-in attempted, succeeded, or failed (without email or password)</li>
+      <li>Translation start, stop, or failure (with categorized error codes only)</li>
+      <li>Whether a translation session reached at least one minute of active use</li>
+      <li>Non-identifying context such as supported <strong>site type</strong> (for example <code>youtube</code>, <code>zoom</code>), <strong>extension version</strong>, and coarse <strong>duration buckets</strong></li>
+    </ul>
+    <p>
+      The extension generates a random <strong>anonymous client identifier</strong> stored locally in <code>chrome.storage.local</code>. This identifier is not linked to your name, email, or account credentials in analytics reports.
+    </p>
+
+    <h3 style="font-size:1rem;margin:24px 0 8px;">What we do not collect in analytics</h3>
+    <p>Analytics events do <strong>not</strong> include:</p>
+    <ul>
+      <li>Email address, password, or authentication tokens</li>
+      <li>Soniox, OpenAI, Google, or ElevenLabs API keys</li>
+      <li>License keys or payment card data</li>
+      <li>Full page URLs, video titles, transcripts, translated text, or meeting content</li>
+      <li>Raw error messages or stack traces</li>
+    </ul>
+
+    <h3 style="font-size:1rem;margin:24px 0 8px;">How analytics data flows</h3>
+    <p>
+      Analytics events are sent from the extension to the developer-operated EziTranslate API, which validates and forwards them to <strong>Google Analytics 4</strong> using Google's Measurement Protocol. Analytics credentials are kept on the server; they are not embedded in the extension.
+    </p>
+    <p>
+      If you uninstall the extension, Chromium may open an optional feedback form. That URL may include your anonymous client identifier so uninstall feedback can be correlated with prior usage patterns. Submitting feedback is voluntary.
+    </p>
+    <p>
+      Google's processing of analytics data is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
+    </p>
+
+    <h2>4. Transcript Handling and Export</h2>
     <p>
       Live transcript text displayed in the panel is kept in memory for the active session and is cleared when the session or panel is closed.
     </p>
@@ -160,7 +203,7 @@
       If you choose to export transcript files (<code>.txt</code>, <code>.json</code>, or <code>.srt</code>), files are generated and downloaded locally in your browser. You control where those files are stored after download.
     </p>
 
-    <h2>4. Third-Party Services</h2>
+    <h2>5. Third-Party Services</h2>
     <p>
       Live Translator integrates with third-party services selected by feature usage:
     </p>
@@ -168,7 +211,8 @@
       <li><strong>Soniox</strong> — Real-time speech transcription/translation.</li>
       <li><strong>OpenAI</strong> — Optional inline assistant and optional TTS narration features.</li>
       <li><strong>Google Translate</strong> — Optional TTS narration provider.</li>
-      <li><strong>EziTranslate API</strong> — License activation/verification and extension update checks.</li>
+      <li><strong>EziTranslate API</strong> — License activation/verification, extension update checks, and anonymous usage analytics relay.</li>
+      <li><strong>Google Analytics 4</strong> — Anonymous product usage analytics when the analytics toggle is enabled (see <a href="#anonymous-analytics">Section 3</a>).</li>
     </ul>
     <p>
       Data sent to these services is governed by each provider's own terms and privacy policy. You are responsible for reviewing and accepting applicable third-party policies.
@@ -177,7 +221,7 @@
       Live Translator is an independent product and is not affiliated with Google, Zoom, Microsoft, YouTube, WhatsApp, Soniox, or OpenAI.
     </p>
 
-    <h2>5. Permissions Explanation</h2>
+    <h2>6. Permissions Explanation</h2>
     <p>The extension requests the following permissions and access scopes:</p>
     <ul>
       <li><strong>storage</strong> — Store settings, API keys, context presets, and local license state.</li>
@@ -185,37 +229,37 @@
       <li><strong>scripting</strong> — Inject and control panel scripts/styles on supported pages.</li>
       <li><strong>offscreen</strong> — Play narration audio in an offscreen document to reduce feedback loops during live transcription.</li>
       <li><strong>declarativeNetRequest</strong> — Apply scoped header rules required for specific supported platforms (for example WhatsApp Web compatibility).</li>
-      <li><strong>Host permissions</strong> — Limited host access for <code>https://translate.google.com/</code> (Google TTS) and <code>https://web.whatsapp.com/*</code> (platform compatibility).</li>
+      <li><strong>Host permissions</strong> — Limited host access for <code>https://translate.google.com/</code> (Google TTS), <code>https://web.whatsapp.com/*</code> (platform compatibility), and EziTranslate API domains used for licensing, update checks, and anonymous analytics relay.</li>
       <li><strong>Microphone / display-capture</strong> — Runtime browser prompts; used only when you explicitly start a translation session or related audio workflow.</li>
     </ul>
     <p>
       The extension does not request universal host permission (<code>&lt;all_urls&gt;</code>). Content scripts run only on an explicit allowlist of supported domains defined in the manifest.
     </p>
 
-    <h2>6. Security</h2>
+    <h2>7. Security</h2>
     <p>
       Network communication to supported service providers uses encrypted HTTPS/WSS connections. Sensitive settings (such as API keys and license token data) are stored locally in extension storage on your device.
     </p>
 
-    <h2>7. Data Retention</h2>
+    <h2>8. Data Retention</h2>
     <p>
-      Session transcript state is temporary in memory. Locally saved settings, API keys, saved contexts, and license metadata remain on your device until you change/remove them, clear extension storage, or uninstall the extension.
+      Session transcript state is temporary in memory. Locally saved settings, API keys, saved contexts, license metadata, analytics opt-out preference, and anonymous analytics client identifier remain on your device until you change/remove them, clear extension storage, or uninstall the extension.
     </p>
     <p>
-      Data processed by third-party providers is retained according to each provider's policy and is outside the direct control of this extension.
+      Data processed by third-party providers (including Google Analytics 4) is retained according to each provider's policy and is outside the direct control of this extension.
     </p>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>9. Children's Privacy</h2>
     <p>
       Live Translator is not directed at children under the age of 13 and does not knowingly collect any information from children.
     </p>
 
-    <h2>9. Changes to This Policy</h2>
+    <h2>10. Changes to This Policy</h2>
     <p>
       If this privacy policy changes materially, the updated policy will be published at this URL and the "Last updated" date will be revised. We encourage you to review this page periodically.
     </p>
 
-    <h2>10. Refund Conditions</h2>
+    <h2>11. Refund Conditions</h2>
     <p>
       EziTranslate offers refunds subject to the following conditions:
     </p>
@@ -225,7 +269,7 @@
       <li>If EziTranslate determines that a user is intentionally abusing the refund policy for unfair gain, EziTranslate reserves the right to reject the refund request.</li>
     </ul>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>
       If you have any questions or concerns about this privacy policy or how your data is handled, please contact:
     </p>
