@@ -59,9 +59,8 @@
         {
           "@type": "Offer",
           "name": "Pro+",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/PreOrder"
+          "price": "13.99",
+          "priceCurrency": "USD"
         }
       ],
       "featureList": [
@@ -237,6 +236,23 @@
     }
     .btn-primary:hover::before { opacity: 1; }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59,130,246,0.3); }
+
+    .btn-violet {
+      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-violet::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #A78BFA, #8B5CF6);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .btn-violet:hover::before { opacity: 1; }
+    .btn-violet:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(139,92,246,0.3); }
 
     .section-divider {
       height: 1px;
@@ -764,7 +780,7 @@
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-slate-300">Real-time translation: 20 min/day, 4 sessions/day, 400 min/month</span>
+              <span class="font-body text-sm text-slate-300">Real-time translation: 20 min/day, 4 sessions/day, 6 hours/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -821,11 +837,12 @@
               <span class="font-display font-extrabold text-4xl gradient-text">$4.99</span>
               <span class="font-body text-sm text-slate-500">/ month</span>
             </div>
+            <p class="font-body text-sm text-slate-500 mt-1">$49 / year — Save 20%</p>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">Real-time translation: 120 min/day, 24 sessions/day, 1440 min/month</span>
+              <span class="font-body text-sm text-white font-medium">Real-time translation: 2 hours/day, 24 sessions/day, 24 hours/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -874,7 +891,7 @@
           </ul>
           <a href="https://buy.polar.sh/polar_cl_ACENb7X8r4vhnoa0DXmuJIpjs1cmnJK2C8Geh2KEn4S" target="_blank" rel="noopener noreferrer" class="btn-primary relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
             <span class="relative z-10 flex items-center gap-2">
-              Get Free Trial
+              Get Pro
             </span>
           </a>
         </div>
@@ -883,24 +900,28 @@
         <div class="glass-card rounded-3xl p-8 reveal relative border-accent-violet/30" style="border-color: rgba(139,92,246,0.25); box-shadow: 0 0 60px rgba(139,92,246,0.06);">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-violet text-white text-xs font-display font-semibold shadow-lg shadow-accent-violet/30">
-              Coming Soon
+              Save 20%
             </div>
           </div>
           <div class="mb-6">
             <h3 class="font-display font-bold text-2xl mb-1">Pro+</h3>
             <p class="font-body text-sm text-slate-500">Higher quotas for power users</p>
           </div>
-          <div class="flex items-baseline gap-1 mb-8">
-            <span class="font-display font-extrabold text-2xl text-accent-violet">Comming Soon</span>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="font-display font-extrabold text-4xl text-accent-violet">$13.99</span>
+              <span class="font-body text-sm text-slate-500">/ month</span>
+            </div>
+            <p class="font-body text-sm text-slate-500 mt-1">$139 / year — Save 20%</p>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">Real-time translation: Higher quota</span>
+              <span class="font-body text-sm text-white font-medium">Real-time translation: Unlimited daily quota, 60 hours/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">AI Assistant: Higher quota</span>
+              <span class="font-body text-sm text-white font-medium">AI Assistant: 60 requests/day, 600 requests/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -943,9 +964,11 @@
               <span class="font-body text-sm text-white font-medium">Transcript &amp; SRT export</span>
             </li>
           </ul>
-          <span class="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-2xl font-display font-semibold text-sm text-slate-500 border border-white/10 bg-white/5 cursor-not-allowed">
-            Comming Soon
-          </span>
+          <a href="https://buy.polar.sh/polar_cl_cc7UblGvVypEZIhsboTE9LJJIp2QXIpl4aHoE0HreAT" target="_blank" rel="noopener noreferrer" class="btn-violet relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-violet/20">
+            <span class="relative z-10 flex items-center gap-2">
+              Get Pro+
+            </span>
+          </a>
         </div>
       </div>
 
@@ -1417,7 +1440,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                The Free plan gives you full real-time translation with 60+ languages, plus Narrate Their Voice (10 minutes per session) and auto-save transcription (up to 10 records). You only pay Soniox for API usage. Upgrade to Pro ($4.99/month or $49/year) for unlimited transcript history, unlimited Narrate Their Voice time, Narrate My Voice, AI assistant, and advanced exports. Pro+ with higher quotas is coming soon.
+                The Free plan gives you full real-time translation with 60+ languages, plus Narrate Their Voice (10 minutes per session) and auto-save transcription (up to 10 records). Upgrade to Pro ($4.99/month or $49/year) for higher quotas, unlimited transcript history, unlimited Narrate Their Voice time, Narrate My Voice, AI assistant, and advanced exports. Pro+ ($13.99/month or $139/year) offers even higher quotas for power users.
               </p>
             </div>
           </div>
