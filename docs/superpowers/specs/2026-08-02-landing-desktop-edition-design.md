@@ -3,7 +3,8 @@
 - **Date:** 2026-08-02
 - **Repo:** `live-translator-landing`
 - **Scope:** `index.html` only
-- **Status:** design approved; spec pending review
+- **Status:** approved
+- **Plan:** [`docs/superpowers/plans/2026-08-02-landing-desktop-edition.md`](../plans/2026-08-02-landing-desktop-edition.md)
 
 ## Goal
 
