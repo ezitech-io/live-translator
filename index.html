@@ -299,6 +299,7 @@
         <div class="hidden md:flex items-center gap-8">
           <a href="#whats-new" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">What's New </a>
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Features</a>
+          <a href="#compare" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Compare</a>
           <a href="#pricing" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Pricing</a>
           <a href="./instruction.html" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">User Guide</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors duration-200">Platforms</a>
@@ -307,13 +308,35 @@
         </div>
 
         <!-- CTA -->
-        <div class="hidden md:flex items-center gap-4">
-          <a href="#install" class="btn-primary relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white">
+        <div class="hidden md:flex items-center gap-4 relative">
+          <button id="install-menu-btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="install-menu" class="btn-primary relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white">
             <span class="relative z-10 flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
               Install Free
+              <svg class="w-3.5 h-3.5 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </span>
-          </a>
+          </button>
+
+          <div id="install-menu" role="menu" aria-labelledby="install-menu-btn" class="hidden absolute right-0 top-full mt-3 w-72 glass rounded-2xl border border-white/10 shadow-2xl shadow-black/50 p-2 z-50">
+            <a role="menuitem" href="https://chromewebstore.google.com/detail/live-translator/pohbgdoejhnjneeokhfcfcpodhdllphh" target="_blank" rel="noopener" data-download-edition="extension" data-download-location="header" class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center flex-shrink-0">
+                <svg class="text-accent-blue" viewBox="0 0 24 24" fill="currentColor" style="width:1.125rem;height:1.125rem"><path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 3.953A7.48 7.48 0 0112 4.5c1.77 0 3.397.617 4.682 1.645l3.953-3.953C18.435 1.083 15.382 0 12 0zm0 24c3.79 0 7.169-1.757 9.368-4.501l-3.953-3.953A7.48 7.48 0 0112 19.5a7.48 7.48 0 01-5.415-3.954l-3.953 3.953C5.565 22.243 8.618 24 12 24zM1.757 7.632A11.946 11.946 0 000 12c0 1.58.307 3.09.864 4.472l4.812-2.779A7.444 7.444 0 014.5 12c0-.592.069-1.169.198-1.723L1.757 7.632zm20.486 0l-2.941 2.645c.129.554.198 1.131.198 1.723s-.069 1.169-.198 1.723l2.941 2.645A11.946 11.946 0 0024 12c0-1.58-.307-3.09-.864-4.472z"/></svg>
+              </span>
+              <span class="min-w-0">
+                <span class="block font-display font-semibold text-sm text-white">Browser Extension</span>
+                <span class="block font-body text-xs text-slate-500 mt-0.5">Chrome, Edge, Brave — free</span>
+              </span>
+            </a>
+            <a role="menuitem" href="./desktop/LiveTranslator-Setup-latest.exe" data-download-edition="windows" data-download-location="header" class="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-colors">
+              <span class="w-9 h-9 rounded-lg bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center flex-shrink-0">
+                <svg class="text-accent-cyan" viewBox="0 0 24 24" fill="currentColor" style="width:1.125rem;height:1.125rem"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+              </span>
+              <span class="min-w-0">
+                <span class="block font-display font-semibold text-sm text-white">Windows App</span>
+                <span class="block font-body text-xs text-slate-500 mt-0.5">Windows 10/11 · v0.1.4</span>
+              </span>
+            </a>
+          </div>
         </div>
 
         <!-- Mobile menu button -->
@@ -329,14 +352,19 @@
         <div class="flex flex-col gap-4 pt-4">
           <a href="#whats-new" class="font-body text-sm text-slate-400 hover:text-white transition-colors">What's New</a>
           <a href="#features" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Features</a>
+          <a href="#compare" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Compare</a>
           <a href="#pricing" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Pricing</a>
           <a href="./instruction.html" class="font-body text-sm text-slate-400 hover:text-white transition-colors">User Guide</a>
           <a href="#platforms" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Platforms</a>
           <a href="#how-it-works" class="font-body text-sm text-slate-400 hover:text-white transition-colors">How It Works</a>
           <a href="#installation-guide" class="font-body text-sm text-slate-400 hover:text-white transition-colors">Install Guide</a>
           <a href="#faq" class="font-body text-sm text-slate-400 hover:text-white transition-colors">FAQ</a>
-          <a href="#install" class="btn-primary relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white mt-2">
-            <span class="relative z-10">Install Free</span>
+          <a href="https://chromewebstore.google.com/detail/live-translator/pohbgdoejhnjneeokhfcfcpodhdllphh" target="_blank" rel="noopener" data-download-edition="extension" data-download-location="header" class="btn-primary relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-white mt-2">
+            <span class="relative z-10">Install Browser Extension</span>
+          </a>
+          <a href="./desktop/LiveTranslator-Setup-latest.exe" data-download-edition="windows" data-download-location="header" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:1rem;height:1rem"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+            Download for Windows
           </a>
         </div>
       </div>
@@ -1675,6 +1703,43 @@
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Install dropdown (header)
+    const installBtn = document.getElementById('install-menu-btn');
+    const installMenu = document.getElementById('install-menu');
+
+    function closeInstallMenu() {
+      installMenu.classList.add('hidden');
+      installBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    installBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = installMenu.classList.toggle('hidden');
+      installBtn.setAttribute('aria-expanded', String(!isHidden));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (installMenu.classList.contains('hidden')) return;
+      if (installMenu.contains(e.target)) return;
+      closeInstallMenu();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape' || installMenu.classList.contains('hidden')) return;
+      closeInstallMenu();
+      installBtn.focus();
+    });
+
+    // Install download tracking
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('[data-download-edition]');
+      if (!link || typeof gtag !== 'function') return;
+      gtag('event', 'download_' + link.dataset.downloadEdition, {
+        edition: link.dataset.downloadEdition,
+        location: link.dataset.downloadLocation
       });
     });
 
