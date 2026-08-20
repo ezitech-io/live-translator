@@ -1,8 +1,8 @@
-version: 0.2.5
+version: 0.2.8
 files:
-  - url: LiveTranslator-Setup-0.2.5.exe
-    sha512: YnYAkduedGM4aZqbN9pTmAZyZSC3GWFpiufA3LwxI3vUsA5qT8ffXGi6f6NMQlbSGYGtDszM/i/hMUgG4R2GWg==
-    size: 100866444
-path: LiveTranslator-Setup-0.2.5.exe
-sha512: YnYAkduedGM4aZqbN9pTmAZyZSC3GWFpiufA3LwxI3vUsA5qT8ffXGi6f6NMQlbSGYGtDszM/i/hMUgG4R2GWg==
-releaseDate: '2026-08-05T14:12:03.542Z'
+  - url: LiveTranslator-Setup-0.2.8.exe
+    sha512: T5KXRrm+wzW6+TYfg1DczOB7dY0djnTeVNhfp0iKPYAE31cAjOOFbcgeB8IgIbFa+7hran4l7pLHmyc1D7tprg==
+    size: 100877592
+path: LiveTranslator-Setup-0.2.8.exe
+sha512: T5KXRrm+wzW6+TYfg1DczOB7dY0djnTeVNhfp0iKPYAE31cAjOOFbcgeB8IgIbFa+7hran4l7pLHmyc1D7tprg==
+releaseDate: '2026-08-20T07:57:41.557Z'
