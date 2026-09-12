@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://translate.ezitech.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-vi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-zh.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-es.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-fr.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-pt.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-ru.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-ar.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/instruction-hi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://translate.ezitech.io/instruction.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://translate.ezitech.io/instruction-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://translate.ezitech.io/instruction-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://translate.ezitech.io/instruction-es.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://translate.ezitech.io/instruction-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://translate.ezitech.io/instruction-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://translate.ezitech.io/instruction-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://translate.ezitech.io/instruction-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://translate.ezitech.io/instruction-hi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://translate.ezitech.io/instruction.html"/>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/changelog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://translate.ezitech.io/llms.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

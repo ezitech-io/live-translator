@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live Translator - Real-time meeting and video translate</title>
-  <meta name="description" content="Live Translator is a browser extension and Windows app for real-time translation in Google Meet, Zoom, Microsoft Teams, YouTube and more. The Windows app translates audio from any application on your PC. Two-way translation, interpreter mode, 60+ languages, and private local processing." />
-  <meta name="keywords" content="live translator extension, live translator windows app, real-time meeting translation, Google Meet translator extension, Zoom translator extension, Microsoft Teams translator, YouTube video translator, windows translator app, desktop translation app, system audio translation, Soniox API translation, OpenAI TTS, narration mode, browser translation extension" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="author" content="Live Translator" />
+  <title>EziTranslate — Real-Time Meeting &amp; Video Translation</title>
+  <meta name="description" content="Real-time meeting and video translation for Google Meet, Zoom, Teams, and YouTube — plus a Windows app for any PC audio. 60+ languages. Free to start." />
+  <meta name="keywords" content="EziTranslate, Live Translator, real-time meeting translation, Google Meet translator, Zoom translator, Microsoft Teams translator, YouTube translator, Windows translation app, session sharing, Soniox" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="EziTranslate by Ezitech" />
   <meta name="theme-color" content="#06080F" />
   <link rel="canonical" href="https://translate.ezitech.io/" />
+  <link rel="alternate" type="text/plain" title="LLM summary" href="https://translate.ezitech.io/llms.txt" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ezitech" />
+  <meta property="og:site_name" content="EziTranslate" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://translate.ezitech.io/" />
-  <meta property="og:title" content="Live Translator - Real-time meeting and video translate" />
-  <meta property="og:description" content="Translate meetings and videos in real time — browser extension or Windows app. Two-way translation, interpreter mode, 60+ languages." />
+  <meta property="og:title" content="EziTranslate — Real-Time Meeting &amp; Video Translation" />
+  <meta property="og:description" content="Translate meetings and videos in real time — browser extension or Windows app. 60+ languages, session sharing, private local processing." />
   <meta property="og:image" content="https://translate.ezitech.io/icons/logo.png" />
-  <meta property="og:image:alt" content="Live Translator logo" />
+  <meta property="og:image:alt" content="EziTranslate — real-time meeting and video translation" />
   <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1408" />
+  <meta property="og:image:height" content="768" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Live Translator - Real-time meeting and video translate" />
-  <meta name="twitter:description" content="Real-time translation for Google Meet, Zoom, Teams, YouTube — plus a Windows app that translates audio from any program on your PC. Private local processing." />
+  <meta name="twitter:title" content="EziTranslate — Real-Time Meeting &amp; Video Translation" />
+  <meta name="twitter:description" content="Real-time translation for Google Meet, Zoom, Teams, YouTube — plus a Windows app for any program on your PC." />
   <meta name="twitter:image" content="https://translate.ezitech.io/icons/logo.png" />
-  <meta name="twitter:image:alt" content="Live Translator logo" />
+  <meta name="twitter:image:alt" content="EziTranslate — real-time meeting and video translation" />
   <meta name="google-site-verification" content="1w2ympg4WOvxOErNPjitHAd_eIfe5gzkPOomlKXblWA" />
 
   <link rel="icon" type="image/png" sizes="128x128" href="./icons/icon-128x128.png" />
@@ -36,49 +39,120 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Live Translator",
-      "url": "https://translate.ezitech.io/",
-      "image": "https://translate.ezitech.io/icons/logo.png",
-      "applicationCategory": ["BrowserApplication", "DesktopApplication"],
-      "description": "Live Translator is a browser extension and Windows app that provides real-time translation for Google Meet, Zoom, Microsoft Teams, and YouTube, with private local processing. The Windows app translates audio from any application on your PC.",
-      "operatingSystem": "Chrome, Edge, Brave, Arc, Windows",
-      "offers": [
+      "@graph": [
         {
-          "@type": "Offer",
-          "name": "Free",
-          "price": "0",
-          "priceCurrency": "USD"
+          "@type": "Organization",
+          "@id": "https://translate.ezitech.io/#organization",
+          "name": "Ezitech",
+          "url": "https://translate.ezitech.io/",
+          "logo": "https://translate.ezitech.io/icons/logo.png"
         },
         {
-          "@type": "Offer",
-          "name": "Pro",
-          "price": "4.99",
-          "priceCurrency": "USD"
+          "@type": "WebSite",
+          "@id": "https://translate.ezitech.io/#website",
+          "url": "https://translate.ezitech.io/",
+          "name": "EziTranslate",
+          "alternateName": ["Live Translator", "Ezi Translate"],
+          "description": "Real-time meeting and video translation — browser extension and Windows app.",
+          "publisher": { "@id": "https://translate.ezitech.io/#organization" },
+          "inLanguage": "en"
         },
         {
-          "@type": "Offer",
-          "name": "Pro+",
-          "price": "13.99",
-          "priceCurrency": "USD"
+          "@type": "SoftwareApplication",
+          "@id": "https://translate.ezitech.io/#app",
+          "name": "EziTranslate",
+          "alternateName": "Live Translator",
+          "url": "https://translate.ezitech.io/",
+          "image": "https://translate.ezitech.io/icons/logo.png",
+          "applicationCategory": ["BrowserApplication", "DesktopApplication"],
+          "description": "EziTranslate provides real-time speech translation for Google Meet, Zoom, Microsoft Teams, YouTube, and more. The Windows app translates audio from any application on your PC. Includes session sharing, AI assistant, narration, and transcript export.",
+          "operatingSystem": "Chrome, Edge, Brave, Arc, Windows",
+          "softwareVersion": "2.3",
+          "offers": [
+            { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro", "price": "4.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro+", "price": "13.99", "priceCurrency": "USD" }
+          ],
+          "featureList": [
+            "Real-time translation for meetings and videos",
+            "Two-way translation between my language and their language",
+            "Session sharing via link or QR (Pro+)",
+            "No daily translation or AI limit for Pro and Pro+ (monthly quota only)",
+            "In-app feedback from Settings",
+            "Actions Library of curated AI fast actions",
+            "Interpreter mode to send translated speech into meeting chat",
+            "Narrate My Voice and Narrate Their Voice",
+            "SRT subtitle and transcript export",
+            "Support for 60+ languages",
+            "Google Meet, Zoom, Teams, YouTube, and more",
+            "Webpage translate with dual-panel reader",
+            "Included Soniox access with Google sign-in (optional BYOK)",
+            "Windows desktop app for system audio from any application"
+          ],
+          "publisher": { "@id": "https://translate.ezitech.io/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://translate.ezitech.io/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How does the real-time translation work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EziTranslate captures audio from your meeting or video, sends it to Soniox for speech recognition and translation, then renders translated captions on your screen in real time. The extension runs locally in your browser, and conversation data is not routed through EziTranslate servers for the core overlay flow."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it really free? What are the costs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Free plan includes real-time translation with 60+ languages, Narrate Their Voice (10 minutes per session), and auto-save transcription (up to 10 records). Pro is $4.99/month or $49/year. Pro+ is $13.99/month or $139/year with higher quotas and session sharing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a Soniox API key to use it?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. You can use included Soniox access on Free/Pro/Pro+, or add your own Soniox API key in Settings for unlimited usage billed by Soniox."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can other meeting participants see my translations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Translations appear only as a local overlay on your screen. Other participants cannot see them unless you use session sharing to invite viewers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does it work with any browser?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EziTranslate is a Chrome extension and works on Chromium browsers including Chrome, Edge, Brave, and Arc. Firefox support is planned."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between the extension and the Windows app?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The browser extension has the fullest feature set but only translates audio inside the browser. The Windows app translates audio from any application on your PC. One license covers both."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does my Pro license work on both?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. One account and one license cover the browser extension and the Windows app."
+              }
+            }
+          ]
         }
-      ],
-      "featureList": [
-        "Real-time translation for meetings and videos",
-        "Two-way translation between my language and their language",
-        "Interpreter mode to send translated speech into meeting chat",
-        "Narrate My Voice — speak into meetings in the other person's language",
-        "Narrate Their Voice — hear translations read aloud",
-        "SRT subtitle export for video editing workflows",
-        "Support for 60+ languages",
-        "Google Meet, Zoom, Teams, and YouTube support",
-        "Private local processing on browser",
-        "Download translated transcripts (TXT, JSON, SRT)",
-        "Inline AI Assistant with Explain and Generate Answer actions",
-        "Webpage translate with dual-panel reader overlay",
-        "Included Soniox access with Google sign-in (optional BYOK for unlimited)",
-        "OpenAI Realtime API for speech-to-speech translation",
-        "Windows desktop app that translates audio from any application on your PC"
       ]
     }
   </script>
@@ -291,9 +365,9 @@
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 group">
           <div class="w-9 h-9 rounded-xl overflow-hidden ring-white/10 shadow-lg shadow-black/30">
-            <img src="./icons/icon-128x128.png" alt="Live Translator icon" class="w-full h-full object-cover" />
+            <img src="./icons/icon-128x128.png" alt="EziTranslate icon" class="w-full h-full object-cover" />
           </div>
-          <span class="font-display font-bold text-lg tracking-tight">Live Translator</span>
+          <span class="font-display font-bold text-lg tracking-tight">EziTranslate</span>
         </a>
 
         <!-- Desktop Nav -->
@@ -371,6 +445,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- ===== HERO SECTION ===== -->
   <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden mesh-gradient" id="hero">
     <!-- Background glows -->
@@ -396,7 +471,7 @@
           </h1>
 
           <p class="font-body text-lg text-slate-400 leading-relaxed mb-10 max-w-lg" style="animation: slideUp 0.6s ease-out 0.2s forwards; opacity: 0;">
-            Live Translator is a browser extension for real-time translation in Google Meet, Zoom, Teams, YouTube and more. Fast, accurate,            60+ supported languages, local processing on your browser so your data stays private.
+            EziTranslate is a browser extension and Windows app for real-time translation in Google Meet, Zoom, Teams, YouTube and more. Fast and accurate across 60+ languages, with private local processing so your data stays yours.
           </p>
 
           <!-- CTAs -->
@@ -526,6 +601,81 @@
     </div>
   </section>
 
+    <!-- ===== NEW RELEASE ===== -->
+    <section id="whats-new" class="relative py-16 lg:py-20 border-y border-white/5 bg-base-800/40">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 mb-5">
+            <span class="font-body text-xs font-semibold text-accent-emerald tracking-wider uppercase">New Release</span>
+          </div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
+            What's New in <span class="gradient-text">v2.3</span>
+          </h2>
+          <p class="font-body text-base sm:text-lg text-slate-400 leading-relaxed">
+            Share live translation sessions, use your full monthly quota with no daily cap on Pro/Pro+,
+            send feedback in-app, and browse a curated Actions Library.
+          </p>
+        </div>
+  
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="glass-card rounded-2xl p-6 reveal">
+            <div class="w-11 h-11 rounded-xl bg-accent-emerald/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.064.368.1.563.1h5.44c.195 0 .383-.036.563-.1m-6.566 0a2.25 2.25 0 10-.563 2.186m6.566-2.186a2.25 2.25 0 11-.563 2.186M3.75 12a8.25 8.25 0 1116.5 0 8.25 8.25 0 01-16.5 0z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">Session Sharing</h3>
+            <p class="font-body text-sm text-slate-400 leading-relaxed">
+              Share a live translation session with a link or QR code. Viewers join a read-only page
+              and follow original + translated text in real time.
+            </p>
+             <a href="https://youtube.com/shorts/bfd33SttB2Q?si=Boy5Ce7tXqVcGsvD" target="_blank" class="text-sm text-accent-cyan hover:text-white transition-colors mt-4 inline-flex items-center gap-1">View Demo <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg></a>
+          </div>
+  
+          <div class="glass-card rounded-2xl p-6 reveal">
+            <div class="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">No Daily Limit</h3>
+            <p class="font-body text-sm text-slate-400 leading-relaxed">
+              Pro and Pro+ no longer hit a daily translation or AI cap — only the monthly allowance
+              applies. Free plan daily limits stay the same.
+            </p>
+          </div>
+  
+          <div class="glass-card rounded-2xl p-6 reveal">
+            <div class="w-11 h-11 rounded-xl bg-accent-cyan/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">In-app Feedback</h3>
+            <p class="font-body text-sm text-slate-400 leading-relaxed">
+              Send feedback from Settings → Contact &amp; Feedback without leaving the extension.
+              Choose General, Feature request, or Bug report.
+            </p>
+          </div>
+  
+          <div class="glass-card rounded-2xl p-6 reveal">
+            <div class="w-11 h-11 rounded-xl bg-accent-violet/10 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-2">Actions Library</h3>
+            <p class="font-body text-sm text-slate-400 leading-relaxed">
+              Browse curated AI fast actions and add them to your list. Enabling stays tier-based
+              (Free: 1, Pro/Pro+: 4).
+            </p>
+          </div>
+        </div>
+  
+        <div class="text-center mt-8 reveal">
+          <a href="./changelog.html" class="inline-flex items-center gap-2 font-body text-sm text-accent-cyan hover:text-white transition-colors">
+            View full changelog
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+  
+      </div>
+    </section>
+
   <!-- ===== VIDEO DEMO ===== -->
   <section id="demo-video" class="relative py-16 lg:py-20">
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
@@ -534,7 +684,7 @@
           <span class="font-body text-xs font-semibold text-accent-cyan tracking-wider uppercase">Live Demo</span>
         </div>
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
-          See Live Translator in <span class="gradient-text">Action</span>
+          See EziTranslate in <span class="gradient-text">Action</span>
         </h2>
         <!-- <p class="font-body text-base sm:text-lg text-slate-400 leading-relaxed">
           Watch a quick demo to see real-time translation, narration, and transcript export workflow.
@@ -547,7 +697,7 @@
           <iframe
             class="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/V_ivTfswnd0?rel=0&modestbranding=1&playsinline=1"
-            title="Live Translator demo video"
+            title="EziTranslate demo video"
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
@@ -555,80 +705,6 @@
           </iframe>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== NEW RELEASE ===== -->
-  <section id="whats-new" class="relative py-16 lg:py-20 border-y border-white/5 bg-base-800/40">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10 reveal">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-emerald/10 border border-accent-emerald/20 mb-5">
-          <span class="font-body text-xs font-semibold text-accent-emerald tracking-wider uppercase">New Release</span>
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-4">
-          What's New in <span class="gradient-text">v1.14.7</span>
-        </h2>
-        <p class="font-body text-base sm:text-lg text-slate-400 leading-relaxed">
-          A free AI Assistant for signed-in users, AI-powered meeting summaries for everyone,
-          custom OpenAI-compatible endpoints, and faster transcript management.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="glass-card rounded-2xl p-6 reveal">
-          <div class="w-11 h-11 rounded-xl bg-accent-emerald/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" /></svg>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">Free AI Assistant</h3>
-          <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Sign in with Google to use the in-meeting AI Assistant without your own API key.
-            Responses now stream in real time and render with full Markdown formatting.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 reveal">
-          <div class="w-11 h-11 rounded-xl bg-accent-blue/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.014 8.25 4.977 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" /></svg>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">Meeting Insights for Everyone</h3>
-          <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Meeting Summary and Task Breakdown are no longer BYOK-only. Any signed-in user can
-            now generate them using their included AI quota.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 reveal">
-          <div class="w-11 h-11 rounded-xl bg-accent-cyan/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75L14.25 12l-2.25 2.25m-4.5 0h4.5m5.653 4.943l-7.108 7.109a2.25 2.25 0 01-3.182 0l-7.108-7.109a2.25 2.25 0 01-.659-1.591V5.25A2.25 2.25 0 015.25 3h6.101c.597 0 1.17.237 1.591.659l7.108 7.109a2.25 2.25 0 010 3.182z" /></svg>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">Custom OpenAI Endpoint</h3>
-          <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Bring your own OpenAI-compatible base URL and model for translation and AI features,
-            configured right from Settings.
-          </p>
-        </div>
-
-        <div class="glass-card rounded-2xl p-6 reveal">
-          <div class="w-11 h-11 rounded-xl bg-accent-violet/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18" /></svg>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">Faster Transcript Management</h3>
-          <p class="font-body text-sm text-slate-400 leading-relaxed">
-            Select multiple transcript entries at once to download or delete them together —
-            no more one-by-one cleanup.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-center mt-8 reveal">
-        <a href="./changelog.html" class="inline-flex items-center gap-2 font-body text-sm text-accent-cyan hover:text-white transition-colors">
-          View full changelog
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </a>
-      </div>
-
     </div>
   </section>
 
@@ -671,7 +747,7 @@
           Powerful real-time translation that works where you already meet, learn, and collaborate.
         </p>
         <p class="font-body text-sm text-accent-cyan mt-3">
-          New in v1.14.7: free AI Assistant, Meeting Insights for everyone, custom OpenAI endpoint, and multi-select transcripts.
+          New in v2.3: session sharing, no daily limit for Pro/Pro+, in-app feedback, and Actions Library.
         </p>
       </div>
 
@@ -703,7 +779,20 @@
           </p>
         </div>
 
-        <!-- Feature 3: Multi-Platform -->
+        <!-- Feature 3: Session Sharing -->
+        <div class="glass-card rounded-2xl p-7 reveal">
+          <div class="w-12 h-12 rounded-2xl bg-accent-violet/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.064.368.1.563.1h5.44c.195 0 .383-.036.563-.1m-6.566 0a2.25 2.25 0 10-.563 2.186m6.566-2.186a2.25 2.25 0 11-.563 2.186M3.75 12a8.25 8.25 0 1116.5 0 8.25 8.25 0 01-16.5 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-3">Session Sharing</h3>
+          <p class="font-body text-sm text-slate-400 leading-relaxed">
+            Share a live translation session with a link or QR code. Viewers join a read-only page and follow original and translated text in real time — no install required. <a href="https://youtube.com/shorts/bfd33SttB2Q?si=Boy5Ce7tXqVcGsvD" target="_blank" class="text-sm text-accent-cyan hover:text-white transition-colors inline-flex items-center gap-1">View Demo</a>
+          </p>
+        </div>
+
+        <!-- Feature 4: Multi-Platform -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-emerald/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -716,7 +805,7 @@
           </p>
         </div>
 
-        <!-- Feature 4: Privacy -->
+        <!-- Feature 5: Privacy -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-violet/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -729,7 +818,7 @@
           </p>
         </div>
 
-        <!-- Feature 5: Download Transcripts -->
+        <!-- Feature 6: Download Transcripts -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-blue/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -742,7 +831,7 @@
           </p>
         </div>
 
-        <!-- Feature 6: BYO Key -->
+        <!-- Feature 7: BYO Key -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-cyan/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -755,7 +844,7 @@
           </p>
         </div>
 
-        <!-- Feature 7: Narration (TTS) -->
+        <!-- Feature 8: Narration (TTS) -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-violet/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-violet" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -768,7 +857,7 @@
           </p>
         </div>
 
-        <!-- Feature 8: Inline AI Assistant -->
+        <!-- Feature 9: Inline AI Assistant -->
         <div class="glass-card rounded-2xl p-7 reveal">
           <div class="w-12 h-12 rounded-2xl bg-accent-emerald/10 flex items-center justify-center mb-5">
             <svg class="w-6 h-6 text-accent-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
@@ -806,7 +895,7 @@
       <div class="glass-card rounded-3xl overflow-hidden reveal mb-12">
         <div class="overflow-x-auto">
           <table class="w-full min-w-[560px] border-collapse text-left">
-            <caption class="sr-only">Feature comparison between the Live Translator browser extension and the Live Translator Windows app</caption>
+            <caption class="sr-only">Feature comparison between the EziTranslate browser extension and the EziTranslate Windows app</caption>
             <thead>
               <tr class="border-b border-white/10">
                 <th scope="col" class="sticky left-0 bg-base-900 z-10 p-5 font-display font-semibold text-sm text-slate-400">Feature</th>
@@ -972,19 +1061,25 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <!-- Free Plan -->
-        <div class="glass-card rounded-3xl p-8 reveal relative">
+        <div class="glass-card rounded-3xl p-8 reveal relative flex flex-col h-full">
           <div class="mb-6">
             <h3 class="font-display font-bold text-2xl mb-1">Free</h3>
             <p class="font-body text-sm text-slate-500">Everything you need to get started</p>
           </div>
-          <div class="flex items-baseline gap-1 mb-8">
-            <span class="font-display font-extrabold text-4xl">$0</span>
-            <span class="font-body text-sm text-slate-500">forever</span>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="font-display font-extrabold text-4xl gradient-text">$0</span>
+              <span class="font-body text-sm text-slate-500"></span>
+            </div>
+            <p class="font-body text-sm text-slate-500 mt-1">Free forever</p>
           </div>
+          
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-slate-300">Real-time translation: 20 min/day, 4 sessions/day, 6 hours/month</span>
+              <span class="font-body text-sm text-slate-300">
+                15 included translation minutes per day, 6 hours per month
+              </span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1000,7 +1095,11 @@
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-slate-300">Screen recording — 10 min/session</span>
+              <span class="font-body text-sm text-slate-300">10 minutes of screen recording</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-slate-300">1 AI fast action</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-emerald flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1019,13 +1118,13 @@
               <span class="font-body text-sm text-slate-300">Custom speaker names</span>
             </li>
           </ul>
-          <a href="#hero" target="_blank" rel="noopener" data-download-edition="extension" data-download-location="pricing" class="inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-2xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:bg-white/5">
+          <a href="#hero" target="_blank" rel="noopener" data-download-edition="extension" data-download-location="pricing" class="mt-auto inline-flex items-center justify-center w-full gap-2 px-6 py-3.5 rounded-2xl font-display font-semibold text-sm text-slate-300 border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 hover:bg-white/5">
             Get Started Free
           </a>
         </div>
 
         <!-- Pro Plan -->
-        <div class="glass-card rounded-3xl p-8 reveal relative border-accent-blue/30" style="border-color: rgba(59,130,246,0.25); box-shadow: 0 0 60px rgba(59,130,246,0.06);">
+        <div class="glass-card rounded-3xl p-8 reveal relative flex flex-col h-full border-accent-blue/30" style="border-color: rgba(59,130,246,0.25); box-shadow: 0 0 60px rgba(59,130,246,0.06);">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-blue text-white text-xs font-display font-semibold shadow-lg shadow-accent-blue/30">
               <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" /></svg>
@@ -1046,11 +1145,11 @@
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">Real-time translation: 2 hours/day, 24 sessions/day, 24 hours/month</span>
+              <span class="font-body text-sm text-white font-medium">1440 included translation minutes per month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">AI Assistant: 20 requests/day, 200 requests/month</span>
+              <span class="font-body text-sm text-white font-medium">AI Assistant: 200 requests/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1063,6 +1162,10 @@
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
               <span class="font-body text-sm text-white font-medium">Screen recording — Unlimited</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">4 AI fast actions</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-blue flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1093,7 +1196,7 @@
               <span class="font-body text-sm text-white font-medium">Transcript &amp; SRT export</span>
             </li>
           </ul>
-          <a href="https://buy.polar.sh/polar_cl_ACENb7X8r4vhnoa0DXmuJIpjs1cmnJK2C8Geh2KEn4S" target="_blank" rel="noopener noreferrer" class="btn-primary relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
+          <a href="https://buy.polar.sh/polar_cl_ACENb7X8r4vhnoa0DXmuJIpjs1cmnJK2C8Geh2KEn4S" target="_blank" rel="noopener noreferrer" class="btn-primary relative mt-auto inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-blue/20">
             <span class="relative z-10 flex items-center gap-2">
               Get Pro
             </span>
@@ -1101,7 +1204,7 @@
         </div>
 
         <!-- Pro+ Plan -->
-        <div class="glass-card rounded-3xl p-8 reveal relative border-accent-violet/30" style="border-color: rgba(139,92,246,0.25); box-shadow: 0 0 60px rgba(139,92,246,0.06);">
+        <div class="glass-card rounded-3xl p-8 reveal relative flex flex-col h-full border-accent-violet/30" style="border-color: rgba(139,92,246,0.25); box-shadow: 0 0 60px rgba(139,92,246,0.06);">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-violet text-white text-xs font-display font-semibold shadow-lg shadow-accent-violet/30">
               Higher Quota
@@ -1121,11 +1224,11 @@
           <ul class="space-y-3 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">Real-time translation: Unlimited daily quota, 60 hours/month</span>
+              <span class="font-body text-sm text-white font-medium">3600 included translation minutes per month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
-              <span class="font-body text-sm text-white font-medium">AI Assistant: 60 requests/day, 600 requests/month</span>
+              <span class="font-body text-sm text-white font-medium">AI Assistant: 600 requests/month</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1138,6 +1241,10 @@
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
               <span class="font-body text-sm text-white font-medium">Screen recording — Unlimited</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">4 AI fast actions</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1167,8 +1274,12 @@
               <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
               <span class="font-body text-sm text-white font-medium">Transcript &amp; SRT export</span>
             </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-accent-violet flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span class="font-body text-sm text-white font-medium">Session sharing</span>
+            </li>
           </ul>
-          <a href="https://buy.polar.sh/polar_cl_cc7UblGvVypEZIhsboTE9LJJIp2QXIpl4aHoE0HreAT" target="_blank" rel="noopener noreferrer" class="btn-violet relative inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-violet/20">
+          <a href="https://buy.polar.sh/polar_cl_cc7UblGvVypEZIhsboTE9LJJIp2QXIpl4aHoE0HreAT" target="_blank" rel="noopener noreferrer" class="btn-violet relative mt-auto inline-flex items-center justify-center w-full gap-2.5 px-6 py-3.5 rounded-2xl font-display font-bold text-base text-white shadow-xl shadow-accent-violet/20">
             <span class="relative z-10 flex items-center gap-2">
               Get Pro+
             </span>
@@ -1179,12 +1290,6 @@
       <div class="text-center mt-10 reveal max-w-3xl mx-auto space-y-2">
         <p class="font-body text-sm text-slate-300 leading-relaxed">
           Every plan covers <strong class="text-white font-medium">both the browser extension and the Windows app</strong> — one account, one license.
-        </p>
-        <p class="font-body text-sm text-slate-500 leading-relaxed">
-          * Unlimited usage with your own API key.
-        </p>
-        <p class="font-body text-xs text-slate-600 leading-relaxed">
-          ** A session runs from Start to Stop or closing the extension.
         </p>
       </div>
     </div>
@@ -1397,7 +1502,7 @@
             </svg>
           </div>
           <h3 class="font-display font-bold text-base mb-2">Any Website</h3>
-          <p class="font-body text-xs text-slate-500 leading-relaxed">Turn on <strong class="text-slate-400 font-medium">Show translator on all websites</strong> in Settings to use Live Translator in any website.</p>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Turn on <strong class="text-slate-400 font-medium">Show translator on all websites</strong> in Settings to use EziTranslate in any website.</p>
         </div>
 
         <!-- Any Windows App -->
@@ -1426,7 +1531,7 @@
           Start Translating in <span class="gradient-text">Three&nbsp;Steps</span>
         </h2>
         <p class="font-body text-lg text-slate-400 leading-relaxed">
-          No accounts, no configuration headaches. Get up and running in under a minute.
+          No configuration headaches. Get up and running in under 30 secs.
         </p>
       </div>
 
@@ -1438,9 +1543,9 @@
           </div>
           <!-- Connector line (desktop) -->
           <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent-blue/30 to-accent-cyan/30"></div>
-          <h3 class="font-display font-bold text-xl mb-3">Install the Extension</h3>
+          <h3 class="font-display font-bold text-xl mb-3">Install</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-            Install Live Translator from Chrome Web Store.
+            Install EziTranslate Extension or Desktop App.
           </p>
         </div>
 
@@ -1450,9 +1555,9 @@
             <span class="font-display font-extrabold text-xl text-white">2</span>
           </div>
           <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-px bg-gradient-to-r from-accent-cyan/30 to-accent-emerald/30"></div>
-          <h3 class="font-display font-bold text-xl mb-3">Add Your API Key(s)</h3>
+          <h3 class="font-display font-bold text-xl mb-3">Login</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-            Add your Soniox API key to start translation. If you want Narration mode, add your OpenAI API key too.
+            Login with your Google account to start translation.
           </p>
         </div>
 
@@ -1463,60 +1568,13 @@
           </div>
           <h3 class="font-display font-bold text-xl mb-3">Start Translating</h3>
           <p class="font-body text-sm text-slate-400 leading-relaxed max-w-xs mx-auto">
-            Open a supported platform (Google Meet, Zoom, Teams, WhatsApp Web, YouTube, Facebook, TikTok, Douyin, Dailymotion, Vimeo, or Udemy). A small bird icon appears at the bottom-right corner - click it to open Live Translator and start translating.
+            Join a meeting or open a video on any platform. A small bird icon appears at the bottom-right corner - click it to open EziTranslate and start translating.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
-
-  <!-- ===== NARRATION GUIDE ===== -->
-  <section id="narration-guide" class="relative py-24 lg:py-28">
-    <div class="max-w-5xl mx-auto px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/20 mb-6">
-          <span class="font-body text-xs font-semibold text-accent-violet tracking-wider uppercase">Narration Guide</span>
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-5">
-          How to Use <span class="gradient-text">Narration (TTS)</span>
-        </h2>
-        <p class="font-body text-lg text-slate-400 leading-relaxed">
-          Turn translated captions into spoken audio in just a few clicks.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
-          <h3 class="font-display font-semibold text-base text-accent-violet mb-4">Narrate Their Voice</h3>
-          <p class="font-body text-sm text-slate-500 mb-4">Hear translations from other participants read aloud to you.</p>
-          <ol class="space-y-3 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
-            <li>Open Live Translator during a meeting and start translation.</li>
-            <li>Click the Narration button and choose a voice from one unified list (<strong>OpenAI • ...</strong> or <strong>Google • ...</strong>).</li>
-            <li>Use the voice search box to quickly find voices by provider, language, or name.</li>
-            <li>If you select an OpenAI voice, enter your OpenAI API key (<a href="https://platform.openai.com/account/api-keys" target="_blank" class="text-accent-cyan hover:underline"><b>get key here</b></a>). Google voices do not need an API key.</li>
-            <li>Adjust voice speed and voice volume, then use <strong>Test</strong> to preview your selected voice.</li>
-            <li>Click <strong>Start</strong> to enable narration.</li>
-            <li>Narration automatically skips your own voice — only other participants' speech is read aloud.</li>
-          </ol>
-        </div>
-        <div class="glass rounded-3xl p-7 lg:p-8 border border-white/10 reveal">
-          <h3 class="font-display font-semibold text-base text-accent-emerald mb-4">Narrate My Voice</h3>
-          <p class="font-body text-sm text-slate-500 mb-4">Speak your words into the meeting in the other person's language.</p>
-          <ol class="space-y-3 font-body text-sm text-slate-300 leading-relaxed list-decimal pl-5">
-            <li>Configure two-way translation: set <strong>My language</strong> and <strong>Their language</strong>.</li>
-            <li>Open Narration settings, choose an OpenAI or Google voice, then toggle on <strong>Narrate my voice</strong>.</li>
-            <li>If using OpenAI voice, make sure your OpenAI API key is set. Google voices work without OpenAI key.</li>
-            <li>Click <strong>Start</strong> — your speech is translated and spoken into the meeting in real time.</li>
-            <li>Voice speed and voice volume settings apply to both OpenAI and Google voices.</li>
-            <li>Your original voice is muted while translated audio plays, avoiding overlap.</li>
-            <li>Both "Narrate their voice" and "Narrate my voice" can be used at the same time.</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <div class="section-divider"></div>
 
@@ -1590,7 +1648,7 @@
             Your Conversations<br /><span class="gradient-text">Stay Yours</span>
           </h2>
           <p class="font-body text-lg text-slate-400 leading-relaxed mb-6">
-            Unlike cloud-based translation services, Live Translator processes everything locally in your browser. No audio recordings, no conversation logs, no data collection — period.
+            Unlike cloud-based translation services, EziTranslate processes everything locally in your browser. No audio recordings, no conversation logs, no data collection — period.
           </p>
           <p class="font-body text-base text-slate-500 leading-relaxed mb-8">
             You bring your own Soniox API key, stored only in your browser's local storage. We never see it, never route it through our servers, and never have access to your translation data. Billing is pay-as-you-go directly with Soniox based on your usage.
@@ -1624,7 +1682,7 @@
           Frequently Asked <span class="gradient-text">Questions</span>
         </h2>
         <p class="font-body text-lg text-slate-400 leading-relaxed">
-          Everything you need to know about Live Translator.
+          Everything you need to know about EziTranslate.
         </p>
       </div>
 
@@ -1640,7 +1698,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                Live Translator captures audio from your meeting or video, sends it directly to Soniox for speech recognition and translation, then renders translated captions on your screen in real-time. The extension runs locally in your browser, and no conversation data is routed through our servers.
+                EziTranslate captures audio from your meeting or video, sends it directly to Soniox for speech recognition and translation, then renders translated captions on your screen in real-time. The extension runs locally in your browser, and no conversation data is routed through our servers.
               </p>
             </div>
           </div>
@@ -1674,7 +1732,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                No, you don't need a Soniox API key to use Live Translator. You can use the free plan with included Soniox access or add your own Soniox API key in Settings for unlimited usage and pay-as-you-go billing from Soniox.
+                No, you don't need a Soniox API key to use EziTranslate. You can use the free plan with included Soniox access or add your own Soniox API key in Settings for unlimited usage and pay-as-you-go billing from Soniox.
               </p>
             </div>
           </div>
@@ -1691,7 +1749,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                Open Live Translator, add your OpenAI API key in settings. After that, click the Narration button, choose a voice and press <span class="text-slate-300">Start</span> to hear translated text as speech. You can use <span class="text-slate-300">Test</span> to preview the selected voice before starting.
+                Open EziTranslate, add your OpenAI API key in settings. After that, click the Narration button, choose a voice and press <span class="text-slate-300">Start</span> to hear translated text as speech. You can use <span class="text-slate-300">Test</span> to preview the selected voice before starting.
               </p>
             </div>
           </div>
@@ -1748,7 +1806,7 @@
           <div class="faq-answer">
             <div class="px-6 pb-6 pt-0">
               <p class="font-body text-sm text-slate-400 leading-relaxed">
-                Currently, Live Translator is available as a Chrome extension and works on all Chromium-based browsers including Google Chrome, Microsoft Edge, Brave, and Arc. Support for Firefox is planned for a future release.
+                Currently, EziTranslate is available as a Chrome extension and works on all Chromium-based browsers including Google Chrome, Microsoft Edge, Brave, and Arc. Support for Firefox is planned for a future release.
               </p>
             </div>
           </div>
@@ -1827,6 +1885,8 @@
 
   <div class="section-divider"></div>
 
+  </main>
+
   <!-- ===== FOOTER ===== -->
   <footer class="border-t border-white/5 py-16 bg-base-900">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -1835,9 +1895,9 @@
         <div class="md:col-span-1">
           <a href="#" class="flex items-center gap-3 mb-4">
             <div class="w-9 h-9 rounded-xl overflow-hidden ring-1 ring-white/10">
-              <img src="./icons/icon-128x128.png" alt="Live Translator icon" class="w-full h-full object-cover" />
+              <img src="./icons/icon-128x128.png" alt="EziTranslate icon" class="w-full h-full object-cover" />
             </div>
-            <span class="font-display font-bold text-lg">Live Translator</span>
+            <span class="font-display font-bold text-lg">EziTranslate</span>
           </a>
           <p class="font-body text-sm text-slate-500 leading-relaxed">
             Break language barriers in real-time. Free, private, and open.
@@ -1865,6 +1925,7 @@
             <li><a href="https://soniox.com/docs/stt/get-started#get-api-key" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Get Soniox API Key</a></li>
             <li><a href="https://developers.openai.com/api/docs/quickstart" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Get OpenAI API Key</a></li>
             <li><a href="./changelog.html" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Changelog</a></li>
+            <li><a href="./llms.txt" class="font-body text-sm text-slate-500 hover:text-white transition-colors">AI / LLM summary</a></li>
             <li><a href="mailto:ezsolu.io@gmail.com" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Support</a></li>
             <li><a href="https://forms.gle/hSmHR885BHY4Ssen9" target="_blank" rel="noopener" class="font-body text-sm text-slate-500 hover:text-white transition-colors">Feedback</a></li>
             <li><a href="./instruction.html" target="_blank" rel="noopener" class="font-body text-sm text-slate-500 hover:text-white transition-colors">User Guide</a></li>
@@ -1887,7 +1948,7 @@
 
       <!-- Bottom bar -->
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="font-body text-xs text-slate-600">&copy; 2026 Live Translator. All rights reserved.</p>
+        <p class="font-body text-xs text-slate-600">&copy; 2026 EziTranslate. All rights reserved.</p>
         <div class="flex items-center gap-6">
           <a href="./privacy-policy.html" class="font-body text-xs text-slate-600 hover:text-slate-400 transition-colors">Privacy Policy</a>
           <!-- <a href="#" class="font-body text-xs text-slate-600 hover:text-slate-400 transition-colors">Terms of Service</a> -->
