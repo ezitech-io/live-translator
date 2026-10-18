@@ -1,8 +1,8 @@
-version: 1.10.2
+version: 1.10.3
 files:
-  - url: https://translate-api.ezitech.io/api/desktop/release/windows/LiveTranslator-Setup-1.10.2.exe
-    sha512: pTklQ02HNPTRU4mxMMJOyjh/I4i6RzoWKMIpXF58zhBp4hQh/Ajyji6Mlonz84OPwDJfhzo4DgRqJUFi28bjKA==
-    size: 108661884
-path: https://translate-api.ezitech.io/api/desktop/release/windows/LiveTranslator-Setup-1.10.2.exe
-sha512: pTklQ02HNPTRU4mxMMJOyjh/I4i6RzoWKMIpXF58zhBp4hQh/Ajyji6Mlonz84OPwDJfhzo4DgRqJUFi28bjKA==
-releaseDate: '2026-10-18T18:24:29.536Z'
+  - url: https://translate-api2.ezitech.io/api/desktop/release/windows/LiveTranslator-Setup-1.10.3.exe
+    sha512: q0Rrs1lxCe5J1fnjLvd2bXY9CfvLyblgaI7P4smec7OP4uaHsHBiqU+1z645kq2q46Q6QVO2qLgWQmtW6gj9Lw==
+    size: 108662082
+path: https://translate-api2.ezitech.io/api/desktop/release/windows/LiveTranslator-Setup-1.10.3.exe
+sha512: q0Rrs1lxCe5J1fnjLvd2bXY9CfvLyblgaI7P4smec7OP4uaHsHBiqU+1z645kq2q46Q6QVO2qLgWQmtW6gj9Lw==
+releaseDate: '2026-10-18T19:52:50.843Z'
